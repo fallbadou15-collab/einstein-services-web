@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test d'orientation — Einstein Services</title>
+    <meta
+      name="description"
+      content="Découvrez en quelques minutes les domaines d'études et destinations qui correspondent à votre profil : centres d'intérêt, matières fortes, projet professionnel et budget."
+    />
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="img/logo.svg"
+            alt="Logo Einstein Services"
+            class="logo-img"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="services.html">Services</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="test-orientation.html">Test d'orientation</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#contact" class="btn btn-orange">Nous contacter</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container test-container">
+        <div class="section-head">
+          <h2>Test d'<span class="grad-orange">orientation</span></h2>
+          <p>
+            Répondez à ces questions pour découvrir les domaines d'études et les
+            destinations qui correspondent à votre profil.
+          </p>
+        </div>
+
+        <form class="card test-form" id="orientForm">
+          <h3>1. Quelles matières vous réussissent le mieux ?</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="matieres" value="sciences" required />
+              Mathématiques, physique, sciences</label
+            >
+            <label
+              ><input type="radio" name="matieres" value="lettres" /> Français,
+              philosophie, langues</label
+            >
+            <label
+              ><input type="radio" name="matieres" value="eco" /> Économie,
+              gestion, histoire-géographie</label
+            >
+            <label
+              ><input type="radio" name="matieres" value="arts" /> Arts, design,
+              activités créatives</label
+            >
+          </div>
+
+          <h3>2. Qu'est-ce qui vous motive le plus dans un métier ?</h3>
+          <div class="field-group">
+            <label
+              ><input
+                type="radio"
+                name="motivation"
+                value="sciences"
+                required
+              />
+              Comprendre, analyser, résoudre des problèmes</label
+            >
+            <label
+              ><input type="radio" name="motivation" value="lettres" />
+              Communiquer, transmettre, convaincre</label
+            >
+            <label
+              ><input type="radio" name="motivation" value="eco" />
+              Entreprendre, gérer, organiser</label
+            >
+            <label
+              ><input type="radio" name="motivation" value="arts" /> Créer,
+              imaginer, concevoir</label
+            >
+          </div>
+
+          <h3>3. Votre projet professionnel ?</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="projet" value="sciences" required />
+              Ingénieur, médecin, chercheur, informaticien</label
+            >
+            <label
+              ><input type="radio" name="projet" value="lettres" /> Juriste,
+              enseignant, journaliste, traducteur</label
+            >
+            <label
+              ><input type="radio" name="projet" value="eco" /> Manager,
+              comptable, entrepreneur, banquier</label
+            >
+            <label
+              ><input type="radio" name="projet" value="arts" /> Designer,
+              architecte, artiste, développeur créatif</label
+            >
+          </div>
+
+          <h3>
+            4. Votre budget annuel disponible (frais de scolarité + vie) ?
+          </h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="budget" value="suisse" required /> Plus
+              de 20 000 €</label
+            >
+            <label
+              ><input type="radio" name="budget" value="canada" /> Entre 10 000
+              et 20 000 €</label
+            >
+            <label
+              ><input type="radio" name="budget" value="france" /> Entre 5 000
+              et 10 000 €</label
+            >
+            <label
+              ><input type="radio" name="budget" value="italie" /> Moins de 5
+              000 €</label
+            >
+          </div>
+
+          <h3>5. Quelle langue préférez-vous pour vos études ?</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="langue" value="france" required />
+              Français</label
+            >
+            <label
+              ><input type="radio" name="langue" value="canada" /> Français ou
+              anglais, les deux me vont</label
+            >
+            <label
+              ><input type="radio" name="langue" value="italie" /> Peu importe,
+              prêt(e) à apprendre</label
+            >
+          </div>
+
+          <h3>6. Quelle taille de ville vous attire ?</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="ville" value="france" required />
+              Grande capitale animée</label
+            >
+            <label
+              ><input type="radio" name="ville" value="canada" /> Grande ville
+              multiculturelle</label
+            >
+            <label
+              ><input type="radio" name="ville" value="belgique" /> Ville
+              moyenne à taille humaine</label
+            >
+            <label
+              ><input type="radio" name="ville" value="italie" /> Ville riche en
+              histoire et en art</label
+            >
+          </div>
+
+          <button type="submit" class="btn btn-orange btn-lg">
+            Découvrir mon profil
+          </button>
+        </form>
+
+        <div class="card result-card" id="orientResultat" hidden>
+          <h3 id="orientDomaine"></h3>
+          <p id="orientDest"></p>
+          <div class="service-actions">
+            <a href="index.html#contact" class="btn btn-orange"
+              >Approfondir avec un conseiller</a
+            >
+            <a href="https://wa.me/221783876262" class="btn btn-ghost"
+              >💬 WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          src="img/logo-light.svg"
+          alt="Einstein Services"
+          class="footer-logo"
+        />
+        <p>
+          <strong>Einstein Services</strong> — Orientation · Mobilité
+          internationale · Voyages.<br />
+          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54
+          60
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.svg" alt="TikTok" /></a>
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
+        <p class="muted footer-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          ·
+          <a href="politique-confidentialite.html"
+            >Politique de confidentialité</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/221783876262" class="wa-float" aria-label="WhatsApp"
+      >💬</a
+    >
+    <script src="js/code.js"></script>
+    <script src="js/test-orientation.js"></script>
+  </body>
+</html>

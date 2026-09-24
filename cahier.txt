@@ -1,0 +1,277 @@
+EINSTEIN SERVICES
+Orientation • Mobilité internationale • Voyages
+Cahier des charges
+Site internet officiel
+Conception et développement d’une plateforme web professionnelle,
+sécurisée et interactive pour l’orientation, l’admission
+et la mobilité des étudiants à l’international.
+MAÎTRE D’OUVRAGE Einstein Services – Yoff, Dakar, Sénégal
+DOMAINE einsteinservicesvoyages.com
+DATE Septembre 2026
+VERSION 1.0 – document de travail
+
+-- 1 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 01
+Sommaire
+01 Objectifs de la plateforme
+02 Présentation de l’agence
+03 Design et identité visuelle
+04 Arborescence du site
+05 Nos services
+06 Nos partenaires
+07 Contenus et médias
+08 Fonctionnalités générales
+09 Chatbot intelligent
+10 Catalogue des formations
+11 Test d’orientation
+12 Test d’éligibilité Campus France
+13 Sécurité du site
+14 Coordonnées et confidentialité
+15 Éléments à fournir
+Objet du document. Ce cahier des charges définit les attentes d’Einstein Services pour la
+création de son site internet officiel : objectifs, contenus, fonctionnalités, identité visuelle et
+exigences de sécurité. Les mentions [entre crochets] signalent les éléments à confirmer ou à
+fournir.
+
+-- 2 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 02
+01 OBJECTIFS DE LA PLATEFORME
+n Objectif principal : présenter l’agence et ses services, rassurer les familles grâce à des
+partenaires reconnus, et générer des demandes de contact et d’accompagnement.
+n Objectif secondaire : automatiser progressivement une partie des inscriptions et permettre le
+suivi des dossiers en ligne.
+n Cibles : lycéens et bacheliers sénégalais et ouest-africains, étudiants en licence ou en master,
+ainsi que leurs parents, qui financent souvent le projet et doivent être rassurés.
+n Clients voyage : particuliers et professionnels ayant besoin d’un visa, d’un billet d’avion ou
+d’une réservation d’hôtel.
+02 PRÉSENTATION DE L’AGENCE
+Einstein Services est une agence d’orientation et de mobilité internationale fondée en 2024 et
+basée à Yoff, Dakar. Elle accompagne les étudiants à chaque étape de leur projet : orientation,
+admission, Campus France, Parcoursup, visa, logement, financement et voyage.
+≈ 500 50+ 100+ 5
+étudiants accompagnés
+en France
+étudiants accompagnés
+au Canada
+étudiants dans le reste de
+l’Europe destinations d’études
+n Destinations : France, Canada, Belgique, Suisse, Italie.
+n Présence à l’international : relais à Paris et à Lille.
+n Équipe : section « Notre équipe » avec photos et fonctions. [photos à fournir]
+n Mise en valeur : compteurs animés pour les chiffres clés, rubriques mission, valeurs et histoire
+de l’agence.
+03 DESIGN ET IDENTITÉ VISUELLE
+n Sites de référence : Univers France Succès et Nexroom, pour leur style moderne, clair et
+rassurant.
+n Couleurs officielles : bleu royal et ambre (déjà utilisées sur les brochures et présentations de
+l’agence).
+Bleu royal Ambre Bleu nuit
+n Rendu attendu : site professionnel et attractif, animations légères, visuels d’étudiants et de
+destinations, icônes modernes.
+n Mobile d’abord : adaptation parfaite au téléphone, la majorité des visiteurs venant du mobile.
+n Performance : chargement rapide, y compris avec une connexion limitée.
+n Charte : [logo HD et polices à transmettre]
+
+-- 3 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 03
+04 ARBORESCENCE DU SITE
+N° Page Contenu principal
+1 Accueil Présentation, chiffres clés, services, partenaires,
+témoignages
+2 L’agence Histoire, mission, valeurs, équipe, chiffres
+3 Nos services Une page détaillée par service
+4 Nos destinations France, Canada, Belgique, Suisse, Italie
+5 Formations Catalogue des formations des établissements
+6 Test d’orientation Questionnaire interactif
+7 Test d’éligibilité Campus France Évaluation indicative du profil
+8 Nos partenaires Logos classés par catégorie
+9 Témoignages Avis écrits et vidéos d’étudiants
+10 Actualités / Blog Échéances, bourses, procédures
+11 FAQ Questions fréquentes interactives
+12 Contact et rendez-vous Formulaires, WhatsApp, carte, prise de rendez-vous
+13 Espace client (phase 2) Suivi sécurisé des dossiers
+05 NOS SERVICES
+Chaque service dispose de sa propre page : description, étapes de l’accompagnement,
+documents requis, FAQ, bouton « Demander un accompagnement » et bouton WhatsApp. Sur la
+page d’accueil, les services sont présentés sous forme de cartes avec icônes.
+1. Orientation et conseils
+• Bilan de profil, choix de la formation et de la
+destination
+• Tests d’orientation et d’éligibilité en ligne
+• Rendez-vous sur place ou en visio
+2. Préinscriptions et admissions
+• Parcoursup et Campus France (« Études en
+France »)
+• Candidatures directes auprès des
+établissements
+• Lettres de motivation et CV
+• Suivi jusqu’à l’inscription
+3. Assistance visa
+• Visa études, tourisme et travail
+• Visa affaires et visite familiale [à confirmer]
+• Constitution du dossier et prise de rendez-vous
+• Préparation à l’entretien
+4. Financement et garanties
+• AVI via Univers France Succès
+• Conseils sur les justificatifs de ressources
+• Informations sur les bourses
+5. Logement
+• Logement étudiant via Nexroom
+• Attestation d’hébergement pour le visa
+6. Billetterie
+• Billets d’avion toutes compagnies et destinations
+• Conseils tarifs et franchises bagages étudiants
+
+-- 4 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 04
+7. Hôtels et séjours
+• Réservation d’hôtels
+• Séjours touristiques et voyages d’affaires
+• Réservations pour dossier de visa
+8. Assurance voyage
+• Assurance voyage et santé étudiante
+• [partenaire à préciser]
+9. Accompagnement et incubation de
+projets
+• Accompagnement des porteurs de projets
+• Conseil en création et formalisation d’entreprise
+• Mise en relation [détails à préciser]
+10. Accueil et suivi à l’arrivée
+• Relais à Paris et à Lille
+• Aide à l’installation [contenu à confirmer]
+06 NOS PARTENAIRES
+Un bandeau défilant de logos sera affiché sur la page d’accueil, complété par une page dédiée
+classée par catégorie. Chaque logo sera cliquable et accompagné d’une courte description du
+partenariat.
+Catégorie Partenaires
+Structures financières Univers France Succès (AVI) – Einstein Services est son premier
+partenaire depuis 2024. [autres partenaires financiers ou banques]
+Structures immobilières Nexroom (logement étudiant). [autres partenaires]
+Établissements
+d’enseignement [liste des écoles et universités partenaires officielles, avec logos]
+Assurances de voyage [nom de l’assureur partenaire]
+Autres partenaires [transport, billetterie, hôtellerie, etc.]
+Les logos seront utilisés avec l’accord écrit de chaque partenaire.
+07 CONTENUS ET MÉDIAS
+n Textes : une partie existe déjà (brochures, présentations institutionnelles, guide visa France) et
+sera adaptée. Le reste sera rédigé puis validé par l’agence.
+n Photos et vidéos : [photos de l’agence, de l’équipe et des étudiants], complétées par des
+images libres de droits. Intégration des vidéos TikTok de l’agence.
+n Témoignages : avis d’étudiants avec photo, école et pays, idéalement en vidéo.
+08 FONCTIONNALITÉS GÉNÉRALES
+n Bouton WhatsApp flottant, visible sur toutes les pages.
+n Formulaire d’évaluation de profil : niveau, moyenne, destination, budget, domaine d’études.
+n Prise de rendez-vous en ligne (type Calendly).
+n Blog des actualités et échéances : Parcoursup, Campus France, visas, bourses.
+n FAQ interactive.
+n Liens vers les réseaux sociaux : TikTok, Facebook, Instagram, LinkedIn.
+
+-- 5 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 05
+n Espace d’administration pour gérer les contenus, formations, demandes et rendez-vous.
+n Espace client pour le suivi des dossiers (phase 2).
+n Version anglaise : [à préciser]
+n Référencement naturel (SEO) : « études en France Sénégal », « visa étudiant Dakar », etc.
+09 CHATBOT INTELLIGENT
+Assistant virtuel disponible 24h/24 sur toutes les pages, sous le nom Nafi, déjà conçu pour
+l’agence.
+n Répondre aux questions fréquentes : destinations, démarches, calendrier, documents.
+n Qualifier les prospects : niveau, projet, destination.
+n Orienter vers le test d’éligibilité ou la prise de rendez-vous.
+n Transférer vers un conseiller humain sur WhatsApp si nécessaire.
+n Enregistrer les conversations dans l’espace d’administration pour le suivi commercial.
+Règle : le chatbot ne communique aucun tarif. L’utilisateur est redirigé vers un conseiller.
+10 CATALOGUE DES FORMATIONS
+n Base de données des formations proposées par les établissements partenaires.
+n Filtres : pays, ville, domaine, niveau (BTS, Licence, Bachelor, Master, ingénieur), langue, rentrée,
+frais de scolarité.
+n Fiche détaillée : établissement et logo, conditions d’admission, durée, débouchés, dates
+limites.
+n Bouton « Je candidate avec Einstein Services » relié au formulaire de contact.
+n Gestion autonome depuis l’administration : ajout, modification, archivage.
+11 TEST D’ORIENTATION
+n Questionnaire interactif : centres d’intérêt, matières fortes, projet professionnel, budget.
+n Résultat personnalisé : domaines recommandés, destinations adaptées et formations
+correspondantes du catalogue.
+n Résultat envoyé par e-mail, transmis à l’agence, avec proposition de rendez-vous.
+12 TEST D’ÉLIGIBILITÉ CAMPUS FRANCE
+Test rapide évaluant la faisabilité du projet selon les critères suivants :
+– niveau d’études et moyennes ;
+– niveau de français (TCF ou DELF le cas échéant) ;
+– cohérence du parcours ;
+– capacité de financement (AVI ou garant) ;
+– respect des dates de la procédure.
+Éligible À renforcer Non éligible pour le moment
+
+-- 6 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 06
+n Résultat accompagné de conseils ; si le profil est éligible, redirection vers la prise de
+rendez-vous.
+Mention obligatoire : « Test indicatif – ne remplace pas la décision de Campus France ni des
+établissements. »
+13 SÉCURITÉ DU SITE – EXIGENCE PRIORITAIRE
+Infrastructure
+• Certificat SSL (HTTPS) sur tout le site
+• Hébergement professionnel fiable
+• Sauvegardes automatiques quotidiennes
+Protection
+• Pare-feu applicatif (WAF)
+• Protection DDoS, injections, force brute
+• Formulaires anti-spam (reCAPTCHA)
+Accès
+• Double authentification (2FA)
+• Mots de passe robustes
+• Rôles distincts : administrateur, conseiller,
+secrétariat
+Données des étudiants
+• Documents chiffrés (passeports, relevés,
+attestations)
+• Accès limité aux personnes autorisées
+Conformité
+• Loi sénégalaise sur les données personnelles
+(déclaration CDP)
+• RGPD pour les utilisateurs en Europe
+• Politique de confidentialité, cookies,
+consentement explicite
+Maintenance
+• Mises à jour régulières du site et des extensions
+• Surveillance continue
+• Délai d’intervention défini au contrat
+14 COORDONNÉES ET CONFIDENTIALITÉ
+Domaine einsteinservicesvoyages.com
+E-mail contact@einsteinservicesvoyages.com
+Téléphones +221 33 830 54 60 / +221 78 387 62 62 / +221 78 733 81 81
+Adresse Route de l’Aéroport, près de la Senelec, Yoff, Dakar
+À intégrer Carte Google Maps, politique de confidentialité
+Confidentialité : les numéros NINEA et RCCM ainsi que les documents officiels de l’agence
+(registre du commerce, attestation NINEA) ne doivent pas être publiés sur le site.
+
+-- 7 of 8 --
+
+EINSTEIN SERVICES Cahier des charges – Site internet
+contact@einsteinservicesvoyages.com • +221 33 830 54 60 • Yoff, Dakar 07
+15 ÉLÉMENTS À FOURNIR PAR L’AGENCE
+☐ Logo en haute définition et polices officielles
+☐ Photos de l’agence, de l’équipe et des étudiants
+☐ Logos et accords des partenaires (financiers, immobiliers, établissements, assurance)
+☐ Liste des formations et établissements partenaires
+☐ Témoignages écrits et vidéo d’étudiants
+☐ Précisions : visas affaires/familiaux, incubation de projets, accueil à l’arrivée
+☐ Choix concernant la version anglaise du site
+Einstein Services – Boubacar Diallo, Président Directeur Général
+Pour toute question relative à ce cahier des charges : contact@einsteinservicesvoyages.com
+
+-- 8 of 8 --
+

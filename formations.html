@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogue des formations — Einstein Services</title>
+    <meta
+      name="description"
+      content="Explorez les formations proposées par les établissements partenaires d'Einstein Services : BTS, Licence, Bachelor, Master, écoles d'ingénieurs en France, Canada, Belgique, Suisse et Italie."
+    />
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="img/logo.svg"
+            alt="Logo Einstein Services"
+            class="logo-img"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="agence.html">L'agence</a>
+          <a href="services.html">Services</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="blog.html">Actualités</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="index.html#contact" class="btn btn-orange">Nous contacter</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Catalogue des <span class="grad-orange">formations</span></h2>
+          <p>
+            Formations proposées par nos établissements partenaires. Filtrez
+            selon votre projet, puis candidatez avec nous en un clic.
+          </p>
+        </div>
+
+        <!-- ===== Filtres ===== -->
+        <div class="filters card" id="filters">
+          <select id="fPays">
+            <option value="">Tous les pays</option>
+            <option>France</option>
+            <option>Canada</option>
+            <option>Belgique</option>
+            <option>Suisse</option>
+            <option>Italie</option>
+          </select>
+          <select id="fNiveau">
+            <option value="">Tous les niveaux</option>
+            <option>BTS</option>
+            <option>Licence</option>
+            <option>Bachelor</option>
+            <option>Master</option>
+            <option>Ingénieur</option>
+          </select>
+          <select id="fDomaine">
+            <option value="">Tous les domaines</option>
+            <option>Sciences & ingénierie</option>
+            <option>Commerce & gestion</option>
+            <option>Droit & sciences humaines</option>
+            <option>Art & design</option>
+            <option>Informatique</option>
+            <option>Santé</option>
+          </select>
+          <select id="fLangue">
+            <option value="">Toutes les langues</option>
+            <option>Français</option>
+            <option>Anglais</option>
+            <option>Français / Anglais</option>
+          </select>
+          <button id="fReset" class="btn btn-ghost">Réinitialiser</button>
+        </div>
+
+        <!-- ===== Résultats ===== -->
+        <p class="muted" id="fCount"></p>
+        <div class="grid grid-3" id="formationsGrid"></div>
+        <p id="noResult" class="disclaimer" hidden>
+          Aucune formation ne correspond à ces filtres pour le moment. Nos
+          partenaires s'agrandissent régulièrement — contactez-nous pour être
+          averti des nouveautés.
+        </p>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          src="img/logo-light.svg"
+          alt="Einstein Services"
+          class="footer-logo"
+        />
+        <p>
+          <strong>Einstein Services</strong> — Orientation · Mobilité
+          internationale · Voyages.<br />
+          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54
+          60
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.svg" alt="TikTok" /></a>
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
+        <p class="muted footer-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          ·
+          <a href="politique-confidentialite.html"
+            >Politique de confidentialité</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/221783876262" class="wa-float" aria-label="WhatsApp"
+      >💬</a
+    >
+    <script src="js/code.js"></script>
+    <script src="js/formations.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test d'éligibilité Campus France — Einstein Services</title>
+    <meta
+      name="description"
+      content="Évaluez gratuitement et en 2 minutes la faisabilité de votre projet d'études en France : niveau, français, cohérence du parcours, financement et calendrier."
+    />
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="img/logo.svg"
+            alt="Logo Einstein Services"
+            class="logo-img"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="services.html">Services</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="blog.html">Actualités</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="test-orientation.html">Test d'orientation</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#contact" class="btn btn-orange">Nous contacter</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container test-container">
+        <div class="section-head">
+          <h2>
+            Test d'<span class="grad-orange">éligibilité Campus France</span>
+          </h2>
+          <p>
+            Évaluez en 2 minutes la faisabilité de votre projet d'études en
+            France selon les 5 critères clés de la procédure.
+          </p>
+        </div>
+
+        <form class="card test-form" id="eligForm">
+          <h3>1. Niveau d'études et moyennes</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="niveau" value="2" required /> Bac à bac+2 en
+              cours, moyennes ≥ 12/20</label
+            >
+            <label
+              ><input type="radio" name="niveau" value="2" /> Bac+2 à bac+3
+              obtenu, moyennes correctes</label
+            >
+            <label
+              ><input type="radio" name="niveau" value="1" /> Dossiers avec
+              moyennes inférieures à 10/20</label
+            >
+            <label
+              ><input type="radio" name="niveau" value="0" /> Parcours très
+              irrégulier ou incomplet</label
+            >
+          </div>
+
+          <h3>2. Niveau de français</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="langue" value="2" required /> TCF/TEF
+              B2 ou plus, ou DELF B2 obtenu</label
+            >
+            <label
+              ><input type="radio" name="langue" value="1" /> TCF/TEF B1, ou en
+              préparation</label
+            >
+            <label
+              ><input type="radio" name="langue" value="0" /> Aucun test de
+              français pour le moment</label
+            >
+          </div>
+
+          <h3>3. Cohérence du parcours</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="coherence" value="2" required /> La
+              formation visée prolonge naturellement mon parcours</label
+            >
+            <label
+              ><input type="radio" name="coherence" value="1" /> Changement de
+              domaine mais justifiable</label
+            >
+            <label
+              ><input type="radio" name="coherence" value="0" /> Projet sans
+              lien clair avec mon parcours</label
+            >
+          </div>
+
+          <h3>4. Capacité de financement</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="financement" value="2" required />
+              Garant avec revenus réguliers ou AVI en cours</label
+            >
+            <label
+              ><input type="radio" name="financement" value="1" /> Financement
+              partiel / en construction</label
+            >
+            <label
+              ><input type="radio" name="financement" value="0" /> Aucun
+              financement identifié</label
+            >
+          </div>
+
+          <h3>5. Respect du calendrier</h3>
+          <div class="field-group">
+            <label
+              ><input type="radio" name="calendrier" value="2" required /> Je
+              m'y prends 8 mois ou plus avant la rentrée</label
+            >
+            <label
+              ><input type="radio" name="calendrier" value="1" /> Entre 4 et 8
+              mois avant la rentrée visée</label
+            >
+            <label
+              ><input type="radio" name="calendrier" value="0" /> Moins de 4
+              mois avant la rentrée visée</label
+            >
+          </div>
+
+          <button type="submit" class="btn btn-orange btn-lg">
+            Voir mon résultat
+          </button>
+        </form>
+
+        <div class="card result-card" id="resultat" hidden>
+          <h3 id="resultTitle"></h3>
+          <p id="resultText"></p>
+          <div class="service-actions">
+            <a href="index.html#contact" class="btn btn-orange" id="resultCta"
+              >Prendre rendez-vous</a
+            >
+            <a href="https://wa.me/221783876262" class="btn btn-ghost"
+              >💬 WhatsApp</a
+            >
+          </div>
+        </div>
+
+        <p class="disclaimer">
+          ⚠️ Test indicatif — ne remplace pas la décision de Campus France ni
+          des établissements.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          src="img/logo-light.svg"
+          alt="Einstein Services"
+          class="footer-logo"
+        />
+        <p>
+          <strong>Einstein Services</strong> — Orientation · Mobilité
+          internationale · Voyages.<br />
+          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54
+          60
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.svg" alt="TikTok" /></a>
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
+        <p class="muted footer-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          ·
+          <a href="politique-confidentialite.html"
+            >Politique de confidentialité</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/221783876262" class="wa-float" aria-label="WhatsApp"
+      >💬</a
+    >
+    <script src="js/code.js"></script>
+    <script src="js/test-eligibilite.js"></script>
+  </body>
+</html>
