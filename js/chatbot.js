@@ -1,143 +1,105 @@
-/* ===== Chatbot Nafi � Einstein Services ===== */
-/* Assistant virtuel 24h/24 (cahier des charges �09) :
-   - r�pond aux questions fr�quentes (destinations, d�marches, calendrier, documents)
+/* ===== Chatbot Nafi — Einstein Services ===== */
+/* Assistant virtuel 24h/24 (cahier des charges §09) :
+   - répond aux questions fréquentes (destinations, démarches, calendrier, documents)
    - qualifie les prospects (niveau, projet, destination)
-   - oriente vers le test d'�ligibilit� ou la prise de rendez-vous
-   - transf�re vers un conseiller humain sur WhatsApp
+   - oriente vers le test d'éligibilité ou la prise de rendez-vous
+   - transfère vers un conseiller humain sur WhatsApp
    - enregistre les conversations (localStorage) pour le suivi commercial
-   R�gle : Nafi ne communique AUCUN tarif � il redirige vers un conseiller. */
+   Règle : Nafi ne communique AUCUN tarif — il redirige vers un conseiller. */
 
 const NAFI_WHATSAPP = "221783876262";
 const NAFI_CONTACT_EMAIL = "contact@einsteinservicesvoyages.com";
 
-/* ---------- Moteur de r�ponses ---------- */
+/* ---------- Moteur de réponses ---------- */
 const NAFI_REPLIES = [
   {
     kw: ["bonjour", "salut", "hello", "bonsoir", "coucou"],
-    r: "Bonjour et bienvenue chez Einstein Services ! ?? Je suis Nafi, votre assistante virtuelle. Comment puis-je vous aider ? Tapez � menu � pour voir tout ce que je peux faire.",
+    r: "Bonjour et bienvenue chez Einstein Services ! 👋 Je suis Nafi, votre assistante virtuelle. Comment puis-je vous aider ? Tapez « menu » pour voir tout ce que je peux faire.",
   },
   {
     kw: ["menu", "aide", "option", "choix", "help"],
-    r: "Voici ce que je peux faire pour vous :\n1?? Destinations d'�tudes\n2?? D�marches & documents (Campus France, visa�)\n3?? Calendrier des candidatures\n4?? Tester mon �ligibilit�\n5?? Prendre rendez-vous\n6?? Parler � un conseiller (WhatsApp)\n\nTapez simplement un mot-cl�, par exemple � Canada �, � visa � ou � rendez-vous �.",
+    r: "Voici ce que je peux faire pour vous :\n1️⃣ Destinations d'études\n2️⃣ Démarches & documents (Campus France, visa…)\n3️⃣ Calendrier des candidatures\n4️⃣ Tester mon éligibilité\n5️⃣ Prendre rendez-vous\n6️⃣ Parler à un conseiller (WhatsApp)\n\nTapez simplement un mot-clé, par exemple « Canada », « visa » ou « rendez-vous ».",
   },
   {
     kw: ["france", "campus france", "parcoursup", "etudes en france"],
-    r: "???? La France est notre destination n�1 : universit�s, grandes �coles, BTS/BUT�\nLa proc�dure passe par Campus France (� �tudes en France �) ou Parcoursup selon votre situation.\nVous voulez savoir si votre profil est �ligible ? Faites le test gratuit : test-eligibilite.html ??",
+    r: "🇫🇷 La France est notre destination n°1 : universités, grandes écoles, BTS/BUT…\nLa procédure passe par Campus France (« Études en France ») ou Parcoursup selon votre situation.\nVous voulez savoir si votre profil est éligible ? Faites le test gratuit : test-eligibilite.html 👉",
   },
   {
-    kw: ["canada", "quebec", "montr�al", "montreal", "toronto"],
-    r: "???? Le Canada est tr�s demand� : coll�ges (DEC technique), universit�s, possibilit� de permis de travail post-dipl�me.\nRent�es principales : ao�t et septembre. Il faut s'y prendre plusieurs mois � l'avance !\nVoulez-vous passer au test d'�ligibilit� pour v�rifier votre dossier ?",
+    kw: ["canada", "quebec", "montréal", "montreal", "toronto"],
+    r: "🇨🇦 Le Canada est très demandé : collèges (DEC technique), universités, possibilité de permis de travail post-diplôme.\nRentrées principales : août et septembre. Il faut s'y prendre plusieurs mois à l'avance !\nVoulez-vous passer au test d'éligibilité pour vérifier votre dossier ?",
   },
   {
-    kw: ["belgique", "belgique", "bruxelles"],
-    r: "???? La Belgique offre un excellent rapport qualit�/prix : hautes �coles et universit�s francophones reconnues, co�t de la vie raisonnable et villes � taille humaine (Bruxelles, Li�ge�).",
+    kw: ["belgique", "bruxelles"],
+    r: "🇧🇪 La Belgique offre un excellent rapport qualité/prix : hautes écoles et universités francophones reconnues, coût de la vie raisonnable et villes à taille humaine (Bruxelles, Liège…).",
   },
   {
-    kw: ["suisse", "gen�ve", "geneve"],
-    r: "???? La Suisse : excellence acad�mique, d�bouch�s solides, qualit� de vie exceptionnelle. Les frais universitaires sont mod�r�s mais le co�t de la vie est �lev� � un budget solide est n�cessaire.",
+    kw: ["suisse", "genève", "geneve"],
+    r: "🇨🇭 La Suisse : excellence académique, débouchés solides, qualité de vie exceptionnelle. Les frais universitaires sont modérés mais le coût de la vie est élevé — un budget solide est nécessaire.",
   },
   {
     kw: ["italie", "italy", "rome", "milan"],
-    r: "???? L'Italie : universit�s historiques, frais accessibles (souvent selon les revenus de la famille) et de plus en plus de cursus en anglais. Villes phares : Rome, Milan, Bologne.",
+    r: "🇮🇹 L'Italie : universités historiques, frais accessibles (souvent selon les revenus de la famille) et de plus en plus de cursus en anglais. Villes phares : Rome, Milan, Bologne.",
   },
   {
-    kw: ["visa", "vls", "titre de s�jour"],
-    r: "?? Pour le visa �tudiant, il faut g�n�ralement : une admission confirm�e, un justificatif de financement, un logement et une assurance. Nous vous accompagnons � chaque �tape, y compris la pr�paration du rendez-vous consulaire.\nSouhaitez-vous un rendez-vous avec un conseiller ?",
+    kw: ["visa", "vls", "titre de séjour"],
+    r: "🛂 Pour le visa étudiant, il faut généralement : une admission confirmée, un justificatif de financement, un logement et une assurance. Nous vous accompagnons à chaque étape, y compris la préparation du rendez-vous consulaire.\nSouhaitez-vous un rendez-vous avec un conseiller ?",
   },
   {
-    kw: [
-      "document",
-      "dossier",
-      "papier",
-      "pieces",
-      "pi�ces",
-      "releve",
-      "relev�",
-    ],
-    r: "?? Documents g�n�ralement demand�s : relev�s de notes et dipl�mes (traduits si besoin), pi�ce d'identit�/passeport, CV, lettre de motivation, justificatif de langue (TCF/DELF/IELTS), preuve de financement.\nJe peux vous orienter vers un conseiller pour une checklist personnalis�e. Dites � conseiller � !",
+    kw: ["document", "dossier", "papier", "pieces", "pièces", "releve", "relevé"],
+    r: "📄 Documents généralement demandés : relevés de notes et diplômes (traduits si besoin), pièce d'identité/passeport, CV, lettre de motivation, justificatif de langue (TCF/DELF/IELTS), preuve de financement.\nJe peux vous orienter vers un conseiller pour une checklist personnalisée. Dites « conseiller » !",
   },
   {
-    kw: [
-      "calendrier",
-      "date",
-      "deadline",
-      "quand",
-      "rentree",
-      "rentr�e",
-      "candidature",
-    ],
-    r: "??? Rep�res g�n�raux :\n� France : Campus France/Parcoursup entre novembre et mars selon la proc�dure\n� Canada : candidatures souvent avant janvier-mars pour la rentr�e d'automne\n� Belgique/Suisse/Italie : printemps � d�but d'�t�\nLe plus t�t est le mieux ! Consultez le catalogue : formations.html",
+    kw: ["calendrier", "date", "deadline", "quand", "rentree", "rentrée", "candidature"],
+    r: "📅 Repères généraux :\n• France : Campus France/Parcoursup entre novembre et mars selon la procédure\n• Canada : candidatures souvent avant janvier-mars pour la rentrée d'automne\n• Belgique/Suisse/Italie : printemps à début d'été\nLe plus tôt est le mieux ! Consultez le catalogue : formations.html",
   },
   {
-    kw: ["langue", "tcf", "delf", "ielts", "anglais", "fran�ais"],
-    r: "??? Pour la France, un niveau B2 en fran�ais (TCF/DELF) est g�n�ralement demand�. Pour les cursus en anglais (Canada, Italie�), pr�voyez l'IELTS (souvent 6.0�6.5).\nNous vous aidons � planifier votre test de langue. Dites � rendez-vous � pour �tre accompagn�.",
+    kw: ["langue", "tcf", "delf", "ielts", "anglais", "français"],
+    r: "🗣️ Pour la France, un niveau B2 en français (TCF/DELF) est généralement demandé. Pour les cursus en anglais (Canada, Italie…), prévoyez l'IELTS (souvent 6.0–6.5).\nNous vous aidons à planifier votre test de langue. Dites « rendez-vous » pour être accompagné.",
   },
   {
-    kw: ["test", "eligibilite", "�ligibilit�", "eligible", "profil"],
-    r: "?? Le test d'�ligibilit� �value gratuitement la faisabilit� de votre projet (niveau, langue, financement, calendrier). C'est le meilleur point de d�part : test-eligibilite.html\nEt pour votre orientation : test-orientation.html",
+    kw: ["test", "eligibilite", "éligibilité", "eligible", "profil"],
+    r: "✅ Le test d'éligibilité évalue gratuitement la faisabilité de votre projet (niveau, langue, financement, calendrier). C'est le meilleur point de départ : test-eligibilite.html\nEt pour votre orientation : test-orientation.html",
   },
   {
-    kw: ["logement", "hebergement", "h�bergement", "residence", "r�sidence"],
-    r: "?? Nous proposons une assistance logement : r�sidences �tudiantes, CROUS en France, colocations. L'attestation de logement est aussi souvent requise pour le visa.\nUn conseiller peut vous d�tailler les options : tapez � conseiller �.",
+    kw: ["logement", "hebergement", "hébergement", "residence", "résidence"],
+    r: "🏠 Nous proposons une assistance logement : résidences étudiantes, CROUS en France, colocations. L'attestation de logement est aussi souvent requise pour le visa.\nUn conseiller peut vous détailler les options : tapez « conseiller ».",
   },
   {
-    kw: ["bourse", "financement", "argent", "budget", "cout", "co�t", "frais"],
-    r: "?? Le financement se pr�pare t�t : justificatif de ressources, AVI, garant� Des bourses existent (Eiffel, bourses r�gionales, �tablissements). Je ne peux pas vous communiquer de tarifs � un conseiller se charge de l'aspect financier avec vous. Tapez � conseiller � ou � rendez-vous �.",
+    kw: ["bourse", "financement", "argent", "budget", "cout", "coût", "frais"],
+    r: "💰 Le financement se prépare tôt : justificatif de ressources, AVI, garant… Des bourses existent (Eiffel, bourses régionales, établissements). Je ne peux pas vous communiquer de tarifs — un conseiller se charge de l'aspect financier avec vous. Tapez « conseiller » ou « rendez-vous ».",
   },
   {
-    kw: [
-      "formation",
-      "catalogue",
-      "ecole",
-      "�cole",
-      "universit�",
-      "universite",
-      "master",
-      "licence",
-      "bts",
-      "bachelor",
-    ],
-    r: "?? Notre catalogue r�f�rence les formations de nos �tablissements partenaires avec des filtres (pays, niveau, domaine, langue�). Direction : formations.html",
+    kw: ["formation", "catalogue", "ecole", "école", "université", "universite", "master", "licence", "bts", "bachelor"],
+    r: "🎓 Notre catalogue référence les formations de nos établissements partenaires avec des filtres (pays, niveau, domaine, langue…). Direction : formations.html",
   },
   {
-    kw: ["voyage", "billet", "avion", "hotel", "h�tel", "tourisme"],
-    r: "?? Einstein Services c'est aussi la billetterie : billets d'avion, r�servations d'h�tels, visas de tourisme et d'affaires. Un conseiller s'occupe de votre demande : tapez � conseiller �.",
+    kw: ["voyage", "billet", "avion", "hotel", "hôtel", "tourisme"],
+    r: "✈️ Einstein Services c'est aussi la billetterie : billets d'avion, réservations d'hôtels, visas de tourisme et d'affaires. Un conseiller s'occupe de votre demande : tapez « conseiller ».",
   },
   {
-    kw: [
-      "rendez-vous",
-      "rendez vous",
-      "rdv",
-      "appointment",
-      "conseiller",
-      "humain",
-      "agent",
-      "contact",
-    ],
+    kw: ["rendez-vous", "rendez vous", "rdv", "appointment", "conseiller", "humain", "agent", "contact"],
     r:
-      "?? Tr�s bien ! Pour parler � un conseiller humain :\n� WhatsApp direct : https://wa.me/221783876262\n� T�l�phone : +221 33 830 54 60\n� Email : " +
-      NAFI_CONTACT_EMAIL +
-      "\nOu via le formulaire de contact en page d'accueil : index.html#contact",
+      "👋 Très bien ! Pour parler à un conseiller humain :\n• WhatsApp direct : https://wa.me/" + NAFI_WHATSAPP + "\n• Téléphone : +221 33 830 54 60\n• Email : " + NAFI_CONTACT_EMAIL + "\nOu via le formulaire de contact en page d'accueil : index.html#contact",
   },
   {
-    kw: ["tarif", "prix", "combien", "coute", "co�te", "paiement", "devis"],
-    r: "?? Notre r�gle : Nafi ne communique aucun tarif, pour garantir une information exacte et personnalis�e. Un conseiller vous r�pond tr�s vite sur WhatsApp : https://wa.me/221783876262",
+    kw: ["tarif", "prix", "combien", "coute", "coûte", "paiement", "devis"],
+    r: "📋 Notre règle : Nafi ne communique aucun tarif, pour garantir une information exacte et personnalisée. Un conseiller vous répond très vite sur WhatsApp : https://wa.me/" + NAFI_WHATSAPP,
   },
   {
     kw: ["merci", "super", "parfait", "top", "cool"],
-    r: "Avec plaisir ! ?? N'h�sitez pas si vous avez d'autres questions. Bonne pr�paration de votre projet d'�tudes !",
+    r: "Avec plaisir ! 😊 N'hésitez pas si vous avez d'autres questions. Bonne préparation de votre projet d'études !",
   },
   {
-    kw: ["adresse", "o�", "ou etes", "localisation", "bureau", "yoff"],
-    r: "?? Nous sommes � Yoff (Dakar, S�n�gal) : Route de l'A�roport, pr�s de la Senelec.\nT�l�phones : +221 33 830 54 60 � +221 78 387 62 62 � +221 78 733 81 81",
+    kw: ["adresse", "où", "ou etes", "localisation", "bureau", "yoff"],
+    r: "📍 Nous sommes à Yoff (Dakar, Sénégal) : Route de l'Aéroport, près de la Senelec.\nTéléphones : +221 33 830 54 60 • +221 78 387 62 62 • +221 78 733 81 81",
   },
   {
     kw: ["qui es", "nafi", "robot", "humain", "personne"],
-    r: "Je suis Nafi ??, l'assistante virtuelle d'Einstein Services, disponible 24h/24 ! Je r�ponds aux questions courantes et je vous mets en relation avec un conseiller humain d�s que n�cessaire.",
+    r: "Je suis Nafi 🤖, l'assistante virtuelle d'Einstein Services, disponible 24h/24 ! Je réponds aux questions courantes et je vous mets en relation avec un conseiller humain dès que nécessaire.",
   },
 ];
 const NAFI_FALLBACK =
-  "Je ne suis pas s�re d'avoir bien compris ?? Essayez un mot-cl� comme � France �, � visa �, � documents �, � calendrier �, � logement �, � formation � ou � rendez-vous �. Ou tapez � menu � pour voir les options.";
+  "Je ne suis pas sûre d'avoir bien compris 🤔 Essayez un mot-clé comme « France », « visa », « documents », « calendrier », « logement », « formation » ou « rendez-vous ». Ou tapez « menu » pour voir les options.";
 
 /* ---------- Enregistrement des conversations ---------- */
 function nafiSave(msg, from) {
@@ -173,29 +135,29 @@ const NAFI_HTML = `
 <div id="nafiWidget" aria-live="polite">
   <div class="nafi-panel" id="nafiPanel" hidden>
     <div class="nafi-head">
-      <div class="nafi-avatar">??</div>
+      <div class="nafi-avatar">🤖</div>
       <div>
         <strong>Nafi</strong>
-        <small>Assistant Einstein Services � en ligne</small>
+        <small>Assistant Einstein Services — en ligne</small>
       </div>
-      <button class="nafi-close" id="nafiClose" aria-label="Fermer">?</button>
+      <button class="nafi-close" id="nafiClose" aria-label="Fermer">✕</button>
     </div>
     <div class="nafi-body" id="nafiBody">
-      <div class="nafi-msg bot">Bonjour ! ?? Je suis <strong>Nafi</strong>, l'assistante virtuelle d'Einstein Services. Comment puis-je vous aider ?</div>
+      <div class="nafi-msg bot">Bonjour ! 👋 Je suis <strong>Nafi</strong>, l'assistante virtuelle d'Einstein Services. Comment puis-je vous aider ?</div>
       <div class="nafi-quick">
-        <button data-q="Destinations d'�tudes">?? Destinations</button>
-        <button data-q="Documents et d�marches">?? D�marches</button>
-        <button data-q="Tester mon �ligibilit�">?? �ligibilit�</button>
-        <button data-q="Parler � un conseiller">?? Conseiller</button>
+        <button data-q="Destinations d'études">🌍 Destinations</button>
+        <button data-q="Documents et démarches">📄 Démarches</button>
+        <button data-q="Tester mon éligibilité">✅ Éligibilité</button>
+        <button data-q="Parler à un conseiller">💬 Conseiller</button>
       </div>
     </div>
     <form class="nafi-input" id="nafiForm">
-      <input id="nafiText" type="text" placeholder="�crivez votre question�" autocomplete="off" />
-      <button type="submit" aria-label="Envoyer">?</button>
+      <input id="nafiText" type="text" placeholder="Écrivez votre question…" autocomplete="off" />
+      <button type="submit" aria-label="Envoyer">➤</button>
     </form>
   </div>
   <button class="nafi-toggle" id="nafiToggle" aria-label="Ouvrir le chat">
-    <span>??</span>
+    <span>💬</span>
   </button>
 </div>`;
 
@@ -210,6 +172,7 @@ const nafiBody = document.getElementById("nafiBody");
 const nafiForm = document.getElementById("nafiForm");
 const nafiText = document.getElementById("nafiText");
 
+/* Le chat ne s'ouvre JAMAIS tout seul : uniquement sur clic du bouton */
 nafiToggle.addEventListener("click", () => {
   nafiPanel.hidden = !nafiPanel.hidden;
   nafiToggle.classList.toggle("hidden", !nafiPanel.hidden);
@@ -227,7 +190,7 @@ function nafiAdd(text, who) {
     if (i) div.appendChild(document.createElement("br"));
     div.appendChild(document.createTextNode(line));
   });
-  // Transforme les liens cit�s en liens cliquables
+  // Transforme les liens cités en liens cliquables
   div.innerHTML = div.innerHTML.replace(
     /(test-eligibilite\.html|test-orientation\.html|formations\.html|index\.html#contact|https:\/\/wa\.me\/\d+)/g,
     '<a href="$1" target="_blank" rel="noopener">$1</a>',
