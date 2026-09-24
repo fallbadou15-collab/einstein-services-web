@@ -56,9 +56,6 @@ if (form) {
   });
 }
 
-// WhatsApp flottant : m�me num�ro que le formulaire
-const waFloat = document.getElementById("waFloat");
-if (waFloat) waFloat.href = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 // Animations d'apparition au scroll
 const observer = new IntersectionObserver(
@@ -100,4 +97,12 @@ if (profilForm) {
     document.getElementById("profilOk").hidden = false;
     profilForm.reset();
   });
+}
+
+// Ombre de la navbar au scroll
+const navbar = document.querySelector(".navbar");
+if (navbar) {
+  const onScroll = () => navbar.classList.toggle("scrolled", window.scrollY > 10);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 }

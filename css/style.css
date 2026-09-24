@@ -685,27 +685,6 @@ a {
   text-decoration: underline;
 }
 
-/* ---- WhatsApp flottant ---- */
-.wa-float {
-  position: fixed;
-  bottom: 1.4rem;
-  right: 1.4rem;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-size: 1.6rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-  z-index: 60;
-  transition: 0.25s;
-}
-.wa-float:hover {
-  transform: scale(1.1);
-}
-
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .steps-list {
@@ -1205,4 +1184,397 @@ a {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(30, 42, 90, 0.18);
   flex-shrink: 0;
+}
+
+/* ===== POLISH & OPTIMISATIONS VISUELLES (v2) ===== */
+
+/* Accessibilité : focus visible partout */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(242, 131, 60, 0.55);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Cartes : élévation douce au survol */
+.card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px -18px rgba(30, 42, 90, 0.28);
+}
+.card:hover .card-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+.card-icon {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Destinations : zoom léger du drapeau */
+.dest {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.dest:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px -18px rgba(30, 42, 90, 0.3);
+}
+.dest:hover .flag-img {
+  transform: scale(1.1);
+}
+.flag-img {
+  transition: transform 0.3s ease;
+}
+
+/* Témoignages : liseré ambre au survol */
+.temoin {
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.temoin:hover {
+  border-left-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px -16px rgba(30, 42, 90, 0.22);
+}
+
+/* Étapes du parcours : mise en valeur au survol */
+.step {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -14px rgba(30, 42, 90, 0.25);
+}
+.step:hover .step-num {
+  transform: scale(1.12);
+}
+.step-num {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hero : halo lumineux animé très léger sur le blob */
+@keyframes blobDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, -4%) scale(1.05); }
+}
+.blob-blue {
+  animation: blobDrift 9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .blob-blue,
+  .marquee-track {
+    animation: none !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Boutons : ombre colorée au survol */
+.btn-orange {
+  box-shadow: 0 4px 14px -6px rgba(242, 131, 60, 0.55);
+}
+.btn-orange:hover {
+  box-shadow: 0 10px 24px -8px rgba(242, 131, 60, 0.65);
+}
+
+/* Images : légère amélioration du rendu */
+img {
+  image-rendering: auto;
+}
+
+/* Sélection de texte aux couleurs de la marque */
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Scrollbar discrète (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--blue), var(--navy));
+  border-radius: 999px;
+}
+
+/* Navbar : ombre au scroll (classe ajoutée en JS) */
+.navbar.scrolled {
+  box-shadow: 0 8px 24px -12px rgba(30, 42, 90, 0.35);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+}
+.navbar {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Apparition en douceur des sections (IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Marquee partenaires : pause au survol */
+.partner-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== CHATBOT NAFI ===== */
+#nafiWidget {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  z-index: 70;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Bouton d'ouverture */
+.nafi-toggle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(140deg, var(--blue), var(--navy));
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(30, 42, 90, 0.35);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+.nafi-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 14px 30px rgba(30, 42, 90, 0.45);
+}
+.nafi-toggle.hidden {
+  display: none;
+}
+
+/* Panneau */
+.nafi-panel {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: min(340px, calc(100vw - 2rem));
+  max-height: min(520px, calc(100vh - 8rem));
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px -12px rgba(30, 42, 90, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: nafiPop 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: bottom right;
+}
+@keyframes nafiPop {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* En-tête */
+.nafi-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(120deg, var(--navy), #2a3a75);
+  color: #fff;
+}
+.nafi-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.nafi-head strong {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+.nafi-head small {
+  display: block;
+  font-size: 0.72rem;
+  color: #c3cce8;
+}
+.nafi-close {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.nafi-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Corps des messages */
+.nafi-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--cream-2);
+  min-height: 220px;
+}
+.nafi-msg {
+  max-width: 85%;
+  padding: 0.65rem 0.95rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  word-break: break-word;
+}
+.nafi-msg.bot {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--ink);
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 3px 10px rgba(30, 42, 90, 0.08);
+}
+.nafi-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(120deg, var(--blue), var(--navy));
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+.nafi-msg a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.nafi-msg.user a {
+  color: #ffd98a;
+}
+.nafi-msg strong {
+  color: inherit;
+}
+
+/* Boutons de raccourcis */
+.nafi-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-self: flex-start;
+  max-width: 90%;
+}
+.nafi-quick button {
+  background: #fff;
+  border: 1.5px solid #e5e0d8;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.nafi-quick button:hover {
+  border-color: var(--orange);
+  background: #fff4ea;
+  transform: translateY(-1px);
+}
+
+/* Zone de saisie */
+.nafi-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.7rem;
+  background: #fff;
+  border-top: 1.5px solid #f0ebe1;
+}
+.nafi-input input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #e5e0d8;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  background: var(--cream-2);
+}
+.nafi-input input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+.nafi-input button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.nafi-input button:hover {
+  background: var(--gold);
+  transform: scale(1.08);
+}
+
+/* Barre de défilement du chat */
+.nafi-body::-webkit-scrollbar {
+  width: 6px;
+}
+.nafi-body::-webkit-scrollbar-thumb {
+  background: #d5cfdd;
+  border-radius: 999px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .nafi-panel {
+    bottom: 70px;
+    right: 0;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nafi-panel {
+    animation: none;
+  }
+  .nafi-toggle:hover {
+    transform: none;
+  }
 }
