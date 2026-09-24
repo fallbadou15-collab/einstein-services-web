@@ -1369,7 +1369,7 @@ img {
   display: none;
 }
 
-/* Panneau */
+/* Panneau — masqué par défaut via [hidden] (ne jamais forcer display:flex sans condition) */
 .nafi-panel {
   position: absolute;
   bottom: 72px;
@@ -1379,6 +1379,11 @@ img {
   background: #fff;
   border-radius: 22px;
   box-shadow: 0 24px 60px -12px rgba(30, 42, 90, 0.4);
+}
+.nafi-panel[hidden] {
+  display: none;
+}
+.nafi-panel:not([hidden]) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
