@@ -1,4 +1,4 @@
-/* ===== Einstein Services — style.css ===== */
+/* ===== Einstein Services � style.css ===== */
 :root {
   --navy: #1e2a5a;
   --blue: #1f6bb5;
@@ -349,7 +349,26 @@ a {
   color: #cfd6ea;
 }
 
-/* ---- Témoignages ---- */
+/* ---- Contact / carte / RDV ---- */
+.map-wrap {
+  margin-top: 1.4rem;
+  box-shadow: 0 8px 24px rgba(30, 42, 90, 0.1);
+  border-radius: 18px;
+}
+.rdv-card {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 2.5rem;
+}
+.rdv-card .card-icon {
+  margin-inline: auto;
+}
+.rdv-card .btn {
+  margin-top: 1.2rem;
+}
+
+/* ---- T�moignages ---- */
 .temoin {
   background: #fff;
   border-radius: var(--radius);
@@ -548,7 +567,7 @@ a {
   color: #aab3d0;
 }
 
-/* ---- Pourquoi nous / Étapes ---- */
+/* ---- Pourquoi nous / �tapes ---- */
 .steps {
   margin-top: 4rem;
   background: #fff;
@@ -627,7 +646,7 @@ a {
   color: var(--muted);
 }
 
-/* ---- Pages légales ---- */
+/* ---- Pages l�gales ---- */
 .legal h1 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 800;
@@ -745,7 +764,7 @@ a {
   }
 }
 
-/* ===== Pages Services détaillées ===== */
+/* ===== Pages Services d�taill�es ===== */
 .service-detail {
   background: #fff;
   border-radius: var(--radius);
@@ -926,7 +945,7 @@ a {
   color: var(--muted);
 }
 
-/* ===== Équipe ===== */
+/* ===== �quipe ===== */
 .member {
   text-align: center;
 }
@@ -955,7 +974,7 @@ a {
   margin-top: 0.2rem;
 }
 
-/* ===== Bandeau partenaires défilant ===== */
+/* ===== Bandeau partenaires d�filant ===== */
 .partner-marquee {
   overflow: hidden;
   background: #fff;
@@ -977,7 +996,7 @@ a {
   color: var(--navy);
   font-size: 0.95rem;
 }
-/* Logos d'écoles style Nexuroom */
+/* Logos d'�coles style Nexuroom */
 .school-logo {
   font-weight: 700;
   font-size: 1.15rem !important;
@@ -1101,7 +1120,7 @@ a {
   text-align: center;
 }
 
-/* ===== Formulaire d'évaluation de profil ===== */
+/* ===== Formulaire d'�valuation de profil ===== */
 .profil-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1145,7 +1164,7 @@ a {
   font-size: 0.88rem;
 }
 
-/* ===== Réseaux sociaux footer ===== */
+/* ===== R�seaux sociaux footer ===== */
 .footer-socials {
   display: flex;
   justify-content: center;

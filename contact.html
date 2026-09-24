@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & rendez-vous — Einstein Services | Yoff, Dakar</title>
+    <meta
+      name="description"
+      content="Contactez Einstein Services à Yoff, Dakar : téléphone, WhatsApp, e-mail, carte Google Maps et prise de rendez-vous en ligne pour votre projet d'études à l'étranger."
+    />
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="img/logo.svg"
+            alt="Logo Einstein Services"
+            class="logo-img"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="agence.html">L'agence</a>
+          <a href="services.html">Services</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="temoignages.html">Témoignages</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="contact.html" class="btn btn-orange">Nous contacter</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== CONTACT ===== -->
+      <section class="section section-cream" id="contact">
+        <div class="container contact-inner">
+          <div class="contact-text">
+            <h2>Parlons de <span class="grad-blue">votre projet</span></h2>
+            <p>Première consultation gratuite. Réponse sous 24h.</p>
+            <div class="contact-info">
+              <p>📍 Route de l'Aéroport, près de la Senelec, Yoff, Dakar</p>
+              <p>
+                📞 <a href="tel:+221338305460">+221 33 830 54 60</a> ·
+                <a href="tel:+221783876262">+221 78 387 62 62</a> ·
+                <a href="tel:+221787338181">+221 78 733 81 81</a>
+              </p>
+              <p>
+                💬
+                <a
+                  href="https://wa.me/221783876262"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp direct</a
+                >
+              </p>
+              <p>
+                ✉️
+                <a href="mailto:contact@einsteinservicesvoyages.com"
+                  >contact@einsteinservicesvoyages.com</a
+                >
+              </p>
+            </div>
+            <!-- Carte Google Maps -->
+            <div class="map-wrap">
+              <iframe
+                title="Carte — Einstein Services, Yoff, Dakar"
+                src="https://www.google.com/maps?q=Yoff,+Dakar,+S%C3%A9n%C3%A9gal&output=embed"
+                width="100%"
+                height="280"
+                style="border: 0; border-radius: 18px"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <input type="text" name="nom" placeholder="Votre nom" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Votre email"
+              required
+            />
+            <input
+              type="tel"
+              name="tel"
+              placeholder="Votre téléphone / WhatsApp"
+            />
+            <select name="destination" required>
+              <option value="" disabled selected>Destination souhaitée</option>
+              <option>France</option>
+              <option>Canada</option>
+              <option>Belgique</option>
+              <option>Suisse</option>
+              <option>Italie</option>
+              <option>Autre</option>
+            </select>
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Parlez-nous de votre projet…"
+              required
+            ></textarea>
+            <button type="submit" class="btn btn-orange btn-lg">
+              Envoyer ma demande ✈️
+            </button>
+            <p class="form-ok" id="formOk" hidden>
+              ✅ Merci ! Nous revenons vers vous sous 24h.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== PRISE DE RENDEZ-VOUS ===== -->
+      <section class="section" id="rendez-vous">
+        <div class="container">
+          <div class="section-head">
+            <h2>Prenez <span class="grad-orange">rendez-vous</span></h2>
+            <p>
+              Sur place à Yoff ou en visioconférence : choisissez le créneau qui
+              vous convient.
+            </p>
+          </div>
+          <div class="card rdv-card">
+            <div class="card-icon pill-blue">🗓️</div>
+            <h3>Consultation gratuite de 30 minutes</h3>
+            <p>
+              Bilan de votre profil, discussion de votre projet et de votre
+              budget, plan d'action personnalisé. Sans engagement.
+            </p>
+            <a
+              href="https://calendly.com/einsteinservices/consultation"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-orange btn-lg"
+              >Réserver un créneau en ligne</a
+            >
+            <p class="muted" style="margin-top: 1rem">
+              Ou appelez-nous directement au
+              <a
+                href="tel:+221338305460"
+                style="color: var(--blue); font-weight: 600"
+                >+221 33 830 54 60</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA FINALE ===== -->
+      <section class="cta-band">
+        <div class="container cta-band-inner">
+          <div>
+            <h2>
+              Votre parcours <span class="grad-orange">étudiant</span> commence
+              ici
+            </h2>
+            <p>
+              Consultation gratuite · Réponse sous 24h · Accompagnement jusqu'à
+              votre départ.
+            </p>
+          </div>
+          <a href="test-eligibilite.html" class="btn btn-orange btn-lg"
+            >Tester mon éligibilité</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          src="img/logo-light.svg"
+          alt="Einstein Services"
+          class="footer-logo"
+        />
+        <p>
+          <strong>Einstein Services</strong> — Orientation · Mobilité
+          internationale · Voyages.<br />
+          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54
+          60
+        </p>
+        <div class="footer-socials">
+          <a
+            href="https://www.tiktok.com/@einsteinservices"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok"
+            ><img src="img/tiktok.svg" alt="TikTok"
+          /></a>
+          <a
+            href="https://www.facebook.com/einsteinservices"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            ><img src="img/facebook.svg" alt="Facebook"
+          /></a>
+          <a
+            href="https://www.instagram.com/einsteinservices"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><img src="img/instagram.svg" alt="Instagram"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/einsteinservices"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><img src="img/linkedin.svg" alt="LinkedIn"
+          /></a>
+        </div>
+        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
+        <p class="muted footer-links">
+          <a href="mentions-legales.html">Mentions légales</a>
+          ·
+          <a href="politique-confidentialite.html"
+            >Politique de confidentialité</a
+          >
+        </p>
+      </div>
+    </footer>
+    <a
+      href="https://wa.me/221783876262"
+      class="wa-float"
+      id="waFloat"
+      aria-label="WhatsApp"
+      >💬</a
+    >
+    <script src="js/code.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

@@ -6,52 +6,52 @@ const orientDest = document.getElementById("orientDest");
 
 const DOMAINES = {
   sciences: {
-    titre: "🔬 Profil scientifique et technique",
+    titre: "?? Profil scientifique et technique",
     texte:
-      "Vos réponses orientent vers les domaines des sciences, de l'ingénierie, de la santé ou de l'informatique. Pistes : écoles d'ingénieurs, licences sciences, santé, BTS/BUT techniques.",
+      "Vos r�ponses orientent vers les domaines des sciences, de l'ing�nierie, de la sant� ou de l'informatique. Pistes : �coles d'ing�nieurs, licences sciences, sant�, BTS/BUT techniques.",
   },
   lettres: {
-    titre: "⚖️ Profil lettres, droit et sciences humaines",
+    titre: "?? Profil lettres, droit et sciences humaines",
     texte:
-      "Vos réponses orientent vers le droit, les langues, la communication, l'enseignement ou le journalisme. Pistes : licences de droit, LEA/LLCE, sciences de l'information, écoles de journalisme.",
+      "Vos r�ponses orientent vers le droit, les langues, la communication, l'enseignement ou le journalisme. Pistes : licences de droit, LEA/LLCE, sciences de l'information, �coles de journalisme.",
   },
   eco: {
-    titre: "📊 Profil économie, gestion et commerce",
+    titre: "?? Profil �conomie, gestion et commerce",
     texte:
-      "Vos réponses orientent vers la gestion, le commerce, la finance ou l'entrepreneuriat. Pistes : écoles de commerce, licences éco-gestion, BTS/BUT commerciaux, comptabilité.",
+      "Vos r�ponses orientent vers la gestion, le commerce, la finance ou l'entrepreneuriat. Pistes : �coles de commerce, licences �co-gestion, BTS/BUT commerciaux, comptabilit�.",
   },
   arts: {
-    titre: "🎨 Profil créatif et artistique",
+    titre: "?? Profil cr�atif et artistique",
     texte:
-      "Vos réponses orientent vers le design, l'architecture, les arts appliqués ou le numérique créatif. Pistes : écoles d'art et de design, architecture, motion design, UX/UI.",
+      "Vos r�ponses orientent vers le design, l'architecture, les arts appliqu�s ou le num�rique cr�atif. Pistes : �coles d'art et de design, architecture, motion design, UX/UI.",
   },
 };
 
 const DESTINATIONS = {
   france: {
-    nom: "🇫🇷 France",
+    nom: "???? France",
     detail:
-      "Excellente adéquation avec votre profil : universités et grandes écoles reconnues, frais modérés, et nos relais à Paris et Lille pour vous accueillir. Procédure Campus France ou Parcoursup selon votre situation.",
+      "Excellente ad�quation avec votre profil : universit�s et grandes �coles reconnues, frais mod�r�s, et nos relais � Paris et Lille pour vous accueillir. Proc�dure Campus France ou Parcoursup selon votre situation.",
   },
   canada: {
-    nom: "🇨🇦 Canada",
+    nom: "???? Canada",
     detail:
-      "Le Canada correspond bien à votre projet : formations de qualité, environnement multiculturel et possibilité de permis de travail post-diplôme.",
+      "Le Canada correspond bien � votre projet : formations de qualit�, environnement multiculturel et possibilit� de permis de travail post-dipl�me.",
   },
   belgique: {
-    nom: "🇧🇪 Belgique",
+    nom: "???? Belgique",
     detail:
-      "La Belgique offre un excellent compromis : universités francophones réputées, coût de la vie raisonnable et villes à taille humaine.",
+      "La Belgique offre un excellent compromis : universit�s francophones r�put�es, co�t de la vie raisonnable et villes � taille humaine.",
   },
   suisse: {
-    nom: "🇨🇭 Suisse",
+    nom: "???? Suisse",
     detail:
-      "La Suisse correspond à votre budget et à votre ambition : excellence académique, débouchés professionnels solides et qualité de vie exceptionnelle.",
+      "La Suisse correspond � votre budget et � votre ambition : excellence acad�mique, d�bouch�s professionnels solides et qualit� de vie exceptionnelle.",
   },
   italie: {
-    nom: "🇮🇹 Italie",
+    nom: "???? Italie",
     detail:
-      "L'Italie est une belle opportunité : universités historiques, frais de scolarité accessibles, riches cadres culturels, avec des cursus de plus en plus offerts en anglais.",
+      "L'Italie est une belle opportunit� : universit�s historiques, frais de scolarit� accessibles, riches cadres culturels, avec des cursus de plus en plus offerts en anglais.",
   },
 };
 
@@ -71,13 +71,13 @@ if (orientForm) {
     for (const c of champs) {
       if (data.get(c) === null) {
         alert(
-          "Merci de répondre à toutes les questions avant de voir votre résultat.",
+          "Merci de r�pondre � toutes les questions avant de voir votre r�sultat.",
         );
         return;
       }
     }
 
-    // Domaine : majorité des 3 premières réponses
+    // Domaine : majorit� des 3 premi�res r�ponses
     const votes = [
       data.get("matieres"),
       data.get("motivation"),
@@ -100,7 +100,7 @@ if (orientForm) {
     orientDomaine.textContent = DOMAINES[domaine].titre;
     orientDest.innerHTML =
       DOMAINES[domaine].texte +
-      `<br><br><strong>Destination suggérée : ${DESTINATIONS[dest].nom}</strong><br>${DESTINATIONS[dest].detail}`;
+      `<br><br><strong>Destination sugg�r�e : ${DESTINATIONS[dest].nom}</strong><br>${DESTINATIONS[dest].detail}`;
 
     orientResultat.hidden = false;
     orientResultat.scrollIntoView({ behavior: "smooth", block: "center" });

@@ -1,69 +1,69 @@
 /* ===== Catalogue des formations ===== */
-/* ⚠️ Données d'exemple — à remplacer/maintenir depuis la liste officielle
-   des établissements partenaires transmise par l'agence. */
+/* ?? Donn�es d'exemple � � remplacer/maintenir depuis la liste officielle
+   des �tablissements partenaires transmise par l'agence. */
 const FORMATIONS = [
   {
     etab: "Institut polytechnique partenaires",
     pays: "France",
     ville: "Paris",
-    titre: "Cycle d'ingénieur — Informatique",
+    titre: "Cycle d'ing�nieur � Informatique",
     domaine: "Informatique",
-    niveau: "Ingénieur",
-    langue: "Français",
+    niveau: "Ing�nieur",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "8 500 € / an",
-    conditions: "Bac scientifique, dossier + entretien, niveau de français B2",
+    frais: "8 500 � / an",
+    conditions: "Bac scientifique, dossier + entretien, niveau de fran�ais B2",
     duree: "3 ans",
-    debouches: "Développeur, ingénieur logiciel, chef de projet IT",
+    debouches: "D�veloppeur, ing�nieur logiciel, chef de projet IT",
     deadline: "31 mars 2026",
   },
   {
-    etab: "École de commerce partenaire",
+    etab: "�cole de commerce partenaire",
     pays: "France",
     ville: "Lille",
-    titre: "Programme Grande École — Management",
+    titre: "Programme Grande �cole � Management",
     domaine: "Commerce & gestion",
     niveau: "Master",
-    langue: "Français / Anglais",
+    langue: "Fran�ais / Anglais",
     rentree: "Septembre 2026",
-    frais: "9 900 € / an",
-    conditions: "Bac+3 validé, score TAGE MAGE ou GMAT, entretien",
+    frais: "9 900 � / an",
+    conditions: "Bac+3 valid�, score TAGE MAGE ou GMAT, entretien",
     duree: "2 ans",
     debouches: "Management, marketing, finance d'entreprise",
     deadline: "30 avril 2026",
   },
   {
-    etab: "Université partenaire — Paris",
+    etab: "Universit� partenaire � Paris",
     pays: "France",
     ville: "Paris",
     titre: "Licence Droit",
     domaine: "Droit & sciences humaines",
     niveau: "Licence",
-    langue: "Français",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "2 900 € / an (frais différentiels non-UE)",
-    conditions: "Bac, dossier Campus France « Études en France »",
+    frais: "2 900 � / an (frais diff�rentiels non-UE)",
+    conditions: "Bac, dossier Campus France � �tudes en France �",
     duree: "3 ans",
-    debouches: "Master de droit, écoles de journalisme, concours",
-    deadline: "via Parcoursup / Campus France — voir calendrier",
+    debouches: "Master de droit, �coles de journalisme, concours",
+    deadline: "via Parcoursup / Campus France � voir calendrier",
   },
   {
     etab: "College partenaire",
     pays: "Canada",
-    ville: "Montréal",
-    titre: "DEC technique — Administration des affaires",
+    ville: "Montr�al",
+    titre: "DEC technique � Administration des affaires",
     domaine: "Commerce & gestion",
     niveau: "BTS",
-    langue: "Français / Anglais",
-    rentree: "Août 2026",
-    frais: "≈ 12 000 $ CA / an",
-    conditions: "Bac, moyenne ≥ 12/20 recommandée",
+    langue: "Fran�ais / Anglais",
+    rentree: "Ao�t 2026",
+    frais: "� 12 000 $ CA / an",
+    conditions: "Bac, moyenne = 12/20 recommand�e",
     duree: "3 ans",
-    debouches: "Gestion, comptabilité, entrepreneuriat",
+    debouches: "Gestion, comptabilit�, entrepreneuriat",
     deadline: "1er mars 2026",
   },
   {
-    etab: "Université partenaire — Ontario",
+    etab: "Universit� partenaire � Ontario",
     pays: "Canada",
     ville: "Toronto",
     titre: "Bachelor of Computer Science",
@@ -71,115 +71,115 @@ const FORMATIONS = [
     niveau: "Bachelor",
     langue: "Anglais",
     rentree: "Septembre 2026",
-    frais: "≈ 28 000 $ CA / an",
+    frais: "� 28 000 $ CA / an",
     conditions: "Bac scientifique solide, preuve d'anglais (IELTS 6.5)",
     duree: "4 ans",
-    debouches: "Développeur, data analyst, études supérieures",
+    debouches: "D�veloppeur, data analyst, �tudes sup�rieures",
     deadline: "15 janvier 2026",
   },
   {
-    etab: "Haute École partenaire",
+    etab: "Haute �cole partenaire",
     pays: "Belgique",
     ville: "Bruxelles",
     titre: "Bachelor en Marketing",
     domaine: "Commerce & gestion",
     niveau: "Bachelor",
-    langue: "Français",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "≈ 900 € / an",
+    frais: "� 900 � / an",
     conditions: "Bac, dossier + entretien de motivation",
     duree: "3 ans",
     debouches: "Marketing, communication, digital",
     deadline: "30 juin 2026",
   },
   {
-    etab: "Université partenaire — Genève",
+    etab: "Universit� partenaire � Gen�ve",
     pays: "Suisse",
-    ville: "Genève",
+    ville: "Gen�ve",
     titre: "Master en Relations internationales",
     domaine: "Droit & sciences humaines",
     niveau: "Master",
-    langue: "Français / Anglais",
+    langue: "Fran�ais / Anglais",
     rentree: "Septembre 2026",
-    frais: "≈ 1 000 CHF / semestre",
-    conditions: "Licence en sciences sociales ou droit, dossier sélectif",
+    frais: "� 1 000 CHF / semestre",
+    conditions: "Licence en sciences sociales ou droit, dossier s�lectif",
     duree: "2 ans",
     debouches: "Organisations internationales, ONG, diplomatie",
-    deadline: "28 février 2026",
+    deadline: "28 f�vrier 2026",
   },
   {
     etab: "Academia partner",
     pays: "Italie",
     ville: "Milan",
-    titre: "Bachelor en Design — Interior & Product",
+    titre: "Bachelor en Design � Interior & Product",
     domaine: "Art & design",
     niveau: "Bachelor",
     langue: "Anglais",
     rentree: "Octobre 2026",
-    frais: "≈ 15 000 € / an",
-    conditions: "Bac, portfolio recommandé, motivation",
+    frais: "� 15 000 � / an",
+    conditions: "Bac, portfolio recommand�, motivation",
     duree: "3 ans",
     debouches: "Designer produit, interior designer, stylisme",
     deadline: "31 mai 2026",
   },
   {
-    etab: "Université partenaire — Rome",
+    etab: "Universit� partenaire � Rome",
     pays: "Italie",
     ville: "Rome",
-    titre: "Licence en Sciences économiques",
+    titre: "Licence en Sciences �conomiques",
     domaine: "Commerce & gestion",
     niveau: "Licence",
-    langue: "Français / Anglais",
+    langue: "Fran�ais / Anglais",
     rentree: "Septembre 2026",
-    frais: "≈ 2 000 € / an (selon revenus)",
-    conditions: "Bac, test d'entrée TOLC",
+    frais: "� 2 000 � / an (selon revenus)",
+    conditions: "Bac, test d'entr�e TOLC",
     duree: "3 ans",
-    debouches: "Banque, management, masters spécialisés",
+    debouches: "Banque, management, masters sp�cialis�s",
     deadline: "15 avril 2026",
   },
   {
-    etab: "École partenaire — Lyon",
+    etab: "�cole partenaire � Lyon",
     pays: "France",
     ville: "Lyon",
     titre: "BTS Commerce international",
     domaine: "Commerce & gestion",
     niveau: "BTS",
-    langue: "Français",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "≈ 4 500 € / an",
-    conditions: "Bac toutes séries, entretien de motivation",
+    frais: "� 4 500 � / an",
+    conditions: "Bac toutes s�ries, entretien de motivation",
     duree: "2 ans",
     debouches: "Assistant export/import, poursuite en licence pro",
     deadline: "30 juin 2026",
   },
   {
-    etab: "Institut partenaire — Casablanca de l'enseignement privé FR",
+    etab: "Institut partenaire � Casablanca de l'enseignement priv� FR",
     pays: "France",
     ville: "Bordeaux",
-    titre: "Licence Santé (PASS)",
-    domaine: "Santé",
+    titre: "Licence Sant� (PASS)",
+    domaine: "Sant�",
     niveau: "Licence",
-    langue: "Français",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "2 900 € / an (frais différentiels non-UE)",
+    frais: "2 900 � / an (frais diff�rentiels non-UE)",
     conditions: "Bac scientifique avec mention, dossier Campus France",
     duree: "1 an + concours",
-    debouches: "Médecine, pharmacie, maïeutique",
-    deadline: "via Campus France — voir calendrier",
+    debouches: "M�decine, pharmacie, ma�eutique",
+    deadline: "via Campus France � voir calendrier",
   },
   {
     etab: "Polytechnic partner",
     pays: "Belgique",
-    ville: "Liège",
-    titre: "Master en Sciences de l'ingénieur",
-    domaine: "Sciences & ingénierie",
+    ville: "Li�ge",
+    titre: "Master en Sciences de l'ing�nieur",
+    domaine: "Sciences & ing�nierie",
     niveau: "Master",
-    langue: "Français",
+    langue: "Fran�ais",
     rentree: "Septembre 2026",
-    frais: "≈ 900 € / an",
-    conditions: "Bac+3 en sciences appliquées, dossier",
+    frais: "� 900 � / an",
+    conditions: "Bac+3 en sciences appliqu�es, dossier",
     duree: "2 ans",
-    debouches: "Ingénieur civil, R&D, énergie",
+    debouches: "Ing�nieur civil, R&D, �nergie",
     deadline: "30 avril 2026",
   },
 ];
@@ -198,26 +198,26 @@ function formationCard(f) {
  <article class="card formation-card">
     <div class="formation-top">
       <span class="tag">${f.niveau}</span>
-      <span class="tag tag-country">${f.pays} · ${f.ville}</span>
+      <span class="tag tag-country">${f.pays} � ${f.ville}</span>
     </div>
     <h3>${f.titre}</h3>
     <p class="formation-etab">${f.etab}</p>
     <ul class="formation-facts">
-      <li>🗓️ Rentrée : ${f.rentree}</li>
-      <li>⏱️ Durée : ${f.duree}</li>
-      <li>🗣️ Langue : ${f.langue}</li>
-      <li>💶 Frais : ${f.frais}</li>
-      <li>📅 Candidature avant : ${f.deadline}</li>
+      <li>??? Rentr�e : ${f.rentree}</li>
+      <li>?? Dur�e : ${f.duree}</li>
+      <li>??? Langue : ${f.langue}</li>
+      <li>?? Frais : ${f.frais}</li>
+      <li>?? Candidature avant : ${f.deadline}</li>
     </ul>
     <details class="formation-details">
-      <summary>Conditions d'admission & débouchés</summary>
+      <summary>Conditions d'admission & d�bouch�s</summary>
       <p><strong>Conditions :</strong> ${f.conditions}</p>
-      <p><strong>Débouchés :</strong> ${f.debouches}</p>
+      <p><strong>D�bouch�s :</strong> ${f.debouches}</p>
     </details>
     <a
       class="btn btn-orange"
       href="index.html#contact"
-      onclick="sessionStorage.setItem('formation', '${f.titre} — ${f.etab} (${f.ville}, ${f.pays})')"
+      onclick="sessionStorage.setItem('formation', '${f.titre} � ${f.etab} (${f.ville}, ${f.pays})')"
       >Je candidate avec Einstein Services</a
     >
  </article>`;
@@ -231,15 +231,15 @@ function render() {
       (!fDomaine.value || f.domaine === fDomaine.value) &&
       (!fLangue.value ||
         f.langue === fLangue.value ||
-        (f.langue === "Français / Anglais" && !fLangue.value)),
+        (f.langue === "Fran�ais / Anglais" && !fLangue.value)),
   );
   grid.innerHTML = liste.map(formationCard).join("");
-  // Les cartes générées dynamiquement ne passent pas par l'observer de
-  // code.js : on force leur affichage en marquant le conteneur « visible ».
+  // Les cartes g�n�r�es dynamiquement ne passent pas par l'observer de
+  // code.js : on force leur affichage en marquant le conteneur � visible �.
   grid.classList.add("visible");
   noResult.hidden = liste.length > 0;
   fCount.textContent = liste.length
-    ? `${liste.length} formation${liste.length > 1 ? "s" : ""} correspondent à vos critères`
+    ? `${liste.length} formation${liste.length > 1 ? "s" : ""} correspondent � vos crit�res`
     : "";
 }
 
@@ -253,10 +253,10 @@ fReset.addEventListener("click", () => {
 
 render();
 
-// Pré-remplit le message de contact si l'utilisateur vient d'une candidature
+// Pr�-remplit le message de contact si l'utilisateur vient d'une candidature
 const fMessage = document.querySelector("textarea[name='message']");
 const fChoisie = sessionStorage.getItem("formation");
 if (fMessage && fChoisie) {
-  fMessage.value = `Bonjour, je souhaite candidate avec Einstein Services à la formation : ${fChoisie}.`;
+  fMessage.value = `Bonjour, je souhaite candidate avec Einstein Services � la formation : ${fChoisie}.`;
   sessionStorage.removeItem("formation");
 }
