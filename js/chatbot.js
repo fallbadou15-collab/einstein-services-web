@@ -3,33 +3,32 @@
    - répond aux questions fréquentes (destinations, démarches, calendrier, documents)
    - qualifie les prospects (niveau, projet, destination)
    - oriente vers le test d'éligibilité ou la prise de rendez-vous
-   - transfère vers un conseiller humain sur WhatsApp
+   - transfère vers un conseiller humain (page contact)
    - enregistre les conversations (localStorage) pour le suivi commercial
    Règle : Nafi ne communique AUCUN tarif — il redirige vers un conseiller. */
 
-const NAFI_WHATSAPP = "221783876262";
 const NAFI_CONTACT_EMAIL = "contact@einsteinservicesvoyages.com";
 
 /* ---------- Moteur de réponses ---------- */
 const NAFI_REPLIES = [
   {
     kw: ["bonjour", "salut", "hello", "bonsoir", "coucou"],
-    r: "Bonjour et bienvenue chez Einstein Services ! 👋 Je suis Nafi, votre assistante virtuelle. Comment puis-je vous aider ? Tapez « menu » pour voir tout ce que je peux faire.",
+    r: "Bonjour et bienvenue chez Einstein Services ! 😊 Je suis Nafi, votre assistante virtuelle. Comment puis-je vous aider ? Tapez « menu » pour voir tout ce que je peux faire.",
   },
   {
     kw: ["menu", "aide", "option", "choix", "help"],
-    r: "Voici ce que je peux faire pour vous :\n1️⃣ Destinations d'études\n2️⃣ Démarches & documents (Campus France, visa…)\n3️⃣ Calendrier des candidatures\n4️⃣ Tester mon éligibilité\n5️⃣ Prendre rendez-vous\n6️⃣ Parler à un conseiller (WhatsApp)\n\nTapez simplement un mot-clé, par exemple « Canada », « visa » ou « rendez-vous ».",
+    r: "Voici ce que je peux faire pour vous :\n1️⃣ Destinations d'études\n2️⃣ Démarches & documents (Campus France, visa…)\n3️⃣ Calendrier des candidatures\n4️⃣ Tester mon éligibilité\n5️⃣ Prendre rendez-vous\n6️⃣ Parler à un conseiller\n\nTapez simplement un mot-clé, par exemple « Canada », « visa » ou « rendez-vous ».",
   },
   {
     kw: ["france", "campus france", "parcoursup", "etudes en france"],
-    r: "🇫🇷 La France est notre destination n°1 : universités, grandes écoles, BTS/BUT…\nLa procédure passe par Campus France (« Études en France ») ou Parcoursup selon votre situation.\nVous voulez savoir si votre profil est éligible ? Faites le test gratuit : test-eligibilite.html 👉",
+    r: "🇫🇷 La France est notre destination n°1 : universités, grandes écoles, BTS/BUT…\nLa procédure passe par Campus France (« Études en France ») ou Parcoursup selon votre situation.\nVous voulez savoir si votre profil est éligible ? Faites le test gratuit : test-eligibilite.html ✅",
   },
   {
-    kw: ["canada", "quebec", "montréal", "montreal", "toronto"],
+    kw: ["canada", "quebec", "québec", "montréal", "montreal", "toronto"],
     r: "🇨🇦 Le Canada est très demandé : collèges (DEC technique), universités, possibilité de permis de travail post-diplôme.\nRentrées principales : août et septembre. Il faut s'y prendre plusieurs mois à l'avance !\nVoulez-vous passer au test d'éligibilité pour vérifier votre dossier ?",
   },
   {
-    kw: ["belgique", "bruxelles"],
+    kw: ["belgique", "bruxelles", "liège", "liege"],
     r: "🇧🇪 La Belgique offre un excellent rapport qualité/prix : hautes écoles et universités francophones reconnues, coût de la vie raisonnable et villes à taille humaine (Bruxelles, Liège…).",
   },
   {
@@ -50,15 +49,15 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["calendrier", "date", "deadline", "quand", "rentree", "rentrée", "candidature"],
-    r: "📅 Repères généraux :\n• France : Campus France/Parcoursup entre novembre et mars selon la procédure\n• Canada : candidatures souvent avant janvier-mars pour la rentrée d'automne\n• Belgique/Suisse/Italie : printemps à début d'été\nLe plus tôt est le mieux ! Consultez le catalogue : formations.html",
+    r: "📅 Repères généraux :\n• France : Campus France/Parcoursup entre novembre et mars selon la procédure\n• Canada : candidatures souvent avant janvier-mars pour la rentrée d'automne\n• Belgique/Suisse/Italie : printemps → début d'été\nLe plus tôt est le mieux ! Consultez le catalogue : formations.html",
   },
   {
     kw: ["langue", "tcf", "delf", "ielts", "anglais", "français"],
     r: "🗣️ Pour la France, un niveau B2 en français (TCF/DELF) est généralement demandé. Pour les cursus en anglais (Canada, Italie…), prévoyez l'IELTS (souvent 6.0–6.5).\nNous vous aidons à planifier votre test de langue. Dites « rendez-vous » pour être accompagné.",
   },
   {
-    kw: ["test", "eligibilite", "éligibilité", "eligible", "profil"],
-    r: "✅ Le test d'éligibilité évalue gratuitement la faisabilité de votre projet (niveau, langue, financement, calendrier). C'est le meilleur point de départ : test-eligibilite.html\nEt pour votre orientation : test-orientation.html",
+    kw: ["test", "eligibilite", "éligibilité", "eligible", "éligible", "profil"],
+    r: "🎯 Le test d'éligibilité évalue gratuitement la faisabilité de votre projet (niveau, langue, financement, calendrier). C'est le meilleur point de départ : test-eligibilite.html\nEt pour votre orientation : test-orientation.html",
   },
   {
     kw: ["logement", "hebergement", "hébergement", "residence", "résidence"],
@@ -74,16 +73,18 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["voyage", "billet", "avion", "hotel", "hôtel", "tourisme"],
-    r: "✈️ Einstein Services c'est aussi la billetterie : billets d'avion, réservations d'hôtels, visas de tourisme et d'affaires. Un conseiller s'occupe de votre demande : tapez « conseiller ».",
+    r: "✈️ Einstein Services, c'est aussi la billetterie : billets d'avion, réservations d'hôtels, visas de tourisme et d'affaires. Un conseiller s'occupe de votre demande : tapez « conseiller ».",
   },
   {
     kw: ["rendez-vous", "rendez vous", "rdv", "appointment", "conseiller", "humain", "agent", "contact"],
     r:
-      "👋 Très bien ! Pour parler à un conseiller humain :\n• WhatsApp direct : https://wa.me/" + NAFI_WHATSAPP + "\n• Téléphone : +221 33 830 54 60\n• Email : " + NAFI_CONTACT_EMAIL + "\nOu via le formulaire de contact en page d'accueil : index.html#contact",
+      "📞 Très bien ! Pour parler à un conseiller humain :\n• Page contact : contact.html\n• Téléphone : +221 33 830 54 60\n• Email : " +
+      NAFI_CONTACT_EMAIL +
+      "\nOu via le formulaire de contact : contact.html",
   },
   {
     kw: ["tarif", "prix", "combien", "coute", "coûte", "paiement", "devis"],
-    r: "📋 Notre règle : Nafi ne communique aucun tarif, pour garantir une information exacte et personnalisée. Un conseiller vous répond très vite sur WhatsApp : https://wa.me/" + NAFI_WHATSAPP,
+    r: "🔒 Notre règle : Nafi ne communique aucun tarif, pour garantir une information exacte et personnalisée. Un conseiller vous répond très vite : contact.html",
   },
   {
     kw: ["merci", "super", "parfait", "top", "cool"],
@@ -147,7 +148,7 @@ const NAFI_HTML = `
       <div class="nafi-quick">
         <button data-q="Destinations d'études">🌍 Destinations</button>
         <button data-q="Documents et démarches">📄 Démarches</button>
-        <button data-q="Tester mon éligibilité">✅ Éligibilité</button>
+        <button data-q="Tester mon éligibilité">🎯 Éligibilité</button>
         <button data-q="Parler à un conseiller">💬 Conseiller</button>
       </div>
     </div>
@@ -172,7 +173,7 @@ const nafiBody = document.getElementById("nafiBody");
 const nafiForm = document.getElementById("nafiForm");
 const nafiText = document.getElementById("nafiText");
 
-/* Le chat ne s'ouvre JAMAIS tout seul : uniquement sur clic du bouton */
+/* Ouverture/fermeture : UNIQUEMENT au clic (jamais automatique) */
 nafiToggle.addEventListener("click", () => {
   nafiPanel.hidden = !nafiPanel.hidden;
   nafiToggle.classList.toggle("hidden", !nafiPanel.hidden);
@@ -192,8 +193,8 @@ function nafiAdd(text, who) {
   });
   // Transforme les liens cités en liens cliquables
   div.innerHTML = div.innerHTML.replace(
-    /(test-eligibilite\.html|test-orientation\.html|formations\.html|index\.html#contact|https:\/\/wa\.me\/\d+)/g,
-    '<a href="$1" target="_blank" rel="noopener">$1</a>',
+    /(test-eligibilite\.html|test-orientation\.html|formations\.html|contact\.html)/g,
+    '<a href="$1">$1</a>',
   );
   nafiBody.appendChild(div);
   nafiBody.scrollTop = nafiBody.scrollHeight;

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -22,6 +22,9 @@
     <meta name="author" content="Einstein Services" />
     <meta name="geo.region" content="SN-DK" />
     <meta name="geo.placename" content="Dakar" />
+    <link rel="alternate" hreflang="fr" href="https://einsteinservicesvoyages.com/" />
+    <link rel="alternate" hreflang="en" href="https://einsteinservicesvoyages.com/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://einsteinservicesvoyages.com/" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Einstein Services" />
@@ -30,10 +33,14 @@
     <meta property="og:description" content="Agence d'orientation et de mobilité internationale à Yoff, Dakar : études en France, Canada, Belgique, Suisse, Italie. Campus France, visa étudiant, logement, billetterie." />
     <meta property="og:url" content="https://einsteinservicesvoyages.com/" />
     <meta property="og:image" content="https://einsteinservicesvoyages.com/img/logo-light.svg" />
+    <meta property="og:image:alt" content="Logo Einstein Services" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Einstein Services — Orientation, études à l'étranger et voyages à Dakar" />
     <meta name="twitter:description" content="Agence d'orientation et de mobilité internationale à Yoff, Dakar : Campus France, visa étudiant, logement, billetterie." />
+    <meta name="twitter:image" content="https://einsteinservicesvoyages.com/img/logo-light.svg" />
     <!-- Données structurées -->
     <script type="application/ld+json">
     {
@@ -73,6 +80,20 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Einstein Services",
+      "url": "https://einsteinservicesvoyages.com/",
+      "inLanguage": "fr",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://einsteinservicesvoyages.com/formations.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- ===== NAVBAR ===== -->
@@ -85,11 +106,14 @@
           <a href="services.html">Services</a>
           <a href="destinations.html">Destinations</a>
           <a href="formations.html">Formations</a>
-          <a href="blog.html">Actualités</a>
           <a href="temoignages.html">Témoignages</a>
           <a href="test-eligibilite.html">Test d'éligibilité</a>
-          <a href="contact.html" class="btn btn-orange">Nous contacter</a>
+          <a href="contact.html" class="btn btn-orange nav-cta">Nous contacter</a>
         </nav>
+        <div class="lang-switch" aria-label="Choix de la langue">
+            <a href="index.html" class="lang-opt active" hreflang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="22" height="16" /></a>
+            <a href="index-en.html" class="lang-opt" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
+          </div>
         <button class="burger" id="burger" aria-label="Menu">☰</button>
       </div>
     </header>

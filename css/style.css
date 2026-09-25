@@ -1,4 +1,4 @@
-/* ===== Einstein Services � style.css ===== */
+/* ===== Einstein Services — style.css ===== */
 :root {
   --navy: #1e2a5a;
   --blue: #1f6bb5;
@@ -368,7 +368,7 @@ a {
   margin-top: 1.2rem;
 }
 
-/* ---- T�moignages ---- */
+/* ---- Témoignages ---- */
 .temoin {
   background: #fff;
   border-radius: var(--radius);
@@ -388,6 +388,23 @@ a {
 }
 .temoin footer strong {
   color: var(--navy);
+}
+.temoin footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.temoin-flag {
+  width: 24px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(30, 42, 90, 0.25);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.temoin:hover .temoin-flag {
+  transform: scale(1.15);
 }
 
 /* ---- FAQ ---- */
@@ -567,7 +584,7 @@ a {
   color: #aab3d0;
 }
 
-/* ---- Pourquoi nous / �tapes ---- */
+/* ---- Pourquoi nous / étapes ---- */
 .steps {
   margin-top: 4rem;
   background: #fff;
@@ -646,7 +663,7 @@ a {
   color: var(--muted);
 }
 
-/* ---- Pages l�gales ---- */
+/* ---- Pages légales ---- */
 .legal h1 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 800;
@@ -743,7 +760,7 @@ a {
   }
 }
 
-/* ===== Pages Services d�taill�es ===== */
+/* ===== Pages Services dtailles ===== */
 .service-detail {
   background: #fff;
   border-radius: var(--radius);
@@ -924,7 +941,7 @@ a {
   color: var(--muted);
 }
 
-/* ===== �quipe ===== */
+/* ===== Équipe ===== */
 .member {
   text-align: center;
 }
@@ -953,7 +970,7 @@ a {
   margin-top: 0.2rem;
 }
 
-/* ===== Bandeau partenaires d�filant ===== */
+/* ===== Bandeau partenaires dfilant ===== */
 .partner-marquee {
   overflow: hidden;
   background: #fff;
@@ -975,7 +992,7 @@ a {
   color: var(--navy);
   font-size: 0.95rem;
 }
-/* Logos d'�coles style Nexuroom */
+/* Logos d'écoles style Nexuroom */
 .school-logo {
   font-weight: 700;
   font-size: 1.15rem !important;
@@ -1099,7 +1116,7 @@ a {
   text-align: center;
 }
 
-/* ===== Formulaire d'�valuation de profil ===== */
+/* ===== Formulaire d'évaluation de profil ===== */
 .profil-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1143,7 +1160,7 @@ a {
   font-size: 0.88rem;
 }
 
-/* ===== R�seaux sociaux footer ===== */
+/* ===== Réseaux sociaux footer ===== */
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -1581,5 +1598,75 @@ img {
   }
   .nafi-toggle:hover {
     transform: none;
+  }
+}
+
+/* ===== Sélecteur de langue (drapeaux, version épurée) ===== */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.15rem;
+  background: transparent;
+  border: 1.5px solid #eae3d6;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.lang-opt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 26px;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.lang-opt img {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(30, 42, 90, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+.lang-opt:hover {
+  background: rgba(30, 42, 90, 0.06);
+  transform: translateY(-1px);
+}
+.lang-opt.active {
+  background: var(--navy);
+}
+.lang-opt.active img {
+  transform: scale(1.08);
+  box-shadow: 0 2px 6px rgba(30, 42, 90, 0.4);
+}
+
+/* Navlinks un peu plus aérés */
+.nav-links a {
+  position: relative;
+}
+.nav-links a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  transition: width 0.25s ease;
+}
+.nav-links a:not(.btn):hover::after {
+  width: 100%;
+}
+
+/* Sur mobile, le sélecteur reste visible à côté du burger */
+@media (max-width: 900px) {
+  .lang-switch {
+    margin-right: 0.4rem;
+  }
+  .nav-links .lang-switch {
+    margin: 0.5rem 0 0;
   }
 }
