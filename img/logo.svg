@@ -1,30 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 150" width="480" height="150">
-  <!-- Globe filaire bleu (coupé en bas, style demi-globe) -->
- <g stroke="#2372b9" stroke-width="2.2" fill="none" stroke-linecap="round">
-    <circle cx="70" cy="60" r="34"/>
-    <ellipse cx="70" cy="60" rx="14" ry="34"/>
-    <path d="M38 46 h64 M38 74 h64"/>
-    <path d="M70 26 v68"/>
-    <!--axes qui dépassent-->
-    <path d="M30 60 h-10 M110 60 h10"/>
-    <path d="M70 22 v-8 M70 94 v10"/>
-    <circle cx="70" cy="100" r="4" fill="#2372b9" stroke="none"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200">
+  <!-- Globe filaire bleu, au-dessus d'EINSTEIN -->
+  <g stroke="#1a63a8" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <circle cx="112" cy="82" r="52"/>
+    <ellipse cx="112" cy="82" rx="22" ry="52"/>
+    <ellipse cx="112" cy="82" rx="42" ry="52" opacity="0.5"/>
+    <!-- parallèles -->
+    <path d="M64 62 h96 M64 102 h96"/>
+    <!-- axe vertical qui descend jusqu'au point -->
+    <path d="M112 30 v118"/>
+    <!-- petite croix à droite du globe -->
+    <path d="M170 82 h14 M170 62 v14"/>
+  </g>
+  <circle cx="112" cy="150" r="5" fill="#1a63a8"/>
 
-  <!-- Trajectoire pointillée orange -->
- <path d="M52 96 q40 8 110 4" stroke="#f0932b" stroke-width="1.6" stroke-dasharray="4 4" fill="none"/>
+  <!-- Point + pointillé orange sous EINSTEIN -->
+  <circle cx="40" cy="150" r="4" fill="#f0932b"/>
+  <path d="M40 150 H262" stroke="#f0932b" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
 
   <!-- EINSTEIN en orange -->
- <text x="30" y="102" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="36" letter-spacing="1" fill="#f0932b">EINSTEIN</text>
+  <text x="36" y="138" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="50" letter-spacing="1" fill="#f0932b">EINSTEIN</text>
 
-  <!-- Swoosh sous SERVICES -->
- <path d="M206 98 q90 -18 170 -8" stroke="#fdfaf5" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- SERVICES en bleu, sur la même ligne -->
+  <text x="282" y="140" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" letter-spacing="0.5" fill="#1a63a8">SERVICES</text>
 
-  <!-- SERVICES en bleu -->
- <text x="200" y="102" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="44" letter-spacing="0.5" fill="#2372b9">SERVICES</text>
+  <!-- Swoosh blanc qui traverse SERVICES et remonte vers l'avion -->
+  <path d="M290 132 Q470 118 640 62" stroke="#ffffff" stroke-width="9" stroke-dasharray="46 16" fill="none" stroke-linecap="round"/>
 
-  <!-- Avion orange au bout -->
- <g transform="translate(428,52) rotate(-18)">
-    <path d="M0 10 L22 0 L12 12 L24 22 L17 22 L10 15 L3 18 Z" fill="#f0932b"/>
- </g>
+  <!-- Avion orange en haut à droite -->
+  <g transform="translate(646,44) rotate(-32)">
+    <path d="M0 14 L30 0 L17 15 L33 27 L24 27 L14 19 L5 24 Z" fill="#f0932b"/>
+  </g>
 </svg>
