@@ -1,4 +1,4 @@
-# Détourage par flood-fill depuis les bords + recadrage sur le logo
+# Détourage global : tout pixel clair et peu saturé -> transparent, puis recadrage
 Add-Type -AssemblyName System.Drawing
 $src = "C:\Users\fallb\OneDrive\Desktop\projet Einstein Services\img\logo.jpg"
 $dst = "C:\Users\fallb\OneDrive\Desktop\projet Einstein Services\img\logo-transparent.png"
@@ -16,23 +16,8 @@ function Is-Bg([byte[]]$b, [int]$i) {
     return ($min -gt 150 -and ($max - $min) -lt 65)
 }
 
-$bg = [bool[]]::new($w * $h)
-$queue = [System.Collections.Generic.Queue[int]]::new()
-foreach ($x in 0..($w-1)) { $queue.Enqueue($x); $queue.Enqueue(($h-1)*$w + $x) }
-foreach ($y in 0..($h-1)) { $queue.Enqueue($y*$w); $queue.Enqueue($y*$w + ($w-1)) }
-while ($queue.Count -gt 0) {
-    $p = $queue.Dequeue()
-    if ($bg[$p]) { continue }
-    if (-not (Is-Bg $bytes ($p*4))) { continue }
-    $bg[$p] = $true
-    $x = $p % $w; $y = [Math]::Floor($p / $w)
-    if ($x -gt 0)    { $queue.Enqueue($p-1) }
-    if ($x -lt $w-1) { $queue.Enqueue($p+1) }
-    if ($y -gt 0)    { $queue.Enqueue($p-$w) }
-    if ($y -lt $h-1) { $queue.Enqueue($p+$w) }
-}
-for ($p = 0; $p -lt $w*$h; $p++) {
-    if ($bg[$p]) { $bytes[$p*4+3] = 0 }
+for ($i = 0; $i -lt $bytes.Length; $i += 4) {
+    if (Is-Bg $bytes $i) { $bytes[$i+3] = 0 }
 }
 
 # bbox du contenu opaque
