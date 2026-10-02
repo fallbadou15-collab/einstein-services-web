@@ -148,7 +148,7 @@
             <a href="index.html" class="lang-opt" hreflang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="22" height="16" /></a>
             <a href="index-en.html" class="lang-opt active" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
           </div>
-        <button class="burger" id="burger" aria-label="Menu">☰</button>
+        <button class="burger" id="burger" aria-label="Menu"></button>
       </div>
     </header>
 
@@ -158,7 +158,7 @@
         <div class="hero-text">
           <span class="badge">✈️ Your study-abroad & mobility agency</span>
           <h1>
-            Study <span class="grad-blue">abroad</span>, <br />achieve
+            Study <span class="grad-blue">abroad</span>, achieve
             <span class="grad-orange">your ambitions</span>.
           </h1>
           <p class="lead">
@@ -174,32 +174,38 @@
               >Discover our services</a
             >
           </div>
-          <div class="hero-stats">
-            <div>
-              <strong>500+</strong><span>students placed in France</span>
-            </div>
-            <div>
-              <strong>50+</strong><span>students placed in Canada</span>
-            </div>
-            <div><strong>100+</strong><span>students in Europe</span></div>
-            <div><strong>5</strong><span>study destinations</span></div>
-          </div>
+          <p class="hero-destinations-mobile">
+            Destinations:
+            <a href="destinations.html">France · Canada · Belgium · Switzerland · Italy →</a>
+          </p>
         </div>
         <div class="hero-visual">
-          <div class="blob-blue"></div>
-          <div class="hero-card">
-            🎓
-            <p>
-              <strong>Admitted!</strong><br />University of Toronto — Fall 2026
-            </p>
-          </div>
-          <div class="hero-card hero-card-2">
-            🛂
-            <p>
-              <strong>Visa approved</strong><br />Canada, processing: 3 weeks
-            </p>
+          <div class="hero-route-panel">
+            <div class="hero-route-top">
+              <p class="hero-route-kicker">Your study route</p>
+              <span class="hero-route-code">DKR / 05</span>
+            </div>
+            <h2>5 destinations to move your plans forward.</h2>
+            <div class="hero-route-origin">
+              <span>Starting point</span>
+              <strong>Dakar, Senegal</strong>
+            </div>
+            <ul class="hero-route-list">
+              <li><a href="destinations.html#france"><span>01</span><strong>France</strong></a></li>
+              <li><a href="destinations.html#canada"><span>02</span><strong>Canada</strong></a></li>
+              <li><a href="destinations.html#belgique"><span>03</span><strong>Belgium</strong></a></li>
+              <li><a href="destinations.html#suisse"><span>04</span><strong>Switzerland</strong></a></li>
+              <li><a href="destinations.html#italie"><span>05</span><strong>Italy</strong></a></li>
+            </ul>
+            <a class="hero-route-link" href="destinations.html">Compare destinations <span aria-hidden="true">→</span></a>
           </div>
         </div>
+      </div>
+      <div class="container hero-stats">
+        <div><strong>500+</strong><span>supported in France</span></div>
+        <div><strong>50+</strong><span>supported in Canada</span></div>
+        <div><strong>100+</strong><span>in Europe</span></div>
+        <div><strong>5</strong><span>destinations</span></div>
       </div>
       <div class="wave-divider"></div>
     </section>
@@ -718,8 +724,8 @@
           class="footer-logo"
         />
         <p>
-          <strong>Einstein Services</strong> — Guidance · International mobility
-          · Travel.<br />
+          <strong>Einstein Services</strong> — From first guidance to arrival,
+          we support your international journey.<br />
           Airport Road, near Senelec, Yoff, Dakar — +221 33 830 54 60
         </p>
         <div class="footer-socials">

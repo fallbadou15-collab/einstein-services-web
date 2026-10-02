@@ -8,6 +8,13 @@
    Règle : Nafi ne communique AUCUN tarif — il redirige vers un conseiller. */
 
 const NAFI_CONTACT_EMAIL = "contact@einsteinservicesvoyages.com";
+const NAFI_LINK_LABELS = {
+  "test-eligibilite.html": "Faire le test d'éligibilité",
+  "test-orientation.html": "Faire le test d'orientation",
+  "formations.html": "Voir le catalogue des formations",
+  "destinations.html": "Découvrir les destinations",
+  "contact.html": "Ouvrir la page contact",
+};
 
 /* ---------- Moteur de réponses ---------- */
 const NAFI_REPLIES = [
@@ -18,6 +25,10 @@ const NAFI_REPLIES = [
   {
     kw: ["menu", "aide", "option", "choix", "help"],
     r: "Voici ce que je peux faire pour vous :\n1️⃣ Destinations d'études\n2️⃣ Démarches & documents (Campus France, visa…)\n3️⃣ Calendrier des candidatures\n4️⃣ Tester mon éligibilité\n5️⃣ Prendre rendez-vous\n6️⃣ Parler à un conseiller\n\nTapez simplement un mot-clé, par exemple « Canada », « visa » ou « rendez-vous ».",
+  },
+  {
+    kw: ["destination", "pays", "études à l'étranger", "etudes a l'etranger"],
+    r: "🌍 Nous accompagnons les projets d'études en France, au Canada, en Belgique, en Suisse et en Italie.\nConsultez les informations et démarches par pays : destinations.html\nQuel pays vous intéresse ?",
   },
   {
     kw: ["france", "campus france", "parcoursup", "etudes en france"],
@@ -187,15 +198,30 @@ nafiClose.addEventListener("click", () => {
 function nafiAdd(text, who) {
   const div = document.createElement("div");
   div.className = "nafi-msg " + who;
+  const appendLine = (line) => {
+    if (who !== "bot") {
+      div.appendChild(document.createTextNode(line));
+      return;
+    }
+
+    const linkPattern =
+      /(test-eligibilite\.html|test-orientation\.html|formations\.html|destinations\.html|contact\.html)/g;
+    let cursor = 0;
+    for (const match of line.matchAll(linkPattern)) {
+      div.appendChild(document.createTextNode(line.slice(cursor, match.index)));
+      const link = document.createElement("a");
+      link.href = match[0];
+      link.textContent = NAFI_LINK_LABELS[match[0]];
+      div.appendChild(link);
+      cursor = match.index + match[0].length;
+    }
+    div.appendChild(document.createTextNode(line.slice(cursor)));
+  };
+
   text.split("\n").forEach((line, i) => {
     if (i) div.appendChild(document.createElement("br"));
-    div.appendChild(document.createTextNode(line));
+    appendLine(line);
   });
-  // Transforme les liens cités en liens cliquables
-  div.innerHTML = div.innerHTML.replace(
-    /(test-eligibilite\.html|test-orientation\.html|formations\.html|contact\.html)/g,
-    '<a href="$1">$1</a>',
-  );
   nafiBody.appendChild(div);
   nafiBody.scrollTop = nafiBody.scrollHeight;
   nafiSave(text, who === "bot" ? "nafi" : "utilisateur");
