@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Demande d'AVI — Attestation de Virement Irrévocable | Einstein Services
+    </title>
+    <meta
+      name="description"
+      content="Demandez votre Attestation de Virement Irrévocable (AVI) avec Einstein Services : preuve de vos ressources financières pour votre visa étudiant. Processus simple et sécurisé."
+    />
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <!-- ===== TOP BAR ===== -->
+    <div class="u-topbar">
+      <div class="u-container u-topbar-inner">
+        <div class="u-topbar-left">
+          <a href="tel:+221338305460" class="u-topbar-phone"
+            >📞 Appelez-nous : +221 33 830 54 60</a
+          >
+          <span class="hide-sm">Lun–Sam : 9h–18h</span>
+        </div>
+        <div class="u-topbar-left">
+          <button class="u-login-btn" type="button">
+            👤 Connexion / Inscription
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="u-navbar">
+      <div class="u-container u-nav-inner">
+        <a href="index.html" class="u-logo">
+          <img src="img/logo.svg" alt="Logo Einstein Services" />
+        </a>
+        <nav class="u-nav-links" id="navLinks">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="avi.html" class="active">AVI</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="tarifs.html">Tarifs</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="contact.html" class="u-nav-cta">Contactez-nous</a>
+        </nav>
+        <button class="u-burger" id="burger" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="u-hero" style="padding: 3.5rem 0 4rem">
+      <div class="u-container">
+        <span class="u-hero-badge">Application AVI sécurisée</span>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem)">
+          Demandez votre <em>Attestation de Virement Irrévocable</em>
+        </h1>
+        <p class="u-hero-lead">
+          Fournissez une preuve de vos ressources financières au consulat afin
+          d'obtenir votre visa étudiant. Nos fonds sont conservés en toute
+          sécurité et ne seront utilisés qu'à votre arrivée en France,
+          conformément à votre plan de soutien.
+        </p>
+        <div class="u-agree">
+          <span class="u-agree-icon">🛡️</span>
+          <p>
+            <strong>Processus sécurisé</strong><br />Vérification des étudiants
+            · Protection financière de confiance
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMULAIRE ===== -->
+    <section class="u-section" id="formulaire">
+      <div class="u-container" style="max-width: 760px">
+        <div class="u-section-head">
+          <p class="u-kicker">Étape <span id="stepLabel">1</span> sur 3</p>
+          <h2>Votre demande d'AVI</h2>
+          <p>
+            Merci de vous assurer que toutes les informations fournies sont
+            exactes. Notre équipe examinera votre dossier avant de vous demander
+            le dépôt de la garantie bancaire.
+          </p>
+        </div>
+
+        <form class="u-contact-form" id="aviForm" novalidate>
+          <!-- Étape 1 : infos personnelles -->
+          <div class="avi-step" data-step="1">
+            <h3>Vos informations personnelles</h3>
+            <div class="u-form-row">
+              <div class="u-form-group champs-required">
+                <label for="av-name">Nom et prénom</label>
+                <input type="text" id="av-name" name="name" required />
+              </div>
+              <div class="u-form-group champs-required">
+                <label for="av-dob">Date de naissance</label>
+                <input type="date" id="av-dob" name="dob" required />
+              </div>
+            </div>
+            <div class="u-form-row">
+              <div class="u-form-group champs-required">
+                <label for="av-email">Adresse email</label>
+                <input type="email" id="av-email" name="email" required />
+              </div>
+              <div class="u-form-group champs-required">
+                <label for="av-phone">Téléphone (WhatsApp de préférence)</label>
+                <input
+                  type="tel"
+                  id="av-phone"
+                  name="phone"
+                  required
+                  placeholder="+221 ..."
+                />
+              </div>
+            </div>
+            <div class="u-form-group champs-required">
+              <label for="av-address">Adresse complète</label>
+              <input type="text" id="av-address" name="address" required />
+            </div>
+          </div>
+
+          <!-- Étape 2 : projet d'études -->
+          <div class="avi-step" data-step="2" hidden>
+            <h3>Votre projet d'études</h3>
+            <div class="u-form-row">
+              <div class="u-form-group champs-required">
+                <label for="av-country">Pays de destination</label>
+                <select id="av-country" name="country" required>
+                  <option value="">— Choisir —</option>
+                  <option>France</option>
+                  <option>Canada</option>
+                  <option>Belgique</option>
+                  <option>Suisse</option>
+                  <option>Italie</option>
+                </select>
+              </div>
+              <div class="u-form-group champs-required">
+                <label for="av-city">Ville d'études</label>
+                <input type="text" id="av-city" name="city" required />
+              </div>
+            </div>
+            <div class="u-form-row">
+              <div class="u-form-group champs-required">
+                <label for="av-school">Établissement</label>
+                <input
+                  type="text"
+                  id="av-school"
+                  name="school"
+                  required
+                  placeholder="Université, école..."
+                />
+              </div>
+              <div class="u-form-group champs-required">
+                <label for="av-level">Niveau d'études</label>
+                <select id="av-level" name="level" required>
+                  <option value="">— Choisir —</option>
+                  <option>Licence</option>
+                  <option>Master</option>
+                  <option>Doctorat</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="u-form-group champs-required">
+              <label for="av-amount"
+                >Montant de la garantie souhaité (en euros)</label
+              >
+              <input
+                type="number"
+                id="av-amount"
+                name="amount"
+                min="1000"
+                required
+                placeholder="Ex : 8000"
+              />
+              <p class="u-form-note">
+                Le montant doit couvrir vos frais de première année selon les
+                exigences du consulat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Étape 3 : confirmation -->
+          <div class="avi-step" data-step="3" hidden>
+            <h3>Confirmation</h3>
+            <label class="u-form-check">
+              <input type="checkbox" id="av-accurate" required />
+              <span
+                >Je certifie l'exactitude des informations fournies et comprends
+                que mon dossier sera examiné avant toute demande de dépôt de
+                garantie.</span
+              >
+            </label>
+            <label class="u-form-check">
+              <input type="checkbox" id="av-privacy" required />
+              <span
+                >J'accepte le traitement de mes données conformément à la
+                <a href="politique-confidentialite.html"
+                  >politique de confidentialité</a
+                >.</span
+              >
+            </label>
+            <p class="u-form-note">
+              Prochaines étapes après envoi : ① examen de votre dossier par
+              notre équipe, ② signature du contrat par code SMS à 6 chiffres, ③
+              dépôt de la garantie, ④ remise de votre attestation.
+            </p>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              gap: 0.8rem;
+              justify-content: space-between;
+              margin-top: 1.5rem;
+            "
+          >
+            <button
+              type="button"
+              class="u-btn"
+              id="aviPrev"
+              style="background: #e8edf4; color: #0b2a5b"
+              hidden
+            >
+              ← Précédent
+            </button>
+            <button type="button" class="u-btn u-btn-primary" id="aviNext">
+              Suivant →
+            </button>
+            <button
+              type="submit"
+              class="u-btn u-btn-primary"
+              id="aviSubmit"
+              hidden
+            >
+              Envoyer ma demande
+            </button>
+          </div>
+          <p class="u-form-msg" id="aviMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== COMMENT ÇA MARCHE ===== -->
+    <section class="u-section u-section-cream">
+      <div class="u-container">
+        <div class="u-section-head">
+          <p class="u-kicker">Comment ça marche</p>
+          <h2>4 étapes, en toute sécurité</h2>
+        </div>
+        <div class="u-steps">
+          <div class="u-step">
+            <span class="u-step-num">1</span>
+            <h3>Déposez votre demande</h3>
+            <p>
+              Remplissez le formulaire ci-dessus. Notre équipe examine votre
+              dossier sous 48h ouvrées.
+            </p>
+          </div>
+          <div class="u-step">
+            <span class="u-step-num">2</span>
+            <h3>Signature du contrat</h3>
+            <p>
+              Vous recevez un code à 6 chiffres par SMS pour signer
+              électroniquement votre accord.
+            </p>
+          </div>
+          <div class="u-step">
+            <span class="u-step-num">3</span>
+            <h3>Dépôt de la garantie</h3>
+            <p>
+              Le dépôt est effectué auprès de notre partenaire bancaire
+              sécurisé.
+            </p>
+          </div>
+          <div class="u-step">
+            <span class="u-step-num">4</span>
+            <h3>Attestation délivrée</h3>
+            <p>
+              Recevez votre AVI à présenter au consulat pour votre demande de
+              visa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="u-footer">
+      <div class="u-container u-footer-grid">
+        <div class="u-footer-brand">
+          <img src="img/logo.svg" alt="Logo Einstein Services" />
+          <p>
+            Einstein Services, agence d'orientation et de mobilité
+            internationale à Yoff, Dakar.
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>contact@einsteinservicesvoyages.com</li>
+            <li>+221 33 830 54 60</li>
+            <li>Yoff, Dakar — Sénégal</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li>
+              <a href="politique-confidentialite.html"
+                >Politique de confidentialité</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="u-footer-bottom">
+        <div class="u-container">
+          © 2026 Einstein Services. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Menu mobile
+      var burger = document.getElementById("burger");
+      var navLinks = document.getElementById("navLinks");
+      burger.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+      });
+
+      // Formulaire AVI multi-étapes
+      var step = 1;
+      var form = document.getElementById("aviForm");
+      var msg = document.getElementById("aviMsg");
+      var prev = document.getElementById("aviPrev");
+      var next = document.getElementById("aviNext");
+      var submit = document.getElementById("aviSubmit");
+      var stepLabel = document.getElementById("stepLabel");
+
+      function showStep() {
+        form.querySelectorAll(".avi-step").forEach(function (el) {
+          el.hidden = Number(el.dataset.step) !== step;
+        });
+        stepLabel.textContent = step;
+        prev.hidden = step === 1;
+        next.hidden = step === 3;
+        submit.hidden = step !== 3;
+        msg.className = "u-form-msg";
+      }
+
+      function validateStep() {
+        var ok = true;
+        form
+          .querySelectorAll(".avi-step[data-step='" + step + "'] [required]")
+          .forEach(function (f) {
+            if (
+              f.type === "checkbox"
+                ? !f.checked
+                : !f.value || (f.type === "email" && !f.checkValidity())
+            ) {
+              ok = false;
+              f.style.borderColor = "#c0392b";
+            } else {
+              f.style.borderColor = "";
+            }
+          });
+        return ok;
+      }
+
+      next.addEventListener("click", function () {
+        if (!validateStep()) {
+          msg.className = "u-form-msg ko";
+          msg.textContent = "Merci de compléter correctement cette étape.";
+          return;
+        }
+        step++;
+        showStep();
+      });
+      prev.addEventListener("click", function () {
+        step--;
+        showStep();
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!validateStep()) {
+          msg.className = "u-form-msg ko";
+          msg.textContent = "Merci d'accepter les conditions avant d'envoyer.";
+          return;
+        }
+        var d = new FormData(form);
+        var text =
+          "🇫🇷 NOUVELLE DEMANDE D'AVI\n" +
+          "• Nom : " +
+          d.get("name") +
+          "\n" +
+          "• Naissance : " +
+          d.get("dob") +
+          "\n" +
+          "• Email : " +
+          d.get("email") +
+          "\n" +
+          "• Téléphone : " +
+          d.get("phone") +
+          "\n" +
+          "• Adresse : " +
+          d.get("address") +
+          "\n" +
+          "• Destination : " +
+          d.get("country") +
+          " — " +
+          d.get("city") +
+          "\n" +
+          "• Établissement : " +
+          d.get("school") +
+          " (" +
+          d.get("level") +
+          ")\n" +
+          "• Montant souhaité : " +
+          d.get("amount") +
+          " €";
+        window.open(
+          "https://wa.me/221338305460?text=" + encodeURIComponent(text),
+          "_blank",
+        );
+        msg.className = "u-form-msg ok";
+        msg.textContent =
+          "Demande envoyée ! Notre équipe vous contacte sous 48h. (WhatsApp s'est ouvert pour transmettre votre dossier.)";
+        form.reset();
+        step = 1;
+        showStep();
+      });
+
+      showStep();
+    </script>
+  </body>
+</html>
