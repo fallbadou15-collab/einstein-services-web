@@ -15,6 +15,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+[hidden] {
+  display: none !important;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -1082,6 +1085,21 @@ a.btn[href$="contact-en.html"]:hover {
   height: 18px;
   flex-shrink: 0;
 }
+.field-group input:not([type="radio"]),
+.field-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #eee5d9;
+  border-radius: 12px;
+  background: var(--cream-2);
+  color: var(--ink);
+  font: inherit;
+}
+.field-group input:not([type="radio"]):focus,
+.field-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
 .test-form .btn {
   margin-top: 1.6rem;
   align-self: flex-start;
@@ -1229,6 +1247,15 @@ a.btn[href$="contact-en.html"]:hover {
   color: var(--navy);
   font-size: 0.95rem;
 }
+.marquee-track a {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+.marquee-track a:hover {
+  color: var(--blue);
+}
 /* Logos d'écoles style Nexuroom */
 .school-logo {
   font-weight: 700;
@@ -1270,6 +1297,36 @@ a.btn[href$="contact-en.html"]:hover {
   .partner-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.site-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s;
+}
+.site-whatsapp:hover {
+  color: #fff;
+  transform: scale(1.08);
+}
+.site-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+.site-whatsapp span {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
 }
 
 /* ===== Catalogue formations ===== */

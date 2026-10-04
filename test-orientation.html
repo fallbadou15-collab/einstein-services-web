@@ -88,137 +88,39 @@
         <div class="section-head">
           <h2>Test d'<span class="grad-orange">orientation</span></h2>
           <p>
-            Répondez à ces questions pour découvrir les domaines d'études et les
-            destinations qui correspondent à votre profil.
+            Décrivez vos centres d’intérêt, vos matières fortes, votre projet
+            professionnel et votre budget. Un conseiller pourra étudier vos
+            réponses avec le catalogue officiel des formations.
           </p>
         </div>
 
         <form class="card test-form" id="orientForm">
-          <h3>1. Quelles matières vous réussissent le mieux ?</h3>
+          <h3>1. Vos centres d’intérêt et matières fortes</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="matieres" value="sciences" required />
-              Mathématiques, physique, sciences</label
-            >
-            <label
-              ><input type="radio" name="matieres" value="lettres" /> Français,
-              philosophie, langues</label
-            >
-            <label
-              ><input type="radio" name="matieres" value="eco" /> Économie,
-              gestion, histoire-géographie</label
-            >
-            <label
-              ><input type="radio" name="matieres" value="arts" /> Arts, design,
-              activités créatives</label
-            >
+            <label for="orient-matieres">Décrivez vos centres d’intérêt et les matières qui vous réussissent</label>
+            <textarea id="orient-matieres" name="matieres" rows="3" required></textarea>
           </div>
 
-          <h3>2. Qu'est-ce qui vous motive le plus dans un métier ?</h3>
+          <h3>2. Vos motivations</h3>
           <div class="field-group">
-            <label
-              ><input
-                type="radio"
-                name="motivation"
-                value="sciences"
-                required
-              />
-              Comprendre, analyser, résoudre des problèmes</label
-            >
-            <label
-              ><input type="radio" name="motivation" value="lettres" />
-              Communiquer, transmettre, convaincre</label
-            >
-            <label
-              ><input type="radio" name="motivation" value="eco" />
-              Entreprendre, gérer, organiser</label
-            >
-            <label
-              ><input type="radio" name="motivation" value="arts" /> Créer,
-              imaginer, concevoir</label
-            >
+            <label for="orient-motivation">Quelles sont vos motivations et vos intérêts professionnels ?</label>
+            <textarea id="orient-motivation" name="motivation" rows="3" required></textarea>
           </div>
 
-          <h3>3. Votre projet professionnel ?</h3>
+          <h3>3. Votre projet professionnel</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="projet" value="sciences" required />
-              Ingénieur, médecin, chercheur, informaticien</label
-            >
-            <label
-              ><input type="radio" name="projet" value="lettres" /> Juriste,
-              enseignant, journaliste, traducteur</label
-            >
-            <label
-              ><input type="radio" name="projet" value="eco" /> Manager,
-              comptable, entrepreneur, banquier</label
-            >
-            <label
-              ><input type="radio" name="projet" value="arts" /> Designer,
-              architecte, artiste, développeur créatif</label
-            >
+            <label for="orient-projet">Décrivez votre projet professionnel</label>
+            <textarea id="orient-projet" name="projet" rows="3" required></textarea>
           </div>
 
-          <h3>
-            4. Votre budget annuel disponible (frais de scolarité + vie) ?
-          </h3>
+          <h3>4. Votre budget</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="budget" value="suisse" required /> Plus
-              de 20 000 €</label
-            >
-            <label
-              ><input type="radio" name="budget" value="canada" /> Entre 10 000
-              et 20 000 €</label
-            >
-            <label
-              ><input type="radio" name="budget" value="france" /> Entre 5 000
-              et 10 000 €</label
-            >
-            <label
-              ><input type="radio" name="budget" value="italie" /> Moins de 5
-              000 €</label
-            >
-          </div>
-
-          <h3>5. Quelle langue préférez-vous pour vos études ?</h3>
-          <div class="field-group">
-            <label
-              ><input type="radio" name="langue" value="france" required />
-              Français</label
-            >
-            <label
-              ><input type="radio" name="langue" value="canada" /> Français ou
-              anglais, les deux me vont</label
-            >
-            <label
-              ><input type="radio" name="langue" value="italie" /> Peu importe,
-              prêt(e) à apprendre</label
-            >
-          </div>
-
-          <h3>6. Quelle taille de ville vous attire ?</h3>
-          <div class="field-group">
-            <label
-              ><input type="radio" name="ville" value="france" required />
-              Grande capitale animée</label
-            >
-            <label
-              ><input type="radio" name="ville" value="canada" /> Grande ville
-              multiculturelle</label
-            >
-            <label
-              ><input type="radio" name="ville" value="belgique" /> Ville
-              moyenne à taille humaine</label
-            >
-            <label
-              ><input type="radio" name="ville" value="italie" /> Ville riche en
-              histoire et en art</label
-            >
+            <label for="orient-budget">Indiquez le budget disponible et sa devise</label>
+            <input id="orient-budget" type="text" name="budget" required />
           </div>
 
           <button type="submit" class="btn btn-orange btn-lg">
-            Découvrir mon profil
+            Préparer mon récapitulatif
           </button>
         </form>
 

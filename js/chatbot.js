@@ -4,7 +4,6 @@
    - qualifie les prospects (niveau, projet, destination)
    - oriente vers le test d'éligibilité ou la prise de rendez-vous
    - transfère vers un conseiller humain (page contact)
-   - enregistre les conversations (localStorage) pour le suivi commercial
    Règle : Nafi ne communique AUCUN tarif — il redirige vers un conseiller. */
 
 const NAFI_CONTACT_EMAIL = "contact@einsteinservicesvoyages.com";
@@ -15,6 +14,18 @@ const NAFI_LINK_LABELS = {
   "destinations.html": "Découvrir les destinations",
   "contact.html": "Ouvrir la page contact",
 };
+
+if (!document.querySelector(".u-whatsapp, .site-whatsapp")) {
+  const whatsappLink = document.createElement("a");
+  whatsappLink.className = "site-whatsapp";
+  whatsappLink.href =
+    "https://wa.me/221783876262?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations";
+  whatsappLink.target = "_blank";
+  whatsappLink.rel = "noopener";
+  whatsappLink.setAttribute("aria-label", "Contacter Einstein Services sur WhatsApp");
+  whatsappLink.innerHTML = "<span aria-hidden=\"true\">WA</span>";
+  document.body.appendChild(whatsappLink);
+}
 
 /* ---------- Moteur de réponses ---------- */
 const NAFI_REPLIES = [
@@ -32,59 +43,59 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["france", "campus france", "parcoursup", "etudes en france"],
-    r: "🇫🇷 La France est notre destination n°1 : universités, grandes écoles, BTS/BUT…\nLa procédure passe par Campus France (« Études en France ») ou Parcoursup selon votre situation.\nVous voulez savoir si votre profil est éligible ? Faites le test gratuit : test-eligibilite.html ✅",
+    r: "🇫🇷 La France fait partie des destinations mentionnées par Einstein Services. Le cahier des charges cite Parcoursup et Campus France (« Études en France ») parmi les démarches d'admission.\nLe questionnaire Campus France est indicatif : la grille d'évaluation doit être confirmée par l'agence. Vous pouvez le consulter ici : test-eligibilite.html",
   },
   {
     kw: ["canada", "quebec", "québec", "montréal", "montreal", "toronto"],
-    r: "🇨🇦 Le Canada est très demandé : collèges (DEC technique), universités, possibilité de permis de travail post-diplôme.\nRentrées principales : août et septembre. Il faut s'y prendre plusieurs mois à l'avance !\nVoulez-vous passer au test d'éligibilité pour vérifier votre dossier ?",
+    r: "🇨🇦 Le Canada fait partie des destinations d'études mentionnées dans le cahier des charges. Les établissements, formations, admissions, coûts et procédures de visa doivent être confirmés selon votre projet.",
   },
   {
     kw: ["belgique", "bruxelles", "liège", "liege"],
-    r: "🇧🇪 La Belgique offre un excellent rapport qualité/prix : hautes écoles et universités francophones reconnues, coût de la vie raisonnable et villes à taille humaine (Bruxelles, Liège…).",
+    r: "🇧🇪 La Belgique fait partie des destinations d'études mentionnées dans le cahier des charges. Les établissements, formations, admissions, coûts et procédures sont à confirmer selon votre projet.",
   },
   {
     kw: ["suisse", "genève", "geneve"],
-    r: "🇨🇭 La Suisse : excellence académique, débouchés solides, qualité de vie exceptionnelle. Les frais universitaires sont modérés mais le coût de la vie est élevé — un budget solide est nécessaire.",
+    r: "🇨🇭 La Suisse fait partie des destinations d'études mentionnées dans le cahier des charges. Les établissements, formations, admissions, coûts et procédures sont à confirmer selon votre projet.",
   },
   {
     kw: ["italie", "italy", "rome", "milan"],
-    r: "🇮🇹 L'Italie : universités historiques, frais accessibles (souvent selon les revenus de la famille) et de plus en plus de cursus en anglais. Villes phares : Rome, Milan, Bologne.",
+    r: "🇮🇹 L'Italie fait partie des destinations d'études mentionnées dans le cahier des charges. Les établissements, formations, admissions, coûts et procédures sont à confirmer selon votre projet.",
   },
   {
     kw: ["visa", "vls", "titre de séjour"],
-    r: "🛂 Pour le visa étudiant, il faut généralement : une admission confirmée, un justificatif de financement, un logement et une assurance. Nous vous accompagnons à chaque étape, y compris la préparation du rendez-vous consulaire.\nSouhaitez-vous un rendez-vous avec un conseiller ?",
+    r: "🛂 Les services mentionnés comprennent l'assistance pour les visas études, tourisme et travail, la constitution du dossier, la prise de rendez-vous et la préparation à l'entretien. Les pièces et conditions varient selon la procédure et doivent être confirmées auprès de l'agence.",
   },
   {
     kw: ["document", "dossier", "papier", "pieces", "pièces", "releve", "relevé"],
-    r: "📄 Documents généralement demandés : relevés de notes et diplômes (traduits si besoin), pièce d'identité/passeport, CV, lettre de motivation, justificatif de langue (TCF/DELF/IELTS), preuve de financement.\nJe peux vous orienter vers un conseiller pour une checklist personnalisée. Dites « conseiller » !",
+    r: "📄 La liste des documents dépend du service, de la destination et de la procédure. Elle doit être confirmée par l'agence avant tout envoi. N'envoyez pas de document personnel ou financier dans ce chat.",
   },
   {
     kw: ["calendrier", "date", "deadline", "quand", "rentree", "rentrée", "candidature"],
-    r: "📅 Repères généraux :\n• France : Campus France/Parcoursup entre novembre et mars selon la procédure\n• Canada : candidatures souvent avant janvier-mars pour la rentrée d'automne\n• Belgique/Suisse/Italie : printemps → début d'été\nLe plus tôt est le mieux ! Consultez le catalogue : formations.html",
+    r: "📅 Les dates limites dépendent de l'établissement, de la destination et de la procédure. Consultez les sources officielles et demandez à l'agence les échéances applicables à votre projet.",
   },
   {
     kw: ["langue", "tcf", "delf", "ielts", "anglais", "français"],
-    r: "🗣️ Pour la France, un niveau B2 en français (TCF/DELF) est généralement demandé. Pour les cursus en anglais (Canada, Italie…), prévoyez l'IELTS (souvent 6.0–6.5).\nNous vous aidons à planifier votre test de langue. Dites « rendez-vous » pour être accompagné.",
+    r: "🗣️ Les justificatifs et niveaux de langue requis dépendent de l'établissement et de la formation. Vérifiez les critères officiels et demandez à l'agence les exigences applicables à votre dossier.",
   },
   {
     kw: ["test", "eligibilite", "éligibilité", "eligible", "éligible", "profil"],
-    r: "🎯 Le test d'éligibilité évalue gratuitement la faisabilité de votre projet (niveau, langue, financement, calendrier). C'est le meilleur point de départ : test-eligibilite.html\nEt pour votre orientation : test-orientation.html",
+    r: "🎯 Le questionnaire Campus France recueille les critères indiqués dans le cahier des charges, mais ne délivre pas de verdict automatique tant que la grille d'évaluation n'est pas validée par l'agence : test-eligibilite.html\nLe questionnaire d'orientation prépare un récapitulatif à partager avec un conseiller : test-orientation.html",
   },
   {
     kw: ["logement", "hebergement", "hébergement", "residence", "résidence"],
-    r: "🏠 Nous proposons une assistance logement : résidences étudiantes, CROUS en France, colocations. L'attestation de logement est aussi souvent requise pour le visa.\nUn conseiller peut vous détailler les options : tapez « conseiller ».",
+    r: "🏠 Le cahier des charges mentionne le logement étudiant via Nexroom et une attestation d'hébergement pour le dossier de visa. Les disponibilités, tarifs et modalités sont à confirmer par l'agence.",
   },
   {
     kw: ["bourse", "financement", "argent", "budget", "cout", "coût", "frais"],
-    r: "💰 Le financement se prépare tôt : justificatif de ressources, AVI, garant… Des bourses existent (Eiffel, bourses régionales, établissements). Je ne peux pas vous communiquer de tarifs — un conseiller se charge de l'aspect financier avec vous. Tapez « conseiller » ou « rendez-vous ».",
+    r: "💰 Les services mentionnés comprennent l'AVI via Univers France Succès, des conseils sur les justificatifs de ressources et des informations sur les bourses. Les conditions et tarifs sont à confirmer auprès d'un conseiller.",
   },
   {
     kw: ["formation", "catalogue", "ecole", "école", "université", "universite", "master", "licence", "bts", "bachelor"],
-    r: "🎓 Notre catalogue référence les formations de nos établissements partenaires avec des filtres (pays, niveau, domaine, langue…). Direction : formations.html",
+    r: "🎓 Le catalogue officiel des formations et établissements partenaires est en attente des données à fournir par l'agence. La page sera complétée après validation : formations.html",
   },
   {
     kw: ["voyage", "billet", "avion", "hotel", "hôtel", "tourisme"],
-    r: "✈️ Einstein Services, c'est aussi la billetterie : billets d'avion, réservations d'hôtels, visas de tourisme et d'affaires. Un conseiller s'occupe de votre demande : tapez « conseiller ».",
+    r: "✈️ Les services mentionnés comprennent les billets d'avion, les réservations d'hôtels, les séjours touristiques et les voyages d'affaires. Les visas affaires et visite familiale sont à confirmer par l'agence.",
   },
   {
     kw: ["rendez-vous", "rendez vous", "rdv", "appointment", "conseiller", "humain", "agent", "contact"],
@@ -95,7 +106,7 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["tarif", "prix", "combien", "coute", "coûte", "paiement", "devis"],
-    r: "🔒 Notre règle : Nafi ne communique aucun tarif, pour garantir une information exacte et personnalisée. Un conseiller vous répond très vite : contact.html",
+    r: "🔒 Nafi ne communique pas de tarif. Contactez Einstein Services pour connaître les tarifs validés : contact.html",
   },
   {
     kw: ["merci", "super", "parfait", "top", "cool"],
@@ -112,35 +123,6 @@ const NAFI_REPLIES = [
 ];
 const NAFI_FALLBACK =
   "Je ne suis pas sûre d'avoir bien compris 🤔 Essayez un mot-clé comme « France », « visa », « documents », « calendrier », « logement », « formation » ou « rendez-vous ». Ou tapez « menu » pour voir les options.";
-
-/* ---------- Enregistrement des conversations ---------- */
-function nafiSave(msg, from) {
-  try {
-    const key = "es_nafi_conversations";
-    const convs = JSON.parse(localStorage.getItem(key) || "[]");
-    const page = location.pathname.split("/").pop() || "index.html";
-    let conv = convs.find(
-      (c) => c.session === sessionStorage.getItem("nafiSession"),
-    );
-    if (!conv) {
-      sessionStorage.setItem(
-        "nafiSession",
-        "S" + Date.now().toString(36).toUpperCase(),
-      );
-      conv = {
-        session: sessionStorage.getItem("nafiSession"),
-        page: page,
-        date: new Date().toISOString(),
-        messages: [],
-      };
-      convs.unshift(conv);
-    }
-    conv.messages.push({ from, text: msg, time: new Date().toISOString() });
-    localStorage.setItem(key, JSON.stringify(convs.slice(0, 100)));
-  } catch (e) {
-    /* stockage indisponible : on ignore */
-  }
-}
 
 /* ---------- Interface ---------- */
 const NAFI_HTML = `
@@ -224,7 +206,6 @@ function nafiAdd(text, who) {
   });
   nafiBody.appendChild(div);
   nafiBody.scrollTop = nafiBody.scrollHeight;
-  nafiSave(text, who === "bot" ? "nafi" : "utilisateur");
 }
 
 function nafiReply(question) {

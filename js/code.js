@@ -27,7 +27,7 @@ document.querySelectorAll(".faq-q").forEach((q) => {
   });
 });
 
-// Formulaire de contact — envoi réel via WhatsApp (pré-rempli)
+// Formulaire de contact — prépare un message WhatsApp à envoyer par l'utilisateur
 // ⚠️ Remplacez le numéro ci-dessous par le vrai numéro WhatsApp de l'agence
 // au format international sans + ni espaces (ex. : 33612345678)
 const WHATSAPP_NUMBER = "221783876262";
@@ -36,6 +36,9 @@ const form = document.getElementById("contactForm");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    const formOk = document.getElementById("formOk");
+    if (!form.reportValidity()) return;
+
     const data = new FormData(form);
     const message =
       `Bonjour Einstein Services ! 👋\n\n` +
@@ -43,6 +46,7 @@ if (form) {
       `📧 Email : ${data.get("email")}\n` +
       `📱 Téléphone : ${data.get("tel") || "non renseigné"}\n` +
       `🌍 Destination : ${data.get("destination")}\n\n` +
+      `🎓 Formation : ${new URLSearchParams(window.location.search).get("formation") || "non précisée"}\n\n` +
       `💬 Message :\n${data.get("message")}`;
 
     // Ouvre WhatsApp avec le message pré-rempli
@@ -51,8 +55,12 @@ if (form) {
       "_blank",
     );
 
-    document.getElementById("formOk").hidden = false;
-    form.reset();
+    if (formOk) {
+      formOk.textContent =
+        "WhatsApp s'ouvre avec votre message prérempli. Vérifiez-le puis appuyez sur Envoyer pour transmettre votre demande.";
+      formOk.hidden = false;
+      formOk.setAttribute("role", "status");
+    }
   });
 }
 
@@ -88,7 +96,7 @@ if (profilForm) {
       `• Budget annuel : ${d.get("budget")}\n` +
       `• Domaine : ${d.get("domaine")}\n` +
       `• Téléphone : ${d.get("tel")}\n\n` +
-      `Je souhaite recevoir une analyse gratuite de mon projet.`;
+      `Je souhaite échanger avec un conseiller au sujet de mon projet.`;
     window.open(
       `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
       "_blank",

@@ -6,7 +6,7 @@
     <title>Test d'éligibilité Campus France — Einstein Services</title>
     <meta
       name="description"
-      content="Évaluez gratuitement et en 2 minutes la faisabilité de votre projet d'études en France : niveau, français, cohérence du parcours, financement et calendrier."
+      content="Questionnaire indicatif de Campus France : niveau d'études, langue, cohérence du parcours, financement et calendrier. Aucun verdict automatique avant validation de la grille par l'agence."
     />
     <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,13 +26,13 @@
     <meta property="og:site_name" content="Einstein Services" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:title" content="Test d'éligibilité Campus France — Einstein Services" />
-    <meta property="og:description" content="Évaluez gratuitement et en 2 minutes la faisabilité de votre projet d'études en France : niveau, français, cohérence du parcours, financement et calendrier." />
+    <meta property="og:description" content="Questionnaire indicatif de Campus France : niveau d'études, langue, cohérence du parcours, financement et calendrier. Aucun verdict automatique avant validation de la grille par l'agence." />
     <meta property="og:url" content="https://einsteinservicesvoyages.com/test-eligibilite.html" />
     <meta property="og:image" content="https://einsteinservicesvoyages.com/img/logo-light.svg" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Test d'éligibilité Campus France — Einstein Services" />
-    <meta name="twitter:description" content="Évaluez gratuitement et en 2 minutes la faisabilité de votre projet d'études en France." />
+    <meta name="twitter:description" content="Questionnaire indicatif Campus France, sans verdict automatique avant validation par l'agence." />
     <!-- Données structurées -->
     <script type="application/ld+json">
     {
@@ -90,98 +90,45 @@
             Test d'<span class="grad-orange">éligibilité Campus France</span>
           </h2>
           <p>
-            Évaluez en 2 minutes la faisabilité de votre projet d'études en
-            France selon les 5 critères clés de la procédure.
+            Ce questionnaire recueille les cinq critères du cahier des charges.
+            La grille de notation n'étant pas définie, il ne délivre pas de
+            verdict automatique d'éligibilité.
           </p>
         </div>
 
         <form class="card test-form" id="eligForm">
           <h3>1. Niveau d'études et moyennes</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="niveau" value="2" required /> Bac à bac+2 en
-              cours, moyennes ≥ 12/20</label
-            >
-            <label
-              ><input type="radio" name="niveau" value="2" /> Bac+2 à bac+3
-              obtenu, moyennes correctes</label
-            >
-            <label
-              ><input type="radio" name="niveau" value="1" /> Dossiers avec
-              moyennes inférieures à 10/20</label
-            >
-            <label
-              ><input type="radio" name="niveau" value="0" /> Parcours très
-              irrégulier ou incomplet</label
-            >
+            <label for="elig-niveau">Indiquez votre niveau et vos moyennes</label>
+            <input id="elig-niveau" type="text" name="niveau" required />
           </div>
 
           <h3>2. Niveau de français</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="langue" value="2" required /> TCF/TEF
-              B2 ou plus, ou DELF B2 obtenu</label
-            >
-            <label
-              ><input type="radio" name="langue" value="1" /> TCF/TEF B1, ou en
-              préparation</label
-            >
-            <label
-              ><input type="radio" name="langue" value="0" /> Aucun test de
-              français pour le moment</label
-            >
+            <label for="elig-langue">Indiquez votre niveau et, le cas échéant, votre test de français</label>
+            <input id="elig-langue" type="text" name="langue" required />
           </div>
 
           <h3>3. Cohérence du parcours</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="coherence" value="2" required /> La
-              formation visée prolonge naturellement mon parcours</label
-            >
-            <label
-              ><input type="radio" name="coherence" value="1" /> Changement de
-              domaine mais justifiable</label
-            >
-            <label
-              ><input type="radio" name="coherence" value="0" /> Projet sans
-              lien clair avec mon parcours</label
-            >
+            <label for="elig-coherence">Expliquez le lien entre votre parcours et la formation visée</label>
+            <textarea id="elig-coherence" name="coherence" rows="3" required></textarea>
           </div>
 
           <h3>4. Capacité de financement</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="financement" value="2" required />
-              Garant avec revenus réguliers ou AVI en cours</label
-            >
-            <label
-              ><input type="radio" name="financement" value="1" /> Financement
-              partiel / en construction</label
-            >
-            <label
-              ><input type="radio" name="financement" value="0" /> Aucun
-              financement identifié</label
-            >
+            <label for="elig-financement">Indiquez si un garant ou une AVI est envisagé(e), sans transmettre de document ni donnée bancaire</label>
+            <textarea id="elig-financement" name="financement" rows="3" required></textarea>
           </div>
 
           <h3>5. Respect du calendrier</h3>
           <div class="field-group">
-            <label
-              ><input type="radio" name="calendrier" value="2" required /> Je
-              m'y prends 8 mois ou plus avant la rentrée</label
-            >
-            <label
-              ><input type="radio" name="calendrier" value="1" /> Entre 4 et 8
-              mois avant la rentrée visée</label
-            >
-            <label
-              ><input type="radio" name="calendrier" value="0" /> Moins de 4
-              mois avant la rentrée visée</label
-            >
+            <label for="elig-calendrier">Indiquez la rentrée visée et l'état d'avancement de votre calendrier</label>
+            <textarea id="elig-calendrier" name="calendrier" rows="3" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-orange btn-lg">
-            Voir mon résultat
+            Préparer mon récapitulatif indicatif
           </button>
         </form>
 
@@ -190,7 +137,7 @@
           <p id="resultText"></p>
           <div class="service-actions">
             <a href="index.html#contact" class="btn btn-orange" id="resultCta"
-              >Prendre rendez-vous</a
+              >Contacter un conseiller</a
             >
             <a href="https://wa.me/221783876262" class="btn btn-ghost"
               >💬 WhatsApp</a

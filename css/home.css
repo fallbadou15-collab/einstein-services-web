@@ -15,6 +15,10 @@
   --u-shadow: 0 12px 32px rgba(11, 42, 91, 0.12);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -329,6 +333,35 @@ body {
   height: 30px;
   fill: #fff;
 }
+.site-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s;
+}
+.site-whatsapp:hover {
+  color: #fff;
+  transform: scale(1.08);
+}
+.site-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+.site-whatsapp span {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
 
 /* ===== Cookie banner ===== */
 .u-cookie {
@@ -352,6 +385,12 @@ body {
   flex-wrap: wrap;
 }
 .u-cookie a { color: var(--u-gold); }
+.u-cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
 .u-cookie .u-btn { padding: 0.55rem 1.2rem; font-size: 0.85rem; }
 
 /* ===== FAQ ===== */
