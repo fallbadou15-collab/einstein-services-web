@@ -6,7 +6,7 @@
    - transfère vers un conseiller humain (page contact)
    Règle : Nafi ne communique AUCUN tarif — il redirige vers un conseiller. */
 
-const NAFI_CONTACT_EMAIL = "contact@einsteinservicesvoyages.com";
+const NAFI_CONTACT_EMAIL = "contact@einstein-services.com";
 const NAFI_LINK_LABELS = {
   "test-eligibilite.html": "Faire le test d'éligibilité",
   "test-orientation.html": "Faire le test d'orientation",

@@ -270,7 +270,7 @@ body {
   font-weight: 700;
   font-size: 0.98rem;
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: 5px;
   padding: 0.8rem 1.6rem;
   transition:
     transform 0.15s,
@@ -768,6 +768,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+}
+.u-testimonials .temoin {
+  opacity: 1;
+  transform: none;
 }
 .u-testimonial {
   background: var(--u-white);

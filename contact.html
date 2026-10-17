@@ -46,7 +46,7 @@
       "foundingDate": "2024",
       "address": { "@type": "PostalAddress", "streetAddress": "Route de l'Aéroport, près de la Senelec", "addressLocality": "Yoff, Dakar", "addressCountry": "SN" },
       "telephone": "+221338305460",
-      "email": "contact@einsteinservicesvoyages.com",
+      "email": "contact@einstein-services.com",
       "sameAs": [
         "https://www.facebook.com/einsteinservices",
         "https://www.instagram.com/einsteinservices",
@@ -88,7 +88,7 @@
       <section class="section section-cream" id="contact">
         <div class="container contact-inner">
           <div class="contact-text">
-            <h2>Parlons de <span class="grad-blue">votre projet</span></h2>
+            <h1>Parlons de <span class="grad-blue">votre projet</span></h1>
             <p>Présentez votre projet à Einstein Services pour organiser un échange.</p>
             <div class="contact-info">
               <p>📍 Route de l'Aéroport, près de la Senelec, Yoff, Dakar</p>
@@ -108,9 +108,16 @@
               </p>
               <p>
                 ✉️
-                <a href="mailto:contact@einsteinservicesvoyages.com"
-                  >contact@einsteinservicesvoyages.com</a
-                >
+                <a href="mailto:contact@einstein-services.com"
+                  >contact@einstein-services.com</a
+              </p>
+              <p>
+                <strong>Partenariats</strong><br />
+                <a href="mailto:partners.apply@einstein-services.com">partners.apply@einstein-services.com</a>
+              </p>
+              <p>
+                <strong>Support</strong><br />
+                <a href="mailto:support@einstein-services.com">support@einstein-services.com</a>
               </p>
               <p>
                 🗺️ Route de l'Aéroport, près de la Senelec, Yoff, Dakar —
@@ -136,19 +143,25 @@
             </div>
           </div>
           <form class="contact-form" id="contactForm">
-            <input type="text" name="nom" placeholder="Votre nom" required />
+            <label class="sr-only" for="contact-nom">Votre nom</label>
+            <input id="contact-nom" type="text" name="nom" placeholder="Votre nom" required />
+            <label class="sr-only" for="contact-email">Votre email</label>
             <input
+              id="contact-email"
               type="email"
               name="email"
               placeholder="Votre email"
               required
             />
+            <label class="sr-only" for="contact-tel">Votre téléphone ou WhatsApp</label>
             <input
+              id="contact-tel"
               type="tel"
               name="tel"
               placeholder="Votre téléphone / WhatsApp"
             />
-            <select name="destination" required>
+            <label class="sr-only" for="contact-destination">Destination souhaitée</label>
+            <select id="contact-destination" name="destination" required>
               <option value="" disabled selected>Destination souhaitée</option>
               <option>France</option>
               <option>Canada</option>
@@ -157,7 +170,9 @@
               <option>Italie</option>
               <option>Autre</option>
             </select>
+            <label class="sr-only" for="contact-message">Parlez-nous de votre projet</label>
             <textarea
+              id="contact-message"
               name="message"
               rows="4"
               placeholder="Parlez-nous de votre projet…"

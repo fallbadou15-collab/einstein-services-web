@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fiche destination d'Einstein Services : études, démarches, coût de la vie et informations clés."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <title>Destination — Einstein Services</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="services.html">Services</a>
+          <a href="destinations.html" aria-current="page">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menu"></button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container" id="paysContainer">
+        <a class="card-link" href="destinations.html"
+          >← Toutes les destinations</a
+        >
+        <div class="pays-hero card">
+          <img
+            id="paysFlag"
+            class="dest-flag dest-flag-lg"
+            src=""
+            alt=""
+            width="64"
+            height="48"
+            hidden
+          />
+          <h1 id="paysName"></h1>
+          <p class="dest-meta" id="paysMeta"></p>
+          <p id="paysIntro"></p>
+        </div>
+        <div id="paysError" class="disclaimer" hidden>
+          Destination inconnue.
+          <a href="destinations.html">Retour aux destinations</a>.
+        </div>
+
+        <div class="section-head">
+          <h2>Informations clés</h2>
+        </div>
+        <div class="grid grid-3" id="paysFacts"></div>
+
+        <div class="section-head">
+          <h2>Démarches principales</h2>
+        </div>
+        <div class="grid grid-3" id="paysSteps"></div>
+
+        <div class="service-actions" style="justify-content: center">
+          <a
+            href="contact.html?destination="
+            id="paysCta"
+            class="btn btn-orange"
+            >Préparer mon projet pour ce pays</a
+          >
+          <a href="formations.html" class="btn btn-ghost"
+            >Voir les formations</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          Einstein Services — Yoff, Dakar ·
+          <a href="tel:+221338305460">+221 33 830 54 60</a> ·
+          <a href="mailto:contact@einstein-services.com"
+            >contact@einstein-services.com</a
+          >
+        </p>
+        <a href="politique-confidentialite.html"
+          >Politique de confidentialité</a
+        >
+      </div>
+    </footer>
+    <script src="js/code.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/destination-pays.js"></script>
+  </body>
+</html>

@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Einstein Services — Brochure de présentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #10264b;
+        --blue: #256da7;
+        --pale: #eaf2f8;
+        --orange: #ee7737;
+        --gold: #f2bd59;
+        --ink: #202c3d;
+        --muted: #68778b;
+        --line: #dce3eb;
+        --paper: #fffefa;
+      }
+      * { box-sizing: border-box; }
+      html { background: #e9edf2; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font: 10pt/1.5 "DM Sans", sans-serif;
+      }
+      .page {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 210mm;
+        height: 297mm;
+        margin: 8mm auto;
+        padding: 15mm;
+        overflow: hidden;
+        background: var(--paper);
+        box-shadow: 0 8px 32px #10264b20;
+      }
+      .content { position: relative; z-index: 1; }
+      .logo {
+        display: block;
+        width: 54mm;
+        height: auto;
+      }
+      .eyebrow {
+        margin: 0 0 3mm;
+        color: var(--orange);
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+      }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, h3 { font-family: "Manrope", sans-serif; }
+      h1 {
+        max-width: 145mm;
+        margin: 24mm 0 7mm;
+        color: #fff;
+        font-size: 40pt;
+        font-weight: 800;
+        letter-spacing: -.055em;
+        line-height: 1.04;
+      }
+      h1 em { color: var(--gold); font-style: normal; }
+      h2 {
+        margin: 0 0 4mm;
+        color: var(--navy);
+        font-size: 24pt;
+        font-weight: 800;
+        letter-spacing: -.05em;
+        line-height: 1.13;
+      }
+      h3 {
+        margin: 0 0 2mm;
+        color: var(--navy);
+        font-size: 12pt;
+        line-height: 1.25;
+      }
+      .cover {
+        color: #fff;
+        background:
+          radial-gradient(ellipse at 100% 100%, #2768a5 0, transparent 46%),
+          radial-gradient(ellipse at 100% 0, #1d3d6c 0, transparent 40%),
+          var(--navy);
+      }
+      .cover .logo { width: 82mm; }
+      .orbit {
+        position: absolute;
+        top: 67mm;
+        right: -50mm;
+        width: 130mm;
+        height: 130mm;
+        border: 1px solid #ffffff2c;
+        border-radius: 50%;
+        box-shadow: 0 0 0 17mm #ffffff08, 0 0 0 34mm #ffffff06;
+      }
+      .cover .eyebrow { margin-top: 25mm; }
+      .cover-tag {
+        display: inline-block;
+        padding: 2.5mm 4mm;
+        border: 1px solid #ffffff45;
+        border-radius: 999px;
+        color: #f7d99b;
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: .07em;
+        text-transform: uppercase;
+      }
+      .cover-copy {
+        max-width: 118mm;
+        color: #d5deeb;
+        font-size: 13pt;
+        line-height: 1.65;
+      }
+      .destination-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5mm;
+        margin-top: 13mm;
+      }
+      .destination-pills span {
+        padding: 2.4mm 4mm;
+        border: 1px solid #ffffff40;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 8pt;
+        font-weight: 600;
+      }
+      .cover-footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 10mm;
+        margin-top: auto;
+        padding-top: 7mm;
+        border-top: 1px solid #ffffff40;
+      }
+      .cover-footer strong {
+        display: block;
+        color: var(--gold);
+        font: 700 11pt "Manrope", sans-serif;
+      }
+      .cover-footer span { color: #d5deeb; font-size: 8pt; }
+      .page-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5mm;
+        margin-bottom: 12mm;
+        padding-bottom: 4mm;
+        border-bottom: 1px solid var(--line);
+      }
+      .page-head .logo { width: 48mm; }
+      .page-head span {
+        color: var(--muted);
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .intro {
+        max-width: 158mm;
+        margin-bottom: 8mm;
+        color: var(--muted);
+        font-size: 11pt;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
+      .service-card {
+        min-height: 45mm;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 4mm;
+        background: #fff;
+      }
+      .service-number {
+        display: grid;
+        width: 10mm;
+        height: 10mm;
+        margin-bottom: 4mm;
+        border-radius: 3mm;
+        color: var(--blue);
+        background: var(--pale);
+        font: 800 9pt "Manrope", sans-serif;
+        place-items: center;
+      }
+      .service-card:nth-child(3n + 2) .service-number {
+        color: #b44e2d;
+        background: #fff0e8;
+      }
+      .service-card p, .destination-card p, .step p, .testimonial p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 8.7pt;
+        line-height: 1.5;
+      }
+      .note {
+        margin-top: 7mm;
+        padding: 4mm 5mm;
+        border-left: 3px solid var(--orange);
+        border-radius: 0 3mm 3mm 0;
+        color: #674537;
+        background: #fff4ed;
+        font-size: 8.5pt;
+      }
+      .page-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 4mm;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 7.5pt;
+        font-weight: 600;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+      }
+      .destination-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3mm;
+        margin: 6mm 0 10mm;
+      }
+      .destination-card {
+        min-height: 58mm;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 4mm;
+        background: var(--pale);
+      }
+      .destination-photo {
+        display: block;
+        width: 100%;
+        height: 25mm;
+        object-fit: cover;
+      }
+      .destination-card-body { padding: 2.5mm 3mm; }
+      .destination-card span {
+        display: block;
+        margin-bottom: 1mm;
+        color: var(--orange);
+        font: 800 9pt "Manrope", sans-serif;
+      }
+      .destination-card h3 { font-size: 10pt; }
+      .destination-card p { font-size: 7.5pt; }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3mm;
+        margin: 6mm 0 8mm;
+      }
+      .step {
+        padding: 4mm;
+        border-top: 2px solid var(--blue);
+        background: #f5f7fa;
+      }
+      .step span {
+        display: block;
+        margin-bottom: 3mm;
+        color: var(--orange);
+        font: 800 15pt "Manrope", sans-serif;
+      }
+      .step h3 { min-height: 9mm; font-size: 9pt; }
+      .step p { font-size: 8pt; }
+      .promise {
+        display: flex;
+        align-items: center;
+        gap: 6mm;
+        padding: 5mm 6mm;
+        border-radius: 4mm;
+        color: #fff;
+        background: var(--navy);
+      }
+      .promise strong { color: var(--gold); font: 700 11pt "Manrope", sans-serif; }
+      .promise p { margin: 1mm 0 0; color: #d5deeb; font-size: 8.5pt; }
+      .promise-mark {
+        display: grid;
+        flex: 0 0 13mm;
+        height: 13mm;
+        border: 1px solid #ffffff55;
+        border-radius: 50%;
+        color: var(--gold);
+        font: 800 12pt "Manrope", sans-serif;
+        place-items: center;
+      }
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
+      .student-feature {
+        position: relative;
+        height: 37mm;
+        margin: 0 0 5mm;
+        overflow: hidden;
+        border-radius: 4mm;
+        background: var(--navy);
+      }
+      .student-feature img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 42%;
+      }
+      .student-feature figcaption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 2mm 4mm;
+        color: #fff;
+        background: #10264bd9;
+        font-size: 7.2pt;
+      }
+      .testimonial {
+        display: flex;
+        min-height: 42mm;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4mm;
+        border: 1px solid var(--line);
+        border-radius: 4mm;
+        background: #fff;
+      }
+      .testimonial:first-child {
+        border-color: var(--navy);
+        background: var(--navy);
+      }
+      .testimonial:first-child p, .testimonial:first-child .student span { color: #d5deeb; }
+      .quote {
+        margin-bottom: 1mm;
+        color: var(--orange);
+        font: 800 20pt "Manrope", sans-serif;
+        line-height: 1;
+      }
+      .testimonial p { font-size: 8.2pt; }
+      .student {
+        margin-top: 3mm;
+        padding-top: 2mm;
+        border-top: 1px solid #dce3ea75;
+      }
+      .student strong {
+        display: block;
+        color: var(--gold);
+        font: 700 8.7pt "Manrope", sans-serif;
+      }
+      .student span { display: block; color: var(--muted); font-size: 7pt; }
+      .contact-panel {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 6mm;
+        margin-top: 6mm;
+        padding: 5mm;
+        border-radius: 4mm;
+        background: #f1f5f9;
+      }
+      .contact-panel h3 { margin-bottom: 2mm; font-size: 12pt; }
+      .contact-panel p { margin-bottom: 1mm; color: var(--muted); font-size: 8pt; }
+      .contact-panel strong { color: var(--navy); }
+      .contact-action {
+        padding: 4mm 5mm;
+        border-radius: 3mm;
+        color: #fff;
+        background: var(--orange);
+        font: 700 8.5pt "Manrope", sans-serif;
+        text-align: center;
+      }
+      .disclaimer { margin: 3mm 0 0; color: var(--muted); font-size: 7pt; }
+      .photo-credits {
+        margin: 2mm 0 0;
+        color: var(--muted);
+        font-size: 5.6pt;
+        line-height: 1.35;
+      }
+      .photo-credits a { color: inherit; text-decoration: underline; }
+      .testimonials-page { padding: 11mm 15mm 12mm; }
+      .testimonials-page .student-feature { height: 30mm; margin-bottom: 3mm; }
+      .testimonials-page .testimonial { min-height: 35mm; padding: 3mm; }
+      .testimonials-page .contact-panel { gap: 4mm; margin-top: 4mm; padding: 3.5mm 4mm; }
+      .testimonials-page .contact-panel p { font-size: 7.5pt; }
+      @page { size: A4; margin: 0; }
+      @media print {
+        html, body { width: 210mm; margin: 0; background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+        .page { margin: 0; box-shadow: none; break-after: page; page-break-after: always; }
+        .page:last-child { break-after: auto; page-break-after: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="page cover">
+        <div class="orbit" aria-hidden="true"></div>
+        <div class="content">
+          <img class="logo" src="../img/logo-transparent.png" alt="Einstein Services" />
+          <p class="eyebrow">Études · Mobilité · Orientation</p>
+          <span class="cover-tag">Yoff, Dakar · Sénégal</span>
+          <h1>Votre projet.<br /><em>Votre avenir.</em></h1>
+          <p class="cover-copy">
+            Un accompagnement humain et structuré pour préparer votre parcours
+            d’études à l’international, de la première idée jusqu’au départ.
+          </p>
+          <div class="destination-pills">
+            <span>France</span><span>Canada</span><span>Belgique</span><span>Suisse</span><span>Italie</span>
+          </div>
+        </div>
+        <footer class="cover-footer">
+          <div><strong>Du premier échange au projet de départ.</strong><span>Des étapes claires pour avancer.</span></div>
+          <span>PRÉSENTATION · EINSTEIN SERVICES</span>
+        </footer>
+      </section>
+
+      <section class="page">
+        <div class="content">
+          <header class="page-head"><img class="logo" src="../img/logo-transparent.png" alt="Einstein Services" /><span>01 — Nos services</span></header>
+          <p class="eyebrow">Un projet à la fois</p>
+          <h2>Des repères utiles.<br />Des démarches mieux préparées.</h2>
+          <p class="intro">
+            Chaque parcours est différent. Nous vous aidons à comprendre les
+            étapes, à organiser vos démarches et à identifier les services
+            adaptés à votre situation.
+          </p>
+          <div class="service-grid">
+            <article class="service-card"><span class="service-number">01</span><h3>Orientation &amp; formation</h3><p>Faire le point sur votre profil, vos objectifs et votre choix de formation.</p></article>
+            <article class="service-card"><span class="service-number">02</span><h3>Admissions &amp; candidatures</h3><p>Préparer vos dossiers et organiser les démarches d’admission.</p></article>
+            <article class="service-card"><span class="service-number">03</span><h3>Visa étudiant</h3><p>Vous guider dans la préparation des pièces et des étapes de votre demande.</p></article>
+            <article class="service-card"><span class="service-number">04</span><h3>Financement &amp; AVI</h3><p>Vous informer sur les démarches de financement et les solutions avec nos partenaires.</p></article>
+            <article class="service-card"><span class="service-number">05</span><h3>Logement &amp; arrivée</h3><p>Anticiper l’hébergement et les premières étapes pratiques de votre installation.</p></article>
+            <article class="service-card"><span class="service-number">06</span><h3>Voyage &amp; assurance</h3><p>Préparer les réservations et les besoins liés à votre déplacement.</p></article>
+          </div>
+          <aside class="note"><strong>Un accompagnement, pas une promesse de résultat.</strong> Les décisions d’admission, de visa et de financement relèvent des établissements, autorités et partenaires concernés.</aside>
+        </div>
+        <footer class="page-footer"><span>Einstein Services · Yoff, Dakar</span><span>02 / 04</span></footer>
+      </section>
+
+      <section class="page">
+        <div class="content">
+          <header class="page-head"><img class="logo" src="../img/logo-transparent.png" alt="Einstein Services" /><span>02 — Votre parcours</span></header>
+          <p class="eyebrow">Choisir sa destination</p>
+          <h2>Un horizon international,<br />plusieurs possibilités.</h2>
+          <p class="intro">
+            Nous accompagnons les projets d’études vers cinq destinations.
+            Le choix se construit selon votre profil, votre formation et les
+            critères propres à chaque établissement.
+          </p>
+          <div class="destination-grid">
+            <article class="destination-card">
+              <img class="destination-photo" src="../img/brochure/france-eiffel.jpg" alt="Tour Eiffel à Paris" />
+              <div class="destination-card-body"><span>01</span><h3>France</h3><p>Études &amp; admissions</p></div>
+            </article>
+            <article class="destination-card">
+              <img class="destination-photo" src="../img/brochure/canada-toronto.jpg" alt="Panorama de Toronto au Canada" />
+              <div class="destination-card-body"><span>02</span><h3>Canada</h3><p>Parcours francophone &amp; international</p></div>
+            </article>
+            <article class="destination-card">
+              <img class="destination-photo" src="../img/brochure/belgium-grand-place.jpg" alt="Grand-Place de Bruxelles" />
+              <div class="destination-card-body"><span>03</span><h3>Belgique</h3><p>Formations supérieures</p></div>
+            </article>
+            <article class="destination-card">
+              <img class="destination-photo" src="../img/brochure/switzerland-matterhorn.jpg" alt="Mont Cervin dans les Alpes suisses" />
+              <div class="destination-card-body"><span>04</span><h3>Suisse</h3><p>Projet d’études</p></div>
+            </article>
+            <article class="destination-card">
+              <img class="destination-photo" src="../img/brochure/italy-colosseum.jpg" alt="Colisée de Rome en Italie" />
+              <div class="destination-card-body"><span>05</span><h3>Italie</h3><p>Projet d’études</p></div>
+            </article>
+          </div>
+          <p class="eyebrow">Un chemin en quatre temps</p>
+          <h2 style="font-size:19pt">Du premier échange à la préparation du départ.</h2>
+          <div class="steps">
+            <article class="step"><span>01</span><h3>Écouter</h3><p>Comprendre votre parcours, vos objectifs et vos questions.</p></article>
+            <article class="step"><span>02</span><h3>Orienter</h3><p>Explorer les formations et démarches cohérentes avec votre profil.</p></article>
+            <article class="step"><span>03</span><h3>Préparer</h3><p>Organiser les candidatures et les pièces nécessaires, étape par étape.</p></article>
+            <article class="step"><span>04</span><h3>Anticiper</h3><p>Préparer le voyage et les premières étapes de l’installation.</p></article>
+          </div>
+          <div class="promise"><div><strong>La clarté avant le départ.</strong><p>Des informations compréhensibles pour vous aider à avancer en connaissance de cause.</p></div><span class="promise-mark">ES</span></div>
+        </div>
+        <footer class="page-footer"><span>Orientation · Admissions · Mobilité</span><span>03 / 04</span></footer>
+      </section>
+
+      <section class="page testimonials-page">
+        <div class="content">
+          <header class="page-head"><img class="logo" src="../img/logo-transparent.png" alt="Einstein Services" /><span>03 — Les étudiants en parlent</span></header>
+          <p class="eyebrow">Paroles d’étudiants</p>
+          <h2>Des parcours réels.<br />Des expériences partagées.</h2>
+          <p class="intro">Quelques retours d’étudiants accompagnés par Einstein Services dans leurs démarches et leur projet de mobilité.</p>
+          <figure class="student-feature">
+            <img
+              src="../img/brochure/students-ilorin.jpg"
+              alt="Groupe d’étudiants noirs réunis sur le campus de l’Université d’Ilorin"
+            />
+            <figcaption>
+              Photo d’illustration : étudiants de l’Université d’Ilorin, Nigeria.
+              Cette photo ne représente pas les étudiants témoins ci-dessous.
+            </figcaption>
+          </figure>
+          <div class="testimonial-grid">
+            <article class="testimonial"><div><div class="quote">“</div><p>J’ai obtenu mon AVI avec Einstein Services, ce qui m’a permis d’obtenir mon visa. Je recommande fortement leurs services.</p></div><div class="student"><strong>Jeannot</strong><span>Ingénierie des déchets et de l’économie circulaire</span><span>École Nationale Supérieure de Géologie de Nancy, France</span></div></article>
+            <article class="testimonial"><div><div class="quote">“</div><p>Einstein Services m’a accompagné pour obtenir une AVI en 48 heures. J’ai finalement obtenu mon visa pour étudier en France.</p></div><div class="student"><strong>Harouna</strong><span>Licence de mathématiques · Université de Tours</span><span>France</span></div></article>
+            <article class="testimonial"><div><div class="quote">“</div><p>L’agence m’a accompagné tout au long de ma procédure et continue de m’orienter. L’équipe est fiable, transparente et honnête.</p></div><div class="student"><strong>Omar Diouf</strong><span>Génie civil · Collège communautaire du Nouveau-Brunswick</span><span>Canada</span></div></article>
+          </div>
+          <div class="contact-panel">
+            <div>
+              <p class="eyebrow">Parlons de votre projet</p>
+              <h3>Le prochain parcours peut être le vôtre.</h3>
+              <p><strong>Adresse</strong> · Route de l’Aéroport, près de la Senelec, Yoff, Dakar</p>
+              <p><strong>Téléphone</strong> · +221 33 830 54 60</p>
+              <p><strong>WhatsApp</strong> · +221 78 387 62 62</p>
+              <p><strong>Email</strong> · contact@einstein-services.com</p>
+            </div>
+            <div class="contact-action">Contactez Einstein Services</div>
+          </div>
+          <p class="disclaimer">Les témoignages rapportent des expériences individuelles et ne garantissent pas un résultat identique pour chaque dossier.</p>
+          <p class="photo-credits">
+            Crédits photos — <a href="https://commons.wikimedia.org/wiki/File:Paris_-_The_Eiffel_Tower_in_spring_-_2307.jpg">Tour Eiffel : Jorge Royan</a>
+            (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>) ·
+            <a href="https://commons.wikimedia.org/wiki/File:Sunset_Toronto_Skyline_Panorama_Crop_from_Snake_Island.jpg">Toronto : Jchmrt</a>
+            (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) ·
+            <a href="https://commons.wikimedia.org/wiki/File:Grand-Place,_Brussels_-_panorama,_June_2018.jpg">Bruxelles : Celuici</a>
+            (CC BY-SA 4.0) ·
+            <a href="https://commons.wikimedia.org/wiki/File:Matterhorn_Riffelsee_2005-06-11.jpg">Matterhorn : Dirk Beyer</a>
+            (CC BY-SA 3.0) ·
+            <a href="https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg">Rome : David Iliff</a>
+            (<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>) ·
+            <a href="https://commons.wikimedia.org/wiki/File:Students_of_the_University_OF_Ilorin._26.jpg">Étudiants d’Ilorin : Haylad</a>
+            (CC BY-SA 4.0), Wikimedia Commons.
+          </p>
+        </div>
+        <footer class="page-footer"><span>Einstein Services · Votre projet, notre accompagnement</span><span>04 / 04</span></footer>
+      </section>
+    </main>
+  </body>
+</html>
