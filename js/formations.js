@@ -14,6 +14,12 @@ const filters = {
 const fReset = document.getElementById("fReset");
 const fCount = document.getElementById("fCount");
 const noResult = document.getElementById("noResult");
+const filtersPanel = document.getElementById("filters");
+const catalogEmpty = FORMATIONS.length === 0;
+
+filtersPanel.hidden = catalogEmpty;
+fCount.hidden = catalogEmpty;
+grid.hidden = catalogEmpty;
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => {
