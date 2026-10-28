@@ -468,10 +468,14 @@ a.btn[href$="contact-en.html"]:hover {
 }
 
 /* ---- Contact / carte / RDV ---- */
+.u-contact + .u-container .map-wrap,
 .map-wrap {
   margin-top: 1.4rem;
   box-shadow: 0 8px 24px rgba(30, 42, 90, 0.1);
   border-radius: 18px;
+}
+.u-contact + .u-container .map-wrap {
+  margin-top: 0;
 }
 .rdv-card {
   max-width: 640px;
