@@ -765,13 +765,46 @@ body {
 
 /* ===== Testimonials ===== */
 .u-testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-bottom: 2.5rem;
+}
+.u-testimonials .carousel-item {
+  padding: 0 3.5rem 1rem;
 }
 .u-testimonials .temoin {
   opacity: 1;
   transform: none;
+  height: 100%;
+}
+.u-testimonials .carousel-control-prev,
+.u-testimonials .carousel-control-next {
+  width: 2.75rem;
+  height: 2.75rem;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--u-blue);
+  opacity: 1;
+}
+.u-testimonials .carousel-control-prev:hover,
+.u-testimonials .carousel-control-next:hover {
+  background: var(--u-orange);
+}
+.u-testimonials .carousel-indicators {
+  bottom: 0;
+  margin-bottom: 0;
+}
+.u-testimonials .carousel-indicators [data-bs-target] {
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--u-blue);
+}
+.u-testimonials .carousel-indicators .active {
+  background-color: var(--u-orange);
 }
 .u-testimonial {
   background: var(--u-white);
@@ -1073,8 +1106,7 @@ body {
   .u-hero-inner {
     grid-template-columns: 1fr;
   }
-  .u-grid-3,
-  .u-testimonials {
+  .u-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
   .u-steps {
@@ -1115,9 +1147,11 @@ body {
     display: none;
   }
   .u-grid-3,
-  .u-testimonials,
   .u-steps {
     grid-template-columns: 1fr;
+  }
+  .u-testimonials .carousel-item {
+    padding-inline: 2.5rem;
   }
   .u-form-row {
     grid-template-columns: 1fr;

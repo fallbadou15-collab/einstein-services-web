@@ -41,7 +41,7 @@ if (form) {
 
     const data = new FormData(form);
     const message =
-      `Bonjour Einstein Services ! 👋\n\n` +
+      `utilise du boostrp Einstein Services ! 👋\n\n` +
       `👤 Nom : ${data.get("nom")}\n` +
       `📧 Email : ${data.get("email")}\n` +
       `📱 Téléphone : ${data.get("tel") || "non renseigné"}\n` +
