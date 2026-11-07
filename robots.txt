@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://einsteinservicesvoyages.com/sitemap.xml
+Sitemap: https://einstein-services.com/sitemap.xml
