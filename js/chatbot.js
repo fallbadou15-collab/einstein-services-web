@@ -19,7 +19,7 @@ if (!document.querySelector(".u-whatsapp, .site-whatsapp")) {
   const whatsappLink = document.createElement("a");
   whatsappLink.className = "site-whatsapp";
   whatsappLink.href =
-    "https://wa.me/221783876262?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations";
+    "https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations";
   whatsappLink.target = "_blank";
   whatsappLink.rel = "noopener";
   whatsappLink.setAttribute("aria-label", "Contacter Einstein Services sur WhatsApp");
@@ -114,7 +114,7 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["adresse", "où", "ou etes", "localisation", "bureau", "yoff"],
-    r: "📍 Nous sommes à Yoff (Dakar, Sénégal) : Route de l'Aéroport, près de la Senelec.\nTéléphones : +221 33 830 54 60 • +221 78 387 62 62 • +221 78 733 81 81",
+    r: "📍 Nous sommes à Yoff (Dakar, Sénégal) : Route de l'Aéroport, près de la Senelec.\nTéléphones : +221 33 830 54 60 • +221 78 792 73 73 • +221 78 733 81 81",
   },
   {
     kw: ["qui es", "nafi", "robot", "humain", "personne"],

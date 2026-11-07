@@ -33,7 +33,7 @@ if (orientForm) {
         ...answers,
         "Je souhaite échanger avec un conseiller.",
       ].join("\n");
-      shareResult.href = `https://wa.me/221783876262?text=${encodeURIComponent(message)}`;
+      shareResult.href = `https://wa.me/221787927373?text=${encodeURIComponent(message)}`;
       shareResult.target = "_blank";
       shareResult.rel = "noopener";
     }

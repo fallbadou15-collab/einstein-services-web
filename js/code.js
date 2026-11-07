@@ -30,7 +30,7 @@ document.querySelectorAll(".faq-q").forEach((q) => {
 // Formulaire de contact — prépare un message WhatsApp à envoyer par l'utilisateur
 // ⚠️ Remplacez le numéro ci-dessous par le vrai numéro WhatsApp de l'agence
 // au format international sans + ni espaces (ex. : 33612345678)
-const WHATSAPP_NUMBER = "221783876262";
+const WHATSAPP_NUMBER = "221787927373";
 
 const form = document.getElementById("contactForm");
 if (form) {

@@ -1,18 +1,18 @@
 /* ===== Einstein Services — page d'accueil style "Univers France Succès" ===== */
 
 :root {
-  --u-blue: #0b2a5b;
-  --u-blue-dark: #071d3f;
-  --u-navy: #0a2547;
-  --u-orange: #ff6b35;
-  --u-orange-light: #ff8c5f;
-  --u-gold: #ffc048;
+  --u-blue: #2070b4;
+  --u-blue-dark: #16547f;
+  --u-navy: #14568a;
+  --u-orange: #f59000;
+  --u-orange-light: #ffab2e;
+  --u-gold: #ffb61e;
   --u-cream: #fdf8f1;
   --u-white: #ffffff;
   --u-text: #1c2b3a;
   --u-muted: #5a6b7d;
   --u-radius: 14px;
-  --u-shadow: 0 12px 32px rgba(11, 42, 91, 0.12);
+  --u-shadow: 0 12px 32px rgba(20, 86, 138, 0.12);
 }
 
 [hidden] {
@@ -93,24 +93,27 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 14px rgba(11, 42, 91, 0.08);
+  box-shadow: 0 2px 14px rgba(20, 86, 138, 0.08);
 }
 .u-nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.7rem 0;
+  padding: 0.55rem 0;
 }
 .u-logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
+  line-height: 0;
 }
 .u-logo img {
   height: 52px;
   width: auto;
+  display: block;
+  object-fit: contain;
 }
 .u-logo-text {
   line-height: 1.1;
@@ -198,7 +201,7 @@ body {
     120deg,
     var(--u-blue-dark) 0%,
     var(--u-blue) 55%,
-    #123a77 100%
+    #14568a 100%
   );
   color: #fff;
   padding: 4.5rem 0 5.5rem;
@@ -595,7 +598,7 @@ body {
   border: 1px solid #e8edf4;
   border-radius: var(--u-radius);
   padding: 1.7rem;
-  box-shadow: 0 4px 16px rgba(11, 42, 91, 0.05);
+  box-shadow: 0 4px 16px rgba(20, 86, 138, 0.05);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -685,7 +688,7 @@ body {
   font-weight: 800;
 }
 .u-about-visual {
-  background: linear-gradient(140deg, var(--u-blue) 0%, #123a77 100%);
+  background: linear-gradient(140deg, var(--u-blue) 0%, #14568a 100%);
   border-radius: 20px;
   padding: 2.4rem;
   color: #fff;
@@ -811,7 +814,7 @@ body {
   border: 1px solid #e8edf4;
   border-radius: var(--u-radius);
   padding: 1.8rem;
-  box-shadow: 0 4px 16px rgba(11, 42, 91, 0.05);
+  box-shadow: 0 4px 16px rgba(20, 86, 138, 0.05);
 }
 .u-testimonial .stars {
   color: var(--u-gold);
@@ -990,7 +993,7 @@ body {
 
 /* ===== CTA banner ===== */
 .u-cta-banner {
-  background: linear-gradient(120deg, var(--u-orange) 0%, #e35420 100%);
+  background: linear-gradient(120deg, var(--u-orange) 0%, #f59000 100%);
   border-radius: 20px;
   padding: 2.6rem;
   display: flex;
@@ -1055,11 +1058,12 @@ body {
   margin: 0.8rem 0 1.2rem;
 }
 .u-footer-brand img {
-  height: 48px;
+  height: 40px;
   width: auto;
   border-radius: 8px;
   background: #fff;
-  padding: 4px;
+  padding: 3px;
+  display: block;
 }
 .u-footer-socials {
   display: flex;
@@ -1135,7 +1139,7 @@ body {
     align-items: stretch;
     padding: 1rem 5%;
     gap: 0.4rem;
-    box-shadow: 0 12px 24px rgba(11, 42, 91, 0.15);
+    box-shadow: 0 12px 24px rgba(20, 86, 138, 0.15);
   }
   .u-nav-links.open {
     display: flex;
