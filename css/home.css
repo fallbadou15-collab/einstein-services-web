@@ -1098,7 +1098,12 @@ body {
   color: #8fa3bd;
   text-decoration: underline;
 }
-
+.u-footer-bottom .site-credit {
+  margin: 0.65rem 0 0;
+  color: #8fa3bd;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
 /* ===== Container util ===== */
 .u-container {
   width: min(1140px, 92%);
