@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarifs Einstein Services</title>
+<meta name="description" content="Tarifs d'accompagnement Einstein Services et frais officiels à prévoir pour étudier en France, au Canada, en Belgique, en Italie et en Suisse : Campus France, visa, équivalence, admission, CAQ, permis d'études.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Plan : bleu Atlantique (marque) + ocre (repères) ; nos honoraires d'abord, puis un tableau de frais officiels par pays, puis les partenaires */
+  --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
+  --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
+  --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+    --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+    --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+  --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+  --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.topline{height:4px;background:linear-gradient(90deg,var(--brand) 0 72%,var(--accent) 72% 100%)}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
+.brand img{height:44px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.menu a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:16px}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.hero{padding:36px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+h3{font:700 20px/1.3 var(--font-display);margin:0}
+.lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
+.section{padding:26px 0}
+.sub{color:var(--muted);margin:0 0 16px;max-width:64ch}
+.flag{display:inline-block;width:30px;height:20px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)}
+.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
+.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
+.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
+.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
+.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:20px}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.price.main{border:2px solid var(--brand)}
+.price .top{display:flex;align-items:center;gap:10px;font-weight:700}
+.price b{font:800 26px/1.1 var(--font-display);font-variant-numeric:tabular-nums}
+.price b.quote{font-size:22px;color:var(--muted)}
+.price small{color:var(--muted);font-size:14.5px}
+.price .tag{align-self:flex-start;font-size:12.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);padding:3px 9px;border-radius:999px}
+.fees{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;scroll-margin-top:12px}
+.fees + .fees{margin-top:16px}
+.fees-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.fees-head .flag{width:36px;height:24px}
+.fees-head .f-ch{width:24px}
+.fees-head p{margin:0;color:var(--muted);font-size:15px}
+.table-wrap{overflow-x:auto}
+table.fee{border-collapse:collapse;width:100%;min-width:600px;font-size:15.5px}
+table.fee th,table.fee td{text-align:left;padding:12px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+table.fee thead th{font:700 12.5px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:color-mix(in srgb,var(--paper) 60%,var(--card))}
+table.fee tbody tr:last-child td{border-bottom:0}
+table.fee td.amt{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.fee td.amt span{display:block;font-weight:400;color:var(--muted);font-size:14px;white-space:normal}
+table.fee tr.ours td{background:color-mix(in srgb,var(--brand) 7%,var(--card))}
+table.fee tr.funds td{background:color-mix(in srgb,var(--accent) 9%,var(--card))}
+.fees-foot{padding:12px 18px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.partner{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:18px}
+.partner p{margin:8px 0 0;font-size:16px}
+.partner .role{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.warn b{color:var(--alert)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.stamp{font-size:14px;color:var(--muted)}
+footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
+footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
+footer.site p{margin:0 0 6px;color:var(--foot-muted)}
+footer.site a{color:var(--foot-ink)}
+footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
+footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+@media (max-width:640px){
+  table.fee{min-width:0}
+  table.fee thead{display:none}
+  table.fee tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.fee tbody tr:last-child{border-bottom:0}
+  table.fee tbody td{border:0;padding:0;background:transparent!important}
+  table.fee td.amt{text-align:right;white-space:normal;max-width:52vw}
+  table.fee tbody td:last-child{grid-column:1 / -1;color:var(--muted);font-size:14px}
+  table.fee tr.ours{background:color-mix(in srgb,var(--brand) 7%,var(--card))}
+  table.fee tr.funds{background:color-mix(in srgb,var(--accent) 9%,var(--card))}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .brand img{height:38px}
+  nav.menu{margin-left:0;width:100%}
+  .header-wa{display:none}
+}
+</style>
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="tarifs.html" aria-current="page">Tarifs</a>
+      <a href="test-eligibilite.html">Test d'éligibilité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations%20sur%20vos%20tarifs" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Montants vérifiés le 10 novembre 2026</span>
+    <h1>Tarifs et frais à prévoir</h1>
+    <p class="lead">Un projet d'études comporte deux types de frais : nos honoraires d'accompagnement, et les frais officiels fixés par Campus France, les consulats et les établissements. Voici les deux, pays par pays.</p>
+  </section>
+
+  <section class="section" aria-labelledby="honoraires">
+    <h2 id="honoraires">Nos honoraires d'accompagnement</h2>
+    <p class="sub">Les frais officiels ne sont pas inclus dans nos honoraires.</p>
+    <div class="prices">
+      <div class="price main">
+        <div class="top"><span class="flag f-fr" aria-hidden="true"></span>France</div>
+        <span class="tag">Procédure Campus France</span>
+        <b>100 000 FCFA</b>
+        <small>Accompagnement de votre procédure Études en France. Places limitées à 100 pour la rentrée 2027.</small>
+      </div>
+      <div class="price">
+        <div class="top"><span class="flag f-ca" aria-hidden="true"></span>Canada</div>
+        <b class="quote">Sur devis</b>
+        <small>Selon le programme et la province</small>
+      </div>
+      <div class="price">
+        <div class="top"><span class="flag f-be" aria-hidden="true"></span>Belgique</div>
+        <b class="quote">Sur devis</b>
+        <small>Équivalence de diplôme, orientation, préinscription et admission, visa, AVI. Places limitées à 60 pour la rentrée de septembre 2027.</small>
+      </div>
+      <div class="price">
+        <div class="top"><span class="flag f-it" aria-hidden="true"></span>Italie</div>
+        <span class="tag">Pack en 3 étapes</span>
+        <b>150 000 FCFA</b>
+        <small>Déclaration de valeur, admission, visa</small>
+      </div>
+      <div class="price">
+        <div class="top"><span class="flag f-ch" aria-hidden="true"></span>Suisse</div>
+        <b class="quote">Sur devis</b>
+        <small>Selon l'école et le canton</small>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet%20d'%C3%A9tudes." target="_blank" rel="noopener">Demander un devis sur WhatsApp</a>
+      <a class="btn btn-ghost" href="test-eligibilite.html">Tester mon éligibilité</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="officiels">
+    <h2 id="officiels">Frais officiels par pays</h2>
+    <p class="sub">Ces montants sont fixés par les organismes officiels et peuvent changer. Les frais de dossier et de visa ne sont pas remboursés en cas de refus. Conversion en FCFA au taux fixe de 655,957 FCFA pour 1 €.</p>
+
+    <article class="fees" id="france">
+      <div class="fees-head"><span class="flag f-fr" aria-hidden="true"></span><div><h3>France</h3><p>Procédure Études en France obligatoire depuis le Sénégal</p></div></div>
+      <div class="table-wrap">
+        <table class="fee">
+          <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
+          <tbody>
+            <tr class="ours"><td>Accompagnement Einstein Services</td><td class="amt">100 000 FCFA</td><td>Einstein Services</td></tr>
+            <tr><td>Frais de dossier Campus France</td><td class="amt">85 000 FCFA<span>non remboursables</span></td><td>Sunu Bank (ex-BICIS), après la demande de paiement</td></tr>
+            <tr><td>Visa long séjour étudiant</td><td class="amt">50 €<span>environ 32 800 FCFA</span></td><td>Consulat de France, dépôt chez VFS Global</td></tr>
+            <tr><td>Frais de service VFS Global</td><td class="amt">environ 15 000 FCFA</td><td>VFS Global</td></tr>
+            <tr><td>Validation du visa à l'arrivée en France</td><td class="amt">50 €</td><td>En ligne, dans les 3 mois suivant l'arrivée</td></tr>
+            <tr class="ours"><td>Solution AVI si vous n'avez pas la totalité des fonds</td><td class="amt">525 000 FCFA</td><td>Univers France Succès, notre partenaire</td></tr>
+            <tr class="funds"><td>Ressources à justifier pour le visa</td><td class="amt">877,50 € par mois<span>10 530 € sur 12 mois, environ 6,91 millions FCFA</span></td><td>AVI ou garant (depuis le 1er août 2026)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="fees" id="canada">
+      <div class="fees-head"><span class="flag f-ca" aria-hidden="true"></span><div><h3>Canada</h3><p>Montants en dollars canadiens</p></div></div>
+      <div class="table-wrap">
+        <table class="fee">
+          <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
+          <tbody>
+            <tr><td>Frais d'admission</td><td class="amt">50 à 350 $ CA<span>selon l'établissement</span></td><td>Établissement</td></tr>
+            <tr><td>CAQ (Québec uniquement)</td><td class="amt">135 $ CA<span>tarif 2026</span></td><td>Ministère de l'Immigration du Québec</td></tr>
+            <tr><td>Permis d'études</td><td class="amt">150 $ CA</td><td>IRCC</td></tr>
+            <tr><td>Données biométriques</td><td class="amt">85 $ CA<span>valables 10 ans</span></td><td>IRCC, au centre de réception des demandes de visa</td></tr>
+            <tr class="funds"><td>Preuve de fonds</td><td class="amt">22 895 $ CA<span>+ frais de la 1re année ; Québec : 24 617 $ CA</span></td><td>À justifier dans le dossier</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="fees" id="belgique">
+      <div class="fees-head"><span class="flag f-be" aria-hidden="true"></span><div><h3>Belgique</h3><p>Fédération Wallonie-Bruxelles</p></div></div>
+      <div class="table-wrap">
+        <table class="fee">
+          <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
+          <tbody>
+            <tr><td>Frais d'admission (universités publiques)</td><td class="amt">200 € par établissement<span>environ 131 200 FCFA</span></td><td>Chaque université</td></tr>
+            <tr><td>Équivalence du bac (pour un bachelier)</td><td class="amt">150 €<span>tarif réduit pour le Sénégal et les autres pays de la liste APD de l'OCDE, sinon 400 €</span></td><td>Service des équivalences, avant le 15 juillet</td></tr>
+            <tr><td>Visa D études</td><td class="amt">250 €<span>environ 164 000 FCFA, depuis le 1er juillet 2026</span></td><td>Poste diplomatique belge (dépôt chez TLScontact)</td></tr>
+            <tr><td>Redevance de l'Office des étrangers</td><td class="amt">selon le dossier<span>de 152 à 251 € selon le motif</span></td><td>Office des étrangers</td></tr>
+            <tr class="funds"><td>Moyens de subsistance</td><td class="amt">1 062 € par mois<span>12 744 € sur 12 mois (2026-2027)</span></td><td>Compte personnel ou garant (annexe 32)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="fees" id="italie">
+      <div class="fees-head"><span class="flag f-it" aria-hidden="true"></span><div><h3>Italie</h3><p>Tarifs de l'Ambassade d'Italie à Dakar</p></div></div>
+      <div class="table-wrap">
+        <table class="fee">
+          <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
+          <tbody>
+            <tr class="ours"><td>Pack Einstein Services (déclaration de valeur, admission, visa)</td><td class="amt">150 000 FCFA</td><td>Einstein Services</td></tr>
+            <tr class="ours"><td>Solution AVI pour les étudiants sans garant</td><td class="amt">500 000 FCFA</td><td>Einstein Services</td></tr>
+            <tr><td>Déclaration de valeur</td><td class="amt">32 800 FCFA<span>50 € par déclaration ; gratuite pour les boursiers inscrits</span></td><td>Ambassade d'Italie à Dakar</td></tr>
+            <tr><td>Légalisation de document</td><td class="amt">15 750 FCFA<span>24 € par document</span></td><td>Ambassade d'Italie à Dakar</td></tr>
+            <tr><td>Traduction</td><td class="amt">8 550 FCFA<span>13 € par traduction</span></td><td>Ambassade d'Italie à Dakar</td></tr>
+            <tr><td>Visa D études</td><td class="amt">50 €<span>environ 32 800 FCFA, plus les frais de service</span></td><td>Ambassade d'Italie, dépôt chez BLS</td></tr>
+            <tr class="funds"><td>Ressources à justifier</td><td class="amt">10 179,85 €<span>783,06 € par mois sur 13 mois</span></td><td>Compte bancaire ou garant (pas de tontine)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="fees" id="suisse">
+      <div class="fees-head"><span class="flag f-ch" aria-hidden="true"></span><div><h3>Suisse</h3><p>Le canton d'études fixe le montant des moyens financiers</p></div></div>
+      <div class="table-wrap">
+        <table class="fee">
+          <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
+          <tbody>
+            <tr><td>Visa D études</td><td class="amt">généralement gratuit<span>les étudiants sont en principe exonérés d'émoluments</span></td><td>Ambassade de Suisse</td></tr>
+            <tr><td>Frais d'inscription et d'études</td><td class="amt">selon l'école</td><td>Établissement</td></tr>
+            <tr class="funds"><td>Moyens financiers</td><td class="amt">selon le canton<span>Fribourg : 21 900 CHF par an ; Bâle : 2 000 CHF par mois</span></td><td>Compte à votre nom ou prise en charge bancaire</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="partenaires">
+    <h2 id="partenaires">Nos partenaires AVI et logement</h2>
+    <p class="sub">Pour la preuve de ressources et le logement, nous travaillons avec des partenaires reconnus.</p>
+    <div class="partners">
+      <div class="partner">
+        <h3>Univers France Succès</h3>
+        <span class="role">Attestation de virement irrévocable (AVI)</span>
+        <p>Einstein Services est le premier partenaire d'Univers France Succès, depuis sa toute première campagne AVI en 2024. L'AVI permet de justifier les ressources exigées pour le visa étudiant en France (877,50 € par mois depuis le 1er août 2026).</p>
+        <p>Vous n'avez pas la totalité des fonds ? La solution de notre partenaire vous permet de ne verser que 525 000 FCFA. Nos conseillers vous expliquent les conditions.</p>
+      </div>
+      <div class="partner">
+        <h3>Nexroom</h3>
+        <span class="role">Logement étudiant</span>
+        <p>Recherche de logement et justificatif d'hébergement pour votre arrivée.</p>
+      </div>
+    </div>
+    <div class="partners" style="margin-top:14px">
+      <div class="partner">
+        <h3>Italie : solution AVI</h3>
+        <span class="role">Étudiants sans garant</span>
+        <p>Pour les étudiants qui n'ont pas de garant, Einstein Services propose une solution AVI à 500 000 FCFA.</p>
+      </div>
+      <div class="partner">
+        <h3>Autres services Einstein Services Voyages</h3>
+        <span class="role">Sur devis</span>
+        <p>Billets d'avion, assurance voyage, assurance automobile, visa tourisme et travail, réservation d'hôtels, accompagnement et incubation de projets.</p>
+      </div>
+    </div>
+    <div class="warn"><b>Attention :</b> ne payez jamais de frais officiels à un intermédiaire qui promet un rendez-vous plus rapide ou un visa garanti. Einstein Services ne garantit ni l'admission ni le visa.</div>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations%20sur%20l'AVI%20et%20le%20logement." target="_blank" rel="noopener">Parler de l'AVI sur WhatsApp</a>
+      <a class="btn btn-ghost" href="destinations.html">Voir les fiches pays</a>
+    </div>
+  </section>
+
+  <p class="stamp">Sources : Campus France Sénégal, France-Visas, IRCC, gouvernement du Québec, Fédération Wallonie-Bruxelles, Ambassade d'Italie à Dakar, Universitaly, DFAE. Montants vérifiés le 10 novembre 2026. Les tarifs d'Einstein Services peuvent évoluer : le devis remis en agence fait foi.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Einstein Services</h4>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+      </div>
+      <div>
+        <h4>Nous trouver</h4>
+        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
+        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
+      </div>
+      <div>
+        <h4>Nous appeler</h4>
+        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
+        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
+        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
+      </div>
+      <div>
+        <h4>Nous suivre</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destinations d'études Einstein Services</title>
+<meta name="description" content="Procédures, calendrier, budget et documents pour étudier en France, au Canada, en Belgique, en Italie et en Suisse depuis le Sénégal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Plan : bleu Atlantique (marque) + ocre (repères), papier bleuté ; comparatif en tête, puis une fiche par pays en onglets */
+  --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
+  --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
+  --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+    --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+    --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+  --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+  --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.topline{height:4px;background:linear-gradient(90deg,var(--brand) 0 72%,var(--accent) 72% 100%)}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
+.brand img{height:44px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.menu a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:16px}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.hero{padding:36px 0 10px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+h3{font:700 19px/1.3 var(--font-display);margin:0 0 10px}
+.lead{max-width:62ch;color:var(--muted);font-size:19px;margin:0}
+.section{padding:28px 0}
+.flag{display:inline-block;width:30px;height:20px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-4px}
+.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
+.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
+.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
+.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
+.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:20px}
+.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
+table.compare{border-collapse:collapse;width:100%;min-width:720px;font-size:15.5px}
+table.compare th,table.compare td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+table.compare thead th{font:700 13px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:color-mix(in srgb,var(--paper) 60%,var(--card))}
+table.compare tbody tr:last-child td,table.compare tbody tr:last-child th{border-bottom:0}
+table.compare tbody th{font-weight:700;white-space:nowrap}
+table.compare tbody th a{color:var(--ink);text-decoration:none;display:inline-flex;gap:10px;align-items:center}
+table.compare td.num{font-variant-numeric:tabular-nums;font-weight:600}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin:0 -2px}
+.tabs a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:700;white-space:nowrap}
+.tabs a[aria-selected="true"]{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
+.fiche{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;scroll-margin-top:12px}
+.fiche + .fiche{margin-top:20px}
+.fiche-head{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px}
+.fiche-head p{margin:0;color:var(--muted);max-width:62ch}
+.fiche-head .flag{width:40px;height:27px;margin-right:6px}
+.fiche-head .f-ch{width:27px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.tile{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:14px 16px;background:var(--paper)}
+.tile span{display:block;font-size:13.5px;color:var(--muted);font-weight:600}
+.tile b{display:block;font:800 21px/1.2 var(--font-display);margin-top:4px;font-variant-numeric:tabular-nums}
+.tile small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.block{border-top:1px solid var(--line);padding-top:16px}
+ol.steps,ul.list{margin:0;padding-left:22px;display:grid;gap:7px;font-size:16px}
+ul.list li::marker{color:var(--accent)}
+.note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:18px}
+.note b{color:var(--accent-ink)}
+.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:12px}
+.warn b{color:var(--alert)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.sources{margin-top:20px;font-size:14px;color:var(--muted)}
+.sources a{color:var(--muted)}
+.stamp{font-size:14px;color:var(--muted);margin-top:4px}
+footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
+footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
+footer.site p{margin:0 0 6px;color:var(--foot-muted)}
+footer.site a{color:var(--foot-ink)}
+footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
+footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .fiche{padding:18px}
+  .brand img{height:38px}
+  nav.menu{margin-left:0;width:100%}
+  .header-wa{display:none}
+  .cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="destinations.html" aria-current="page">Destinations</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="test-eligibilite.html">Test d'éligibilité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Informations vérifiées le 10 novembre 2026</span>
+    <h1>Nos destinations d'études</h1>
+    <p class="lead">Procédure, calendrier, budget et documents pour partir étudier depuis le Sénégal. Les règles changent chaque année : nous mettons ces fiches à jour à chaque nouvelle campagne.</p>
+  </section>
+
+  <section class="section" aria-labelledby="comparatif">
+    <h2 id="comparatif">Comparatif rapide</h2>
+    <p class="stamp">Faites défiler le tableau sur mobile.</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table class="compare">
+        <thead><tr><th scope="col">Pays</th><th scope="col">Démarche obligatoire</th><th scope="col">Ressources à justifier</th><th scope="col">Date à retenir</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="#france"><span class="flag f-fr" aria-hidden="true"></span>France</a></th><td>Études en France (Campus France Sénégal)</td><td class="num">877,50 € par mois</td><td>Candidature avant le 15 décembre 2026</td></tr>
+          <tr><th scope="row"><a href="#canada"><span class="flag f-ca" aria-hidden="true"></span>Canada</a></th><td>Lettre d'acceptation + LAP, ou CAQ au Québec</td><td class="num">22 895 $ CA + 1re année de scolarité (Québec : 24 617 $ CA)</td><td>Quotas annuels : déposer tôt</td></tr>
+          <tr><th scope="row"><a href="#belgique"><span class="flag f-be" aria-hidden="true"></span>Belgique</a></th><td>Équivalence du bac (bachelier) + visa D</td><td class="num">1 062 € par mois (2026-2027)</td><td>Équivalence dès l'ouverture des demandes</td></tr>
+          <tr><th scope="row"><a href="#italie"><span class="flag f-it" aria-hidden="true"></span>Italie</a></th><td>Préinscription validée sur Universitaly</td><td class="num">10 179,85 €</td><td>Visa 2027-2028 avant le 31 octobre 2027</td></tr>
+          <tr><th scope="row"><a href="#suisse"><span class="flag f-ch" aria-hidden="true"></span>Suisse</a></th><td>Admission directe à l'école + visa D</td><td class="num">21 900 à 24 000 CHF par an selon le canton</td><td>Visa au moins 3 mois avant la rentrée</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Fiches pays">
+    <nav class="tabs" aria-label="Choisir un pays">
+      <a href="#france" data-tab="france" aria-selected="true"><span class="flag f-fr" aria-hidden="true"></span>France</a>
+      <a href="#canada" data-tab="canada" aria-selected="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</a>
+      <a href="#belgique" data-tab="belgique" aria-selected="false"><span class="flag f-be" aria-hidden="true"></span>Belgique</a>
+      <a href="#italie" data-tab="italie" aria-selected="false"><span class="flag f-it" aria-hidden="true"></span>Italie</a>
+      <a href="#suisse" data-tab="suisse" aria-selected="false"><span class="flag f-ch" aria-hidden="true"></span>Suisse</a>
+    </nav>
+
+    <!-- FRANCE -->
+    <article class="fiche" id="france">
+      <div class="fiche-head">
+        <div>
+          <h2><span class="flag f-fr" aria-hidden="true"></span>Étudier en France</h2>
+          <p>Depuis le Sénégal, la procédure Études en France de Campus France est obligatoire pour toute demande de visa d'études de plus de 6 mois. Critères de la rentrée 2027.</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Frais Campus France</span><b>85 000 FCFA</b><small>non remboursables</small></div>
+        <div class="tile"><span>Ressources pour le visa</span><b>877,50 € par mois</b><small>environ 575 600 FCFA, depuis le 1er août 2026</small></div>
+        <div class="tile"><span>Date limite de candidature</span><b>15 décembre 2026</b><small>formations connectées</small></div>
+        <div class="tile"><span>Date limite de paiement</span><b>19 décembre 2026</b><small>après la demande de paiement</small></div>
+      </div>
+      <div class="cols">
+        <div class="block">
+          <h3>Qui peut candidater</h3>
+          <ul class="list">
+            <li>Bacheliers 2026 ou 2027, bac obtenu avec une reprise au plus.</li>
+            <li>Bac arabe (L-AR) : test de français de niveau B2 en plus.</li>
+            <li>Étudiants qui ont validé ou valideront en 2027 un BTS, un DUT, un DiSEP, une Licence ou un Master accrédité par l'ANAQ-Sup.</li>
+            <li>Cycle ingénieur d'une école CTI : après une CPGE, un BTS, un DUT, un DiSEP ou une licence.</li>
+            <li>Étrangers résidant au Sénégal : titre de séjour valide (sauf CEDEAO) et au moins un an d'études ou de travail au Sénégal.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Les étapes</h3>
+          <ol class="steps">
+            <li>Construire son projet d'études et vérifier son éligibilité.</li>
+            <li>Créer un seul compte sur Études en France et choisir ses formations.</li>
+            <li>Soumettre le dossier avant le 15 décembre 2026.</li>
+            <li>Payer 85 000 FCFA dans une agence Sunu Bank (ex-BICIS), uniquement après la demande de paiement.</li>
+            <li>Passer l'entretien pédagogique si vous êtes convoqué(e) : rendez-vous à prendre dans les 7 jours.</li>
+            <li>Valider son choix définitif après les réponses des établissements.</li>
+            <li>Demander le visa étudiant après le mail de fin de procédure (entre le 15 mai et le 27 août 2027).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="note"><b>Formations non connectées</b> (BTS, BTSA, DCG, CPGE, IFSI via Parcoursup, et certaines écoles privées) : candidature sur Parcoursup ou auprès de l'école, puis dossier sur Études en France avec la lettre d'admission, du 1er avril au 15 juillet 2027. Compléments et vérification des originaux jusqu'au 30 juillet 2027.</div>
+      <div class="cols" style="margin-top:22px">
+        <div class="block">
+          <h3>Documents à préparer</h3>
+          <ul class="list">
+            <li>Passeport en cours de validité.</li>
+            <li>Relevés de notes et diplômes (bac et études supérieures).</li>
+            <li>CV et lettre de motivation pour chaque formation.</li>
+            <li>Test de français B2 si vous avez le bac L-AR.</li>
+            <li>Pour le visa : justificatif de ressources (AVI avec notre partenaire Univers France Succès, ou garant) et justificatif de logement (notre partenaire Nexroom).</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Espaces Campus France au Sénégal</h3>
+          <ul class="list">
+            <li>Dakar : Km 1, avenue Cheikh Anta Diop, en face du commissariat du 4e arrondissement.</li>
+            <li>Saint-Louis : Institut français, avenue Jean Mermoz.</li>
+            <li>Kaolack : Alliance franco-sénégalaise, 191 rue de France.</li>
+            <li>Ziguinchor : Alliance française, avenue Djignabo.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><b>Frais à prévoir :</b> accompagnement Einstein Services 100 000 FCFA (places limitées à 100 pour la rentrée 2027) ; solution AVI avec Univers France Succès à 525 000 FCFA si vous n'avez pas la totalité des fonds ; frais Campus France 85 000 FCFA ; visa étudiant 50 € (environ 32 800 FCFA) plus environ 15 000 FCFA de frais VFS Global ; validation du visa à l'arrivée 50 €. <a href="tarifs.html#france">Détail des tarifs</a></div>
+      <div class="warn"><b>Attention :</b> un document non authentique entraîne 5 ans d'inéligibilité. La demande de paiement ne signifie pas que le dossier est éligible : vérifiez les critères avant de payer.</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="test-eligibilite.html#france">Tester mon éligibilité</a>
+        <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20%C3%AAtre%20accompagn%C3%A9(e)%20pour%20la%20proc%C3%A9dure%20Campus%20France." target="_blank" rel="noopener">Être accompagné(e)</a>
+      </div>
+      <p class="sources">Sources : <a href="https://www.senegal.campusfrance.org" target="_blank" rel="noopener">Campus France Sénégal</a> (calendrier et critères 2027, FAQ) · <a href="https://etudesenfrance.diplomatie.gouv.fr" target="_blank" rel="noopener">Études en France</a> · <a href="https://france-visas.gouv.fr" target="_blank" rel="noopener">France-Visas</a></p>
+    </article>
+
+    <!-- CANADA -->
+    <article class="fiche" id="canada">
+      <div class="fiche-head">
+        <div>
+          <h2><span class="flag f-ca" aria-hidden="true"></span>Étudier au Canada</h2>
+          <p>Un permis d'études est nécessaire pour un programme de plus de 6 mois. Le nombre de permis est limité chaque année par des quotas.</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Preuve de fonds</span><b>22 895 $ CA</b><small>+ frais de la 1re année de scolarité</small></div>
+        <div class="tile"><span>Frais du permis</span><b>150 $ CA</b><small>+ biométrie 85 $ CA</small></div>
+        <div class="tile"><span>Attestation provinciale</span><b>LAP ou CAQ</b><small>CAQ au Québec</small></div>
+        <div class="tile"><span>Maîtrise ou doctorat</span><b>Sans LAP</b><small>établissement public, depuis janvier 2026</small></div>
+      </div>
+      <div class="cols">
+        <div class="block">
+          <h3>Les étapes</h3>
+          <ol class="steps">
+            <li>Choisir un établissement d'enseignement désigné (EED) et obtenir la lettre d'acceptation.</li>
+            <li>Obtenir l'attestation provinciale : LAP par l'établissement, ou CAQ au Québec.</li>
+            <li>Réunir la preuve de fonds.</li>
+            <li>Déposer la demande de permis d'études en ligne et donner ses données biométriques.</li>
+            <li>Passer l'examen médical si IRCC le demande.</li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3>Documents à préparer</h3>
+          <ul class="list">
+            <li>Passeport valide (le nom doit être identique sur la lettre d'acceptation).</li>
+            <li>Lettre d'acceptation avec le numéro d'EED.</li>
+            <li>LAP ou CAQ.</li>
+            <li>Preuve de fonds : relevés bancaires, CPG, bourse ou lettre de garant avec justificatifs.</li>
+            <li>Lettre d'explication et plan d'études.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><b>Québec :</b> un étudiant seul doit prouver 24 617 $ CA pour ses frais de subsistance en 2026, soit près de 60 % de plus qu'en 2025, et le CAQ coûte 135 $ CA.</div>
+      <div class="note"><b>Frais à prévoir :</b> frais d'admission de 50 à 350 $ CA selon l'établissement ; CAQ 135 $ CA (Québec) ; permis d'études 150 $ CA ; biométrie 85 $ CA. <a href="tarifs.html#canada">Détail des tarifs</a></div>
+      <div class="warn"><b>Attention :</b> une preuve de fonds insuffisante ou mal expliquée est la première cause de refus.</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="test-eligibilite.html#canada">Tester mon éligibilité</a>
+        <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20%C3%AAtre%20accompagn%C3%A9(e)%20pour%20%C3%A9tudier%20au%20Canada." target="_blank" rel="noopener">Être accompagné(e)</a>
+      </div>
+      <p class="sources">Sources : <a href="https://www.canada.ca/fr/immigration-refugies-citoyennete.html" target="_blank" rel="noopener">Immigration, Réfugiés et Citoyenneté Canada</a> · <a href="https://www.quebec.ca" target="_blank" rel="noopener">Gouvernement du Québec</a></p>
+    </article>
+
+    <!-- BELGIQUE -->
+    <article class="fiche" id="belgique">
+      <div class="fiche-head">
+        <div>
+          <h2><span class="flag f-be" aria-hidden="true"></span>Étudier en Belgique</h2>
+          <p>Le visa long séjour (type D) est obligatoire : un visa Schengen de court séjour ne permet pas d'étudier.</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Moyens de subsistance</span><b>1 062 € par mois</b><small>année 2026-2027</small></div>
+        <div class="tile"><span>Sur 12 mois</span><b>12 744 €</b><small>environ 8,36 millions FCFA</small></div>
+        <div class="tile"><span>Visa</span><b>Type D</b><small>long séjour études</small></div>
+        <div class="tile"><span>Bachelier</span><b>Équivalence</b><small>Fédération Wallonie-Bruxelles</small></div>
+      </div>
+      <div class="cols">
+        <div class="block">
+          <h3>Les étapes</h3>
+          <ol class="steps">
+            <li>Choisir l'université ou la haute école et noter sa date limite d'inscription.</li>
+            <li>Bachelier : demander l'équivalence du bac à la Fédération Wallonie-Bruxelles. Master : l'établissement décide de l'admission.</li>
+            <li>Obtenir l'attestation d'inscription.</li>
+            <li>Réunir la preuve de moyens, ou la prise en charge d'un garant (annexe 32).</li>
+            <li>Déposer la demande de visa D auprès du poste diplomatique belge.</li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3>Documents à préparer</h3>
+          <ul class="list">
+            <li>Formulaire de visa D et passeport valide.</li>
+            <li>Attestation d'inscription de l'établissement.</li>
+            <li>Équivalence du bac (pour un bachelier).</li>
+            <li>Preuve de moyens ou annexe 32 avec la mention « solvabilité suffisante ».</li>
+            <li>Certificat médical.</li>
+            <li>Extrait de casier judiciaire à partir de 21 ans.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><b>Places limitées à 60</b> pour la rentrée de septembre 2027. Nos services : équivalence de diplôme, orientation, préinscription et admission, visa, AVI.</div>
+      <div class="note"><b>Frais à prévoir :</b> frais d'admission 200 € par établissement (universités publiques) ; équivalence du bac 150 € pour un bachelier (tarif réduit pour le Sénégal, sinon 400 €), à payer avant le 15 juillet ; visa D 250 € depuis le 1er juillet 2026, plus la redevance de l'Office des étrangers selon le dossier. <a href="tarifs.html#belgique">Détail des tarifs</a></div>
+      <div class="note"><b>Bon à savoir :</b> le montant minimum est indexé chaque année. Pour la rentrée 2027, il sera probablement un peu plus élevé : nous confirmons le chiffre dès sa publication.</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="test-eligibilite.html#belgique">Tester mon éligibilité</a>
+        <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20%C3%AAtre%20accompagn%C3%A9(e)%20pour%20%C3%A9tudier%20en%20Belgique." target="_blank" rel="noopener">Être accompagné(e)</a>
+      </div>
+      <p class="sources">Sources : <a href="https://www.equivalences.cfwb.be" target="_blank" rel="noopener">Équivalences, Fédération Wallonie-Bruxelles</a> · <a href="https://dofi.ibz.be" target="_blank" rel="noopener">Office des étrangers</a></p>
+    </article>
+
+    <!-- ITALIE -->
+    <article class="fiche" id="italie">
+      <div class="fiche-head">
+        <div>
+          <h2><span class="flag f-it" aria-hidden="true"></span>Étudier en Italie</h2>
+          <p>La préinscription passe uniquement par le portail Universitaly. Les règles publiées valent pour les années 2026-2027 et 2027-2028.</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Ressources exigées</span><b>10 179,85 €</b><small>environ 6,68 millions FCFA</small></div>
+        <div class="tile"><span>Calcul</span><b>783,06 € × 13</b><small>par mois, sur 13 mois</small></div>
+        <div class="tile"><span>Préinscription</span><b>Universitaly</b><small>validée par l'université</small></div>
+        <div class="tile"><span>Visa rentrée 2027-2028</span><b>31 octobre 2027</b><small>date limite de demande</small></div>
+      </div>
+      <div class="cols">
+        <div class="block">
+          <h3>Les étapes</h3>
+          <ol class="steps">
+            <li>Choisir le cursus et vérifier les dates de l'université.</li>
+            <li>Faire la préinscription sur Universitaly et attendre sa validation.</li>
+            <li>Obtenir la déclaration de valeur ou l'attestation CIMEA des diplômes.</li>
+            <li>Réunir la preuve de ressources.</li>
+            <li>Demander le visa D « études, immatriculation universitaire » à l'ambassade d'Italie, sur rendez-vous.</li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3>Documents à préparer</h3>
+          <ul class="list">
+            <li>Formulaire de visa, passeport valide et photo d'identité.</li>
+            <li>Récapitulatif de préinscription Universitaly validée.</li>
+            <li>Déclaration de valeur ou attestation CIMEA.</li>
+            <li>Justificatif de ressources et preuves de la capacité financière (relevés bancaires, bulletins de salaire, titres de propriété).</li>
+            <li>Lettre de prise en charge si l'étudiant n'a pas de ressources personnelles.</li>
+            <li>Attestation de bourse, le cas échéant, et assurance santé.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><b>Frais à prévoir :</b> pack Einstein Services 150 000 FCFA (déclaration de valeur, admission, visa) ; solution AVI à 500 000 FCFA pour les étudiants sans garant ; déclaration de valeur 32 800 FCFA par document à l'Ambassade d'Italie à Dakar (plus 15 750 FCFA par légalisation et 8 550 FCFA par traduction) ; visa D études 50 € (environ 32 800 FCFA) plus les frais de service. <a href="tarifs.html#italie">Détail des tarifs</a></div>
+      <div class="warn"><b>Attention :</b> les fonds de tontine ou de microfinance ne sont pas acceptés. Une préinscription « sous condition » ne permet pas de demander le visa, et une préinscription validée ne garantit pas le visa.</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="test-eligibilite.html#italie">Tester mon éligibilité</a>
+        <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20%C3%AAtre%20accompagn%C3%A9(e)%20pour%20%C3%A9tudier%20en%20Italie." target="_blank" rel="noopener">Être accompagné(e)</a>
+      </div>
+      <p class="sources">Sources : <a href="https://www.universitaly.it/studenti-stranieri" target="_blank" rel="noopener">Universitaly, étudiants internationaux</a> · ambassades d'Italie (procédures 2026-2027)</p>
+    </article>
+
+    <!-- SUISSE -->
+    <article class="fiche" id="suisse">
+      <div class="fiche-head">
+        <div>
+          <h2><span class="flag f-ch" aria-hidden="true"></span>Étudier en Suisse</h2>
+          <p>L'étudiant contacte lui-même l'université ou l'école : l'ambassade n'intervient pas dans la préinscription. Le canton d'études fixe le montant des moyens financiers.</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Fribourg</span><b>21 900 CHF</b><small>par an</small></div>
+        <div class="tile"><span>Bâle</span><b>2 000 CHF</b><small>par mois</small></div>
+        <div class="tile"><span>Durée de la procédure</span><b>2 à 4 mois</b><small>déposer au moins 3 mois avant</small></div>
+        <div class="tile"><span>Visa</span><b>Type D</b><small>dépôt en personne</small></div>
+      </div>
+      <div class="cols">
+        <div class="block">
+          <h3>Les étapes</h3>
+          <ol class="steps">
+            <li>Obtenir l'admission et l'attestation d'inscription de l'école.</li>
+            <li>Payer les frais d'études demandés.</li>
+            <li>Réunir la preuve de moyens financiers.</li>
+            <li>Déposer en personne la demande de visa D à l'ambassade de Suisse.</li>
+            <li>Attendre la décision du canton, puis la délivrance du visa.</li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3>Documents à préparer</h3>
+          <ul class="list">
+            <li>Formulaire de visa D et passeport valide.</li>
+            <li>Attestation d'inscription de l'établissement.</li>
+            <li>Moyens financiers : compte bancaire à votre nom ou attestation de prise en charge émise par une banque.</li>
+            <li>Lettre personnelle d'engagement à quitter la Suisse à la fin des études.</li>
+            <li>Étrangers résidant au Sénégal : permis de résidence.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><b>Frais à prévoir :</b> le visa D études est en principe gratuit pour les étudiants ; prévoyez les frais d'inscription de l'école et les moyens financiers exigés par le canton. <a href="tarifs.html#suisse">Détail des tarifs</a></div>
+      <div class="warn"><b>Attention :</b> on ne peut pas entrer en Suisse avec un visa touristique puis demander un visa d'études sur place.</div>
+      <div class="cta">
+        <a class="btn btn-primary" href="test-eligibilite.html#suisse">Tester mon éligibilité</a>
+        <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20%C3%AAtre%20accompagn%C3%A9(e)%20pour%20%C3%A9tudier%20en%20Suisse." target="_blank" rel="noopener">Être accompagné(e)</a>
+      </div>
+      <p class="sources">Sources : <a href="https://www.sem.admin.ch" target="_blank" rel="noopener">Secrétariat d'État aux migrations</a> · <a href="https://www.eda.admin.ch" target="_blank" rel="noopener">DFAE</a> · services cantonaux des migrations</p>
+    </article>
+  </section>
+
+  <p class="stamp">Ces fiches donnent des repères généraux. Seuls les établissements, Campus France et les consulats décident de l'admission et du visa. Einstein Services ne garantit ni l'admission ni le visa.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Einstein Services</h4>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+      </div>
+      <div>
+        <h4>Nous trouver</h4>
+        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
+        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
+      </div>
+      <div>
+        <h4>Nous appeler</h4>
+        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
+        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
+        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
+      </div>
+      <div>
+        <h4>Nous suivre</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ids = ["france","canada","belgique","italie","suisse"];
+  function show(id, scroll){
+    if (ids.indexOf(id) < 0) id = "france";
+    ids.forEach(function(k){
+      document.getElementById(k).hidden = k !== id;
+      document.querySelector('[data-tab="' + k + '"]').setAttribute("aria-selected", k === id ? "true" : "false");
+    });
+    if (scroll) { var t = document.querySelector(".tabs"); if (t && t.scrollIntoView) t.scrollIntoView({ block: "start" }); }
+  }
+  window.addEventListener("hashchange", function(){ show(location.hash.slice(1), true); });
+  var h = location.hash.slice(1);
+  show(h, ids.indexOf(h) >= 0);
+})();
+</script>
+</body>
+</html>

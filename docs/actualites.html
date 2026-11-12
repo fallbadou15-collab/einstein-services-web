@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actualités Einstein Services</title>
+<meta name="description" content="Les changements de règles pour étudier à l'étranger depuis le Sénégal : Campus France, ressources pour le visa, Belgique, Canada, Italie. Chaque actualité est datée et sourcée.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Plan : bleu Atlantique (marque) + ocre (repères), papier bleuté ; en-tête et pied communs à toutes les pages */
+  --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
+  --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
+  --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+    --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+    --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+  --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+  --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.topline{height:4px;background:linear-gradient(90deg,var(--brand) 0 72%,var(--accent) 72% 100%)}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
+.brand img{height:44px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.menu a{padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:15.5px}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-sm{padding:8px 13px;font-size:14.5px;border-radius:9px}
+.hero{padding:36px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+h3{font:700 19px/1.3 var(--font-display);margin:0}
+.lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
+.section{padding:26px 0}
+.sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
+.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
+.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
+.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
+.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
+.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
+.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
+.chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:600 15px var(--font-body);padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.seg button[aria-pressed="true"]{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,var(--card));font-weight:700}
+.note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.note b{color:var(--accent-ink)}
+.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.warn b{color:var(--alert)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.stamp{font-size:14px;color:var(--muted)}
+footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
+footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
+footer.site p{margin:0 0 6px;color:var(--foot-muted)}
+footer.site a{color:var(--foot-ink)}
+footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
+footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .brand img{height:38px}
+  nav.menu{margin-left:0;width:100%}
+  .header-wa{display:none}
+}
+@media (max-width:1240px){.header-wa{display:none}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* Page */
+.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:26px;align-items:start}
+.news{display:grid;gap:14px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;color:var(--muted);margin-bottom:8px}
+.meta time{font-weight:700;color:var(--ink)}
+.item h3{font-size:20px;margin-bottom:8px;text-wrap:balance}
+.item p{margin:0 0 10px;font-size:16px}
+.impact{background:var(--accent-soft);border-radius:10px;padding:10px 12px;font-size:15px}
+.impact b{color:var(--accent-ink)}
+.src{margin:10px 0 0;font-size:14px}
+.src a{color:var(--muted)}
+.side{position:sticky;top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.side h3{padding:16px 18px;border-bottom:1px solid var(--line)}
+.dl{list-style:none;margin:0;padding:0}
+.dl li{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font-size:15px}
+.dl li:last-child{border-bottom:0}
+.dl b{display:block}
+.dl span.d{color:var(--muted);font-size:14px}
+.cd{flex:none;font:800 13px/1 var(--font-display);padding:6px 9px;border-radius:8px;background:var(--accent-soft);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.side .cta{padding:0 18px 18px;margin-top:14px}
+.empty{color:var(--muted)}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.side{position:static}}
+</style>
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="etablissements.html">Établissements</a>
+      <a href="formations.html">Formations</a>
+      <a href="guides.html">Guides</a>
+      <a href="actualites.html" aria-current="page">Actualités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="test-eligibilite.html">Test d'éligibilité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <span class="eyebrow">Mis à jour le 12 novembre 2026</span>
+  <h1>Actualités</h1>
+  <p class="lead">Les changements de règles qui comptent pour votre projet, expliqués simplement. Chaque actualité est datée et renvoie vers sa source.</p>
+</section>
+
+<section class="section">
+  <div class="seg" id="cats" aria-label="Filtrer par pays" style="margin-bottom:16px">
+    <button type="button" data-k="" aria-pressed="true">Toutes</button>
+    <button type="button" data-k="fr" aria-pressed="false"><span class="flag f-fr" aria-hidden="true"></span>France</button>
+    <button type="button" data-k="ca" aria-pressed="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</button>
+    <button type="button" data-k="be" aria-pressed="false"><span class="flag f-be" aria-hidden="true"></span>Belgique</button>
+    <button type="button" data-k="it" aria-pressed="false"><span class="flag f-it" aria-hidden="true"></span>Italie</button>
+  </div>
+  <div class="layout">
+    <div class="news" id="news" aria-live="polite"></div>
+    <aside class="side" aria-labelledby="cal">
+      <h3 id="cal">Prochaines dates limites</h3>
+      <ul class="dl" id="deadlines"></ul>
+      <div class="cta"><a class="btn btn-primary btn-sm" href="test-eligibilite.html">Tester mon éligibilité</a><a class="btn btn-ghost btn-sm" href="guides.html">Lire les guides</a></div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Einstein Services</h4>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+        <p>« Votre voyage notre mission »</p>
+      </div>
+      <div>
+        <h4>Nous trouver</h4>
+        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
+        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
+      </div>
+      <div>
+        <h4>Nous appeler</h4>
+        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
+        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
+        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
+      </div>
+      <div>
+        <h4>Nous suivre</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+  </div>
+</footer>
+<script>
+var N = [
+  { k: "fr", tag: "Campus France", date: "2026-10-01", t: "Campagne Études en France 2027 : candidatures jusqu'au 15 décembre 2026",
+    p: "Campus France Sénégal a ouvert la campagne le 1er octobre 2026 pour la rentrée de septembre 2027. Pour les formations connectées, le dossier se soumet avant le 15 décembre et les 85 000 FCFA de frais se paient avant le 19 décembre, après la demande de paiement.",
+    i: "Préparez dès maintenant relevés de notes, diplômes et lettres de motivation : les dossiers de dernière minute encombrent la plateforme.",
+    s: [["Campus France Sénégal, calendrier 2027", "https://www.senegal.campusfrance.org/system/files/medias/documents/2026-10/Calendrier%20proc%C3%A9dure%20rentr%C3%A9e%202027%20(2).pdf"]] },
+  { k: "fr", tag: "Visa", date: "2026-08-01", t: "Visa étudiant pour la France : 877,50 € par mois à justifier",
+    p: "Depuis le 1er août 2026, les ressources exigées pour un visa ou un titre de séjour étudiant sont passées de 615 € à 877,50 € par mois, soit 10 530 € sur 12 mois. Le montant suit désormais le SMIC et sera révisé au moins une fois par an.",
+    i: "Votre AVI ou votre garant doit couvrir ce nouveau montant : un justificatif préparé sur la base de 615 € ne suffit plus.",
+    s: [["France Accueil", "https://franceaccueil.com/ressources-etudiant-etranger-2026/?amp=1"], ["France Immigration", "https://www.france-immigration.com/?p=3073"]] },
+  { k: "be", tag: "Visa", date: "2026-07-01", t: "Belgique : le visa D passe de 180 € à 250 €",
+    p: "Les frais de visa de long séjour pour la Belgique sont de 250 € pour les demandes déposées depuis le 1er juillet 2026. Une redevance de l'Office des étrangers s'y ajoute selon le motif du séjour.",
+    i: "Prévoyez ces frais en plus de l'équivalence et des frais d'admission : ils ne sont pas remboursés en cas de refus.",
+    s: [["LesMRE", "https://www.lesmre.com/fr/actualites/etudiants-marocains-france-877-euros-ressources-visa-titre-sejour-2026"]] },
+  { k: "it", tag: "Procédure", date: "2026-05-01", shown: "Mai 2026", t: "Italie : 10 179,85 € de ressources et nouvelles dates limites de visa",
+    p: "Les procédures 2026-2027 et 2027-2028 fixent les ressources à 783,06 € par mois sur 13 mois, soit 10 179,85 €. Les demandes de visa sont acceptées jusqu'au 30 novembre 2026 pour 2026-2027, et jusqu'au 31 octobre 2027 pour 2027-2028.",
+    i: "Les fonds doivent être sur un compte bancaire : les tontines et la microfinance ne sont pas acceptées.",
+    s: [["Ambassade d'Italie, procédures 2026-2027", "https://amblibreville.esteri.it/wp-content/uploads/2026/06/Etudes.pdf"], ["Ambassade d'Italie à Minsk, dates limites", "https://ambminsk.esteri.it/wp-content/uploads/2026/07/STUDIO-NAZIONALE-PRE-IMMATRICOLAZIONE.pdf"]] },
+  { k: "be", tag: "Ressources", date: "2026-03-04", t: "Belgique : 1 062 € par mois de moyens de subsistance pour 2026-2027",
+    p: "La Belgique a relevé le montant minimum que doivent prouver les étudiants non européens : 1 062 € par mois pour l'année 2026-2027, contre 835 € auparavant, soit 12 744 € sur 12 mois. Le montant sera indexé chaque année.",
+    i: "Pour la rentrée 2027, attendez-vous à un montant légèrement supérieur après indexation.",
+    s: [["Paris Match Belgique", "https://www.parismatch.be/actualites/societe/2026/03/04/pour-avoir-acces-a-un-visa-etudiant-pour-les-non-europeens-il-faudra-debourser-plus-dargent-des-la-rentree-prochaine-A7JA76IUBRHATOUEB4XW6A6GAM/"], ["Managers", "https://managers.tn/2026/03/05/la-belgique-revise-le-seuil-financier-pour-les-non‑europeens-pour-cette-categorie-de-visa/"]] },
+  { k: "ca", tag: "Québec", date: "2026-01-01", t: "Québec : 24 617 $ CA de preuve de fonds et un CAQ à 135 $",
+    p: "Depuis le 1er janvier 2026, un étudiant seul doit prouver 24 617 $ CA pour ses frais de subsistance au Québec, environ 59 % de plus qu'en 2025. Les frais du CAQ sont de 135 $ CA.",
+    i: "Le même montant est vérifié deux fois : pour le CAQ, puis pour le permis d'études fédéral.",
+    s: [["SiLaw, étudier à Montréal en 2026", "https://silaws.com/study-permit-montreal-2026-fr/"], ["SiLaw, CAQ 2026", "https://silaws.com/2026/05/17/quebec-caq-2026-fr/?lang=fr"]] },
+  { k: "ca", tag: "Permis d'études", date: "2026-01-01", t: "Canada : maîtrise et doctorat sans lettre d'attestation provinciale",
+    p: "Depuis le 1er janvier 2026, les étudiants à la maîtrise ou au doctorat dans un établissement public sont dispensés de la lettre d'attestation provinciale (LAP).",
+    i: "Pour un master au Canada, une étape de moins, mais la preuve de fonds reste exigée.",
+    s: [["SiLaw, permis d'études 2026", "https://silaws.com/study-permits-2026-fr/"]] },
+  { k: "ca", tag: "Permis d'études", date: "2025-09-01", t: "Canada : 22 895 $ CA de preuve de fonds hors Québec",
+    p: "Pour un permis d'études hors Québec, la preuve de fonds d'une personne seule est de 22 895 $ CA depuis le 1er septembre 2025, en plus des frais de scolarité de la première année.",
+    i: "Une preuve de fonds insuffisante ou mal expliquée est la première cause de refus.",
+    s: [["SiLaw, permis d'études 2026", "https://silaws.com/study-permits-2026-fr/"]] }
+];
+var DL = [
+  { d: "2026-11-30", t: "Italie : dernière limite visa, rentrée 2026-2027", k: "it" },
+  { d: "2026-12-15", t: "Campus France : candidature (formations connectées)", k: "fr" },
+  { d: "2026-12-19", t: "Campus France : paiement des frais de dossier", k: "fr" },
+  { d: "2027-05-31", t: "Parcoursup ou candidature directe, au plus tard", k: "fr" },
+  { d: "2027-07-15", t: "Études en France : dépôt avec la lettre d'admission", k: "fr" },
+  { d: "2027-07-15", t: "Belgique : équivalence du bac (date habituelle)", k: "be" },
+  { d: "2027-07-30", t: "Campus France : compléments et vérification des originaux", k: "fr" },
+  { d: "2027-10-31", t: "Italie : limite visa, rentrée 2027-2028", k: "it" }
+];
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var NAMES = { fr: "France", ca: "Canada", be: "Belgique", it: "Italie" };
+  function fmt(d){ return new Date(d + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }); }
+  function days(d){ var t = new Date(); t.setHours(0,0,0,0); return Math.round((new Date(d + "T00:00:00") - t) / 864e5); }
+  function render(k){
+    var list = N.filter(function(n){ return !k || n.k === k; });
+    $("news").innerHTML = list.map(function(n){
+      return '<article class="item"><div class="meta"><time datetime="' + n.date + '">' + (n.shown || fmt(n.date)) + '</time><span class="flag f-' + n.k + '" aria-hidden="true"></span><span class="chip">' + NAMES[n.k] + ' · ' + n.tag + '</span></div>' +
+        '<h3>' + n.t + '</h3><p>' + n.p + '</p><div class="impact"><b>Ce que ça change pour vous :</b> ' + n.i + '</div>' +
+        '<p class="src">Sources : ' + n.s.map(function(s){ return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'; }).join(" · ") + '</p></article>';
+    }).join("") || '<p class="empty">Aucune actualité pour ce pays pour le moment.</p>';
+    var dl = DL.filter(function(x){ return days(x.d) >= 0 && (!k || x.k === k); });
+    $("deadlines").innerHTML = dl.map(function(x){
+      var n = days(x.d);
+      return '<li><span><b>' + x.t + '</b><span class="d">' + fmt(x.d) + '</span></span><span class="cd">' + (n === 0 ? "Aujourd'hui" : "J-" + n) + '</span></li>';
+    }).join("") || '<li><span class="d">Aucune date limite à venir pour ce pays.</span></li>';
+    document.querySelectorAll("#cats button").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-k") === k ? "true" : "false"); });
+  }
+  $("cats").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) render(b.getAttribute("data-k")); });
+  render("");
+})();
+</script>
+</body>
+</html>

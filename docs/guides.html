@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides pratiques Einstein Services</title>
+<meta name="description" content="Guides pas à pas pour étudier à l'étranger depuis le Sénégal : Campus France, entretien, AVI, équivalence en Belgique, Universitaly, permis d'études au Canada, Suisse, budget et pièges à éviter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Plan : bleu Atlantique (marque) + ocre (repères), papier bleuté ; en-tête et pied communs à toutes les pages */
+  --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
+  --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
+  --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+    --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+    --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+  --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+  --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.topline{height:4px;background:linear-gradient(90deg,var(--brand) 0 72%,var(--accent) 72% 100%)}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
+.brand img{height:44px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.menu a{padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:15.5px}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-sm{padding:8px 13px;font-size:14.5px;border-radius:9px}
+.hero{padding:36px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+h3{font:700 19px/1.3 var(--font-display);margin:0}
+.lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
+.section{padding:26px 0}
+.sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
+.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
+.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
+.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
+.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
+.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
+.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
+.chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:600 15px var(--font-body);padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.seg button[aria-pressed="true"]{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,var(--card));font-weight:700}
+.note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.note b{color:var(--accent-ink)}
+.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.warn b{color:var(--alert)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.stamp{font-size:14px;color:var(--muted)}
+footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
+footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
+footer.site p{margin:0 0 6px;color:var(--foot-muted)}
+footer.site a{color:var(--foot-ink)}
+footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
+footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .brand img{height:38px}
+  nav.menu{margin-left:0;width:100%}
+  .header-wa{display:none}
+}
+@media (max-width:1240px){.header-wa{display:none}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* Page */
+.toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:18px}
+.toc a{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink)}
+.toc a:hover{border-color:var(--brand)}
+.toc .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);font:800 14px/30px var(--font-display);text-align:center}
+.toc b{display:block;font-size:16px;line-height:1.3}
+.toc small{color:var(--muted);font-size:14px}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:20px;scroll-margin-top:12px}
+.ghead{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+.ghead .num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--brand);color:var(--brand-ink);font:800 17px/38px var(--font-display);text-align:center}
+.ghead p{margin:6px 0 0;color:var(--muted);max-width:66ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:14px 0 18px}
+.fact{background:var(--paper);border-radius:12px;padding:12px 14px;border-top:3px solid var(--accent)}
+.fact span{display:block;font-size:13.5px;color:var(--muted);font-weight:600}
+.fact b{display:block;font:800 18px/1.25 var(--font-display);margin-top:3px}
+.gcols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px}
+.gcols h3{font-size:17px;margin-bottom:8px}
+.gcols ol,.gcols ul{margin:0;padding-left:22px;display:grid;gap:7px;font-size:16px}
+.gcols ul li::marker{color:var(--alert)}
+.gfoot{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}
+.gfoot .src{font-size:14px;color:var(--muted)}
+.gfoot .src a{color:var(--muted)}
+table.mini{border-collapse:collapse;width:100%;font-size:15px;min-width:560px}
+table.mini th,table.mini td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tw{overflow-x:auto}
+@media (max-width:760px){.gcols{grid-template-columns:1fr}.guide{padding:18px}}
+</style>
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="etablissements.html">Établissements</a>
+      <a href="formations.html">Formations</a>
+      <a href="guides.html" aria-current="page">Guides</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="test-eligibilite.html">Test d'éligibilité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <span class="eyebrow">Guides vérifiés le 12 novembre 2026</span>
+  <h1>Guides pratiques</h1>
+  <p class="lead">Neuf guides pas à pas pour préparer votre départ depuis le Sénégal, du choix de la procédure jusqu'au visa. Chiffres officiels, dates et pièges à éviter.</p>
+  <nav class="toc" aria-label="Sommaire des guides">
+    <a href="#campus-france"><span class="num">1</span><span><b>Campus France pas à pas</b><small>Éligibilité, dates, frais</small></span></a>
+    <a href="#entretien"><span class="num">2</span><span><b>Réussir l'entretien Campus France</b><small>Ce qu'on vous demande</small></span></a>
+    <a href="#avi"><span class="num">3</span><span><b>AVI et preuve de ressources</b><small>877,50 € par mois en France</small></span></a>
+    <a href="#equivalence"><span class="num">4</span><span><b>L'équivalence du bac en Belgique</b><small>Quand, combien, comment</small></span></a>
+    <a href="#universitaly"><span class="num">5</span><span><b>Italie : Universitaly et déclaration de valeur</b><small>Les 3 étapes</small></span></a>
+    <a href="#canada"><span class="num">6</span><span><b>Le permis d'études au Canada</b><small>LAP, CAQ, preuve de fonds</small></span></a>
+    <a href="#suisse"><span class="num">7</span><span><b>Étudier en Suisse</b><small>Admission directe, canton</small></span></a>
+    <a href="#pieges"><span class="num">8</span><span><b>Éviter les refus et les arnaques</b><small>Les erreurs qui coûtent cher</small></span></a>
+    <a href="#budget"><span class="num">9</span><span><b>Le budget à prévoir</b><small>Pays par pays</small></span></a>
+  </nav>
+</section>
+
+<article class="guide" id="campus-france">
+  <div class="ghead"><span class="num">1</span><div><h2>Campus France pas à pas</h2><p>Depuis le Sénégal, la procédure Études en France est obligatoire pour étudier en France plus de 6 mois. Voici les règles de la rentrée 2027.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Date limite de candidature</span><b>15 décembre 2026</b></div>
+    <div class="fact"><span>Frais de dossier</span><b>85 000 FCFA</b></div>
+    <div class="fact"><span>Paiement avant le</span><b>19 décembre 2026</b></div>
+    <div class="fact"><span>Entretien</span><b>Sous 7 jours, si convoqué</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Les étapes</h3><ol>
+      <li>Vérifiez votre éligibilité : bac 2026 ou 2027 avec une reprise au plus, ou diplôme du supérieur accrédité par l'ANAQ-Sup.</li>
+      <li>Créez un seul compte sur la plateforme Études en France.</li>
+      <li>Choisissez vos formations et rédigez une lettre de motivation pour chacune.</li>
+      <li>Soumettez votre dossier avant le 15 décembre 2026.</li>
+      <li>Payez 85 000 FCFA dans une agence Sunu Bank (ex-BICIS) après la demande de paiement.</li>
+      <li>Passez l'entretien pédagogique si vous êtes convoqué(e).</li>
+      <li>Validez votre choix définitif après les réponses des établissements.</li>
+      <li>Demandez le visa après le mail de fin de procédure (15 mai au 27 août 2027).</li>
+    </ol></div>
+    <div><h3>À éviter</h3><ul>
+      <li>Payer avant d'avoir reçu la demande de paiement.</li>
+      <li>Créer un deuxième compte si vous en avez déjà un.</li>
+      <li>Fournir un document non authentique : 5 ans d'inéligibilité.</li>
+      <li>Bac arabe (L-AR) sans test de français de niveau B2.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-primary btn-sm" href="test-eligibilite.html#france">Tester mon éligibilité</a><span class="src">Source : <a href="https://www.senegal.campusfrance.org" target="_blank" rel="noopener">Campus France Sénégal</a>, calendrier 2027</span></div>
+</article>
+
+<article class="guide" id="entretien">
+  <div class="ghead"><span class="num">2</span><div><h2>Réussir l'entretien Campus France</h2><p>L'entretien pédagogique n'est pas systématique : un dossier complet peut en être dispensé. Si vous êtes convoqué(e), il vérifie que votre projet est cohérent et que vous pouvez l'expliquer.</p></div></div>
+  <div class="gcols">
+    <div><h3>Préparez ces réponses</h3><ol>
+      <li>Présenter votre parcours en deux minutes, notes et diplômes compris.</li>
+      <li>Expliquer pourquoi chaque formation choisie suit logiquement vos études.</li>
+      <li>Dire quel métier vous visez et comment la formation y mène.</li>
+      <li>Justifier le choix de la France, de la ville et de l'établissement.</li>
+      <li>Expliquer comment vous financerez vos études (AVI, garant, bourse).</li>
+      <li>Expliquer un redoublement ou une année sans études, s'il y en a.</li>
+    </ol></div>
+    <div><h3>À éviter</h3><ul>
+      <li>Réciter un texte appris par cœur.</li>
+      <li>Choisir des formations sans lien entre elles.</li>
+      <li>Ignorer le contenu des formations demandées.</li>
+      <li>Manquer le rendez-vous : il se prend dans les 7 jours.</li>
+    </ul></div>
+  </div>
+  <div class="note"><b>Le bon repère :</b> votre projet est prêt quand vous pouvez le présenter librement, à l'écrit comme à l'oral, sans notes.</div>
+  <div class="gfoot"><a class="btn btn-wa btn-sm" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20pr%C3%A9parer%20mon%20entretien%20Campus%20France." target="_blank" rel="noopener">Préparer mon entretien avec un conseiller</a></div>
+</article>
+
+<article class="guide" id="avi">
+  <div class="ghead"><span class="num">3</span><div><h2>AVI et preuve de ressources</h2><p>Pour un visa étudiant en France, vous devez prouver des ressources suffisantes. L'attestation de virement irrévocable (AVI) est la solution la plus utilisée.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Ressources exigées</span><b>877,50 € par mois</b></div>
+    <div class="fact"><span>Sur 12 mois</span><b>10 530 €</b></div>
+    <div class="fact"><span>En vigueur depuis le</span><b>1er août 2026</b></div>
+    <div class="fact"><span>Notre partenaire AVI</span><b>Univers France Succès</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Comment ça marche</h3><ol>
+      <li>Les fonds sont versés sur un compte bloqué à votre nom.</li>
+      <li>La banque délivre l'attestation, à joindre au dossier de visa.</li>
+      <li>Une fois en France, vous recevez chaque mois une partie de la somme.</li>
+      <li>Sans la totalité des fonds, notre partenaire propose une solution à 525 000 FCFA : nos conseillers vous en expliquent les conditions.</li>
+    </ol></div>
+    <div><h3>À ne pas confondre</h3><ul>
+      <li>L'AVI n'est pas l'acompte de scolarité que demandent certaines écoles privées.</li>
+      <li>Un justificatif calculé sur l'ancien montant de 615 € ne suffit plus.</li>
+      <li>Une AVI se prépare en plusieurs semaines : ne l'attendez pas pour la dernière minute.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-ghost btn-sm" href="tarifs.html#france">Voir les tarifs</a><span class="src">Source : <a href="https://franceaccueil.com/ressources-etudiant-etranger-2026/?amp=1" target="_blank" rel="noopener">France Accueil</a></span></div>
+</article>
+
+<article class="guide" id="equivalence">
+  <div class="ghead"><span class="num">4</span><div><h2>L'équivalence du bac en Belgique</h2><p>Pour entrer en bachelier en Belgique francophone, votre bac doit être reconnu équivalent au CESS par la Fédération Wallonie-Bruxelles.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Frais pour le Sénégal</span><b>150 €</b></div>
+    <div class="fact"><span>Tarif normal</span><b>400 €</b></div>
+    <div class="fact"><span>Dépôt</span><b>15 novembre au 15 juillet</b></div>
+    <div class="fact"><span>Où</span><b>equivalences.cfwb.be</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Les étapes</h3><ol>
+      <li>Rassemblez le diplôme du bac et les relevés de notes, en copies certifiées conformes.</li>
+      <li>Payez les frais avant le 15 juillet : ils ne sont jamais remboursés.</li>
+      <li>Déposez le dossier en ligne ou par courrier recommandé et gardez l'attestation de dépôt.</li>
+      <li>Suivez votre dossier en ligne, rubrique « Mon dossier ».</li>
+      <li>Avec l'équivalence, inscrivez-vous dans une université ou une haute école.</li>
+    </ol></div>
+    <div><h3>À savoir</h3><ul>
+      <li>Le tarif réduit vaut pour les pays de la liste APD de l'OCDE : confirmez-le avant de payer.</li>
+      <li>En master, c'est l'établissement qui décide de votre admission.</li>
+      <li>Ingénieur civil : un examen d'admission en mathématiques est prévu.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-primary btn-sm" href="test-eligibilite.html#belgique">Tester mon éligibilité</a><span class="src">Sources : <a href="https://www.equivalences.cfwb.be" target="_blank" rel="noopener">Fédération Wallonie-Bruxelles</a> · <a href="https://www.jeminforme.be/?p=284326" target="_blank" rel="noopener">Infor Jeunes</a></span></div>
+</article>
+
+<article class="guide" id="universitaly">
+  <div class="ghead"><span class="num">5</span><div><h2>Italie : Universitaly et déclaration de valeur</h2><p>Trois étapes mènent au visa d'études en Italie : la préinscription, la reconnaissance du diplôme, puis le visa.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Ressources</span><b>10 179,85 €</b></div>
+    <div class="fact"><span>Déclaration de valeur</span><b>32 800 FCFA</b></div>
+    <div class="fact"><span>Visa D études</span><b>50 €</b></div>
+    <div class="fact"><span>Visa 2027-2028 avant le</span><b>31 octobre 2027</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Les étapes</h3><ol>
+      <li>Choisissez le cursus et vérifiez les dates de l'université.</li>
+      <li>Faites la préinscription sur Universitaly et attendez sa validation.</li>
+      <li>Demandez la déclaration de valeur à l'Ambassade d'Italie à Dakar (32 800 FCFA, plus 15 750 FCFA par légalisation et 8 550 FCFA par traduction), ou une attestation CIMEA.</li>
+      <li>Réunissez 10 179,85 € sur un compte (783,06 € par mois sur 13 mois) et une assurance santé.</li>
+      <li>Prenez rendez-vous pour le visa D études.</li>
+    </ol></div>
+    <div><h3>À éviter</h3><ul>
+      <li>Demander le visa avec une préinscription encore « sous condition ».</li>
+      <li>Présenter des fonds de tontine ou de microfinance : ils sont refusés.</li>
+      <li>Payer quelqu'un qui promet un rendez-vous plus rapide.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-ghost btn-sm" href="tarifs.html#italie">Notre pack Italie</a><span class="src">Sources : <a href="https://www.universitaly.it/studenti-stranieri" target="_blank" rel="noopener">Universitaly</a> · <a href="https://ambdakar.esteri.it/wp-content/uploads/2026/01/DEMANDE-DE-DECLARATION-DE-VALEUR.pdf" target="_blank" rel="noopener">Ambassade d'Italie à Dakar</a></span></div>
+</article>
+
+<article class="guide" id="canada">
+  <div class="ghead"><span class="num">6</span><div><h2>Le permis d'études au Canada</h2><p>Un permis d'études est nécessaire pour un programme de plus de 6 mois. Le nombre de permis est limité chaque année : déposez tôt.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Preuve de fonds</span><b>22 895 $ CA</b></div>
+    <div class="fact"><span>Au Québec</span><b>24 617 $ CA</b></div>
+    <div class="fact"><span>Permis + biométrie</span><b>150 $ + 85 $ CA</b></div>
+    <div class="fact"><span>CAQ (Québec)</span><b>135 $ CA</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Les étapes</h3><ol>
+      <li>Obtenez la lettre d'acceptation d'un établissement d'enseignement désigné (EED).</li>
+      <li>Au Québec, demandez le CAQ ; ailleurs, la lettre d'attestation provinciale (LAP) passe par l'établissement.</li>
+      <li>Réunissez la preuve de fonds : montant ci-dessus plus la première année de scolarité.</li>
+      <li>Déposez la demande de permis en ligne et donnez vos données biométriques.</li>
+      <li>Passez l'examen médical si on vous le demande.</li>
+    </ol></div>
+    <div><h3>À savoir</h3><ul>
+      <li>Maîtrise ou doctorat en établissement public : pas de LAP depuis le 1er janvier 2026.</li>
+      <li>Le nom sur la lettre d'acceptation doit être identique à celui du passeport.</li>
+      <li>Une preuve de fonds mal expliquée est la première cause de refus.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-primary btn-sm" href="test-eligibilite.html#canada">Tester mon éligibilité</a><span class="src">Source : <a href="https://silaws.com/study-permits-2026-fr/" target="_blank" rel="noopener">SiLaw, permis d'études 2026</a></span></div>
+</article>
+
+<article class="guide" id="suisse">
+  <div class="ghead"><span class="num">7</span><div><h2>Étudier en Suisse</h2><p>En Suisse, vous contactez vous-même l'université ou l'école : l'ambassade n'intervient pas dans l'admission. Le canton fixe le montant des moyens financiers.</p></div></div>
+  <div class="facts">
+    <div class="fact"><span>Fribourg</span><b>21 900 CHF par an</b></div>
+    <div class="fact"><span>Bâle</span><b>2 000 CHF par mois</b></div>
+    <div class="fact"><span>Durée de la procédure</span><b>2 à 4 mois</b></div>
+    <div class="fact"><span>Visa D études</span><b>En principe gratuit</b></div>
+  </div>
+  <div class="gcols">
+    <div><h3>Les étapes</h3><ol>
+      <li>Obtenez l'admission et l'attestation d'inscription de l'école.</li>
+      <li>Payez les frais d'études demandés.</li>
+      <li>Réunissez la preuve de moyens : compte à votre nom ou prise en charge bancaire.</li>
+      <li>Déposez en personne la demande de visa D, avec une lettre d'engagement à quitter la Suisse après les études.</li>
+      <li>Attendez la décision du canton, puis le visa.</li>
+    </ol></div>
+    <div><h3>À éviter</h3><ul>
+      <li>Entrer avec un visa touristique pour demander ensuite un visa d'études.</li>
+      <li>Déposer moins de 3 mois avant la rentrée.</li>
+    </ul></div>
+  </div>
+  <div class="gfoot"><a class="btn btn-primary btn-sm" href="test-eligibilite.html#suisse">Tester mon éligibilité</a><span class="src">Source : <a href="https://www.ibani.com/guides/preuve-moyens-financiers-visa-etudiant-suisse" target="_blank" rel="noopener">ibani, moyens financiers en Suisse</a></span></div>
+</article>
+
+<article class="guide" id="pieges">
+  <div class="ghead"><span class="num">8</span><div><h2>Éviter les refus et les arnaques</h2><p>La plupart des refus viennent de quelques erreurs connues. Les voici, pays par pays.</p></div></div>
+  <div class="gcols">
+    <div><h3>Les erreurs qui coûtent cher</h3><ol>
+      <li><b>Faux document</b> : 5 ans d'inéligibilité aux procédures Campus France.</li>
+      <li><b>Ressources insuffisantes</b> : la première cause de refus, en France comme au Canada.</li>
+      <li><b>Projet incohérent</b> : des formations sans lien avec votre parcours.</li>
+      <li><b>Mauvais visa</b> : un visa Schengen de court séjour ne permet pas d'étudier en Belgique ni en Suisse.</li>
+      <li><b>Délais dépassés</b> : chaque procédure a ses dates, et les dérogations sont rares.</li>
+    </ol></div>
+    <div><h3>Les arnaques à repérer</h3><ul>
+      <li>Une personne qui vend un rendez-vous plus rapide à l'ambassade.</li>
+      <li>Une promesse de « visa garanti » : personne ne peut la tenir.</li>
+      <li>Un paiement demandé hors des canaux officiels.</li>
+    </ul></div>
+  </div>
+  <div class="warn"><b>Notre engagement :</b> Einstein Services ne garantit ni l'admission ni le visa. Nous vous aidons à constituer un dossier solide et conforme.</div>
+</article>
+
+<article class="guide" id="budget">
+  <div class="ghead"><span class="num">9</span><div><h2>Le budget à prévoir</h2><p>Les ressources à prouver pour le visa, pays par pays. Les frais de dossier, de visa et nos honoraires sont détaillés sur la page Tarifs.</p></div></div>
+  <div class="tw"><table class="mini">
+    <thead><tr><th>Pays</th><th>Ressources à justifier</th><th>Principaux frais officiels</th></tr></thead>
+    <tbody>
+      <tr><td><span class="flag f-fr" aria-hidden="true"></span> France</td><td>877,50 € par mois, soit 10 530 € par an</td><td>Campus France 85 000 FCFA ; visa 50 €</td></tr>
+      <tr><td><span class="flag f-ca" aria-hidden="true"></span> Canada</td><td>22 895 $ CA (24 617 $ CA au Québec) + 1re année de scolarité</td><td>Permis 150 $ CA ; biométrie 85 $ CA ; CAQ 135 $ CA</td></tr>
+      <tr><td><span class="flag f-be" aria-hidden="true"></span> Belgique</td><td>1 062 € par mois, soit 12 744 € par an</td><td>Équivalence 150 € ; admission 200 € ; visa 250 €</td></tr>
+      <tr><td><span class="flag f-it" aria-hidden="true"></span> Italie</td><td>10 179,85 €</td><td>Déclaration de valeur 32 800 FCFA ; visa 50 €</td></tr>
+      <tr><td><span class="flag f-ch" aria-hidden="true"></span> Suisse</td><td>Selon le canton : 21 900 CHF par an à Fribourg</td><td>Visa en principe gratuit pour les étudiants</td></tr>
+    </tbody>
+  </table></div>
+  <div class="gfoot"><a class="btn btn-primary btn-sm" href="tarifs.html">Voir tous les tarifs</a><a class="btn btn-wa btn-sm" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20calculer%20le%20budget%20de%20mon%20projet%20d'%C3%A9tudes." target="_blank" rel="noopener">Calculer mon budget avec un conseiller</a></div>
+</article>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Einstein Services</h4>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+        <p>« Votre voyage notre mission »</p>
+      </div>
+      <div>
+        <h4>Nous trouver</h4>
+        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
+        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
+      </div>
+      <div>
+        <h4>Nous appeler</h4>
+        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
+        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
+        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
+      </div>
+      <div>
+        <h4>Nous suivre</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

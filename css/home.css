@@ -586,6 +586,41 @@ body {
   margin: 0;
   line-height: 1.65;
 }
+.u-event-recap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.u-event-copy {
+  color: var(--u-muted);
+  line-height: 1.7;
+}
+.u-event-copy h3 {
+  color: var(--u-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.u-event-facts {
+  color: var(--u-blue-dark);
+}
+.u-event-program {
+  padding-left: 1.35rem;
+}
+.u-event-program li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.35rem;
+}
+.u-event-poster {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin-inline: auto;
+  border-radius: var(--u-radius);
+  box-shadow: var(--u-shadow);
+}
 
 /* ===== Service cards ===== */
 .u-grid-3 {
@@ -1122,7 +1157,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .u-about,
-  .u-contact {
+  .u-contact,
+  .u-event-recap {
     grid-template-columns: 1fr;
   }
   .u-footer-grid {
