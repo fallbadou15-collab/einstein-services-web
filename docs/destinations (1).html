@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Plan : bleu Atlantique (marque) + ocre (repères), papier bleuté ; comparatif en tête, puis une fiche par pays en onglets */
   --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
   --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
   --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
@@ -46,38 +45,56 @@ header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
 .brand img{height:44px;width:auto;display:block}
 nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
-nav.menu a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:16px}
+nav.menu a{padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:15.5px}
 nav.menu a:hover{color:var(--ink)}
 nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-primary{background:var(--brand);color:var(--brand-ink)}
-.hero{padding:36px 0 10px}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:44px 24px 32px;margin:24px 0 10px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 92% 18%,color-mix(in srgb,var(--accent) 16%,transparent) 0 70px,transparent 72px),radial-gradient(circle at 94% 22%,color-mix(in srgb,var(--brand) 8%,transparent) 0 140px,transparent 142px),var(--card)}
+.hero::after{content:"";position:absolute;z-index:-1;width:210px;height:210px;right:9%;bottom:-155px;border:24px solid color-mix(in srgb,var(--brand) 7%,transparent);border-radius:50%}
+.hero h1{color:var(--brand);max-width:18ch}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
 h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
 h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
 h3{font:700 19px/1.3 var(--font-display);margin:0 0 10px}
-.lead{max-width:62ch;color:var(--muted);font-size:19px;margin:0}
+.lead{max-width:68ch;color:var(--muted);font-size:17px;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn-outline{background:var(--card);border-color:var(--line);color:var(--brand)}
+.btn-outline:hover{background:var(--paper);color:var(--brand)}
+.lang-switch{display:flex;align-items:center;gap:4px}
+.lang-switch a{padding:6px 9px;border-radius:999px;color:var(--brand);font-size:12px;font-weight:700;text-decoration:none}
+.lang-switch a[aria-current="true"]{background:#edf4fa}
 .section{padding:28px 0}
+.section > h2{color:var(--brand)}
+.section > h2::after{content:"";display:block;width:58px;height:4px;margin-top:9px;border-radius:99px;background:linear-gradient(90deg,var(--accent),#ffbd59)}
 .flag{display:inline-block;width:30px;height:20px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-4px}
 .f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
 .f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
 .f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
 .f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
 .f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:20px}
-.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 28px rgba(20,86,138,.07)}
 table.compare{border-collapse:collapse;width:100%;min-width:720px;font-size:15.5px}
 table.compare th,table.compare td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-table.compare thead th{font:700 13px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:color-mix(in srgb,var(--paper) 60%,var(--card))}
+table.compare thead th{font:700 12px/1.3 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--brand-ink);background:var(--brand)}
+table.compare tbody tr:nth-child(even){background:color-mix(in srgb,var(--paper) 60%,var(--card))}
+table.compare tbody tr:hover{background:var(--accent-soft)}
 table.compare tbody tr:last-child td,table.compare tbody tr:last-child th{border-bottom:0}
 table.compare tbody th{font-weight:700;white-space:nowrap}
 table.compare tbody th a{color:var(--ink);text-decoration:none;display:inline-flex;gap:10px;align-items:center}
 table.compare td.num{font-variant-numeric:tabular-nums;font-weight:600}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin:0 -2px}
-.tabs a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:700;white-space:nowrap}
-.tabs a[aria-selected="true"]{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
-.fiche{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;scroll-margin-top:12px}
+.country-picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;padding:4px 2px 18px}
+.country-picker a{position:relative;display:flex;align-items:center;gap:12px;min-height:72px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none;box-shadow:0 6px 18px rgba(20,86,138,.05);transition:transform .2s,border-color .2s}
+.country-picker a::after{content:"";position:absolute;right:12px;bottom:-12px;width:32px;height:32px;border:6px solid rgba(245,144,0,.13);border-radius:50%}
+.country-picker a:hover{transform:translateY(-2px);border-color:var(--accent)}
+.country-picker .f-ch{margin-right:5px}
+.country-name{display:block;color:var(--brand);font-weight:800}
+.country-hint{display:block;color:var(--muted);font-size:13px}
+.fiche{position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(32,112,180,.045),transparent 220px),var(--card);border:1px solid var(--line);border-left:6px solid var(--brand);border-radius:8px 20px 20px 8px;padding:26px;scroll-margin-top:20px;box-shadow:0 10px 28px rgba(20,86,138,.06)}
+.fiche::before{content:"";position:absolute;top:-36px;right:-28px;width:120px;height:120px;border:16px solid rgba(245,144,0,.09);border-radius:50%;pointer-events:none}
 .fiche + .fiche{margin-top:20px}
 .fiche-head{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px}
 .fiche-head p{margin:0;color:var(--muted);max-width:62ch}
@@ -92,14 +109,24 @@ table.compare td.num{font-variant-numeric:tabular-nums;font-weight:600}
 .block{border-top:1px solid var(--line);padding-top:16px}
 ol.steps,ul.list{margin:0;padding-left:22px;display:grid;gap:7px;font-size:16px}
 ul.list li::marker{color:var(--accent)}
-.note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:18px}
+.note{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:18px}
 .note b{color:var(--accent-ink)}
-.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:12px}
+.warn{background:var(--alert-bg);border:1px solid color-mix(in srgb,var(--alert) 25%,var(--line));border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:12px}
 .warn b{color:var(--alert)}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cta .btn-primary{background:var(--brand)}
+.cta .btn-primary:hover{background:#2070b4}
 .sources{margin-top:20px;font-size:14px;color:var(--muted)}
 .sources a{color:var(--muted)}
 .stamp{font-size:14px;color:var(--muted);margin-top:4px}
+.next-steps{padding:28px 0}
+.next-steps h2{color:var(--brand)}
+.next-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.next-card{display:block;position:relative;overflow:hidden;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--card);text-decoration:none;box-shadow:0 8px 22px rgba(20,86,138,.06);transition:transform .2s,box-shadow .2s}
+.next-card::after{content:"";position:absolute;width:72px;height:72px;right:-28px;top:-30px;border:12px solid rgba(245,144,0,.12);border-radius:50%}
+.next-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(20,86,138,.12)}
+.next-card strong{display:block;color:var(--brand);font-size:16px}
+.next-card span{display:block;margin-top:5px;color:var(--muted);font-size:14px}
 footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
 footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
 footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
@@ -107,25 +134,32 @@ footer.site p{margin:0 0 6px;color:var(--foot-muted)}
 footer.site a{color:var(--foot-ink)}
 footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
 footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+footer.site a:hover{color:#ffbd59}
 @media (max-width:560px){
   body{font-size:16.5px}
-  .fiche{padding:18px}
+  .fiche{padding:20px 16px}
   .brand img{height:38px}
+  header.site .wrap{gap:10px}
   nav.menu{margin-left:0;width:100%}
+  .hero{margin-top:16px;padding:30px 18px 24px;border-radius:22px}
   .header-wa{display:none}
   .cols{grid-template-columns:1fr}
+  .section{padding:22px 0}
+  .next-steps{padding:22px 0}
 }
-@media (max-width:1240px){.header-wa{display:none}}
+@media (max-width:1080px){
+  .header-wa{display:none}
+  nav.menu{flex-basis:100%;justify-content:center;margin-left:0}
+}
 </style>
+<link rel="stylesheet" href="../css/resources-theme.css">
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <a class="brand" href="destinations.html"><img src="../img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
     <nav class="menu" aria-label="Menu principal">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
       <a href="destinations.html" aria-current="page">Destinations</a>
       <a href="etablissements.html">Établissements</a>
       <a href="formations.html">Formations</a>
@@ -133,7 +167,6 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <a href="actualites.html">Actualités</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="test-eligibilite.html">Test d'éligibilité</a>
-      <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
   </div>
@@ -143,7 +176,12 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   <section class="hero">
     <span class="eyebrow">Informations vérifiées le 10 novembre 2026</span>
     <h1>Nos destinations d'études</h1>
-    <p class="lead">Procédure, calendrier, budget et documents pour partir étudier depuis le Sénégal. Les règles changent chaque année : nous mettons ces fiches à jour à chaque nouvelle campagne.</p>
+    <p class="lead">Comparez les démarches, les budgets et les échéances pour préparer vos études depuis le Sénégal. Chaque destination est ensuite détaillée dans sa propre fiche : étapes, documents, frais et points de vigilance.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="test-eligibilite.html">Tester mon éligibilité</a>
+      <a class="btn btn-outline" href="formations.html">Explorer les formations</a>
+      <a class="btn btn-outline" href="guides.html">Consulter les guides</a>
+    </div>
   </section>
 
   <section class="section" aria-labelledby="comparatif">
@@ -164,12 +202,12 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   </section>
 
   <section class="section" aria-label="Fiches pays">
-    <nav class="tabs" aria-label="Choisir un pays">
-      <a href="#france" data-tab="france" aria-selected="true"><span class="flag f-fr" aria-hidden="true"></span>France</a>
-      <a href="#canada" data-tab="canada" aria-selected="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</a>
-      <a href="#belgique" data-tab="belgique" aria-selected="false"><span class="flag f-be" aria-hidden="true"></span>Belgique</a>
-      <a href="#italie" data-tab="italie" aria-selected="false"><span class="flag f-it" aria-hidden="true"></span>Italie</a>
-      <a href="#suisse" data-tab="suisse" aria-selected="false"><span class="flag f-ch" aria-hidden="true"></span>Suisse</a>
+    <nav class="country-picker" aria-label="Accès rapide aux fiches par pays">
+      <a href="#france"><span class="flag f-fr" aria-hidden="true"></span><span><span class="country-name">France</span><span class="country-hint">Études en France</span></span></a>
+      <a href="#canada"><span class="flag f-ca" aria-hidden="true"></span><span><span class="country-name">Canada</span><span class="country-hint">Permis d'études</span></span></a>
+      <a href="#belgique"><span class="flag f-be" aria-hidden="true"></span><span><span class="country-name">Belgique</span><span class="country-hint">Équivalence et visa D</span></span></a>
+      <a href="#italie"><span class="flag f-it" aria-hidden="true"></span><span><span class="country-name">Italie</span><span class="country-hint">Préinscription Universitaly</span></span></a>
+      <a href="#suisse"><span class="flag f-ch" aria-hidden="true"></span><span><span class="country-name">Suisse</span><span class="country-hint">Admission et visa D</span></span></a>
     </nav>
 
     <!-- FRANCE -->
@@ -429,6 +467,18 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   <p class="stamp">Ces fiches donnent des repères généraux. Seuls les établissements, Campus France et les consulats décident de l'admission et du visa. Einstein Services ne garantit ni l'admission ni le visa.</p>
 </main>
 
+<section class="next-steps wrap" aria-labelledby="next-steps-title">
+  <h2 id="next-steps-title">Poursuivez votre projet</h2>
+  <p class="lead">Les étapes clés, des formations au budget, sont réunies dans nos ressources.</p>
+  <div class="next-grid">
+    <a class="next-card" href="etablissements.html"><strong>Établissements</strong><span>Repérez les établissements selon votre pays et votre projet.</span></a>
+    <a class="next-card" href="formations.html"><strong>Formations</strong><span>Explorez les niveaux et les domaines d’études.</span></a>
+    <a class="next-card" href="guides.html"><strong>Guides pratiques</strong><span>Préparez vos démarches étape par étape.</span></a>
+    <a class="next-card" href="tarifs.html"><strong>Tarifs et frais</strong><span>Consultez les budgets et frais à prévoir.</span></a>
+    <a class="next-card" href="test-eligibilite.html"><strong>Test d’éligibilité</strong><span>Faites le point sur votre projet d’études.</span></a>
+  </div>
+</section>
+
 <footer class="site">
   <div class="wrap">
     <div class="fcols">
@@ -450,32 +500,16 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <div>
         <h4>Nous suivre</h4>
         <div class="social">
-          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
     </div>
-    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés.</div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var ids = ["france","canada","belgique","italie","suisse"];
-  function show(id, scroll){
-    if (ids.indexOf(id) < 0) id = "france";
-    ids.forEach(function(k){
-      document.getElementById(k).hidden = k !== id;
-      document.querySelector('[data-tab="' + k + '"]').setAttribute("aria-selected", k === id ? "true" : "false");
-    });
-    if (scroll) { var t = document.querySelector(".tabs"); if (t && t.scrollIntoView) t.scrollIntoView({ block: "start" }); }
-  }
-  window.addEventListener("hashchange", function(){ show(location.hash.slice(1), true); });
-  var h = location.hash.slice(1);
-  show(h, ids.indexOf(h) >= 0);
-})();
-</script>
 </body>
 </html>

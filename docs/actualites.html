@@ -120,15 +120,16 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 .empty{color:var(--muted)}
 @media (max-width:900px){.layout{grid-template-columns:1fr}.side{position:static}}
 </style>
+<link rel="stylesheet" href="../css/resources-theme.css">
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <a class="brand" href="../index.html"><img src="../img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
     <nav class="menu" aria-label="Menu principal">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
+      <a href="../index.html">Accueil</a>
+      <a href="../services.html">Services</a>
       <a href="destinations.html">Destinations</a>
       <a href="etablissements.html">Établissements</a>
       <a href="formations.html">Formations</a>
@@ -136,7 +137,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <a href="actualites.html" aria-current="page">Actualités</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="test-eligibilite.html">Test d'éligibilité</a>
-      <a href="contact.html">Contact</a>
+      <a href="../contact.html">Contact</a>
     </nav>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
   </div>
@@ -190,18 +191,22 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <div>
         <h4>Nous suivre</h4>
         <div class="social">
-          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
     </div>
-    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="../mentions-legales.html">Mentions légales</a> · <a href="../politique-confidentialite.html">Politique de confidentialité</a></div>
   </div>
 </footer>
 <script>
 var N = [
+  { k: "fr", tag: "Événement", date: "2026-10-24", shown: "24 octobre 2026", t: "Retour sur la Journée d’intégration des nouveaux arrivants en France",
+    p: "Le samedi 24 octobre 2026, Einstein Services et Univers France Succès ont accueilli les nouveaux arrivants à Paris, Puteaux, La Défense, de 9 h à 13 h, pour une matinée d’échange, de partage et d’accompagnement. Au programme : découverte de La Défense, visite de l’Arc de Triomphe et de la tour Eiffel, repas en famille et échanges libres sur la vie en France. Les participants ont également pu aborder les questions de logement, de transport, de santé, d’ouverture de compte bancaire, d’emploi, de stages et de démarches du quotidien.",
+    i: "Cette journée a permis aux étudiants de découvrir leur nouvel environnement et d’obtenir des repères concrets pour mieux commencer leur vie en France.",
+    s: [] },
   { k: "fr", tag: "Campus France", date: "2026-10-01", t: "Campagne Études en France 2027 : candidatures jusqu'au 15 décembre 2026",
     p: "Campus France Sénégal a ouvert la campagne le 1er octobre 2026 pour la rentrée de septembre 2027. Pour les formations connectées, le dossier se soumet avant le 15 décembre et les 85 000 FCFA de frais se paient avant le 19 décembre, après la demande de paiement.",
     i: "Préparez dès maintenant relevés de notes, diplômes et lettres de motivation : les dossiers de dernière minute encombrent la plateforme.",
@@ -255,7 +260,7 @@ var DL = [
     $("news").innerHTML = list.map(function(n){
       return '<article class="item"><div class="meta"><time datetime="' + n.date + '">' + (n.shown || fmt(n.date)) + '</time><span class="flag f-' + n.k + '" aria-hidden="true"></span><span class="chip">' + NAMES[n.k] + ' · ' + n.tag + '</span></div>' +
         '<h3>' + n.t + '</h3><p>' + n.p + '</p><div class="impact"><b>Ce que ça change pour vous :</b> ' + n.i + '</div>' +
-        '<p class="src">Sources : ' + n.s.map(function(s){ return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'; }).join(" · ") + '</p></article>';
+        (n.s && n.s.length ? '<p class="src">Sources : ' + n.s.map(function(s){ return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'; }).join(" · ") + '</p>' : '') + '</article>';
     }).join("") || '<p class="empty">Aucune actualité pour ce pays pour le moment.</p>';
     var dl = DL.filter(function(x){ return days(x.d) >= 0 && (!k || x.k === k); });
     $("deadlines").innerHTML = dl.map(function(x){

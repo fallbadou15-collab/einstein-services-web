@@ -1,184 +1,279 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catalogue des formations — Einstein Services</title>
-    <meta
-      name="description"
-      content="Explorez les formations proposées par les établissements partenaires d'Einstein Services : BTS, Licence, Bachelor, Master, écoles d'ingénieurs en France, Canada, Belgique, Suisse et Italie."
-    />
-    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="canonical" href="https://einstein-services.com/formations.html" />
-    <meta name="robots" content="noindex, follow" />
-    <meta name="author" content="Einstein Services" />
-    <meta name="geo.region" content="SN-DK" />
-    <meta name="geo.placename" content="Dakar" />
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Einstein Services" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:title" content="Catalogue des formations — Einstein Services" />
-    <meta property="og:description" content="Explorez les formations proposées par les établissements partenaires d'Einstein Services : BTS, Licence, Bachelor, Master, écoles d'ingénieurs en France, Canada, Belgique, Suisse et Italie." />
-    <meta property="og:url" content="https://einstein-services.com/formations.html" />
-    <meta property="og:image" content="https://einstein-services.com/img/logo-light.svg" />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Catalogue des formations — Einstein Services" />
-    <meta name="twitter:description" content="BTS, Licence, Bachelor, Master, écoles d'ingénieurs : explorez les formations de nos partenaires." />
-    <!-- Données structurées -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["TravelAgency", "EducationalOrganization"],
-      "name": "Einstein Services",
-      "alternateName": "Einstein Services Voyages",
-      "url": "https://einstein-services.com/",
-      "logo": "https://einstein-services.com/img/logo.svg",
-      "description": "Agence d'orientation et de mobilité internationale — Yoff, Dakar.",
-      "foundingDate": "2024",
-      "address": { "@type": "PostalAddress", "streetAddress": "Route de l'Aéroport, près de la Senelec", "addressLocality": "Yoff, Dakar", "addressCountry": "SN" },
-      "telephone": "+221787927373",
-      "email": "contact@einstein-services.com",
-      "sameAs": [
-        "https://www.facebook.com/einsteinservicesvoyages1",
-        "https://www.instagram.com/einsteinservices",
-        "https://www.linkedin.com/company/einsteinservices",
-        "https://www.tiktok.com/@einsteinservices1"
-      ]
-    }
-    </script>
-  </head>
-  <body>
-    <!-- ===== NAVBAR ===== -->
-    <header class="navbar">
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img
-            src="img/logo.svg"
-            alt="Logo Einstein Services"
-            class="logo-img"
-          />
-        </a>
-        <nav class="nav-links" id="navLinks">
-          <a href="services.html">Services</a>
-          <a href="destinations.html">Destinations</a>
-          <a href="formations.html">Formations</a>
-          <a href="temoignages.html">Témoignages</a>
-          <a href="test-eligibilite.html">Test d'éligibilité</a>
-          <a href="contact.html" class="btn btn-orange nav-cta">Nous contacter</a>
-        </nav>
-        <div class="lang-switch" aria-label="Choix de la langue">
-            <a href="index.html" class="lang-opt active" hreflang="fr" title="Franéais"><img src="img/flags/fr.svg" alt="Franéais" width="22" height="16" /></a>
-            <a href="index-en.html" class="lang-opt" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
-          </div>
-        <button class="burger" id="burger" aria-label="Menu"></button>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formations Einstein Services</title>
+<meta name="description" content="Quelle formation après le bac, en master ou en école d'ingénieurs en France, au Canada, en Belgique, en Italie et en Suisse : diplôme, durée et voie d'admission pour chaque pays.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Plan : bleu Atlantique (marque) + ocre (repères), papier bleuté ; en-tête et pied communs à toutes les pages */
+  --paper:#F2F5F9; --card:#FFFFFF; --ink:#0E1B2C; --muted:#54657B; --line:#D6DEE8;
+  --brand:#143A66; --brand-ink:#FFFFFF; --accent:#D9971C; --accent-ink:#875A06; --accent-soft:#FBF0DA;
+  --wa:#178C4A; --foot-bg:#0E2A4B; --foot-ink:#E4ECF6; --foot-muted:#A9BCD3; --alert:#AE2F28; --alert-bg:#FBE4E2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+    --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+    --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1320; --card:#111D2F; --ink:#E5ECF5; --muted:#9AABC1; --line:#23344B;
+  --brand:#86B6F0; --brand-ink:#0A1320; --accent:#F0B847; --accent-ink:#F3C766; --accent-soft:#2A2210;
+  --wa:#22B860; --foot-bg:#070F1A; --foot-ink:#DCE5F0; --foot-muted:#8FA3BB; --alert:#F28B82; --alert-bg:#2E1513;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body)}
+a{color:var(--brand)}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.topline{height:4px;background:linear-gradient(90deg,var(--brand) 0 72%,var(--accent) 72% 100%)}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:16px;min-height:68px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 21px/1 var(--font-display)}
+.brand img{height:44px;width:auto;display:block}
+nav.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;max-width:100%}
+nav.menu a{padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;white-space:nowrap;font-size:15.5px}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a[aria-current="page"]{color:var(--brand);background:color-mix(in srgb,var(--brand) 11%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;font:700 16px/1.2 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-sm{padding:8px 13px;font-size:14.5px;border-radius:9px}
+.hero{padding:36px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:800 clamp(24px,3.4vw,32px)/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+h3{font:700 19px/1.3 var(--font-display);margin:0}
+.lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
+.section{padding:26px 0}
+.sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
+.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
+.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
+.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
+.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
+.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
+.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
+.chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:600 15px var(--font-body);padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.seg button[aria-pressed="true"]{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,var(--card));font-weight:700}
+.note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.note b{color:var(--accent-ink)}
+.warn{background:var(--alert-bg);border-radius:12px;padding:14px 16px;font-size:15.5px;margin-top:16px}
+.warn b{color:var(--alert)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.stamp{font-size:14px;color:var(--muted)}
+footer.site{background:var(--foot-bg);color:var(--foot-ink);padding:36px 0 28px;font-size:15.5px;margin-top:40px}
+footer.site .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer.site h4{font:700 16px var(--font-display);margin:0 0 10px}
+footer.site p{margin:0 0 6px;color:var(--foot-muted)}
+footer.site a{color:var(--foot-ink)}
+footer.site .social{display:flex;flex-wrap:wrap;gap:12px}
+footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent);margin-top:26px;padding-top:16px;color:var(--foot-muted);font-size:14px}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .brand img{height:38px}
+  nav.menu{margin-left:0;width:100%}
+  .header-wa{display:none}
+}
+@media (max-width:1240px){.header-wa{display:none}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* Page */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:16px}
+.panel-head{padding:16px 18px;border-bottom:1px solid var(--line)}
+.panel-head p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+.rows{display:grid}
+.row{display:grid;grid-template-columns:170px 1.1fr 1.3fr 1.2fr auto;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:start;font-size:15.5px}
+.row:last-child{border-bottom:0}
+.row.head{font:700 12.5px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:color-mix(in srgb,var(--paper) 60%,var(--card));padding-top:11px;padding-bottom:11px}
+.country{display:flex;align-items:center;gap:9px;font-weight:700}
+.dip b{display:block}
+.dip span{color:var(--muted);font-size:14.5px}
+.row a.go{white-space:nowrap;font-weight:600;font-size:14.5px}
+.lab{display:none;font:700 12px var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.domains{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:16px}
+.dom{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.dom p{margin:0;font-size:15px}
+.dom .where{color:var(--muted);font-size:14.5px}
+.dom a{margin-top:auto;font-weight:700;font-size:15px}
+@media (max-width:860px){
+  .row{grid-template-columns:1fr;gap:6px}
+  .row.head{display:none}
+  .lab{display:block;margin-top:4px}
+}
+</style>
+<link rel="stylesheet" href="css/resources-theme.css">
+</head>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="etablissements.html">Établissements</a>
+      <a href="formations.html" aria-current="page">Formations</a>
+      <a href="guides.html">Guides</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="test-eligibilite.html">Test d'éligibilité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <span class="eyebrow">Mis à jour le 12 novembre 2026</span>
+  <h1>Formations</h1>
+  <p class="lead">Choisissez votre niveau pour voir, pays par pays, le diplôme visé, sa durée et la façon de candidater depuis le Sénégal. Parcourez ensuite les domaines d'études.</p>
+</section>
+
+<section class="section" aria-labelledby="niveau">
+  <h2 id="niveau">Votre niveau</h2>
+  <div class="seg" id="levels" aria-label="Niveau visé">
+    <button type="button" data-l="bac" aria-pressed="true">Après le bac</button>
+    <button type="button" data-l="court" aria-pressed="false">Formation courte et professionnelle</button>
+    <button type="button" data-l="master" aria-pressed="false">Master</button>
+    <button type="button" data-l="inge" aria-pressed="false">École d'ingénieurs</button>
+  </div>
+  <div class="panel">
+    <div class="panel-head"><h3 id="ltitle"></h3><p id="lsub"></p></div>
+    <div class="rows" id="rows"></div>
+  </div>
+  <p class="stamp" style="margin-top:10px">Durées habituelles, données à titre indicatif. Chaque établissement fixe ses propres conditions d'admission.</p>
+</section>
+
+<section class="section" aria-labelledby="domaines">
+  <h2 id="domaines">Les domaines d'études</h2>
+  <p class="sub">Les formations les plus demandées par nos étudiants, et les établissements de notre annuaire qui les proposent.</p>
+  <div class="domains" id="domains"></div>
+</section>
+
+<div class="cta">
+  <a class="btn btn-primary" href="test-eligibilite.html">Tester mon éligibilité</a>
+  <a class="btn btn-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20cherche%20une%20formation%20%C3%A0%20l'%C3%A9tranger." target="_blank" rel="noopener">Être orienté(e) sur WhatsApp</a>
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <h4>Einstein Services</h4>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+        <p>« Votre voyage notre mission »</p>
       </div>
-    </header>
-
-    <main class="section">
-      <div class="container">
-        <div class="section-head">
-          <h1>Catalogue des <span class="grad-orange">formations</span></h1>
-          <p>
-            Notre catalogue détaillé est en préparation. Contactez léagence
-            pour discuter de votre projet déétudes et des formations adaptées à votre profil.
-          </p>
-        </div>
-
-        <!-- ===== Filtres ===== -->
-        <div class="filters card" id="filters">
-          <select id="fPays">
-            <option value="">Tous les pays</option>
-            <option>France</option>
-            <option>Canada</option>
-            <option>Belgique</option>
-            <option>Suisse</option>
-            <option>Italie</option>
-          </select>
-          <select id="fVille">
-            <option value="">Toutes les villes</option>
-          </select>
-          <select id="fNiveau">
-            <option value="">Tous les niveaux</option>
-            <option>BTS</option>
-            <option>Licence</option>
-            <option>Bachelor</option>
-            <option>Master</option>
-            <option>Ingénieur</option>
-          </select>
-          <select id="fDomaine">
-            <option value="">Tous les domaines</option>
-            <option>Sciences & ingénierie</option>
-            <option>Commerce & gestion</option>
-            <option>Droit & sciences humaines</option>
-            <option>Art & design</option>
-            <option>Informatique</option>
-            <option>Santé</option>
-          </select>
-          <select id="fLangue">
-            <option value="">Toutes les langues</option>
-            <option>Franéais</option>
-            <option>Anglais</option>
-            <option>Franéais / Anglais</option>
-          </select>
-          <select id="fRentree">
-            <option value="">Toutes les rentrées</option>
-          </select>
-          <select id="fFrais">
-            <option value="">Tous les frais</option>
-          </select>
-          <button id="fReset" class="btn btn-ghost">Réinitialiser</button>
-        </div>
-
-        <!-- ===== Résultats ===== -->
-        <p class="muted" id="fCount"></p>
-        <div class="grid grid-3" id="formationsGrid"></div>
-        <p id="noResult" class="disclaimer" hidden>
-          Le catalogue officiel sera publié dés validation de la liste des
-          formations et établissements partenaires par l'agence. En attendant,
-          <a href="contact.html">contactez-nous</a> pour discuter de votre projet.
-        </p>
+      <div>
+        <h4>Nous trouver</h4>
+        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
+        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
       </div>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <img
-          src="img/logo-light.svg"
-          alt="Einstein Services"
-          class="footer-logo"
-        />
-        <p>
-          <strong>Einstein Services</strong> — Du premier conseil à votre
-          installation, nous vous accompagnons à l'international.<br />
-          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54 60 / +221 78 792 73 73 / +221 78 733 81 81
-        </p>
-        <div class="footer-socials">
-          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.svg" alt="TikTok" /></a>
-          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook" /></a>
-          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.svg" alt="Instagram" /></a>
-          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
-        </div>
-        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
-        <p class="muted footer-links">
-          <a href="mentions-legales.html">Mentions légales</a> ·
-          <a href="politique-confidentialite.html"
-            >Politique de confidentialité</a
-          >
-        </p>
+      <div>
+        <h4>Nous appeler</h4>
+        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
+        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
+        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
       </div>
-    </footer>
-    <script src="js/code.js"></script>
-    <script src="js/chatbot.js"></script>
-    <script src="js/formations.js"></script>
-  </body>
+      <div>
+        <h4>Nous suivre</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+  </div>
+</footer>
+<script>
+var C = { fr: ["France","france"], ca: ["Canada","canada"], be: ["Belgique","belgique"], it: ["Italie","italie"], ch: ["Suisse","suisse"] };
+var L = {
+  bac: { t: "Après le bac : premier cycle", s: "Pour les élèves de terminale et les bacheliers 2026.", r: [
+    ["fr", "Licence ou BUT", "3 ans", "Procédure Études en France (Campus France Sénégal), avant le 15 décembre 2026", "Bac 2026 ou 2027, obtenu avec une reprise au plus"],
+    ["ca", "Baccalauréat universitaire ; au Québec, DEC au cégep", "3 à 4 ans ; DEC de 2 à 3 ans", "Admission par l'établissement, puis CAQ ou lettre d'attestation provinciale, et permis d'études", "Preuve de fonds : 22 895 $ CA (24 617 $ CA au Québec) plus la 1re année de scolarité"],
+    ["be", "Bachelier", "3 ans", "Équivalence du bac à la Fédération Wallonie-Bruxelles, puis inscription", "Équivalence à demander avant le 15 juillet ; 1 062 € par mois de ressources"],
+    ["it", "Laurea triennale", "3 ans", "Préinscription sur Universitaly, validée par l'université", "Déclaration de valeur ou CIMEA ; 10 179,85 € de ressources"],
+    ["ch", "Bachelor", "3 ans", "Admission directement auprès de l'université", "Moyens financiers fixés par le canton (21 900 CHF par an à Fribourg)"]
+  ]},
+  court: { t: "Formation courte et professionnelle", s: "Pour un diplôme rapide et tourné vers le métier.", r: [
+    ["fr", "BTS", "2 ans", "Parcoursup, puis dossier Études en France avec la lettre d'admission (1er avril au 15 juillet 2027)", "Admission obtenue sur Parcoursup"],
+    ["ca", "Diplôme collégial ou certificat", "1 à 3 ans", "Admission par le collège, puis attestation provinciale et permis d'études", "Programme de plus de 6 mois dans un établissement désigné"],
+    ["be", "Bachelier professionnalisant en haute école", "3 ans", "Équivalence du bac, puis inscription en haute école", "Équivalence avant le 15 juillet"],
+    ["ch", "Bachelor en haute école spécialisée (HES)", "3 ans", "Admission directement auprès de la haute école", "Conditions propres à chaque haute école"]
+  ]},
+  master: { t: "Master", s: "Pour les titulaires d'une licence ou d'un diplôme de niveau bac+3.", r: [
+    ["fr", "Master", "2 ans", "Procédure Études en France (Campus France Sénégal)", "Licence validée, diplôme accrédité par l'ANAQ-Sup"],
+    ["ca", "Maîtrise", "1 à 2 ans", "Admission par l'université, CAQ au Québec ; pas de lettre provinciale pour un établissement public depuis le 1er janvier 2026", "Diplôme de premier cycle et preuve de fonds"],
+    ["be", "Master", "1 à 2 ans", "Admission sur dossier par l'établissement, puis visa D", "Diplôme de premier cycle reconnu ; 1 062 € par mois"],
+    ["it", "Laurea magistrale", "2 ans", "Préinscription sur Universitaly", "Diplôme de premier cycle, déclaration de valeur ou CIMEA"],
+    ["ch", "Master", "1,5 à 2 ans", "Admission directement auprès de l'université", "Bachelor reconnu par l'université"]
+  ]},
+  inge: { t: "École d'ingénieurs", s: "Les voies vers un diplôme d'ingénieur dans chaque pays.", r: [
+    ["fr", "Cycle ingénieur d'une école CTI, ou école post-bac", "3 ans après bac+2, ou 5 ans après le bac", "Procédure Études en France ; candidature auprès de l'école pour le privé", "Cycle ingénieur : après une CPGE, un BTS, un DUT, un DiSEP ou une licence"],
+    ["ca", "Baccalauréat en génie", "4 ans", "Admission par l'université, puis CAQ ou lettre provinciale et permis d'études", "Dossier scolaire scientifique solide"],
+    ["be", "Bachelier puis master ingénieur civil ou industriel", "5 ans", "Équivalence du bac, puis inscription", "Ingénieur civil : examen d'admission en mathématiques"],
+    ["it", "Laurea in ingegneria puis laurea magistrale", "3 + 2 ans", "Préinscription sur Universitaly", "Test d'admission selon l'université"],
+    ["ch", "Bachelor puis master en ingénierie (EPFL, HES)", "3 + 1,5 à 2 ans", "Admission directement auprès de l'école", "Conditions propres aux diplômes étrangers"]
+  ]}
+};
+var D = [
+  ["informatique", "Informatique et numérique", "Licence et master d'informatique, BUT informatique, cycle ingénieur en informatique, bachelier en informatique en Belgique."],
+  ["ingenierie", "Ingénierie", "Cycle ingénieur, BUT génie mécanique ou génie électrique, baccalauréat en génie au Canada, laurea in ingegneria en Italie."],
+  ["commerce", "Commerce et gestion", "Bachelor et master en management, BTS, BUT techniques de commercialisation, baccalauréat en administration au Canada."],
+  ["economie", "Économie", "Licence et master d'économie, finance, économétrie."],
+  ["droit", "Droit et science politique", "Licence et master de droit, science politique, relations internationales."],
+  ["sante", "Santé", "Sciences biomédicales, soins infirmiers en haute école ou au collège, biologie. L'accès aux études de médecine est très limité pour les étudiants étrangers."],
+  ["sciences", "Sciences", "Licence et master de mathématiques, physique, chimie, biologie."],
+  ["lettres", "Lettres, langues, sciences humaines", "Langues, lettres, communication, sociologie, sciences de l'éducation."],
+  ["agronomie", "Agronomie et environnement", "Agronomie, agroalimentaire, environnement : Gembloux en Belgique, Université Laval au Canada, JUNIA en France."],
+  ["architecture", "Architecture", "Architecture et urbanisme : universités belges, Politecnico di Milano et di Torino, EPFL."]
+];
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  function show(l){
+    var x = L[l];
+    $("ltitle").textContent = x.t; $("lsub").textContent = x.s;
+    $("rows").innerHTML = '<div class="row head"><span>Pays</span><span>Diplôme et durée</span><span>Comment candidater</span><span>Condition clé</span><span></span></div>' +
+      x.r.map(function(r){
+        var c = C[r[0]];
+        return '<div class="row"><span class="country"><span class="flag f-' + r[0] + '" aria-hidden="true"></span>' + c[0] + '</span>' +
+          '<span class="dip"><span class="lab">Diplôme et durée</span><b>' + r[1] + '</b><span>' + r[2] + '</span></span>' +
+          '<span><span class="lab">Comment candidater</span>' + r[3] + '</span>' +
+          '<span><span class="lab">Condition clé</span>' + r[4] + '</span>' +
+          '<a class="go" href="etablissements.html#' + c[1] + '">Établissements</a></div>';
+      }).join("");
+    document.querySelectorAll("#levels button").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-l") === l ? "true" : "false"); });
+  }
+  $("levels").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) show(b.getAttribute("data-l")); });
+  $("domains").innerHTML = D.map(function(d){
+    return '<article class="dom"><h3>' + d[1] + '</h3><p>' + d[2] + '</p><a href="etablissements.html#' + d[0] + '">Voir les établissements</a></article>';
+  }).join("");
+  show("bac");
+})();
+</script>
+</body>
 </html>

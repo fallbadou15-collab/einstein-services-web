@@ -1,0 +1,54 @@
+:root,
+:root:not([data-theme="light"]),
+:root[data-theme="dark"] {
+  --paper: #fdfaf5 !important;
+  --card: #ffffff !important;
+  --ink: #232323 !important;
+  --muted: #6b6b6b !important;
+  --line: #e9e1d7 !important;
+  --brand: #14568a !important;
+  --brand-ink: #ffffff !important;
+  --accent: #f59000 !important;
+  --accent-ink: #985600 !important;
+  --accent-soft: #fff2df !important;
+  --wa: #178c4a !important;
+  --foot-bg: #14568a !important;
+  --foot-ink: #ffffff !important;
+  --foot-muted: #d7e5f1 !important;
+  --alert: #ae2f28 !important;
+  --alert-bg: #fbe4e2 !important;
+  --navy: #14568a !important;
+  --blue: #2070b4 !important;
+  --gold: #f59000 !important;
+  --orange: #f59000 !important;
+  --cream: #f6efe6 !important;
+  --cream-2: #fdfaf5 !important;
+  --u-blue: #2070b4 !important;
+  --u-blue-dark: #14568a !important;
+  --u-navy: #14568a !important;
+  --u-orange: #f59000 !important;
+  --u-orange-light: #ffab2e !important;
+  --u-gold: #ffb61e !important;
+  --u-cream: #fdfaf5 !important;
+  --u-white: #ffffff !important;
+  --u-text: #232323 !important;
+  --u-muted: #6b6b6b !important;
+  color-scheme: light !important;
+}
+
+body {
+  background: var(--paper) !important;
+  color: var(--ink);
+}
+
+footer,
+footer.site,
+footer.footer,
+footer.u-footer {
+  background: var(--foot-bg) !important;
+  color: var(--foot-ink) !important;
+}
+
+footer a {
+  color: var(--foot-ink) !important;
+}

@@ -17,7 +17,10 @@ const NAFI_LINK_LABELS = {
   "contact.html": NAFI_IS_ENGLISH ? "Open the contact page" : "Ouvrir la page contact",
 };
 
-if (!document.querySelector(".u-whatsapp, .site-whatsapp")) {
+if (
+  !document.body.hasAttribute("data-no-floating-whatsapp") &&
+  !document.querySelector(".u-whatsapp, .site-whatsapp")
+) {
   const whatsappLink = document.createElement("a");
   whatsappLink.className = "site-whatsapp";
   whatsappLink.href =
