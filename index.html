@@ -64,7 +64,10 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["TravelAgency", "EducationalOrganization"],
+        "@type": [
+          "TravelAgency",
+          "EducationalOrganization"
+        ],
         "name": "Einstein Services",
         "alternateName": "Einstein Services Voyages",
         "url": "https://einstein-services.com/",
@@ -92,10 +95,27 @@
           "https://www.instagram.com/einsteinservices",
           "https://www.linkedin.com/company/einsteinservices",
           "https://www.tiktok.com/@einsteinservices1"
+        ],
+        "@id": "https://einstein-services.com/#organization"
+      }
+      </script>
+  <link rel="stylesheet" href="css/resources-theme.css">
+  <link rel="alternate" hreflang="fr" href="https://einstein-services.com/" />
+  <link rel="alternate" hreflang="en" href="https://einstein-services.com/index-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://einstein-services.com/" />
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://einstein-services.com/#website",
+        "url": "https://einstein-services.com/",
+        "name": "Einstein Services",
+        "inLanguage": [
+          "fr",
+          "en"
         ]
       }
-    </script>
-  <link rel="stylesheet" href="css/resources-theme.css">
+      </script>
 </head>
   <body>
     <a
@@ -174,7 +194,7 @@
           aria-label="Choix de la langue"
           style="display: flex; gap: 0.3rem; align-items: center"
         >
-          <a href="index.html" title="Français"
+          <a href="/" title="Français"
             ><img src="img/flags/fr.svg" alt="Français" width="22" height="16"
           /></a>
           <a href="index-en.html" title="English"
@@ -500,7 +520,7 @@
             <span class="u-service-link">Voir l’annuaire →</span>
           </a>
           <a href="formations.html" class="u-service-card" style="text-decoration: none">
-            <div class="u-service-icon orange">🎓</div>
+            <div class="u-service-icon orange">🎓S</div>
             <h3>Formations</h3>
             <p>Explorez les niveaux et les domaines d’études possibles.</p>
             <span class="u-service-link">Explorer les formations →</span>
@@ -624,6 +644,12 @@
               data-bs-slide-to="2"
               aria-label="Témoignage 3"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#homeTestimonialsCarousel"
+              data-bs-slide-to="3"
+              aria-label="Témoignage 4"
+            ></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -662,6 +688,20 @@
                 <footer>
                   <strong>Saër Fall</strong>
                   <span>— BUT 2 Génie mécanique et productique, IUT de Saint-Denis</span>
+                </footer>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="temoin">
+                <p>
+                  « Je tiens à remercier chaleureusement Einstein Services pour
+                  leur aide et leur accompagnement dans mes démarches de visa.
+                  L’équipe est très professionnelle, à l’écoute et toujours
+                  disponible pour répondre aux questions. »
+                </p>
+                <footer>
+                  <strong>Rokhy Dramé</strong>
+                  <span>— BTS Pilotage des Procédés, 2e année, Lycée de l’Escaut, Valenciennes</span>
                 </footer>
               </article>
             </div>

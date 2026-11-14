@@ -70,10 +70,13 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["TravelAgency", "EducationalOrganization"],
+        "@type": [
+          "TravelAgency",
+          "EducationalOrganization"
+        ],
         "name": "Einstein Services",
         "alternateName": "Einstein Services Voyages",
-        "url": "https://einstein-services.com/index-en.html",
+        "url": "https://einstein-services.com/",
         "logo": "https://einstein-services.com/img/logo.svg",
         "description": "Guidance and international mobility agency in Yoff, Dakar: studies in France, Canada, Belgium, Switzerland, Italy, Campus France, student visa, housing and ticketing.",
         "foundingDate": "2024",
@@ -98,10 +101,27 @@
           "https://www.instagram.com/einsteinservices",
           "https://www.linkedin.com/company/einsteinservices",
           "https://www.tiktok.com/@einsteinservices1"
+        ],
+        "@id": "https://einstein-services.com/#organization"
+      }
+      </script>
+  <link rel="stylesheet" href="css/resources-theme.css">
+  <link rel="alternate" hreflang="fr" href="https://einstein-services.com/" />
+  <link rel="alternate" hreflang="en" href="https://einstein-services.com/index-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://einstein-services.com/" />
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://einstein-services.com/#website",
+        "url": "https://einstein-services.com/",
+        "name": "Einstein Services",
+        "inLanguage": [
+          "fr",
+          "en"
         ]
       }
-    </script>
-  <link rel="stylesheet" href="css/resources-theme.css">
+      </script>
 </head>
   <body>
     <a
@@ -178,7 +198,7 @@
           aria-label="Language switch"
           style="display: flex; gap: 0.3rem; align-items: center"
         >
-          <a href="index.html" title="Français"
+          <a href="/" title="Français"
             ><img src="img/flags/fr.svg" alt="Français" width="22" height="16"
           /></a>
           <a href="index-en.html" title="English"
@@ -560,6 +580,12 @@
               data-bs-slide-to="2"
               aria-label="Testimonial 3"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#homeTestimonialsCarousel"
+              data-bs-slide-to="3"
+              aria-label="Testimonial 4"
+            ></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -607,6 +633,20 @@
                     >— BUT 2 Mechanical and Production Engineering, IUT de
                     Saint-Denis</span
                   >
+                </footer>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="temoin">
+                <p>
+                  “I would like to warmly thank Einstein Services for their help
+                  and support with my visa application. The team is very
+                  professional, attentive and always available to answer
+                  questions.”
+                </p>
+                <footer>
+                  <strong>Rokhy Dramé</strong>
+                  <span>— 2nd-year BTS student in Process Control, Lycée de l’Escaut, Valenciennes</span>
                 </footer>
               </article>
             </div>
