@@ -178,6 +178,130 @@ const PAYS_DATA = {
       "Residence permit and housing on arrival",
     ],
   },
+  Maroc: {
+    flag: "img/flags/ma.svg",
+    continent: "North Africa",
+    langues: "Arabic / French",
+    devise: "Moroccan dirham (MAD)",
+    intro:
+      "Study options include AMCI scholarships coordinated through Senegal's Direction des bourses, as well as direct applications to private institutions. Check current entry and residence requirements before applying.",
+    facts: [
+      ["🎓 Routes", "AMCI scholarship or direct application to an institution"],
+      [
+        "💰 Scholarships",
+        "260 AMCI scholarships were announced for Senegal for 2026–27; verify the next call",
+      ],
+      [
+        "🏠 Accommodation",
+        "Costs vary by city and institution; confirm the budget with the school",
+      ],
+      ["🗣️ Language", "Arabic and French; some programmes use other languages"],
+      [
+        "🛂 Residence",
+        "Check entry formalities and apply for a student residence card after arrival when required",
+      ],
+    ],
+    steps: [
+      "Check the latest AMCI call or choose an institution for direct admission",
+      "Confirm eligibility and application deadlines",
+      "Prepare diplomas, transcripts, passport and admission or scholarship documents",
+      "Verify entry formalities with the Moroccan Embassy in Dakar",
+      "Complete student residence procedures after arrival, if required",
+    ],
+  },
+  Allemagne: {
+    flag: "img/flags/de.svg",
+    continent: "Europe",
+    langues: "German / English",
+    devise: "Euro (€)",
+    intro:
+      "German public universities often have low tuition, but admission depends on how your previous diploma is recognised. A blocked account may be required for the student visa.",
+    facts: [
+      ["🎓 System", "Direct admission or a Studienkolleg, depending on your diploma"],
+      [
+        "💰 Proof of funds",
+        "The source guide lists €11,904 for a blocked account in 2026; verify the current amount",
+      ],
+      [
+        "💶 Tuition fees",
+        "Many public universities charge no general tuition; exceptions and semester fees apply",
+      ],
+      ["🗣️ Language", "German or English, depending on the programme"],
+      ["🛂 Visa", "National student visa (type D)"],
+      [
+        "💼 Working",
+        "Work limits apply to international students; confirm the current rules",
+      ],
+    ],
+    steps: [
+      "Check how your diploma is recognised in the anabin database",
+      "Confirm whether you need a Studienkolleg or can apply directly",
+      "Apply through uni-assist or directly to the university",
+      "Meet the language requirements and obtain admission",
+      "Arrange the required proof of funds and apply for a national student visa",
+    ],
+  },
+  Turquie: {
+    flag: "img/flags/tr.svg",
+    continent: "Europe / Asia",
+    langues: "Turkish / English",
+    devise: "Turkish lira (TRY)",
+    intro:
+      "Applicants can pursue the Türkiye Scholarships programme or apply directly to a public or private university. Visa and residence requirements depend on the chosen route.",
+    facts: [
+      ["🎓 Routes", "Türkiye Scholarships or direct university admission"],
+      [
+        "💰 Scholarship",
+        "The scholarship programme may cover tuition and living support; check the current call",
+      ],
+      [
+        "🗣️ Language",
+        "Turkish or English; French-language programmes are also available at some institutions",
+      ],
+      ["🛂 After admission", "Study visa, followed by a residence permit after arrival"],
+    ],
+    steps: [
+      "Choose the scholarship route or apply directly to a university",
+      "Prepare transcripts, diplomas, a motivation letter and recommendations",
+      "Apply during the official scholarship window or the university's deadline",
+      "Complete any interview or language requirements",
+      "Apply for the study visa and then the residence permit",
+    ],
+  },
+  Roumanie: {
+    flag: "img/flags/ro.svg",
+    continent: "Europe",
+    langues: "Romanian / English / French",
+    devise: "Romanian leu (RON)",
+    intro:
+      "Some Romanian universities offer programmes in English or French. The study acceptance letter issued through the Ministry of Education is a key part of the application process.",
+    facts: [
+      ["🎓 System", "Programmes in Romanian, English or French, depending on the institution"],
+      [
+        "💰 Tuition fees",
+        "Fees are set by the programme and are generally payable in euros",
+      ],
+      [
+        "🗣️ Language",
+        "A preparatory Romanian-language year may be required for some programmes",
+      ],
+      [
+        "🛂 Visa",
+        "Obtain the study acceptance letter, then apply for a study visa",
+      ],
+      [
+        "🎓 Scholarships",
+        "Government scholarship calls and eligibility vary by year",
+      ],
+    ],
+    steps: [
+      "Choose a university and confirm its language of instruction",
+      "Submit the application with certified translations where required",
+      "Obtain the study acceptance letter through the Ministry of Education",
+      "Pay tuition according to the institution's instructions",
+      "Apply for the study visa and prepare for arrival",
+    ],
+  },
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -198,29 +322,26 @@ const els = {
 };
 
 if (data) {
-  document.title =
-    `Studying in ${pays === "Belgique" ? "Belgium" : pays === "Suisse" ? "Switzerland" : pays} — Einstein Services`
-      .replace("in Canada", "in Canada")
-      .replace("in France", "in France")
-      .replace("in Belgique", "in Belgium")
-      .replace("in Suisse", "in Switzerland")
-      .replace("in Italie", "in Italy");
-  els.headTitle.textContent = `${pays === "Belgique" ? "Belgium" : pays === "Suisse" ? "Switzerland" : pays} — Study destination | Einstein Services`;
+  const countryNames = {
+    Belgique: "Belgium",
+    Suisse: "Switzerland",
+    Italie: "Italy",
+    Maroc: "Morocco",
+    Allemagne: "Germany",
+    Turquie: "Türkiye",
+    Roumanie: "Romania",
+  };
+  const countryName = countryNames[pays] || pays;
+  document.title = `Studying in ${countryName} — Einstein Services`;
+  els.headTitle.textContent = `${countryName} — Study destination | Einstein Services`;
 
   els.flag.src = data.flag;
   els.flag.alt = `Flag: ${pays}`;
   els.flag.hidden = false;
-  els.name.textContent =
-    pays === "Belgique"
-      ? "Belgium"
-      : pays === "Suisse"
-        ? "Switzerland"
-        : pays === "Italie"
-          ? "Italy"
-          : pays;
+  els.name.textContent = countryName;
   els.meta.innerHTML = `<span class="dest-continent">${data.continent}</span> · 🗣️ ${data.langues} · 💱 ${data.devise}`;
   els.intro.textContent = data.intro;
-  els.cta.href = `contact-en.html?destination=${encodeURIComponent(pays === "Belgique" ? "Belgium" : pays === "Suisse" ? "Switzerland" : pays === "Italie" ? "Italy" : pays)}`;
+  els.cta.href = `contact-en.html?destination=${encodeURIComponent(countryName)}`;
 
   els.facts.innerHTML = data.facts
     .map(

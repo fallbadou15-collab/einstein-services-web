@@ -90,7 +90,7 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["destination", "destinations", "pays", "études à l'étranger", "etudes a l'etranger", "study abroad", "study destinations"],
-    r: "🌍 Nous accompagnons les projets d'études en France, au Canada, en Belgique, en Suisse et en Italie.\nConsultez les informations et démarches par pays : destinations.html\nQuel pays vous intéresse ?",
+    r: "🌍 Nous accompagnons les projets d'études en France, au Canada, en Belgique, en Italie, en Suisse, au Maroc, en Allemagne, en Turquie et en Roumanie.\nConsultez les informations et démarches par pays : destinations.html\nQuel pays vous intéresse ?",
   },
   {
     kw: ["france", "campus france", "parcoursup", "etudes en france", "study in france"],
@@ -180,7 +180,7 @@ const NAFI_ENGLISH_REPLIES = [
   "📄 The admissions page lists documents for final-year students, 2026 high-school graduates (starting L1), L3, Master's 1 and 2, BTS 2 and DUT 2. Lists for L2, BTS 1, DUT 1 and DISEP are not yet provided. The 2027 high-school graduate eligibility criteria are available, but their document list still needs confirmation from the agency: service-admissions.html\nDo not share personal or financial documents in this chat.",
   "Hello and welcome to Einstein Services! 😊 I'm Nafi, your virtual assistant. How can I help? Type “menu” to see what I can do.",
   "Here are some ways I can help:\n1️⃣ Study destinations\n2️⃣ Applications and documents\n3️⃣ Application timelines\n4️⃣ Eligibility test\n5️⃣ Appointments\n6️⃣ Speak to an advisor\n\nTry a keyword such as “Canada”, “visa” or “appointment”.",
-  "🌍 Einstein Services supports study projects in France, Canada, Belgium, Switzerland and Italy.\nExplore destinations here: destinations.html\nWhich country interests you?",
+  "🌍 Einstein Services supports study projects in France, Canada, Belgium, Italy, Switzerland, Morocco, Germany, Türkiye and Romania.\nExplore destinations here: destinations-en.html\nWhich country interests you?",
   "🇫🇷 France is one of the destinations supported by Einstein Services. Applications may involve Parcoursup or Campus France (“Études en France”). The eligibility questionnaire is indicative; the agency should confirm the applicable criteria: test-eligibilite.html",
   "🇨🇦 Canada is one of the study destinations mentioned by Einstein Services. Institutions, programmes, admissions and visa requirements should be confirmed for your project.",
   "🇧🇪 Belgium is one of the study destinations mentioned by Einstein Services. Institutions, programmes, admissions and procedures should be confirmed for your project.",
