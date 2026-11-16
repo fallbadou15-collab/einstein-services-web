@@ -1,215 +1,364 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Explore study procedures, budgets and application steps for France, Canada, Belgium, Italy, Switzerland, Morocco, Germany, Türkiye and Romania."
-    />
-    <meta name="robots" content="index, follow" />
-    <title>Study destinations — Einstein Services</title>
-    <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="canonical" href="https://einstein-services.com/destinations-en.html" />
-  <link rel="alternate" hreflang="fr" href="https://einstein-services.com/destinations.html" />
-  <link rel="alternate" hreflang="en" href="https://einstein-services.com/destinations-en.html" />
-  <link rel="alternate" hreflang="x-default" href="https://einstein-services.com/" />
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study destinations — Einstein Services</title>
+<meta name="description" content="Study procedures, timelines, budgets and documents for nine destinations from Senegal.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="img/einstein-services-logo.png" type="image/png">
+<link rel="canonical" href="https://einstein-services.com/destinations-en.html">
+<link rel="alternate" hreflang="fr" href="https://einstein-services.com/destinations.html">
+<link rel="alternate" hreflang="en" href="https://einstein-services.com/destinations-en.html">
+<link rel="alternate" hreflang="x-default" href="https://einstein-services.com/destinations.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f2f5f9; --card: #fff; --ink: #0e1b2c; --muted: #54657b; --line: #d6dee8;
+  --brand: #143a66; --brand-ink: #fff; --accent: #d9971c; --accent-ink: #875a06; --accent-soft: #fbf0da;
+  --wa: #178c4a; --foot-bg: #0e2a4b; --foot-ink: #e4ecf6; --foot-muted: #a9bcd3; --alert: #ae2f28; --alert-bg: #fbe4e2;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 var(--font-body); }
+a { color: var(--brand); }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+.topline { height: 4px; background: linear-gradient(90deg, var(--brand) 0 72%, var(--accent) 72% 100%); }
+header.site { background: var(--card); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; gap: 16px; min-height: 68px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 21px/1 var(--font-display); }
+.brand img { height: 44px; width: auto; display: block; }
+nav.menu { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; max-width: 100%; }
+nav.menu a { padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--muted); font-weight: 600; white-space: nowrap; font-size: 16px; }
+nav.menu a:hover { color: var(--ink); }
+nav.menu a[aria-current="page"] { color: var(--brand); background: color-mix(in srgb, var(--brand) 11%, transparent); }
+.hero { padding: 36px 0 10px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; color: var(--accent-ink); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; }
+.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+h1 { font: 800 clamp(32px, 5.2vw, 52px)/1.05 var(--font-display); margin: 14px 0 12px; letter-spacing: -.015em; text-wrap: balance; }
+h2 { font: 800 clamp(24px, 3.4vw, 32px)/1.15 var(--font-display); margin: 0 0 6px; text-wrap: balance; }
+h3 { font: 700 19px/1.3 var(--font-display); margin: 0 0 10px; }
+.lead { max-width: 62ch; color: var(--muted); font-size: 19px; margin: 0; }
+.section { padding: 28px 0; }
+.flag { display: inline-block; width: 30px; height: 20px; border-radius: 4px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); vertical-align: -4px; }
+.f-fr { background: linear-gradient(90deg,#0055a4 0 33.4%,#fff 33.4% 66.6%,#ef4135 66.6%); }
+.f-ca { background: linear-gradient(90deg,#d52b1e 0 25%,#fff 25% 75%,#d52b1e 75%); }
+.f-be { background: linear-gradient(90deg,#1a1a1a 0 33.4%,#fdda24 33.4% 66.6%,#ef3340 66.6%); }
+.f-it { background: linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#ce2b37 66.6%); }
+.f-ch { background: linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#da291c; width: 20px; }
+.f-ma { background: radial-gradient(circle,#c1272d 0 20%,#006233 21% 33%,#c1272d 34%); }
+.f-de { background: linear-gradient(180deg,#000 0 33.4%,#dd0000 33.4% 66.6%,#ffce00 66.6%); }
+.f-tr { background: radial-gradient(circle at 54% 50%,#e30a17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#e30a17; }
+.f-ro { background: linear-gradient(90deg,#002b7f 0 33.4%,#fcd116 33.4% 66.6%,#ce1126 66.6%); }
+.table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+table.compare { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 15.5px; }
+table.compare th, table.compare td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.compare thead th { font: 700 13px/1.2 var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: color-mix(in srgb,var(--paper) 60%,var(--card)); }
+table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { border-bottom: 0; }
+table.compare tbody th { font-weight: 700; white-space: nowrap; }
+table.compare tbody th a { color: var(--ink); text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
+table.compare td.num { font-variant-numeric: tabular-nums; font-weight: 600; }
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 14px; margin: 0 -2px; }
+.tabs a { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); text-decoration: none; font-weight: 700; white-space: nowrap; }
+.tabs a[aria-selected="true"] { border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent); }
+.fiche { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; scroll-margin-top: 12px; }
+.fiche + .fiche { margin-top: 20px; }
+.fiche-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+.fiche-head p { margin: 0; color: var(--muted); max-width: 62ch; }
+.fiche-head .flag { width: 40px; height: 27px; margin-right: 6px; }
+.fiche-head .f-ch { width: 27px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; margin-bottom: 22px; }
+.tile { border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; background: var(--paper); }
+.tile span { display: block; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+.tile b { display: block; font: 800 21px/1.2 var(--font-display); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tile small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 22px; }
+.block { border-top: 1px solid var(--line); padding-top: 16px; }
+ol.steps, ul.list { margin: 0; padding-left: 22px; display: grid; gap: 7px; font-size: 16px; }
+ul.list li::marker { color: var(--accent); }
+.note { background: var(--accent-soft); border-radius: 12px; padding: 14px 16px; font-size: 15.5px; margin-top: 18px; }
+.note b { color: var(--accent-ink); }
+.warn { background: var(--alert-bg); border-radius: 12px; padding: 14px 16px; font-size: 15.5px; margin-top: 12px; }
+.warn b { color: var(--alert); }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font: 700 16px/1.2 var(--font-body); text-decoration: none; border: 1.5px solid transparent; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-wa { background: var(--wa); color: #fff; }
+.sources { margin-top: 20px; font-size: 14px; color: var(--muted); }
+.sources a { color: var(--muted); }
+.stamp { font-size: 14px; color: var(--muted); margin-top: 4px; }
+footer.site { background: var(--foot-bg); color: var(--foot-ink); padding: 36px 0 28px; font-size: 15.5px; margin-top: 40px; }
+footer.site .fcols { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 24px; }
+footer.site h4 { font: 700 16px var(--font-display); margin: 0 0 10px; }
+footer.site p { margin: 0 0 6px; color: var(--foot-muted); }
+footer.site a { color: var(--foot-ink); }
+footer.site .social { display: flex; flex-wrap: wrap; gap: 12px; }
+footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%,transparent); margin-top: 26px; padding-top: 16px; color: var(--foot-muted); font-size: 14px; }
+@media (max-width: 560px) { body { font-size: 16.5px; } .fiche { padding: 18px; } .brand img { height: 38px; } nav.menu { margin-left: 0; width: 100%; } .cols { grid-template-columns: 1fr; } }
+</style>
+<link rel="stylesheet" href="css/resources-theme.css">
+<link rel="stylesheet" href="css/site-ui.css">
 </head>
-  <body>
-    <header class="navbar">
-      <div class="container nav-inner">
-        <a href="index-en.html" class="logo">
-          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
-        </a>
-        <nav class="nav-links" id="navLinks">
-          <a href="services-en.html">Services</a>
-          <a href="destinations-en.html" aria-current="page">Destinations</a>
-          <a href="formations-en.html">Programmes</a>
-          <a href="contact-en.html">Contact</a>
-        </nav>
-        <div class="lang-switch" aria-label="Language switch">
-            <a href="https://einstein-services.com/destinations.html" class="lang-opt" hreflang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="22" height="16" /></a>
-            <a href="https://einstein-services.com/destinations-en.html" class="lang-opt active" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
-          </div>
+<body>
+<div class="topline" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index-en.html"><img src="img/logo.svg" alt="Einstein Services"></a>
+    <nav class="menu" id="destinationMenu" aria-label="Main menu">
+      <a href="index-en.html">Home</a>
+      <a href="services-en.html">Services</a>
+      <a href="destinations-en.html" aria-current="page">Destinations</a>
+      <a href="formations-en.html">Programmes</a>
+      <a href="contact-en.html">Contact</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language">
+      <a href="destinations.html" hreflang="fr" lang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="24" height="17"></a>
+      <a href="destinations-en.html" aria-current="page" hreflang="en" lang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="24" height="17"></a>
+    </div>
+    <button class="site-menu-toggle" id="destinationMenuToggle" type="button" aria-controls="destinationMenu" aria-expanded="false" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
 
-        <button class="burger" id="burger" aria-label="Menu"></button>
+<main class="wrap destinations-guide">
+  <section class="hero">
+    <span class="eyebrow">Information checked on 12 November 2026</span>
+    <h1>Study destinations</h1>
+    <p class="lead">Procedures, timelines, budgets and documents for nine study destinations from Senegal. Requirements change each year; we update these guides for each new application cycle.</p>
+  </section>
+
+  <section class="section" aria-labelledby="comparison">
+    <h2 id="comparison">Quick comparison</h2>
+    <p class="stamp">Scroll the table horizontally on mobile.</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table class="compare">
+        <thead><tr><th scope="col">Country</th><th scope="col">Required process</th><th scope="col">Proof of funds</th><th scope="col">Key date</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="#france"><span class="flag f-fr" aria-hidden="true"></span>France</a></th><td>Études en France (Campus France Senegal)</td><td class="num">€877.50 per month</td><td>Apply by 15 December 2026</td></tr>
+          <tr><th scope="row"><a href="#canada"><span class="flag f-ca" aria-hidden="true"></span>Canada</a></th><td>Acceptance letter + PAL, or CAQ in Quebec</td><td class="num">CAD 22,895 + first-year tuition (Quebec: CAD 24,617)</td><td>Annual quotas: apply early</td></tr>
+          <tr><th scope="row"><a href="#belgique"><span class="flag f-be" aria-hidden="true"></span>Belgium</a></th><td>Secondary diploma equivalency + D visa</td><td class="num">€1,062 per month (2026–27)</td><td>Apply for equivalency as soon as applications open</td></tr>
+          <tr><th scope="row"><a href="#italie"><span class="flag f-it" aria-hidden="true"></span>Italy</a></th><td>Pre-enrolment validated on Universitaly</td><td class="num">€10,179.85</td><td>2027–28 study visa deadline: 31 October 2027</td></tr>
+          <tr><th scope="row"><a href="#suisse"><span class="flag f-ch" aria-hidden="true"></span>Switzerland</a></th><td>Direct admission to a school + D visa</td><td class="num">CHF 21,900–24,000 per year, depending on canton</td><td>Apply for the visa at least 3 months before term starts</td></tr>
+          <tr><th scope="row"><a href="#maroc"><span class="flag f-ma" aria-hidden="true"></span>Morocco</a></th><td>AMCI scholarship or private school; residence card after arrival</td><td class="num">Scholarship or school fees</td><td>Watch for the AMCI call from May 2027</td></tr>
+          <tr><th scope="row"><a href="#allemagne"><span class="flag f-de" aria-hidden="true"></span>Germany</a></th><td>Studienkolleg with secondary diploma alone; national D visa</td><td class="num">€11,904 in a blocked account</td><td>Deadlines vary by university</td></tr>
+          <tr><th scope="row"><a href="#turquie"><span class="flag f-tr" aria-hidden="true"></span>Türkiye</a></th><td>Türkiye Scholarships or direct admission; visa then residence permit</td><td class="num">Full scholarship or university fees</td><td>Scholarship applications: January–February</td></tr>
+          <tr><th scope="row"><a href="#roumanie"><span class="flag f-ro" aria-hidden="true"></span>Romania</a></th><td>Acceptance letter from the ministry; study visa</td><td class="num">Tuition fees in euros</td><td>Term starts on 1 October (indicative)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Country guides">
+    <nav class="tabs" aria-label="Choose a country">
+      <a href="#france" data-tab="france" aria-selected="true"><span class="flag f-fr" aria-hidden="true"></span>France</a>
+      <a href="#canada" data-tab="canada" aria-selected="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</a>
+      <a href="#belgique" data-tab="belgique" aria-selected="false"><span class="flag f-be" aria-hidden="true"></span>Belgium</a>
+      <a href="#italie" data-tab="italie" aria-selected="false"><span class="flag f-it" aria-hidden="true"></span>Italy</a>
+      <a href="#suisse" data-tab="suisse" aria-selected="false"><span class="flag f-ch" aria-hidden="true"></span>Switzerland</a>
+      <a href="#maroc" data-tab="maroc" aria-selected="false"><span class="flag f-ma" aria-hidden="true"></span>Morocco</a>
+      <a href="#allemagne" data-tab="allemagne" aria-selected="false"><span class="flag f-de" aria-hidden="true"></span>Germany</a>
+      <a href="#turquie" data-tab="turquie" aria-selected="false"><span class="flag f-tr" aria-hidden="true"></span>Türkiye</a>
+      <a href="#roumanie" data-tab="roumanie" aria-selected="false"><span class="flag f-ro" aria-hidden="true"></span>Romania</a>
+    </nav>
+
+    <article class="fiche" id="france">
+      <div class="fiche-head"><div><h2><span class="flag f-fr" aria-hidden="true"></span>Study in France</h2><p>From Senegal, the Campus France Études en France procedure is required for study visa applications lasting more than six months. The information below covers the 2027 intake.</p></div></div>
+      <div class="tiles">
+        <div class="tile"><span>Campus France fee</span><b>85,000 FCFA</b><small>non-refundable</small></div>
+        <div class="tile"><span>Visa proof of funds</span><b>€877.50/month</b><small>about 575,600 FCFA since 1 August 2026</small></div>
+        <div class="tile"><span>Application deadline</span><b>15 December 2026</b><small>connected programmes</small></div>
+        <div class="tile"><span>Payment deadline</span><b>19 December 2026</b><small>after the payment request</small></div>
       </div>
-    </header>
-    <main class="section">
-      <div class="container">
-        <div class="section-head">
-          <h1>Study destinations</h1>
-          <p>
-            Choose your destination from our partner countries. Each card shows
-            the continent, the language and the key information to prepare your
-            study project.
-          </p>
-        </div>
-        <div class="grid grid-3">
-          <a
-            class="card dest-card"
-            id="france"
-            href="destination-pays-en.html?pays=France"
-          >
-            <img
-              class="dest-flag"
-              src="img/flags/fr.svg"
-              alt="Flag of France"
-              width="48"
-              height="36"
-            />
-            <h2>France</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ French
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="canada"
-            href="destination-pays-en.html?pays=Canada"
-          >
-            <img
-              class="dest-flag"
-              src="img/flags/ca.svg"
-              alt="Flag of Canada"
-              width="48"
-              height="36"
-            />
-            <h2>Canada</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">North America</span> · 🗣️ French /
-              English
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="belgique"
-            href="destination-pays-en.html?pays=Belgique"
-          >
-            <img
-              class="dest-flag"
-              src="img/flags/be.svg"
-              alt="Flag of Belgium"
-              width="48"
-              height="36"
-            />
-            <h2>Belgium</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ French / Dutch
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="suisse"
-            href="destination-pays-en.html?pays=Suisse"
-          >
-            <img
-              class="dest-flag"
-              src="img/flags/ch.svg"
-              alt="Flag of Switzerland"
-              width="48"
-              height="36"
-            />
-            <h2>Switzerland</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ French / German
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="italie"
-            href="destination-pays-en.html?pays=Italie"
-          >
-            <img
-              class="dest-flag"
-              src="img/flags/it.svg"
-              alt="Flag of Italy"
-              width="48"
-              height="36"
-            />
-            <h2>Italy</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ Italian
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="maroc"
-            href="destination-pays-en.html?pays=Maroc"
-          >
-            <img class="dest-flag" src="img/flags/ma.svg" alt="Flag of Morocco" width="48" height="36" />
-            <h2>Morocco</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">North Africa</span> · 🗣️ Arabic /
-              French
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="allemagne"
-            href="destination-pays-en.html?pays=Allemagne"
-          >
-            <img class="dest-flag" src="img/flags/de.svg" alt="Flag of Germany" width="48" height="36" />
-            <h2>Germany</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ German / English
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="turquie"
-            href="destination-pays-en.html?pays=Turquie"
-          >
-            <img class="dest-flag" src="img/flags/tr.svg" alt="Flag of Türkiye" width="48" height="36" />
-            <h2>Türkiye</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe / Asia</span> · 🗣️ Turkish /
-              English
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-          <a
-            class="card dest-card"
-            id="roumanie"
-            href="destination-pays-en.html?pays=Roumanie"
-          >
-            <img class="dest-flag" src="img/flags/ro.svg" alt="Flag of Romania" width="48" height="36" />
-            <h2>Romania</h2>
-            <p class="dest-meta">
-              <span class="dest-continent">Europe</span> · 🗣️ Romanian /
-              English / French
-            </p>
-            <span class="card-link">View the destination →</span>
-          </a>
-        </div>
-        <div class="service-actions" style="justify-content: center">
-          <a href="index-en.html#contact" class="btn btn-orange"
-            >Present my project</a
-          >
-        </div>
+      <div class="cols">
+        <div class="block"><h3>Who can apply</h3><ul class="list">
+          <li>2026 or 2027 high-school graduates, with no more than one repeated year.</li>
+          <li>Arabic-track baccalaureate (L-AR): a B2 French test is also required.</li>
+          <li>Students who have completed or will complete an accredited BTS, DUT, DiSEP, Licence or Master in 2027.</li>
+          <li>CTI engineering programme: after CPGE, BTS, DUT, DiSEP or a bachelor's degree.</li>
+          <li>Foreign nationals living in Senegal: valid residence permit (except ECOWAS nationals) and at least one year of study or work in Senegal.</li>
+        </ul></div>
+        <div class="block"><h3>Application steps</h3><ol class="steps">
+          <li>Build your study plan and check your eligibility.</li><li>Create one Études en France account and select programmes.</li>
+          <li>Submit the application by 15 December 2026.</li><li>Pay 85,000 FCFA at a Sunu Bank branch (formerly BICIS), only after receiving a payment request.</li>
+          <li>Attend the academic interview if invited; book it within seven days.</li><li>Confirm your final choice after receiving school responses.</li>
+          <li>Apply for the student visa after the end-of-procedure email (15 May–27 August 2027).</li>
+        </ol></div>
       </div>
-    </main>
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>
-          Einstein Services — Yoff, Dakar ·
-          <a href="tel:+221338305460">+221 33 830 54 60</a> · <a href="tel:+221787927373">+221 78 792 73 73</a> · <a href="tel:+221787338181">+221 78 733 81 81</a> ·
-          <a href="mailto:contact@einstein-services.com"
-            >contact@einstein-services.com</a
-          >
-        </p>
-        <a href="politique-confidentialite-en.html">Privacy policy</a>
+      <div class="note"><b>Programmes not connected to Études en France:</b> BTS, BTSA, DCG, CPGE, IFSI through Parcoursup and some private schools. Apply through Parcoursup or directly to the school, then submit an Études en France file with the admission letter between 1 April and 15 July 2027. Additional documents and original-document checks run until 30 July 2027.</div>
+      <div class="cols" style="margin-top:22px">
+        <div class="block"><h3>Documents to prepare</h3><ul class="list">
+          <li>Valid passport.</li><li>Transcripts and diplomas (secondary school and higher education).</li><li>CV and cover letter for each programme.</li>
+          <li>B2 French test if you hold an L-AR baccalaureate.</li><li>For the visa: proof of funds (AVI through our partner Univers France Succès or a sponsor) and proof of accommodation (our partner Nexroom).</li>
+        </ul></div>
+        <div class="block"><h3>Campus France offices in Senegal</h3><ul class="list">
+          <li>Dakar: Km 1, avenue Cheikh Anta Diop, opposite the 4th arrondissement police station.</li>
+          <li>Saint-Louis: Institut français, avenue Jean Mermoz.</li><li>Kaolack: Alliance franco-sénégalaise, 191 rue de France.</li><li>Ziguinchor: Alliance française, avenue Djignabo.</li>
+        </ul></div>
       </div>
-    </footer>
-    <script src="js/code.js"></script>
-    <script src="js/chatbot.js"></script>
-  </body>
+      <div class="note"><b>Budget to plan for:</b> Einstein Services support: 100,000 FCFA (limited to 100 students for the 2027 intake); AVI solution through Univers France Succès: 525,000 FCFA if you do not have the full funds; Campus France fee: 85,000 FCFA; student visa: €50 (about 32,800 FCFA) plus about 15,000 FCFA in VFS Global fees; visa validation after arrival: €50. <a href="tarifs-en.html">View fees</a>.</div>
+      <div class="warn"><b>Important:</b> a non-genuine document results in five years of ineligibility. A payment request does not mean your application is eligible; check the criteria before paying.</div>
+      <div class="cta"><a class="btn btn-primary" href="test-eligibilite-en.html">Check my eligibility</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20with%20the%20Campus%20France%20procedure." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.senegal.campusfrance.org" target="_blank" rel="noopener">Campus France Senegal</a> (2027 calendar and criteria, FAQ) · <a href="https://etudesenfrance.diplomatie.gouv.fr" target="_blank" rel="noopener">Études en France</a> · <a href="https://france-visas.gouv.fr" target="_blank" rel="noopener">France-Visas</a></p>
+    </article>
+
+    <article class="fiche" id="canada">
+      <div class="fiche-head"><div><h2><span class="flag f-ca" aria-hidden="true"></span>Study in Canada</h2><p>A study permit is required for programmes lasting more than six months. The number of permits is capped each year.</p></div></div>
+      <div class="tiles">
+        <div class="tile"><span>Proof of funds</span><b>CAD 22,895</b><small>plus first-year tuition</small></div><div class="tile"><span>Permit fee</span><b>CAD 150</b><small>plus CAD 85 biometrics fee</small></div>
+        <div class="tile"><span>Provincial attestation</span><b>PAL or CAQ</b><small>CAQ for Quebec</small></div><div class="tile"><span>Master's or doctoral degree</span><b>No PAL</b><small>public institution, since January 2026</small></div>
+      </div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a designated learning institution (DLI) and obtain its acceptance letter.</li><li>Get the provincial attestation: a PAL from the institution, or a CAQ for Quebec.</li><li>Gather proof of funds.</li><li>Apply online for a study permit and provide biometrics.</li><li>Complete a medical exam if requested by IRCC.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Valid passport (the name must match the acceptance letter).</li><li>Acceptance letter with the DLI number.</li><li>PAL or CAQ.</li><li>Proof of funds: bank statements, GIC, scholarship or sponsor letter with supporting documents.</li><li>Letter of explanation and study plan.</li></ul></div>
+      </div>
+      <div class="note"><b>Quebec:</b> in 2026, a single student must show CAD 24,617 for living expenses, almost 60% more than in 2025; the CAQ fee is CAD 135.</div>
+      <div class="note"><b>Budget to plan for:</b> Einstein Services support: 200,000 FCFA in two instalments (100,000 FCFA before admission and 100,000 FCFA after); application fees: CAD 50–350 depending on the institution; Quebec CAQ: CAD 135; study permit: CAD 150; biometrics: CAD 85. <a href="tarifs-en.html">View fees</a>.</div>
+      <div class="warn"><b>Important:</b> insufficient or poorly explained proof of funds is a leading reason for refusal.</div>
+      <div class="cta"><a class="btn btn-primary" href="test-eligibilite-en.html">Check my eligibility</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Canada." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener">Immigration, Refugees and Citizenship Canada</a> · <a href="https://www.quebec.ca/en" target="_blank" rel="noopener">Government of Quebec</a></p>
+    </article>
+
+    <article class="fiche" id="belgique">
+      <div class="fiche-head"><div><h2><span class="flag f-be" aria-hidden="true"></span>Study in Belgium</h2><p>A long-stay type D visa is required; a short-stay Schengen visa does not allow you to study.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Living expenses</span><b>€1,062/month</b><small>2026–27 academic year</small></div><div class="tile"><span>For 12 months</span><b>€12,744</b><small>about 8.36 million FCFA</small></div><div class="tile"><span>Visa</span><b>Type D</b><small>long-stay study visa</small></div><div class="tile"><span>Bachelor's degree</span><b>Equivalency</b><small>Wallonia-Brussels Federation</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a university or university college and note its application deadline.</li><li>Bachelor's: request secondary-school diploma equivalency from the Wallonia-Brussels Federation. For a Master's, the institution decides on admission.</li><li>Obtain proof of enrolment.</li><li>Prepare proof of funds or a sponsor undertaking (Annex 32).</li><li>Apply for a type D visa through the Belgian diplomatic post.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Type D visa form and valid passport.</li><li>Proof of enrolment from the institution.</li><li>Secondary-school diploma equivalency (for a Bachelor's).</li><li>Proof of funds or Annex 32 stating “sufficient solvency”.</li><li>Medical certificate.</li><li>Police clearance certificate from age 21.</li></ul></div>
+      </div>
+      <div class="note"><b>Limited to 60 places</b> for the September 2027 intake. Our services include diploma equivalency, guidance, pre-enrolment and admission, visa support and AVI.</div>
+      <div class="note"><b>Budget to plan for:</b> admission fee: €200 per institution (public universities); diploma equivalency: €150 for a Bachelor's applicant (reduced rate for Senegal, otherwise €400), payable before 15 July; type D visa: €250 since 1 July 2026, plus the Immigration Office fee depending on the application. <a href="tarifs-en.html">View fees</a>.</div>
+      <div class="note"><b>Good to know:</b> the minimum amount is indexed each year. It will probably be slightly higher for the 2027 intake; we will confirm it when published.</div>
+      <div class="cta"><a class="btn btn-primary" href="test-eligibilite-en.html">Check my eligibility</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Belgium." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.equivalences.cfwb.be" target="_blank" rel="noopener">Equivalencies, Wallonia-Brussels Federation</a> · <a href="https://dofi.ibz.be" target="_blank" rel="noopener">Immigration Office</a></p>
+    </article>
+
+    <article class="fiche" id="italie">
+      <div class="fiche-head"><div><h2><span class="flag f-it" aria-hidden="true"></span>Study in Italy</h2><p>Pre-enrolment is completed through the Universitaly portal. The published rules cover the 2026–27 and 2027–28 academic years.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Required funds</span><b>€10,179.85</b><small>about 6.68 million FCFA</small></div><div class="tile"><span>Calculation</span><b>€783.06 × 13</b><small>per month, for 13 months</small></div><div class="tile"><span>Pre-enrolment</span><b>Universitaly</b><small>validated by the university</small></div><div class="tile"><span>2027–28 visa deadline</span><b>31 October 2027</b><small>final date to apply</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a programme and check the university's dates.</li><li>Submit pre-enrolment through Universitaly and wait for validation.</li><li>Obtain a Declaration of Value or CIMEA certificate for your diplomas.</li><li>Gather proof of funds.</li><li>Apply by appointment for a type D “study, university enrolment” visa at the Italian Embassy.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Visa form, valid passport and identity photo.</li><li>Validated Universitaly pre-enrolment summary.</li><li>Declaration of Value or CIMEA certificate.</li><li>Proof of funds and financial capacity (bank statements, payslips, property documents).</li><li>Sponsorship letter if you do not have personal funds.</li><li>Scholarship certificate, if applicable, and health insurance.</li></ul></div>
+      </div>
+      <div class="note"><b>Budget to plan for:</b> Einstein Services package: 150,000 FCFA (Declaration of Value, admission and visa); AVI solution: 500,000 FCFA for students without a sponsor; Declaration of Value: 32,800 FCFA per document at the Italian Embassy in Dakar (plus 15,750 FCFA per legalisation and 8,550 FCFA per translation); type D study visa: €50 (about 32,800 FCFA) plus service fees. <a href="tarifs-en.html">View fees</a>.</div>
+      <div class="warn"><b>Important:</b> tontine or microfinance funds are not accepted. A conditional pre-enrolment does not allow you to apply for a visa, and validated pre-enrolment does not guarantee a visa.</div>
+      <div class="cta"><a class="btn btn-primary" href="test-eligibilite-en.html">Check my eligibility</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Italy." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.universitaly.it/studenti-stranieri" target="_blank" rel="noopener">Universitaly, international students</a> · Italian embassies (2026–27 procedures)</p>
+    </article>
+
+    <article class="fiche" id="suisse">
+      <div class="fiche-head"><div><h2><span class="flag f-ch" aria-hidden="true"></span>Study in Switzerland</h2><p>Students contact the university or school directly; the embassy is not involved in pre-enrolment. The canton sets the required proof of funds.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Fribourg</span><b>CHF 21,900</b><small>per year</small></div><div class="tile"><span>Basel</span><b>CHF 2,000</b><small>per month</small></div><div class="tile"><span>Processing time</span><b>2–4 months</b><small>apply at least 3 months ahead</small></div><div class="tile"><span>Visa</span><b>Type D</b><small>apply in person</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Obtain admission and proof of enrolment from the school.</li><li>Pay the requested study fees.</li><li>Prepare proof of funds.</li><li>Apply in person for a type D visa at the Swiss Embassy.</li><li>Wait for the canton's decision and then for the visa to be issued.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Type D visa form and valid passport.</li><li>Proof of enrolment from the institution.</li><li>Proof of funds: a bank account in your name or a sponsorship certificate issued by a bank.</li><li>Personal letter undertaking to leave Switzerland when your studies end.</li><li>Foreign nationals living in Senegal: residence permit.</li></ul></div>
+      </div>
+      <div class="note"><b>Budget to plan for:</b> the type D study visa is generally free for students; plan for school enrolment fees and the proof of funds required by the canton. <a href="tarifs-en.html">View fees</a>.</div>
+      <div class="warn"><b>Important:</b> you cannot enter Switzerland on a tourist visa and apply for a study visa after arrival.</div>
+      <div class="cta"><a class="btn btn-primary" href="test-eligibilite-en.html">Check my eligibility</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Switzerland." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.sem.admin.ch" target="_blank" rel="noopener">State Secretariat for Migration</a> · <a href="https://www.eda.admin.ch" target="_blank" rel="noopener">FDFA</a> · cantonal migration offices</p>
+    </article>
+
+    <article class="fiche" id="maroc">
+      <div class="fiche-head"><div><h2><span class="flag f-ma" aria-hidden="true"></span>Study in Morocco</h2><p>Morocco is a leading destination for Senegalese students. Options include AMCI scholarships, managed in Senegal by the Scholarships Directorate, or private schools.</p></div></div>
+      <div class="tiles"><div class="tile"><span>AMCI scholarships 2026–27</span><b>260</b><small>offered to Senegal</small></div><div class="tile"><span>2027–28 campaign</span><b>from May 2027</b><small>watch for announcements</small></div><div class="tile"><span>Student residence card</span><b>1 year</b><small>renewable</small></div><div class="tile"><span>Paid employment</span><b>not permitted</b><small>under student status</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>AMCI scholarship steps</h3><ol class="steps"><li>Watch for the call from the Ministry of Higher Education.</li><li>Check eligibility: Bachelor's for recent high-school graduates; Master's for Bachelor's degree holders.</li><li>Submit the application to the Scholarships Directorate in Dakar.</li><li>Check entry requirements with the Moroccan Embassy in Dakar.</li><li>Apply for a student residence card after arrival.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Valid passport.</li><li>Diplomas and transcripts.</li><li>Admission letter or scholarship certificate.</li><li>Identity photos.</li><li>Proof of enrolment, renewed each year for the residence card.</li></ul></div>
+      </div>
+      <div class="note"><b>Without a scholarship:</b> private schools admit students based on their application, for example Université Internationale de Rabat, EIGSI Casablanca or École Centrale Casablanca. <a href="destination-pays-en.html?pays=Maroc">Ask us about schools</a>.</div>
+      <div class="warn"><b>Important:</b> the Moroccan Embassy in Dakar has warned about intermediaries offering to complete the electronic travel authorisation on your behalf. Apply online yourself.</div>
+      <div class="cta"><a class="btn btn-primary" href="contact-en.html?destination=Morocco">Prepare my project</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Morocco." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.amci.ma" target="_blank" rel="noopener">AMCI</a> · <a href="https://senego.com/etudier-au-maroc-260-bourses-offertes-aux-etudiants-senegalais-depechez-vous_1972396.html" target="_blank" rel="noopener">Senego, 260 scholarships</a> · <a href="https://fr.apanews.net/?p=260162" target="_blank" rel="noopener">APA, embassy warning</a></p>
+    </article>
+
+    <article class="fiche" id="allemagne">
+      <div class="fiche-head"><div><h2><span class="flag f-de" aria-hidden="true"></span>Study in Germany</h2><p>Many public universities charge no general tuition. Admission depends on how your previous diploma is recognised, and a blocked account is required for the visa.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Blocked account, 2026</span><b>€11,904</b><small>€992 per month</small></div><div class="tile"><span>National D visa</span><b>about €75</b><small>6–12 weeks processing</small></div><div class="tile"><span>Tuition</span><b>often free</b><small>public universities, except Baden-Württemberg</small></div><div class="tile"><span>Work allowance</span><b>140 days</b><small>or 280 half-days per year</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Check in the anabin database how your diploma is recognised.</li><li>With a secondary diploma only, a two-semester Studienkolleg is generally required; a Bachelor's degree may qualify you for a Master's.</li><li>Apply through uni-assist or directly to the university.</li><li>Meet the language requirement in German (TestDaF, DSH) or English, depending on the programme.</li><li>Open a blocked account; this can take one to three weeks.</li><li>Apply for a national type D study visa at the German Embassy in Dakar.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Valid passport.</li><li>Admission to a university or Studienkolleg.</li><li>Blocked-account certificate.</li><li>Language certificate.</li><li>Diplomas and transcripts with translations.</li><li>Health insurance.</li></ul></div>
+      </div>
+      <div class="warn"><b>Important:</b> a tourist visa never allows you to study in Germany.</div>
+      <div class="cta"><a class="btn btn-primary" href="contact-en.html?destination=Germany">Prepare my project</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Germany." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://anabin.kmk.org" target="_blank" rel="noopener">anabin</a> · <a href="https://www.uni-assist.de" target="_blank" rel="noopener">uni-assist</a> · <a href="https://www.study-abroad.org/de/blog/studentenvisum-deutschland-leitfaden/" target="_blank" rel="noopener">Study Abroad, 2026 student visa guide</a></p>
+    </article>
+
+    <article class="fiche" id="turquie">
+      <div class="fiche-head"><div><h2><span class="flag f-tr" aria-hidden="true"></span>Study in Türkiye</h2><p>Türkiye is an increasingly popular destination for Senegalese students. You can apply for Türkiye Scholarships or seek direct admission.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Türkiye Scholarships 2026</span><b>10 Jan–20 Feb</b><small>free online application</small></div><div class="tile"><span>Scholarship covers</span><b>tuition and living</b><small>housing, stipend and Turkish classes</small></div><div class="tile"><span>French-language programme</span><b>Galatasaray</b><small>Istanbul</small></div><div class="tile"><span>After arrival</span><b>residence permit</b><small>apply in Türkiye</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Scholarship steps</h3><ol class="steps"><li>Prepare transcripts, diplomas, a motivation letter and recommendation letters.</li><li>Apply online at turkiyeburslari.gov.tr during the application window.</li><li>Attend an interview if shortlisted.</li><li>Apply for a study visa at the Turkish Embassy, then apply for a residence permit after arrival.</li></ol></div>
+        <div class="block"><h3>Without a scholarship</h3><ul class="list"><li>Apply directly to a public or private university.</li><li>Turkish-language programmes may require a preparatory language year.</li><li>English-language programmes are available at ODTÜ (METU) or Boğaziçi; Galatasaray offers French-language programmes.</li><li>Obtain an admission letter, then apply for a study visa.</li></ul></div>
+      </div>
+      <div class="warn"><b>Important:</b> Türkiye Scholarships applications are free and submitted online. Do not pay an intermediary.</div>
+      <div class="cta"><a class="btn btn-primary" href="contact-en.html?destination=Türkiye">Prepare my project</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Turkey." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://www.turkiyeburslari.gov.tr" target="_blank" rel="noopener">Türkiye Scholarships</a> · <a href="https://campusfrance.org/system/files/medias/documents/2025-03/senegal_fr.pdf" target="_blank" rel="noopener">Campus France, Senegal mobility guide</a></p>
+    </article>
+
+    <article class="fiche" id="roumanie">
+      <div class="fiche-head"><div><h2><span class="flag f-ro" aria-hidden="true"></span>Study in Romania</h2><p>Some universities offer programmes in English or French. The study acceptance letter issued by the Ministry of Education is a key document for the visa.</p></div></div>
+      <div class="tiles"><div class="tile"><span>Key document</span><b>Acceptance letter</b><small>issued by the ministry</small></div><div class="tile"><span>Tuition fees</span><b>in euros</b><small>payable after acceptance</small></div><div class="tile"><span>Romanian-language programme</span><b>+ 1 year</b><small>preparatory language year</small></div><div class="tile"><span>Government scholarships</span><b>31 March</b><small>2026 deadline</small></div></div>
+      <div class="cols">
+        <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a university and check its language of instruction.</li><li>Send your application to the university with certified translations.</li><li>Receive the study acceptance letter from the Ministry of Education.</li><li>Pay tuition by the stated deadline (20 days at Politehnica Bucharest).</li><li>Apply for a study visa at the Romanian Embassy.</li></ol></div>
+        <div class="block"><h3>Documents to prepare</h3><ul class="list"><li>Certified copies of diplomas, translated into Romanian, English or French.</li><li>Study acceptance letter.</li><li>Passport with study visa.</li><li>Proof of tuition payment.</li><li>Identity photos.</li></ul></div>
+      </div>
+      <div class="note"><b>Romanian government scholarships:</b> programmes are taught in Romanian and exclude medicine, dentistry and pharmacy. They cover tuition, the preparatory year and a monthly allowance.</div>
+      <div class="cta"><a class="btn btn-primary" href="contact-en.html?destination=Romania">Prepare my project</a><a class="btn btn-wa" href="https://wa.me/221787927373?text=Hello%20Einstein%20Services%2C%20I%20would%20like%20help%20studying%20in%20Romania." target="_blank" rel="noopener">Get support</a></div>
+      <p class="sources">Sources: <a href="https://international.upb.ro/assets/docs/academics/practical/Guide_Pratique.pdf" target="_blank" rel="noopener">Politehnica Bucharest, practical guide</a> · <a href="https://www.mastere.tn/?p=3800" target="_blank" rel="noopener">Romanian government scholarships 2026–27</a></p>
+    </article>
+  </section>
+
+  <p class="stamp">These guides provide general information. Only institutions, Campus France and consulates decide on admission and visas. Einstein Services does not guarantee admission or a visa.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fcols">
+      <div><h4>Einstein Services</h4><p>Student guidance and international mobility: France, Canada, Belgium, Switzerland, Italy, Morocco, Germany, Türkiye and Romania.</p></div>
+      <div><h4>Find us</h4><p>Route de l'Aéroport, near Senelec, Yoff, Dakar, Senegal</p><p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p></div>
+      <div><h4>Call us</h4><p><a href="tel:+221338305460">+221 33 830 54 60</a></p><p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p><p><a href="tel:+221787338181">+221 78 733 81 81</a></p></div>
+      <div><h4>Follow us</h4><div class="social"><a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a></div></div>
+    </div>
+    <div class="legal">© 2026 Einstein Services. All rights reserved. <a href="mentions-legales-en.html">Legal notice</a> · <a href="politique-confidentialite-en.html">Privacy policy</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ids = ["france", "canada", "belgique", "italie", "suisse", "maroc", "allemagne", "turquie", "roumanie"];
+  function show(id, scroll) {
+    if (ids.indexOf(id) < 0) id = "france";
+    ids.forEach(function (key) {
+      document.getElementById(key).hidden = key !== id;
+      document.querySelector('[data-tab="' + key + '"]').setAttribute("aria-selected", key === id ? "true" : "false");
+    });
+    if (scroll) {
+      var tabs = document.querySelector(".tabs");
+      if (tabs && tabs.scrollIntoView) tabs.scrollIntoView({ block: "start" });
+    }
+  }
+  function syncLanguageLinks() {
+    document.querySelectorAll(".lang-switch a").forEach(function (link) {
+      var target = link.getAttribute("href").split("#")[0];
+      link.href = new URL(target, location.href).href + location.hash;
+    });
+  }
+  window.addEventListener("hashchange", function () {
+    show(location.hash.slice(1), true);
+    syncLanguageLinks();
+  });
+  var hash = location.hash.slice(1);
+  show(hash, ids.indexOf(hash) >= 0);
+  syncLanguageLinks();
+})();
+</script>
+<script src="js/chatbot.js"></script>
+</body>
 </html>

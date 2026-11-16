@@ -43,6 +43,12 @@ const siteFooter =
   document.querySelector(".u-footer") ||
   document.querySelector("footer.footer") ||
   Array.from(document.querySelectorAll("footer")).pop();
+(() => {
+  const partnersFooterScript = document.createElement("script");
+  partnersFooterScript.src = "js/site-ui.js";
+  document.body.appendChild(partnersFooterScript);
+})();
+
 if (siteFooter && !siteFooter.querySelector(".footer-about-link")) {
   const aboutLink = document.createElement("a");
   aboutLink.className = "footer-about-link";
