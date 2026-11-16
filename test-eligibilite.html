@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Test d'éligibilité Einstein Services</title>
+<link rel="icon" href="img/einstein-services-logo.png" type="image/png">
+<link rel="canonical" href="https://einstein-services.com/test-eligibilite.html">
 <meta name="description" content="Testez votre éligibilité pour étudier en France (Campus France Sénégal), au Canada, en Belgique, en Italie ou en Suisse. Résultat immédiat et prochaines étapes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +74,11 @@ h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;l
 .f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
 .f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
 .f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:22px}
+.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
+.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
+.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
+.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
+.f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
 .layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start;padding-bottom:56px}
 .intro{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin-bottom:14px}
 .intro p{margin:0;font-size:16px}
@@ -152,13 +159,9 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   .header-wa{display:none}
 }
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
-@media (max-width:1240px){.header-wa{display:none}}
+@media (max-width:1380px){.header-wa{display:none}}
 </style>
 <link rel="stylesheet" href="css/resources-theme.css">
-  <link rel="canonical" href="https://einstein-services.com/test-eligibilite.html" />
-  <link rel="alternate" hreflang="fr" href="https://einstein-services.com/test-eligibilite.html" />
-  <link rel="alternate" hreflang="en" href="https://einstein-services.com/test-eligibilite-en.html" />
-  <link rel="alternate" hreflang="x-default" href="https://einstein-services.com/" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
@@ -183,7 +186,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 
 <main class="wrap">
   <section class="hero">
-    <span class="eyebrow">Critères vérifiés le 10 novembre 2026</span>
+    <span class="eyebrow">Critères vérifiés le 12 novembre 2026</span>
     <h1>Test d'éligibilité</h1>
     <p class="lead">Choisissez votre destination et répondez aux questions. Le résultat s'affiche au fur et à mesure, avec les dates à retenir, le budget à justifier et les prochaines étapes.</p>
   </section>
@@ -194,6 +197,10 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
     <button type="button" class="country" data-c="belgique" aria-pressed="false"><span class="flag f-be" aria-hidden="true"></span><span>Belgique<small>Visa D études</small></span></button>
     <button type="button" class="country" data-c="italie" aria-pressed="false"><span class="flag f-it" aria-hidden="true"></span><span>Italie<small>Universitaly</small></span></button>
     <button type="button" class="country" data-c="suisse" aria-pressed="false"><span class="flag f-ch" aria-hidden="true"></span><span>Suisse<small>Visa D études</small></span></button>
+    <button type="button" class="country" data-c="maroc" aria-pressed="false"><span class="flag f-ma" aria-hidden="true"></span><span>Maroc<small>Bourse AMCI ou privé</small></span></button>
+    <button type="button" class="country" data-c="allemagne" aria-pressed="false"><span class="flag f-de" aria-hidden="true"></span><span>Allemagne<small>Compte bloqué</small></span></button>
+    <button type="button" class="country" data-c="turquie" aria-pressed="false"><span class="flag f-tr" aria-hidden="true"></span><span>Turquie<small>Türkiye Bursları</small></span></button>
+    <button type="button" class="country" data-c="roumanie" aria-pressed="false"><span class="flag f-ro" aria-hidden="true"></span><span>Roumanie<small>Lettre d'acceptation</small></span></button>
   </div>
 
   <div class="layout">
@@ -232,7 +239,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
     <div class="cols">
       <div>
         <h4>Einstein Services</h4>
-        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie, Maroc, Allemagne, Turquie, Roumanie.</p>
       </div>
       <div>
         <h4>Nous trouver</h4>
@@ -248,10 +255,10 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <div>
         <h4>Nous suivre</h4>
         <div class="social">
-          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
     </div>
@@ -538,6 +545,193 @@ var C = {
       ];
       return { reasons: R, steps: steps, dates: dates, budget: budget };
     }
+  },
+
+  maroc: {
+    name: "Maroc", sub: "Bourse AMCI ou école privée",
+    intro: "Deux voies : la bourse AMCI, gérée au Sénégal par la Direction des bourses, ou l'inscription directe dans un établissement privé. À l'arrivée, il faut demander une carte de séjour étudiant.",
+    labels: { ok: "Vous remplissez les conditions de base", warn: "Des étapes restent à valider", no: "Une condition bloque cette voie" },
+    qs: [
+      { id: "voie", t: "Quelle voie visez-vous ?", o: [["amci","Bourse AMCI (établissement public)"],["prive","Établissement privé, sans bourse"]] },
+      { id: "profil", t: "Quel est votre profil ?", o: [["bac","Bachelier de l'année"],["licence","Titulaire d'une licence"],["autre","Bac d'une année précédente, sans licence"]] },
+      { id: "admis", t: "Avez-vous une admission dans l'établissement privé ?", o: ADM, show: function(a){ return a.voie === "prive"; } },
+      { id: "budget", t: "Pouvez-vous financer les frais de scolarité et le séjour ?", h: "Les frais varient selon l'école.", o: PREP, show: function(a){ return a.voie === "prive"; } }
+    ],
+    ev: function(a){
+      var R = [], add = function(s,t){ R.push({ s: s, t: t }); };
+      if (a.voie === "amci") {
+        if (a.profil === "bac") add("ok", "Licence AMCI : réservée aux bacheliers de l'année.");
+        else if (a.profil === "licence") add("ok", "Master AMCI : ouvert aux titulaires d'une licence.");
+        else if (a.profil === "autre") add("no", "La bourse AMCI en licence est réservée aux bacheliers de l'année.");
+        add("warn", "La campagne AMCI 2026-2027 est close depuis le 14 juillet 2026 : la suivante est à surveiller à partir de mai 2027.");
+      } else if (a.voie === "prive") {
+        if (a.profil === "autre" || a.profil === "bac") add("ok", "Le privé recrute sur dossier, quelle que soit l'année du bac.");
+        else if (a.profil === "licence") add("ok", "Avec une licence, visez un master ou un cycle ingénieur.");
+        admReasons(add, a.admis, "La lettre d'admission");
+        if (a.budget === "oui") add("ok", "Financement prêt.");
+        else if (a.budget === "encours") add("warn", "Demandez à l'école le montant exact des frais avant de vous engager.");
+        else if (a.budget === "non") add("no", "Sans financement des frais de scolarité, l'inscription n'est pas possible.");
+      }
+      var amci = a.voie !== "prive";
+      var steps = amci ? [
+        "Surveillez l'ouverture de la campagne AMCI 2027-2028 auprès du ministère de l'Enseignement supérieur, à partir de mai 2027.",
+        "Préparez diplôme, relevés de notes et lettre de motivation.",
+        "Déposez le dossier à la Direction des bourses, à Dakar.",
+        "Après la sélection, vérifiez la formalité d'entrée auprès de l'Ambassade du Maroc à Dakar.",
+        "À l'arrivée, demandez la carte de séjour étudiant."
+      ] : [
+        "Choisissez l'école et candidatez directement.",
+        "Obtenez la lettre d'admission.",
+        "Vérifiez la formalité d'entrée auprès de l'Ambassade du Maroc à Dakar.",
+        "À l'arrivée, demandez la carte de séjour étudiant (1 an, renouvelable)."
+      ];
+      var dates = amci ? [
+        { l: "Campagne AMCI 2026-2027", t: "close depuis le 14 juillet 2026" },
+        { l: "Campagne 2027-2028", t: "à surveiller à partir de mai 2027" }
+      ] : [ { l: "Admissions", t: "calendrier propre à chaque école" } ];
+      var budget = amci ? [
+        ["Bourses AMCI 2026-2027", "260 pour le Sénégal"],
+        ["Licence", "bacheliers de l'année"],
+        ["Master", "titulaires d'une licence"]
+      ] : [
+        ["Frais de scolarité", "selon l'école"],
+        ["Carte de séjour", "1 an, renouvelable"],
+        ["Travail salarié", "non autorisé avec le statut étudiant"]
+      ];
+      return { reasons: R, steps: steps, dates: dates, budget: budget };
+    }
+  },
+
+  allemagne: {
+    name: "Allemagne", sub: "Visa national D études",
+    intro: "Les universités publiques sont en grande partie gratuites, mais il faut prouver 11 904 € par an sur un compte bloqué. Avec le bac sénégalais seul, une année préparatoire (Studienkolleg) est en général nécessaire.",
+    labels: { ok: "Vous remplissez les conditions de base", warn: "Des étapes restent à valider", no: "Une condition bloque la demande" },
+    qs: [
+      { id: "niveau", t: "Quel niveau visez-vous ?", o: [["bachelor","Bachelor (après le bac)"],["master","Master (après une licence)"]] },
+      { id: "univ", t: "Avez-vous validé au moins une année d'université au Sénégal ?", h: "Selon la base anabin, cela peut ouvrir un accès direct dans la même discipline.", o: YN, show: function(a){ return a.niveau === "bachelor"; } },
+      { id: "langue", t: "Avez-vous le niveau de langue du cursus (allemand ou anglais) ?", o: [["oui","Oui, certificat en main"],["encours","En préparation"],["non","Non"]] },
+      { id: "budget", t: "Pouvez-vous verser 11 904 € sur un compte bloqué ?", h: "Soit 992 € débloqués chaque mois en 2026.", o: PREP }
+    ],
+    ev: function(a){
+      var R = [], add = function(s,t){ R.push({ s: s, t: t }); };
+      if (a.niveau === "bachelor") {
+        if (a.univ === "non") add("warn", "Avec le bac sénégalais seul, prévoyez en général un Studienkolleg de 2 semestres avant le Bachelor.");
+        else if (a.univ === "oui") add("warn", "Vos années d'université peuvent ouvrir un accès direct dans la même discipline : vérifiez sur anabin.");
+      } else if (a.niveau === "master") add("ok", "Avec une licence reconnue, l'accès au master est en général direct (à vérifier sur anabin).");
+      if (a.langue === "oui") add("ok", "Certificat de langue : prêt.");
+      else if (a.langue === "encours") add("warn", "Le certificat de langue (TestDaF, DSH, Goethe, ou IELTS et TOEFL pour l'anglais) est demandé à la candidature.");
+      else if (a.langue === "non") add("warn", "Sans le niveau de langue demandé, la candidature n'est pas recevable : commencez les cours dès maintenant.");
+      if (a.budget === "oui") add("ok", "Compte bloqué : montant disponible.");
+      else if (a.budget === "encours") add("warn", "Ouvrez le compte bloqué tôt : l'ouverture prend 1 à 3 semaines.");
+      else if (a.budget === "non") add("no", "Sans les 11 904 € du compte bloqué, ou une prise en charge acceptée, le visa n'est pas accordé.");
+      var steps = [
+        "Vérifiez votre accès sur la base anabin : bac seul, Studienkolleg ; licence, master.",
+        "Candidatez via uni-assist ou directement auprès de l'université.",
+        "Obtenez le certificat de langue demandé.",
+        "Ouvrez le compte bloqué et versez 11 904 €.",
+        "Demandez le visa national D études à l'ambassade d'Allemagne à Dakar."
+      ];
+      var dates = [
+        { l: "Candidatures", t: "dates propres à chaque université" },
+        { l: "Traitement du visa", t: "6 à 12 semaines selon l'ambassade" }
+      ];
+      var budget = [
+        ["Compte bloqué 2026", "11 904 € (992 € par mois)"],
+        ["Visa national D", "environ 75 €"],
+        ["Scolarité", "gratuite dans la plupart des universités publiques"],
+        ["Travail autorisé", "140 jours pleins ou 280 demi-journées par an"]
+      ];
+      return { reasons: R, steps: steps, dates: dates, budget: budget };
+    }
+  },
+
+  turquie: {
+    name: "Turquie", sub: "Türkiye Bursları ou admission directe",
+    intro: "Deux voies : la bourse du gouvernement turc (Türkiye Bursları), qui attribue aussi l'université, ou une admission directe dans une université publique ou privée. Il faut un visa d'études, puis un permis de séjour à l'arrivée.",
+    labels: { ok: "Vous remplissez les conditions de base", warn: "Des étapes restent à valider", no: "Une condition bloque la demande" },
+    qs: [
+      { id: "voie", t: "Quelle voie visez-vous ?", o: [["bourse","Bourse Türkiye Bursları"],["direct","Admission directe, à mes frais"]] },
+      { id: "niveau", t: "Quel niveau visez-vous ?", o: [["licence","Licence"],["master","Master"],["doctorat","Doctorat"]] },
+      { id: "admis", t: "Avez-vous une lettre d'admission d'une université turque ?", o: ADM, show: function(a){ return a.voie === "direct"; } },
+      { id: "langue", t: "Acceptez-vous une année préparatoire de turc si le cursus est en turc ?", h: "Certains cursus sont en anglais, et l'Université Galatasaray enseigne en français.", o: [["oui","Oui"],["non","Non, je cherche un cursus en anglais ou en français"]] },
+      { id: "budget", t: "Pouvez-vous financer les frais de scolarité et le séjour ?", o: PREP, show: function(a){ return a.voie === "direct"; } }
+    ],
+    ev: function(a){
+      var R = [], add = function(s,t){ R.push({ s: s, t: t }); };
+      if (a.voie === "bourse") {
+        add("ok", "La bourse couvre notamment la scolarité, le logement, une allocation mensuelle et le cours de turc.");
+        add("warn", "En 2026, les candidatures en ligne allaient du 10 janvier au 20 février. Les dates 2027 ne sont pas encore publiées.");
+      } else if (a.voie === "direct") {
+        admReasons(add, a.admis, "La lettre d'admission");
+        if (a.budget === "oui") add("ok", "Financement prêt.");
+        else if (a.budget === "encours") add("warn", "Demandez à l'université le montant exact des frais pour les étudiants étrangers.");
+        else if (a.budget === "non") add("no", "Sans financement, visez plutôt la bourse Türkiye Bursları.");
+      }
+      if (a.langue === "oui") add("ok", "L'année préparatoire de turc ouvre l'accès aux cursus en turc.");
+      else if (a.langue === "non") add("warn", "Ciblez les cursus en anglais, ou l'Université Galatasaray pour un cursus en français.");
+      var bourse = a.voie !== "direct";
+      var steps = bourse ? [
+        "Préparez relevés, diplômes, lettre de motivation et lettres de recommandation.",
+        "Candidatez en ligne sur turkiyeburslari.gov.tr pendant la fenêtre (janvier et février en 2026).",
+        "Passez l'entretien si vous êtes présélectionné(e).",
+        "Demandez le visa d'études à l'ambassade de Turquie, puis le permis de séjour à l'arrivée."
+      ] : [
+        "Choisissez l'université et la langue du cursus.",
+        "Candidatez directement auprès de l'université.",
+        "Obtenez la lettre d'admission.",
+        "Demandez le visa d'études à l'ambassade de Turquie, puis le permis de séjour à l'arrivée."
+      ];
+      var dates = bourse ? [
+        { l: "Türkiye Bursları 2026", t: "du 10 janvier au 20 février 2026" },
+        { l: "Édition 2027", t: "dates à confirmer" }
+      ] : [ { l: "Admissions", t: "calendrier propre à chaque université" } ];
+      var budget = bourse ? [
+        ["Bourse", "scolarité, logement, allocation, cours de turc"],
+        ["Candidature", "gratuite et en ligne"]
+      ] : [
+        ["Frais de scolarité", "selon l'université"],
+        ["Permis de séjour", "à demander après l'arrivée"]
+      ];
+      return { reasons: R, steps: steps, dates: dates, budget: budget };
+    }
+  },
+
+  roumanie: {
+    name: "Roumanie", sub: "Lettre d'acceptation aux études",
+    intro: "Vous candidatez auprès de l'université ; le ministère de l'Éducation délivre ensuite la lettre d'acceptation aux études, indispensable pour le visa. Les cursus en roumain commencent par une année préparatoire de langue.",
+    labels: { ok: "Vous remplissez les conditions de base", warn: "Des étapes restent à valider", no: "Une condition bloque la demande" },
+    qs: [
+      { id: "niveau", t: "Quel niveau visez-vous ?", o: [["licence","Licence"],["master","Master"],["sante","Médecine, pharmacie ou dentaire"]] },
+      { id: "langue", t: "Dans quelle langue voulez-vous étudier ?", o: [["roumain","En roumain"],["autre","En anglais ou en français"]] },
+      { id: "lettre", t: "Avez-vous la lettre d'acceptation aux études ?", o: ADM },
+      { id: "budget", t: "Pouvez-vous payer les frais de scolarité dès l'acceptation et financer le séjour ?", h: "Les frais sont payés en euros.", o: PREP }
+    ],
+    ev: function(a){
+      var R = [], add = function(s,t){ R.push({ s: s, t: t }); };
+      if (a.langue === "roumain") add("warn", "Prévoyez une année préparatoire de langue roumaine avant le cursus.");
+      else if (a.langue === "autre") add("ok", "Certaines universités proposent des cursus en anglais ou en français : vérifiez l'offre de l'université.");
+      admReasons(add, a.lettre, "La lettre d'acceptation aux études");
+      if (a.budget === "oui") add("ok", "Financement prêt.");
+      else if (a.budget === "encours") add("warn", "Les frais se paient peu après l'acceptation : 20 jours à Politehnica Bucarest, par exemple.");
+      else if (a.budget === "non") add("no", "Sans paiement des frais de scolarité, l'inscription ne peut pas être finalisée.");
+      var steps = [
+        "Choisissez l'université et vérifiez la langue d'enseignement.",
+        "Envoyez le dossier à l'université, avec des traductions certifiées.",
+        "Recevez la lettre d'acceptation aux études délivrée par le ministère de l'Éducation.",
+        "Payez les frais de scolarité dans le délai indiqué.",
+        "Demandez le visa d'études à l'ambassade de Roumanie."
+      ];
+      var dates = [
+        { l: "Bourses du gouvernement 2026-2027", t: "limite le 31 mars 2026, résultats vers le 15 juillet" },
+        { l: "Rentrée universitaire", t: "1er octobre (indicatif)" }
+      ];
+      var budget = [
+        ["Frais de scolarité", "en euros, selon l'université"],
+        ["Année préparatoire", "pour les cursus en roumain"],
+        ["Bourses du gouvernement", "scolarité, allocation mensuelle"]
+      ];
+      return { reasons: R, steps: steps, dates: dates, budget: budget };
+    }
   }
 };
 
@@ -558,7 +752,7 @@ function computeStatus(c, a){
 /*DATA-END*/
 
 (function(){
-  var ORDER = ["france","canada","belgique","italie","suisse"];
+  var ORDER = ["france","canada","belgique","italie","suisse","maroc","allemagne","turquie","roumanie"];
   var answers = {}, boxes = {}, cur = "france", lastTitle = "";
   var $ = function(id){ return document.getElementById(id); };
   var qWrap = $("questions");
@@ -708,5 +902,6 @@ function computeStatus(c, a){
   setCountry(C[start] ? start : "france", false);
 })();
 </script>
+<script src="js/site-ui.js"></script>
 </body>
 </html>

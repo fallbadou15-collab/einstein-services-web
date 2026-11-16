@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Établissements Einstein Services</title>
+<link rel="icon" href="img/einstein-services-logo.png" type="image/png">
+<link rel="canonical" href="https://einstein-services.com/etablissements.html">
 <meta name="description" content="Annuaire des universités, hautes écoles et écoles accessibles depuis le Sénégal en France, au Canada, en Belgique, en Italie et en Suisse, avec la voie d'admission pour chacun.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +71,11 @@ h3{font:700 19px/1.3 var(--font-display);margin:0}
 .f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
 .f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
 .f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
+.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
+.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
+.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
+.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
+.f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
 .chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
 .seg{display:flex;flex-wrap:wrap;gap:8px}
@@ -93,7 +100,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   nav.menu{margin-left:0;width:100%}
   .header-wa{display:none}
 }
-@media (max-width:1240px){.header-wa{display:none}}
+@media (max-width:1380px){.header-wa{display:none}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 
 /* Page */
@@ -112,7 +119,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 .card.feat{border:2px solid var(--accent)}
 .ctop{display:flex;gap:12px;align-items:flex-start}
 .mono{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font:800 15px var(--font-display);color:#fff;letter-spacing:.02em}
-.c-fr{background:#1F4E8C}.c-ca{background:#B3261E}.c-be{background:#3A3A3A}.c-it{background:#1B7A45}.c-ch{background:#C2262C}
+.c-fr{background:#1F4E8C}.c-ca{background:#B3261E}.c-be{background:#3A3A3A}.c-it{background:#1B7A45}.c-ch{background:#C2262C}.c-ma{background:#0F6B3E}.c-de{background:#2B2B2B}.c-tr{background:#C8102E}.c-ro{background:#1D3F8F}
 .card h3{font-size:17.5px;line-height:1.25}
 .where{margin:3px 0 0;color:var(--muted);font-size:14.5px;display:flex;align-items:center;gap:7px}
 .where .flag{width:20px;height:14px}
@@ -129,7 +136,6 @@ dl.facts dd{margin:0}
 .empty{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:24px;text-align:center;color:var(--muted)}
 </style>
 <link rel="stylesheet" href="css/resources-theme.css">
-  <link rel="canonical" href="https://einstein-services.com/etablissements.html" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
@@ -154,9 +160,9 @@ dl.facts dd{margin:0}
 
 <main class="wrap">
 <section class="hero">
-  <span class="eyebrow">Annuaire vérifié le 12 novembre 2026</span>
+  <span class="eyebrow">Annuaire vérifié le 12 novembre 2026 · 9 pays</span>
   <h1>Établissements</h1>
-  <p class="lead">Universités, hautes écoles et écoles accessibles depuis le Sénégal dans nos 5 destinations. Pour chacun : la ville, le type, les niveaux, la langue, les domaines et la voie d'admission.</p>
+  <p class="lead">Universités, hautes écoles et écoles accessibles depuis le Sénégal dans nos 9 destinations. Pour chacun : la ville, le type, les niveaux, la langue, les domaines et la voie d'admission.</p>
 </section>
 
 <section class="section" aria-labelledby="une">
@@ -178,6 +184,10 @@ dl.facts dd{margin:0}
       <button type="button" data-c="be" aria-pressed="false"><span class="flag f-be" aria-hidden="true"></span>Belgique</button>
       <button type="button" data-c="it" aria-pressed="false"><span class="flag f-it" aria-hidden="true"></span>Italie</button>
       <button type="button" data-c="ch" aria-pressed="false"><span class="flag f-ch" aria-hidden="true"></span>Suisse</button>
+      <button type="button" data-c="ma" aria-pressed="false"><span class="flag f-ma" aria-hidden="true"></span>Maroc</button>
+      <button type="button" data-c="de" aria-pressed="false"><span class="flag f-de" aria-hidden="true"></span>Allemagne</button>
+      <button type="button" data-c="tr" aria-pressed="false"><span class="flag f-tr" aria-hidden="true"></span>Turquie</button>
+      <button type="button" data-c="ro" aria-pressed="false"><span class="flag f-ro" aria-hidden="true"></span>Roumanie</button>
     </div>
     <div class="frow">
       <label class="sel" for="cat">Type d'établissement
@@ -214,7 +224,7 @@ dl.facts dd{margin:0}
     <div class="fcols">
       <div>
         <h4>Einstein Services</h4>
-        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie.</p>
+        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie, Maroc, Allemagne, Turquie, Roumanie.</p>
         <p>« Votre voyage notre mission »</p>
       </div>
       <div>
@@ -231,10 +241,10 @@ dl.facts dd{margin:0}
       <div>
         <h4>Nous suivre</h4>
         <div class="social">
-          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/einsteinservices" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
     </div>
@@ -252,7 +262,11 @@ var COUNTRY = {
   ca: { name: "Canada", hash: "canada", how: "Admission auprès de l'établissement, puis CAQ (Québec) ou lettre d'attestation provinciale, et permis d'études." },
   be: { name: "Belgique", hash: "belgique", how: "Bachelier : équivalence du bac à la Fédération Wallonie-Bruxelles, puis inscription. Master : admission sur dossier. Ensuite, visa D." },
   it: { name: "Italie", hash: "italie", how: "Préinscription sur Universitaly, déclaration de valeur ou attestation CIMEA, puis visa D études." },
-  ch: { name: "Suisse", hash: "suisse", how: "Admission directement auprès de l'établissement, puis visa D à l'ambassade de Suisse." }
+  ch: { name: "Suisse", hash: "suisse", how: "Admission directement auprès de l'établissement, puis visa D à l'ambassade de Suisse." },
+  ma: { name: "Maroc", hash: "maroc", how: "Bourse AMCI via la Direction des bourses à Dakar, ou candidature directe dans le privé. Carte de séjour étudiant à l'arrivée." },
+  de: { name: "Allemagne", hash: "allemagne", how: "Candidature via uni-assist ou l'université ; avec le bac seul, Studienkolleg en général. Compte bloqué de 11 904 €, puis visa national D." },
+  tr: { name: "Turquie", hash: "turquie", how: "Bourse Türkiye Bursları (en ligne) ou admission directe, puis visa d'études et permis de séjour à l'arrivée." },
+  ro: { name: "Roumanie", hash: "roumanie", how: "Dossier à l'université, lettre d'acceptation du ministère de l'Éducation, paiement des frais, puis visa d'études." }
 };
 var E = [
   { ab: "UR", n: "Université de Rouen Normandie", city: "Rouen", c: "fr", cat: "univ", type: "Université publique", lv: "Licence, BUT, Master, Doctorat", lang: "Français", d: ["sciences","droit","economie","lettres","sante","informatique"], url: "https://www.univ-rouen.fr", f: true },
@@ -292,7 +306,29 @@ var E = [
   { ab: "UNIL", n: "Université de Lausanne", city: "Lausanne", c: "ch", cat: "univ", type: "Université publique", lv: "Bachelor, Master, Doctorat", lang: "Français", d: ["sciences","sante","droit","economie","lettres"], url: "https://www.unil.ch" },
   { ab: "UFR", n: "Université de Fribourg", city: "Fribourg", c: "ch", cat: "univ", type: "Université publique bilingue", lv: "Bachelor, Master, Doctorat", lang: "Français, allemand", d: ["sciences","droit","economie","lettres","sante"], url: "https://www.unifr.ch" },
   { ab: "EPFL", n: "EPFL", city: "Lausanne", c: "ch", cat: "inge", type: "École polytechnique fédérale", lv: "Bachelor, Master, Doctorat", lang: "Français, anglais", d: ["ingenierie","informatique","architecture","sciences"], url: "https://www.epfl.ch" },
-  { ab: "HES", n: "HES-SO, Haute école spécialisée de Suisse occidentale", city: "Suisse romande (plusieurs sites)", c: "ch", cat: "he", type: "Haute école spécialisée", lv: "Bachelor, Master", lang: "Français", d: ["ingenierie","commerce","sante","informatique"], url: "https://www.hes-so.ch" }
+  { ab: "HES", n: "HES-SO, Haute école spécialisée de Suisse occidentale", city: "Suisse romande (plusieurs sites)", c: "ch", cat: "he", type: "Haute école spécialisée", lv: "Bachelor, Master", lang: "Français", d: ["ingenierie","commerce","sante","informatique"], url: "https://www.hes-so.ch" },
+  { ab: "UM5", n: "Université Mohammed V de Rabat", city: "Rabat", c: "ma", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Français, arabe", d: ["sciences","droit","economie","lettres","sante","ingenierie"], url: "https://www.um5.ac.ma", how: "Bourse AMCI via la Direction des bourses à Dakar." },
+  { ab: "UH2", n: "Université Hassan II de Casablanca", city: "Casablanca", c: "ma", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Français, arabe", d: ["sciences","droit","economie","lettres","sante","ingenierie"], url: "https://www.univh2c.ma", how: "Bourse AMCI via la Direction des bourses à Dakar." },
+  { ab: "UCA", n: "Université Cadi Ayyad", city: "Marrakech", c: "ma", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Français, arabe", d: ["sciences","droit","economie","lettres","sante","ingenierie"], url: "https://www.uca.ma", how: "Bourse AMCI via la Direction des bourses à Dakar." },
+  { ab: "UIR", n: "Université Internationale de Rabat (UIR)", city: "Rabat", c: "ma", cat: "univ", type: "Université privée", lv: "Licence, Master, cycle ingénieur", lang: "Français, anglais", d: ["ingenierie","informatique","commerce","architecture","droit"], url: "https://www.uir.ac.ma", how: "Candidature directe auprès de l'université, puis carte de séjour étudiant à l'arrivée." },
+  { ab: "UM6P", n: "Université Mohammed VI Polytechnique (UM6P)", city: "Benguerir", c: "ma", cat: "univ", type: "Université", lv: "Licence, Master, Doctorat", lang: "Anglais, français", d: ["ingenierie","sciences","informatique","agronomie","commerce"], url: "https://www.um6p.ma", how: "Candidature directe auprès de l'université, puis carte de séjour étudiant à l'arrivée." },
+  { ab: "EIG", n: "EIGSI Casablanca", city: "Casablanca", c: "ma", cat: "inge", type: "École d'ingénieurs privée", lv: "Cycle préparatoire intégré, cycle ingénieur", lang: "Français", d: ["ingenierie"], url: "https://www.eigsica.ma", how: "Candidature directe auprès de l'école, puis carte de séjour étudiant à l'arrivée." },
+  { ab: "ECC", n: "École Centrale Casablanca", city: "Casablanca", c: "ma", cat: "inge", type: "École d'ingénieurs", lv: "Cycle ingénieur, Master", lang: "Français", d: ["ingenierie"], url: "https://www.centrale-casablanca.ma", how: "Candidature directe auprès de l'école, puis carte de séjour étudiant à l'arrivée." },
+  { ab: "TUM", n: "Université technique de Munich (TUM)", city: "Munich", c: "de", cat: "inge", type: "Université technique publique", lv: "Bachelor, Master, Doctorat", lang: "Allemand, anglais", d: ["ingenierie","informatique","sciences","agronomie","architecture"], url: "https://www.tum.de" },
+  { ab: "RW", n: "RWTH Aachen", city: "Aix-la-Chapelle", c: "de", cat: "inge", type: "Université technique publique", lv: "Bachelor, Master, Doctorat", lang: "Allemand, anglais", d: ["ingenierie","informatique","sciences","architecture"], url: "https://www.rwth-aachen.de" },
+  { ab: "TUB", n: "Université technique de Berlin (TU Berlin)", city: "Berlin", c: "de", cat: "inge", type: "Université technique publique", lv: "Bachelor, Master, Doctorat", lang: "Allemand, anglais", d: ["ingenierie","informatique","sciences","architecture","economie"], url: "https://www.tu.berlin" },
+  { ab: "UHH", n: "Université de Hambourg", city: "Hambourg", c: "de", cat: "univ", type: "Université publique", lv: "Bachelor, Master, Doctorat", lang: "Allemand, anglais", d: ["sciences","droit","economie","lettres","sante","informatique"], url: "https://www.uni-hamburg.de" },
+  { ab: "UST", n: "Université de Stuttgart", city: "Stuttgart", c: "de", cat: "inge", type: "Université publique", lv: "Bachelor, Master, Doctorat", lang: "Allemand, anglais", d: ["ingenierie","informatique","sciences","architecture"], url: "https://www.uni-stuttgart.de", how: "Candidature via uni-assist ou l'université ; avec le bac seul, Studienkolleg. Bade-Wurtemberg : frais de scolarité pour les étudiants hors UE." },
+  { ab: "GSU", n: "Université Galatasaray", city: "Istanbul", c: "tr", cat: "univ", type: "Université publique francophone", lv: "Licence, Master, Doctorat", lang: "Français, turc", d: ["droit","economie","commerce","ingenierie","lettres"], url: "https://www.gsu.edu.tr" },
+  { ab: "IU", n: "Université d'Istanbul", city: "Istanbul", c: "tr", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Turc, anglais", d: ["sciences","sante","droit","economie","lettres","ingenierie"], url: "https://www.istanbul.edu.tr" },
+  { ab: "ODTÜ", n: "Université technique du Moyen-Orient (ODTÜ, METU)", city: "Ankara", c: "tr", cat: "inge", type: "Université technique publique", lv: "Licence, Master, Doctorat", lang: "Anglais", d: ["ingenierie","informatique","sciences","architecture","economie"], url: "https://www.metu.edu.tr" },
+  { ab: "BOUN", n: "Université Boğaziçi", city: "Istanbul", c: "tr", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Anglais", d: ["ingenierie","informatique","sciences","economie","commerce","lettres"], url: "https://www.boun.edu.tr" },
+  { ab: "AU", n: "Université d'Ankara", city: "Ankara", c: "tr", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Turc", d: ["droit","sante","sciences","lettres","agronomie"], url: "https://www.ankara.edu.tr" },
+  { ab: "HU", n: "Université Hacettepe", city: "Ankara", c: "tr", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Turc, anglais", d: ["sante","sciences","ingenierie","lettres"], url: "https://www.hacettepe.edu.tr" },
+  { ab: "UPB", n: "Université Politehnica de Bucarest", city: "Bucarest", c: "ro", cat: "inge", type: "Université technique publique", lv: "Licence, Master, Doctorat", lang: "Roumain, anglais, français", d: ["ingenierie","informatique","sciences"], url: "https://upb.ro", how: "Dossier à l'université, lettre d'acceptation du ministère, frais à payer sous 20 jours, puis visa d'études." },
+  { ab: "UB", n: "Université de Bucarest", city: "Bucarest", c: "ro", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Roumain, anglais", d: ["sciences","droit","economie","lettres","informatique"], url: "https://unibuc.ro" },
+  { ab: "UBB", n: "Université Babeș-Bolyai", city: "Cluj-Napoca", c: "ro", cat: "univ", type: "Université publique", lv: "Licence, Master, Doctorat", lang: "Roumain, anglais", d: ["sciences","droit","economie","lettres","informatique","commerce"], url: "https://www.ubbcluj.ro" },
+  { ab: "UMF", n: "Université de médecine et de pharmacie Iuliu Hațieganu", city: "Cluj-Napoca", c: "ro", cat: "univ", type: "Université de médecine publique", lv: "Médecine, pharmacie, dentaire", lang: "Roumain, anglais, français", d: ["sante"], url: "https://www.umfcluj.ro" }
 ];
 
 (function(){
@@ -347,5 +383,6 @@ var E = [
   render();
 })();
 </script>
+<script src="js/site-ui.js"></script>
 </body>
 </html>

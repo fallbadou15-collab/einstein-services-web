@@ -1733,6 +1733,23 @@ textarea:focus-visible {
   padding: 0.15rem 0.6rem;
   border-radius: 5px;
 }
+.destinations-page {
+  background: linear-gradient(120deg, var(--navy), var(--blue) 55%, #14568a);
+  color: #fff;
+}
+.destinations-page .section-head h1,
+.destinations-page .section-head p {
+  color: #fff;
+}
+.destinations-page .dest-card {
+  color: var(--ink);
+}
+.destinations-page .dest-card h2 {
+  color: var(--navy);
+}
+.destinations-page .dest-card .dest-meta {
+  color: var(--muted);
+}
 
 /* Fiche pays */
 .pays-hero {
