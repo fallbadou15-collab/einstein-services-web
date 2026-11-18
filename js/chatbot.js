@@ -67,18 +67,7 @@ if (siteFooter && !siteFooter.querySelector(".footer-about-link")) {
   }
   linksContainer.appendChild(aboutLink);
 }
-if (siteFooter && !siteFooter.querySelector(".site-credit")) {
-  const creditContainer =
-    siteFooter.querySelector(".u-footer-bottom .u-container") ||
-    siteFooter.querySelector(".footer-inner") ||
-    siteFooter;
-  const credit = document.createElement("p");
-  credit.className = "site-credit";
-  credit.textContent = NAFI_IS_ENGLISH
-    ? "Website designed by SUNU DIGITAL"
-    : "Site réalisé par SUNU DIGITAL";
-  creditContainer.appendChild(credit);
-}
+
 
 /* ---------- Moteur de réponses ---------- */
 const NAFI_REPLIES = [

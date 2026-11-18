@@ -52,3 +52,7 @@ footer.u-footer {
 footer a {
   color: var(--foot-ink) !important;
 }
+
+/* ===== Logo : taille uniforme sur toutes les pages, reduite en mobile ===== */
+.brand img, .logo-img, .u-logo img { height: 44px; max-width: 220px; width: auto; object-fit: contain; display: block; }
+@media (max-width: 720px) { .brand img, header.site .brand img, .logo-img, .u-logo img { height: 36px !important; max-width: min(46vw, 160px) !important; width: auto; } }

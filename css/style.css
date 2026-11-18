@@ -1445,6 +1445,198 @@ a.btn[href$="contact-en.html"]:hover {
   text-transform: uppercase;
 }
 
+/* ===== PARTENAIRES : double carrousel 3D spectaculaire ===== */
+.partner-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 0 3.5rem;
+  background:
+    radial-gradient(1200px 420px at 15% 10%, rgba(32, 112, 180, 0.10), transparent 60%),
+    radial-gradient(1000px 420px at 85% 90%, rgba(245, 144, 0, 0.12), transparent 60%),
+    linear-gradient(180deg, #fdfaf5 0%, #fff 100%);
+  margin-top: 1.5rem;
+}
+.partner-showcase::before,
+.partner-showcase::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 130px;
+  pointer-events: none;
+  z-index: 2;
+}
+.partner-showcase::before {
+  top: 0;
+  background: linear-gradient(180deg, var(--paper, #fdfaf5), transparent);
+}
+.partner-showcase::after {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--paper, #fdfaf5), transparent);
+}
+.partner-showcase-head {
+  margin-bottom: 0.5rem;
+}
+.showcase-pulse {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(245, 144, 0, 0.14) 0%, rgba(32, 112, 180, 0.08) 45%, transparent 70%);
+  filter: blur(6px);
+  animation: showcasePulse 7s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes showcasePulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.85; }
+  50% { transform: translate(-50%, -50%) scale(1.22); opacity: 1; }
+}
+.marquee-3d {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  margin: 1.1rem 0;
+  padding: 0.8rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  perspective: 1000px;
+}
+.marquee-3d-track {
+  display: flex;
+  gap: 1.4rem;
+  width: max-content;
+  align-items: stretch;
+  transform-style: preserve-3d;
+}
+.marquee-left .marquee-3d-track {
+  animation: marqueeLeft var(--m-dur, 34s) linear infinite;
+}
+.marquee-right .marquee-3d-track {
+  animation: marqueeRight var(--m-dur, 26s) linear infinite;
+}
+.marquee-3d[data-speed="fast"] { --m-dur: 24s; }
+.marquee-3d[data-speed="slow"] { --m-dur: 38s; }
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.partner-orb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 240px;
+  padding: 1.15rem 1.6rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.55));
+  border: 1px solid rgba(20, 86, 138, 0.10);
+  box-shadow:
+    0 14px 34px rgba(20, 86, 138, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease, border-color 0.45s ease;
+  animation: orbFloat 6s ease-in-out infinite;
+}
+.marquee-3d-track .partner-orb:nth-child(2n) { animation-delay: -1.6s; }
+.marquee-3d-track .partner-orb:nth-child(3n) { animation-delay: -3.1s; }
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  50% { transform: translateY(-8px) rotateX(4deg) rotateY(-4deg); }
+}
+.partner-orb:hover {
+  transform: translateY(-10px) rotateX(6deg) rotateY(-6deg) scale(1.06) !important;
+  border-color: rgba(245, 144, 0, 0.55);
+  box-shadow:
+    0 26px 52px rgba(20, 86, 138, 0.20),
+    0 0 0 1px rgba(245, 144, 0, 0.25),
+    0 0 42px rgba(245, 144, 0, 0.30);
+  z-index: 5;
+  animation-play-state: paused;
+}
+.orb-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: conic-gradient(from var(--g-a, 0deg), rgba(245,144,0,0), rgba(245,144,0,0.5), rgba(32,112,180,0.4), rgba(245,144,0,0));
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 1.5px;
+  pointer-events: none;
+}
+.partner-orb:hover .orb-glow {
+  opacity: 1;
+  animation: orbGlowSpin 2.4s linear infinite;
+}
+@property --g-a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes orbGlowSpin {
+  to { --g-a: 360deg; }
+}
+.partner-orb.is-ghost {
+  background: linear-gradient(145deg, rgba(20, 86, 138, 0.06), rgba(245, 144, 0, 0.06));
+  border-style: dashed;
+  box-shadow: none;
+}
+.orb-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  transform: translateZ(24px);
+}
+.orb-name {
+  font-weight: 800;
+  color: var(--navy, #14568a);
+  font-size: 1.02rem;
+  line-height: 1.25;
+  transform: translateZ(18px);
+}
+.orb-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange, #f59000);
+  transform: translateZ(12px);
+}
+.partner-orb.is-ghost .orb-tag { color: #8fa3bd; }
+@media (hover: none) {
+  .orb-glow { animation: orbGlowSpin 2.4s linear infinite; opacity: 0.6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-3d-track, .partner-orb, .showcase-pulse { animation: none !important; }
+  .marquee-3d { overflow-x: auto; }
+  .orb-glow { display: none; }
+}
+@media (max-width: 720px) {
+  .partner-orb { min-width: 190px; padding: 0.95rem 1.2rem; }
+  .orb-icon { font-size: 1.35rem; }
+  .orb-name { font-size: 0.92rem; }
+  .showcase-pulse { width: 340px; height: 340px; }
+}
+/* Logos d'écoles style Nexuroom */
+.school-logo {
+  font-weight: 700;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.03em;
+  color: #6b74a0 !important;
+  text-transform: uppercase;
+}
+
 /* ===== Bande CTA finale (style Nexuroom) ===== */
 .cta-band {
   background: linear-gradient(120deg, var(--navy), #2a3a75);
@@ -1472,6 +1664,7 @@ a.btn[href$="contact-en.html"]:hover {
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
+  .marquee-3d-track { animation: none; }
 }
 @media (max-width: 700px) {
   .partner-grid {
@@ -1859,7 +2052,8 @@ textarea:focus-visible {
 }
 @media (prefers-reduced-motion: reduce) {
   .blob-blue,
-  .marquee-track {
+  .marquee-track,
+  .marquee-3d-track {
     animation: none !important;
   }
   * {
@@ -1938,8 +2132,9 @@ img {
 }
 
 /* Marquee partenaires : pause au survol */
-.partner-marquee:hover .marquee-track {
+.marquee-3d:hover .marquee-3d-track {
   animation-play-state: paused;
+}
 }
 
 /* ===== CHATBOT NAFI ===== */
@@ -2229,15 +2424,16 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: block;
 }
+
 .lang-opt:hover {
   background: rgba(20, 112, 180, 0.06);
-  transform: translateY(-1px);
+  transform: none;
 }
 .lang-opt.active {
   background: var(--navy);
 }
 .lang-opt.active img {
-  transform: scale(1.08);
+  transform: none;
   box-shadow: 0 2px 6px rgba(20, 112, 180, 0.4);
 }
 

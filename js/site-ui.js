@@ -1,4 +1,40 @@
 (() => {
+  if (!document.querySelector(".lang-switch")) {
+    const fileName = window.location.pathname.split("/").pop() || "index.html";
+    const isEnglish = document.documentElement.lang === "en" || fileName.endsWith("-en.html");
+    const frenchPage = isEnglish
+      ? (fileName === "index-en.html" ? "index.html" : fileName.replace("-en.html", ".html"))
+      : fileName;
+    const englishPage = isEnglish
+      ? fileName
+      : (fileName === "index.html" ? "index-en.html" : fileName.replace(".html", "-en.html"));
+
+    const switcher = document.createElement("div");
+    switcher.className = "lang-switch";
+    switcher.setAttribute("aria-label", isEnglish ? "Language switch" : "Choix de la langue");
+    switcher.innerHTML = `
+      <a href="${frenchPage}" class="lang-opt${isEnglish ? "" : " active"}" hreflang="fr" title="Français" aria-label="Français">
+        <img src="img/flags/fr.svg" alt="Français" width="22" height="16">
+      </a>
+      <a href="${englishPage}" class="lang-opt${isEnglish ? " active" : ""}" hreflang="en" title="English" aria-label="English">
+        <img src="img/flags/gb.svg" alt="English" width="22" height="16">
+      </a>`;
+
+    const inner = document.querySelector(".nav-inner, .u-nav-inner, header.site .wrap");
+    if (inner) {
+      const burger = inner.querySelector("#burger, .u-burger, .burger, .site-menu-toggle");
+      if (burger) inner.insertBefore(switcher, burger);
+      else inner.appendChild(switcher);
+    }
+
+    if (!document.querySelector('link[rel="stylesheet"][href="css/site-ui.css"]')) {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "css/site-ui.css";
+      document.head.appendChild(stylesheet);
+    }
+  }
+
   const footer = document.querySelector(".u-footer, footer.footer") ||
     Array.from(document.querySelectorAll("footer")).pop();
   const isEnglish = document.documentElement.lang === "en";
@@ -156,50 +192,5 @@
     });
   });
 
-  let previousScrollY = window.scrollY;
-  let previousDirection = 0;
-  let accumulatedScroll = 0;
-  const scrollThreshold = 6;
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      const currentScrollY = Math.max(0, window.scrollY);
-      const direction =
-        currentScrollY > previousScrollY
-          ? 1
-          : currentScrollY < previousScrollY
-            ? -1
-            : 0;
-
-      if (currentScrollY <= 20) {
-        navBars.forEach((navBar) => navBar.classList.remove("scroll-hidden"));
-        previousScrollY = currentScrollY;
-        previousDirection = 0;
-        accumulatedScroll = 0;
-        return;
-      }
-
-      if (!direction) return;
-      if (direction !== previousDirection) accumulatedScroll = 0;
-      accumulatedScroll += Math.abs(currentScrollY - previousScrollY);
-      previousDirection = direction;
-      previousScrollY = currentScrollY;
-
-      if (accumulatedScroll < scrollThreshold) return;
-      accumulatedScroll = 0;
-
-      if (direction > 0) {
-        const menuIsOpen = navMenus.some((menu) =>
-          menu.classList.contains("open"),
-        );
-        if (!menuIsOpen) {
-          navBars.forEach((navBar) => navBar.classList.add("scroll-hidden"));
-        }
-      } else {
-        navBars.forEach((navBar) => navBar.classList.remove("scroll-hidden"));
-      }
-    },
-    { passive: true },
-  );
+  navBars.forEach((navBar) => navBar.classList.remove("scroll-hidden"));
 })();

@@ -114,3 +114,32 @@ if (navbar) {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 }
+
+if (!document.querySelector(".lang-switch")) {
+  const fileName = window.location.pathname.split("/").pop() || "index.html";
+  const isEnglish = document.documentElement.lang === "en" || fileName.endsWith("-en.html");
+  const frenchPage = isEnglish
+    ? (fileName === "index-en.html" ? "index.html" : fileName.replace("-en.html", ".html"))
+    : fileName;
+  const englishPage = isEnglish
+    ? fileName
+    : (fileName === "index.html" ? "index-en.html" : fileName.replace(".html", "-en.html"));
+
+  const switcher = document.createElement("div");
+  switcher.className = "lang-switch";
+  switcher.setAttribute("aria-label", isEnglish ? "Language switch" : "Choix de la langue");
+  switcher.innerHTML = `
+    <a href="${frenchPage}" class="lang-opt${isEnglish ? "" : " active"}" hreflang="fr" title="Français" aria-label="Français">
+      <img src="img/flags/fr.svg" alt="Français" width="22" height="16">
+    </a>
+    <a href="${englishPage}" class="lang-opt${isEnglish ? " active" : ""}" hreflang="en" title="English" aria-label="English">
+      <img src="img/flags/gb.svg" alt="English" width="22" height="16">
+    </a>`;
+
+  const inner = document.querySelector(".nav-inner, .u-nav-inner, header.site .wrap");
+  if (inner) {
+    const burger = inner.querySelector("#burger, .u-burger, .burger, .site-menu-toggle");
+    if (burger) inner.insertBefore(switcher, burger);
+    else inner.appendChild(switcher);
+  }
+}

@@ -44,6 +44,14 @@
   object-fit: contain;
 }
 
+.country-with-flag {
+  white-space: nowrap;
+}
+
+.country-with-flag::before {
+  content: attr(data-flag) " ";
+}
+
 .destinations-guide {
   max-width: none;
   padding: 1px 0 40px;
@@ -111,6 +119,37 @@
   height: 17px;
   border-radius: 3px;
   object-fit: cover;
+}
+
+.lang-switch,
+.lang-opt,
+.lang-opt img,
+.lang-opt:hover,
+.lang-opt.active,
+.lang-opt.active img,
+header.scroll-hidden,
+.navbar.scroll-hidden,
+.u-navbar.scroll-hidden,
+header.site.scroll-hidden {
+  transform: none !important;
+}
+
+.lang-opt {
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-opt:hover,
+.lang-opt.active {
+  transform: none !important;
+}
+
+.navbar,
+.u-navbar,
+header.site {
+  position: sticky !important;
+  top: 0;
+  transform: none !important;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .navbar,
@@ -265,6 +304,8 @@ header.site .wrap {
     gap: 0.5rem;
   }
 }
+
+
 
 @media (max-width: 1380px) {
   header.site .wrap {
