@@ -4,7 +4,16 @@
     style.id = "country-flags-style";
     style.textContent = `
       .country-with-flag { white-space: nowrap; }
-      .country-with-flag::before { content: attr(data-flag) " "; }
+      .country-with-flag img.country-flag {
+        display: inline-block;
+        width: 20px;
+        height: 14px;
+        margin-right: 6px;
+        vertical-align: -1px;
+        border-radius: 2px;
+        object-fit: cover;
+        box-shadow: 0 1px 2px rgba(20, 86, 138, 0.18);
+      }
     `;
     document.head.append(style);
   }
@@ -34,6 +43,18 @@
       countryNames.map((name) => [name.toLocaleLowerCase(), flag]),
     ),
   );
+  const flagImages = new Map([
+    ["🇫🇷", "img/flags/fr.svg"],
+    ["🇨🇦", "img/flags/ca.svg"],
+    ["🇧🇪", "img/flags/be.svg"],
+    ["🇨🇭", "img/flags/ch.svg"],
+    ["🇮🇹", "img/flags/it.svg"],
+    ["🇲🇦", "img/flags/ma.svg"],
+    ["🇩🇪", "img/flags/de.svg"],
+    ["🇹🇷", "img/flags/tr.svg"],
+    ["🇷🇴", "img/flags/ro.svg"],
+    ["🇸🇳", "img/flags/sn.svg"],
+  ]);
 
   function addFlags(root) {
     if (!root) return;
@@ -77,11 +98,16 @@
         const name = match[0];
         const span = document.createElement("span");
         span.className = "country-with-flag";
-        span.dataset.flag =
+        const flag =
           flags.get(name.toLocaleLowerCase()) ||
           flags.get(name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase()) ||
           "";
-        span.textContent = name;
+        const image = document.createElement("img");
+        image.className = "country-flag";
+        image.src = flagImages.get(flag) || "";
+        image.alt = "";
+        image.setAttribute("aria-hidden", "true");
+        span.append(image, document.createTextNode(name));
         fragment.append(span);
         lastIndex = match.index + name.length;
       }
