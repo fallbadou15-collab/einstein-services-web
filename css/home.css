@@ -1362,6 +1362,29 @@ body {
   }
 }
 @media (max-width: 720px) {
+  .u-hero-card {
+    width: 100%;
+    padding: 1.1rem;
+  }
+  .u-hero-card h2 {
+    font-size: 1.08rem;
+  }
+  .u-hero-card ol {
+    gap: 0.4rem;
+  }
+  .u-hero-card ol li a {
+    min-width: 0;
+    gap: 0.45rem;
+    padding: 0.5rem 0.65rem;
+  }
+  .u-hero-card ol li span {
+    flex: 0 0 auto;
+  }
+  .route-country-flag {
+    width: 16px;
+    height: 12px;
+    flex-basis: 16px;
+  }
   .u-event-overview {
     grid-template-columns: 1fr;
     gap: 1.5rem;
