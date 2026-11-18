@@ -45,7 +45,7 @@ const siteFooter =
   Array.from(document.querySelectorAll("footer")).pop();
 (() => {
   const partnersFooterScript = document.createElement("script");
-  partnersFooterScript.src = "js/site-ui.js";
+  partnersFooterScript.src = "js/site-ui.js?v=20261118-2355";
   document.body.appendChild(partnersFooterScript);
 })();
 
