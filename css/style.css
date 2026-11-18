@@ -2440,6 +2440,54 @@ img {
 }
 
 /* ===== Sélecteur de langue (drapeaux, version épurée) ===== */
+.navbar,
+.u-navbar,
+header.site {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  transform: none !important;
+}
+.navbar.scroll-hidden,
+.u-navbar.scroll-hidden,
+header.site.scroll-hidden {
+  transform: none !important;
+}
+.navbar,
+.u-navbar,
+header.site {
+  min-height: 66px;
+}
+.nav-inner,
+.u-nav-inner {
+  min-height: 66px;
+}
+
+/* Floating actions stay separated and predictable on every screen */
+.site-whatsapp,
+.u-whatsapp {
+  right: 22px !important;
+  bottom: 22px !important;
+  z-index: 1200;
+}
+#nafiWidget {
+  position: fixed !important;
+  right: 22px !important;
+  bottom: 92px !important;
+  z-index: 1190;
+}
+@media (max-width: 560px) {
+  .site-whatsapp,
+  .u-whatsapp {
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+  #nafiWidget {
+    right: 16px !important;
+    bottom: 86px !important;
+  }
+}
+
 .lang-switch {
   display: flex;
   align-items: center;

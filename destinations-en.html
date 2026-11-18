@@ -109,21 +109,23 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index-en.html"><img src="img/logo.svg" alt="Einstein Services"></a>
-    <nav class="menu" id="destinationMenu" aria-label="Main menu">
-      <a href="index-en.html">Home</a>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="index-en.html"><img class="logo-img" src="img/logo.svg" alt="Einstein Services"></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main menu">
+      <a href="agence-en.html">Agency</a>
       <a href="services-en.html">Services</a>
-      <a href="destinations-en.html" aria-current="page">Destinations</a>
-      <a href="formations-en.html">Programmes</a>
-      <a href="contact-en.html">Contact</a>
+      <a href="avi-en.html">AVI</a>
+      <a href="destinations-en.html" class="active" aria-current="page">Destinations</a>
+      <a href="tarifs-en.html">Fees</a>
+      <a href="test-eligibilite-en.html">Eligibility test</a>
+      <a href="contact-en.html" class="btn btn-orange nav-cta">Contact us</a>
     </nav>
     <div class="lang-switch" aria-label="Language">
       <a href="destinations.html" hreflang="fr" lang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="24" height="17"></a>
       <a href="destinations-en.html" aria-current="page" hreflang="en" lang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="24" height="17"></a>
     </div>
-    <button class="site-menu-toggle" id="destinationMenuToggle" type="button" aria-controls="destinationMenu" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    <button class="burger" id="burger" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu"><span></span></button>
   </div>
 </header>
 
