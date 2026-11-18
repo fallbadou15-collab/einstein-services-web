@@ -2587,6 +2587,14 @@ header.site {
   max-width: 220px;
   object-fit: contain;
 }
+.navbar .logo,
+.navbar .logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+}
 .nav-links {
   min-width: 0;
   justify-content: flex-end;
