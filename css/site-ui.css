@@ -44,10 +44,6 @@
   object-fit: contain;
 }
 
-.country-with-flag {
-  white-space: nowrap;
-}
-
 .destinations-guide {
   max-width: none;
   padding: 1px 0 40px;
