@@ -1378,6 +1378,12 @@ a.btn[href$="contact-en.html"]:hover {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
+.partner-logo img {
+  width: 100%;
+  max-width: 210px;
+  max-height: 68px;
+  object-fit: contain;
+}
 .placeholder-logo {
   background: var(--cream-2);
   border: 1.5px dashed #ddd3c4;
@@ -1453,6 +1459,15 @@ a.btn[href$="contact-en.html"]:hover {
 }
 .marquee-track a:hover {
   color: var(--blue);
+}
+.partner-track-logo {
+  display: block;
+  width: 150px;
+  height: 58px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
 }
 /* Logos d'écoles style Nexuroom */
 .school-logo {
@@ -1615,6 +1630,17 @@ a.btn[href$="contact-en.html"]:hover {
   font-size: 1.6rem;
   line-height: 1;
   transform: translateZ(24px);
+}
+.orb-logo {
+  width: 100%;
+  max-width: 150px;
+  height: 46px;
+  object-fit: contain;
+  margin-bottom: 0.35rem;
+  transform: translateZ(24px);
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.25rem;
 }
 .orb-name {
   font-weight: 800;
