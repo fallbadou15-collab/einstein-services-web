@@ -1,7 +1,8 @@
 (() => {
+  const fileName = window.location.pathname.split("/").pop() || "index.html";
+  const isEnglish = document.documentElement.lang === "en" || fileName.endsWith("-en.html");
+
   if (!document.querySelector(".lang-switch")) {
-    const fileName = window.location.pathname.split("/").pop() || "index.html";
-    const isEnglish = document.documentElement.lang === "en" || fileName.endsWith("-en.html");
     const frenchPage = isEnglish
       ? (fileName === "index-en.html" ? "index.html" : fileName.replace("-en.html", ".html"))
       : fileName;
@@ -51,23 +52,6 @@
 
     navMenus.push(menu);
     burger.setAttribute("aria-controls", menu.id);
-    if (burger.classList.contains("site-menu-toggle")) {
-      burger.addEventListener("click", () => {
-        menu.classList.toggle("open");
-      });
-      menu.addEventListener("click", (event) => {
-        if (event.target instanceof Element && event.target.closest("a")) {
-          menu.classList.remove("open");
-        }
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && menu.classList.contains("open")) {
-          menu.classList.remove("open");
-          burger.focus();
-        }
-      });
-    }
-
     const updateBurger = () => {
       const isOpen = menu.classList.contains("open");
       burger.classList.toggle("is-open", isOpen);

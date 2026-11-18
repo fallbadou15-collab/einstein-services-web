@@ -126,13 +126,14 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 }
 </style>
 <link rel="stylesheet" href="../css/resources-theme.css">
+  <link rel="stylesheet" href="../css/site-header.css" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="../index.html"><img src="../img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
-    <nav class="menu" aria-label="Menu principal">
+    <nav class="menu" id="destinationMenu" aria-label="Menu principal">
       <a href="../index.html">Accueil</a>
       <a href="../services.html">Services</a>
       <a href="destinations.html">Destinations</a>
@@ -140,6 +141,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <a href="test-eligibilite.html">Test d'éligibilité</a>
       <a href="../contact.html">Contact</a>
     </nav>
+    <button type="button" class="site-menu-toggle" id="destinationMenuToggle" data-site-menu-toggle aria-controls="destinationMenu" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations%20sur%20vos%20tarifs" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
@@ -158,8 +160,8 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <div class="price main">
         <div class="top"><span class="flag f-fr" aria-hidden="true"></span>France</div>
         <span class="tag">Procédure Campus France</span>
-        <b>100 000 FCFA</b>
-        <small>Accompagnement de votre procédure Études en France. Places limitées à 100 pour la rentrée 2027.</small>
+        <b class="quote">Sur devis personnalisé</b>
+        <small>Le devis dépend de votre dossier et de votre projet.</small>
       </div>
       <div class="price">
         <div class="top"><span class="flag f-ca" aria-hidden="true"></span>Canada</div>
@@ -173,9 +175,9 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       </div>
       <div class="price">
         <div class="top"><span class="flag f-it" aria-hidden="true"></span>Italie</div>
-        <span class="tag">Pack en 3 étapes</span>
-        <b>150 000 FCFA</b>
-        <small>Déclaration de valeur, admission, visa</small>
+        <span class="tag">Accompagnement personnalisé</span>
+        <b class="quote">Sur devis personnalisé</b>
+        <small>Déclaration de valeur, admission et visa.</small>
       </div>
       <div class="price">
         <div class="top"><span class="flag f-ch" aria-hidden="true"></span>Suisse</div>
@@ -199,12 +201,12 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
         <table class="fee">
           <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
           <tbody>
-            <tr class="ours"><td>Accompagnement Einstein Services</td><td class="amt">100 000 FCFA</td><td>Einstein Services</td></tr>
+            <tr class="ours"><td>Accompagnement Einstein Services</td><td class="amt">Sur devis personnalisé</td><td>Einstein Services</td></tr>
             <tr><td>Frais de dossier Campus France</td><td class="amt">85 000 FCFA<span>non remboursables</span></td><td>Sunu Bank (ex-BICIS), après la demande de paiement</td></tr>
             <tr><td>Visa long séjour étudiant</td><td class="amt">50 €<span>environ 32 800 FCFA</span></td><td>Consulat de France, dépôt chez VFS Global</td></tr>
             <tr><td>Frais de service VFS Global</td><td class="amt">environ 15 000 FCFA</td><td>VFS Global</td></tr>
             <tr><td>Validation du visa à l'arrivée en France</td><td class="amt">50 €</td><td>En ligne, dans les 3 mois suivant l'arrivée</td></tr>
-            <tr class="ours"><td>Solution AVI si vous n'avez pas la totalité des fonds</td><td class="amt">525 000 FCFA</td><td>Univers France Succès, notre partenaire</td></tr>
+            <tr class="ours"><td>Solution AVI si vous n'avez pas la totalité des fonds</td><td class="amt">Conditions communiquées par l'équipe</td><td>Univers France Succès, notre partenaire</td></tr>
             <tr class="funds"><td>Ressources à justifier pour le visa</td><td class="amt">877,50 € par mois<span>10 530 € sur 12 mois, environ 6,91 millions FCFA</span></td><td>AVI ou garant (depuis le 1er août 2026)</td></tr>
           </tbody>
         </table>
@@ -249,8 +251,8 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
         <table class="fee">
           <thead><tr><th scope="col">Poste</th><th scope="col">Montant</th><th scope="col">Payé à</th></tr></thead>
           <tbody>
-            <tr class="ours"><td>Pack Einstein Services (déclaration de valeur, admission, visa)</td><td class="amt">150 000 FCFA</td><td>Einstein Services</td></tr>
-            <tr class="ours"><td>Solution AVI pour les étudiants sans garant</td><td class="amt">500 000 FCFA</td><td>Einstein Services</td></tr>
+            <tr class="ours"><td>Pack Einstein Services (déclaration de valeur, admission, visa)</td><td class="amt">Sur devis personnalisé</td><td>Einstein Services</td></tr>
+            <tr class="ours"><td>Solution AVI pour les étudiants sans garant</td><td class="amt">Conditions communiquées par l'équipe</td><td>Einstein Services</td></tr>
             <tr><td>Déclaration de valeur</td><td class="amt">32 800 FCFA<span>50 € par déclaration ; gratuite pour les boursiers inscrits</span></td><td>Ambassade d'Italie à Dakar</td></tr>
             <tr><td>Légalisation de document</td><td class="amt">15 750 FCFA<span>24 € par document</span></td><td>Ambassade d'Italie à Dakar</td></tr>
             <tr><td>Traduction</td><td class="amt">8 550 FCFA<span>13 € par traduction</span></td><td>Ambassade d'Italie à Dakar</td></tr>
@@ -284,7 +286,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
         <h3>Univers France Succès</h3>
         <span class="role">Attestation de virement irrévocable (AVI)</span>
         <p>Einstein Services est le premier partenaire d'Univers France Succès, depuis sa toute première campagne AVI en 2024. L'AVI permet de justifier les ressources exigées pour le visa étudiant en France (877,50 € par mois depuis le 1er août 2026).</p>
-        <p>Vous n'avez pas la totalité des fonds ? La solution de notre partenaire vous permet de ne verser que 525 000 FCFA. Nos conseillers vous expliquent les conditions.</p>
+        <p>Vous n'avez pas la totalité des fonds ? Contactez nos conseillers pour connaître les conditions de la solution de notre partenaire.</p>
       </div>
       <div class="partner">
         <h3>Nexroom</h3>
@@ -296,7 +298,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <div class="partner">
         <h3>Italie : solution AVI</h3>
         <span class="role">Étudiants sans garant</span>
-        <p>Pour les étudiants qui n'ont pas de garant, Einstein Services propose une solution AVI à 500 000 FCFA.</p>
+        <p>Pour les étudiants qui n'ont pas de garant, contactez Einstein Services pour connaître les conditions de la solution AVI.</p>
       </div>
       <div class="partner">
         <h3>Autres services Einstein Services Voyages</h3>
@@ -345,5 +347,6 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
     <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="../mentions-legales.html">Mentions légales</a> · <a href="../politique-confidentialite.html">Politique de confidentialité</a></div>
   </div>
 </footer>
+<script src="../js/site-header.js"></script>
 </body>
 </html>

@@ -155,13 +155,14 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 @media (max-width:1240px){.header-wa{display:none}}
 </style>
 <link rel="stylesheet" href="../css/resources-theme.css">
+  <link rel="stylesheet" href="../css/site-header.css" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="../index.html"><img src="../img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
-    <nav class="menu" aria-label="Menu principal">
+    <nav class="menu" id="destinationMenu" aria-label="Menu principal">
       <a href="../index.html">Accueil</a>
       <a href="../services.html">Services</a>
       <a href="destinations.html">Destinations</a>
@@ -173,6 +174,7 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
       <a href="test-eligibilite.html" aria-current="page">Test d'éligibilité</a>
       <a href="../contact.html">Contact</a>
     </nav>
+    <button type="button" class="site-menu-toggle" id="destinationMenuToggle" data-site-menu-toggle aria-controls="destinationMenu" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
@@ -359,8 +361,8 @@ var C = {
         ["Soit sur 12 mois", "10 530 € (environ 6,91 millions FCFA)"],
         ["Frais Campus France", "85 000 FCFA, non remboursables"],
         ["Visa étudiant", "50 € (environ 32 800 FCFA)"],
-        ["Accompagnement Einstein Services", "100 000 FCFA"],
-        ["Solution AVI (partenaire Univers France Succès)", "525 000 FCFA si vous n'avez pas les fonds"]
+        ["Accompagnement Einstein Services", "Devis personnalisé auprès de l'équipe"],
+        ["Solution AVI (partenaire Univers France Succès)", "Conditions à confirmer avec l'équipe"]
       ];
       return { reasons: R, steps: steps, dates: dates, budget: budget };
     }
@@ -400,7 +402,7 @@ var C = {
       var budget = [
         ["Preuve de fonds", "22 895 $ CA + 1re année de scolarité"],
         ["Québec", "24 617 $ CA + 1re année de scolarité"],
-        ["Accompagnement Einstein Services", "200 000 FCFA, en deux tranches"],
+        ["Accompagnement Einstein Services", "Devis personnalisé auprès de l'équipe"],
         ["Frais d'admission", "50 à 350 $ CA"],
         ["CAQ (Québec)", "135 $ CA"],
         ["Permis et biométrie", "150 $ CA + 85 $ CA"]
@@ -491,8 +493,8 @@ var C = {
         ["En FCFA", "environ 6,68 millions"],
         ["Visa D études", "50 € (environ 32 800 FCFA)"],
         ["Déclaration de valeur", "32 800 FCFA"],
-        ["Pack Einstein Services", "150 000 FCFA"],
-        ["Solution AVI sans garant", "500 000 FCFA"]
+        ["Pack Einstein Services", "Devis personnalisé auprès de l'équipe"],
+        ["Solution AVI sans garant", "Conditions à confirmer avec l'équipe"]
       ];
       return { reasons: R, steps: steps, dates: dates, budget: budget };
     }
@@ -704,5 +706,6 @@ function computeStatus(c, a){
   setCountry(C[start] ? start : "france", false);
 })();
 </script>
+<script src="../js/site-header.js"></script>
 </body>
 </html>

@@ -153,13 +153,14 @@ footer.site a:hover{color:#ffbd59}
 }
 </style>
 <link rel="stylesheet" href="../css/resources-theme.css">
+  <link rel="stylesheet" href="../css/site-header.css" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="destinations.html"><img src="../img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
-    <nav class="menu" aria-label="Menu principal">
+    <nav class="menu" id="destinationMenu" aria-label="Menu principal">
       <a href="destinations.html" aria-current="page">Destinations</a>
       <a href="etablissements.html">Établissements</a>
       <a href="formations.html">Formations</a>
@@ -168,6 +169,7 @@ footer.site a:hover{color:#ffbd59}
       <a href="tarifs.html">Tarifs</a>
       <a href="test-eligibilite.html">Test d'éligibilité</a>
     </nav>
+    <button type="button" class="site-menu-toggle" id="destinationMenuToggle" data-site-menu-toggle aria-controls="destinationMenu" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
@@ -270,7 +272,7 @@ footer.site a:hover{color:#ffbd59}
           </ul>
         </div>
       </div>
-      <div class="note"><b>Frais à prévoir :</b> accompagnement Einstein Services 100 000 FCFA (places limitées à 100 pour la rentrée 2027) ; solution AVI avec Univers France Succès à 525 000 FCFA si vous n'avez pas la totalité des fonds ; frais Campus France 85 000 FCFA ; visa étudiant 50 € (environ 32 800 FCFA) plus environ 15 000 FCFA de frais VFS Global ; validation du visa à l'arrivée 50 €. <a href="tarifs.html#france">Détail des tarifs</a></div>
+      <div class="note"><b>Frais à prévoir :</b> pour connaître le devis d'accompagnement Einstein Services et les conditions de l'AVI, contactez notre équipe ; frais Campus France 85 000 FCFA ; visa étudiant 50 € (environ 32 800 FCFA) plus environ 15 000 FCFA de frais VFS Global ; validation du visa à l'arrivée 50 €. <a href="tarifs.html#france">Détail des frais officiels</a></div>
       <div class="warn"><b>Attention :</b> un document non authentique entraîne 5 ans d'inéligibilité. La demande de paiement ne signifie pas que le dossier est éligible : vérifiez les critères avant de payer.</div>
       <div class="cta">
         <a class="btn btn-primary" href="test-eligibilite.html#france">Tester mon éligibilité</a>
@@ -316,7 +318,7 @@ footer.site a:hover{color:#ffbd59}
         </div>
       </div>
       <div class="note"><b>Québec :</b> un étudiant seul doit prouver 24 617 $ CA pour ses frais de subsistance en 2026, soit près de 60 % de plus qu'en 2025, et le CAQ coûte 135 $ CA.</div>
-      <div class="note"><b>Frais à prévoir :</b> accompagnement Einstein Services 200 000 FCFA en deux tranches (100 000 FCFA avant l'admission, 100 000 FCFA après) ; frais d'admission de 50 à 350 $ CA selon l'établissement ; CAQ 135 $ CA (Québec) ; permis d'études 150 $ CA ; biométrie 85 $ CA. <a href="tarifs.html#canada">Détail des tarifs</a></div>
+      <div class="note"><b>Frais à prévoir :</b> pour connaître le devis d'accompagnement Einstein Services, contactez notre équipe ; frais d'admission de 50 à 350 $ CA selon l'établissement ; CAQ 135 $ CA (Québec) ; permis d'études 150 $ CA ; biométrie 85 $ CA. <a href="tarifs.html#canada">Détail des frais officiels</a></div>
       <div class="warn"><b>Attention :</b> une preuve de fonds insuffisante ou mal expliquée est la première cause de refus.</div>
       <div class="cta">
         <a class="btn btn-primary" href="test-eligibilite.html#canada">Tester mon éligibilité</a>
@@ -409,7 +411,7 @@ footer.site a:hover{color:#ffbd59}
           </ul>
         </div>
       </div>
-      <div class="note"><b>Frais à prévoir :</b> pack Einstein Services 150 000 FCFA (déclaration de valeur, admission, visa) ; solution AVI à 500 000 FCFA pour les étudiants sans garant ; déclaration de valeur 32 800 FCFA par document à l'Ambassade d'Italie à Dakar (plus 15 750 FCFA par légalisation et 8 550 FCFA par traduction) ; visa D études 50 € (environ 32 800 FCFA) plus les frais de service. <a href="tarifs.html#italie">Détail des tarifs</a></div>
+      <div class="note"><b>Frais à prévoir :</b> pour connaître le devis du pack Einstein Services et les conditions de l'AVI, contactez notre équipe ; déclaration de valeur 32 800 FCFA par document à l'Ambassade d'Italie à Dakar (plus 15 750 FCFA par légalisation et 8 550 FCFA par traduction) ; visa D études 50 € (environ 32 800 FCFA) plus les frais de service. <a href="tarifs.html#italie">Détail des frais officiels</a></div>
       <div class="warn"><b>Attention :</b> les fonds de tontine ou de microfinance ne sont pas acceptés. Une préinscription « sous condition » ne permet pas de demander le visa, et une préinscription validée ne garantit pas le visa.</div>
       <div class="cta">
         <a class="btn btn-primary" href="test-eligibilite.html#italie">Tester mon éligibilité</a>
@@ -510,5 +512,6 @@ footer.site a:hover{color:#ffbd59}
     <div class="legal">© 2026 Einstein Services. Tous droits réservés.</div>
   </div>
 </footer>
+<script src="../js/site-header.js"></script>
 </body>
 </html>

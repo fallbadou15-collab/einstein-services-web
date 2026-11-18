@@ -132,13 +132,14 @@ table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-s
 @media (max-width:760px){.gcols{grid-template-columns:1fr}.guide{padding:18px}}
 </style>
 <link rel="stylesheet" href="css/resources-theme.css">
+  <link rel="stylesheet" href="css/site-header.css" />
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
-    <nav class="menu" aria-label="Menu principal">
+    <nav class="menu" id="destinationMenu" aria-label="Menu principal">
       <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
       <a href="destinations.html">Destinations</a>
@@ -150,6 +151,7 @@ table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-s
       <a href="test-eligibilite.html">Test d'éligibilité</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button type="button" class="site-menu-toggle" id="destinationMenuToggle" data-site-menu-toggle aria-controls="destinationMenu" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
     <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
@@ -240,7 +242,7 @@ table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-s
       <li>Les fonds sont versés sur un compte bloqué à votre nom.</li>
       <li>La banque délivre l'attestation, à joindre au dossier de visa.</li>
       <li>Une fois en France, vous recevez chaque mois une partie de la somme.</li>
-      <li>Sans la totalité des fonds, notre partenaire propose une solution à 525 000 FCFA : nos conseillers vous en expliquent les conditions.</li>
+      <li>Sans la totalité des fonds, contactez nos conseillers pour connaître les conditions de la solution AVI de notre partenaire.</li>
     </ol></div>
     <div><h3>À ne pas confondre</h3><ul>
       <li>L'AVI n'est pas l'acompte de scolarité que demandent certaines écoles privées.</li>
@@ -523,5 +525,6 @@ table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-s
 </footer>
 
 <script src="js/site-ui.js"></script>
+<script src="js/site-header.js"></script>
 </body>
 </html>
