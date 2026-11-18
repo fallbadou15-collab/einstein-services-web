@@ -1,5 +1,28 @@
 (() => {
   const isEnglish = document.documentElement.lang === "en";
+  const header = document.querySelector("header.navbar, header.u-navbar, header.site");
+
+  if (header && !document.querySelector(".u-topbar")) {
+    const topbar = document.createElement("div");
+    topbar.className = "u-topbar";
+    topbar.innerHTML = `
+      <div class="u-topbar-inner">
+        <div class="u-topbar-left">
+          <a class="u-topbar-phone" href="tel:+221338305460">
+            ${isEnglish ? "Call us" : "Appelez-nous"}: +221 33 830 54 60 / +221 78 792 73 73 / +221 78 733 81 81
+          </a>
+        </div>
+        <div class="u-topbar-left">
+          <nav class="u-topbar-socials" aria-label="${isEnglish ? "Social media" : "Réseaux sociaux"}">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" aria-label="Facebook" target="_blank" rel="noopener"></a>
+            <a href="https://www.instagram.com/einsteinservices" aria-label="Instagram" target="_blank" rel="noopener"></a>
+            <a href="https://www.linkedin.com/company/einsteinservices" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+            <a href="https://www.tiktok.com/@einsteinservices1" aria-label="TikTok" target="_blank" rel="noopener"></a>
+          </nav>
+        </div>
+      </div>`;
+    header.before(topbar);
+  }
 
   document.querySelectorAll("[data-site-menu-toggle]").forEach((button) => {
     const menu = document.getElementById(button.getAttribute("aria-controls"));
