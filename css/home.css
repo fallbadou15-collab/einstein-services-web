@@ -165,6 +165,11 @@ body {
 .u-nav-cta:hover {
   background: var(--u-blue);
 }
+
+.u-hero-card ol a {
+  align-items: center;
+  gap: 0;
+}
 .u-burger {
   display: none;
   background: none;
