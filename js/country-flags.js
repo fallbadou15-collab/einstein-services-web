@@ -66,7 +66,7 @@
         acceptNode(node) {
           if (!node.parentElement) return NodeFilter.FILTER_REJECT;
           if (node.parentElement.closest(
-            "script, style, textarea, option, .country-with-flag, .lang-switch",
+            "script, style, textarea, option, .country-with-flag, .lang-switch, .country, .card, article, .dest-card, .destination-card",
           )) {
             return NodeFilter.FILTER_REJECT;
           }
@@ -90,6 +90,11 @@
       let changed = false;
 
       while ((match = pattern.exec(text)) !== null) {
+        const beforeMatch = text.slice(0, match.index);
+        if (/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]\s*$/.test(beforeMatch)) {
+          continue;
+        }
+
         changed = true;
         if (match.index > lastIndex) {
           fragment.append(document.createTextNode(text.slice(lastIndex, match.index)));
