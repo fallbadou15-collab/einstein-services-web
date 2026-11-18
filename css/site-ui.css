@@ -48,10 +48,6 @@
   white-space: nowrap;
 }
 
-.country-with-flag::before {
-  content: attr(data-flag) " ";
-}
-
 .destinations-guide {
   max-width: none;
   padding: 1px 0 40px;
