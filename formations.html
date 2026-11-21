@@ -65,16 +65,7 @@ h3{font:700 19px/1.3 var(--font-display);margin:0}
 .lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
 .section{padding:26px 0}
 .sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
-.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
-.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
-.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
-.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
-.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
-.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
-.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
-.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
-.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
-.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
+.flag{display:inline-block;width:28px;height:19px;object-fit:contain;background:#fff;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
 .f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
 .chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
@@ -281,7 +272,7 @@ var D = [
     $("rows").innerHTML = '<div class="row head"><span>Pays</span><span>Diplôme et durée</span><span>Comment candidater</span><span>Condition clé</span><span></span></div>' +
       x.r.map(function(r){
         var c = C[r[0]];
-        return '<div class="row"><span class="country"><span class="flag f-' + r[0] + '" aria-hidden="true"></span>' + c[0] + '</span>' +
+        return '<div class="row"><span class="country"><img class="flag" src="img/flags/' + r[0] + '.svg" alt="" aria-hidden="true">' + c[0] + '</span>' +
           '<span class="dip"><span class="lab">Diplôme et durée</span><b>' + r[1] + '</b><span>' + r[2] + '</span></span>' +
           '<span><span class="lab">Comment candidater</span>' + r[3] + '</span>' +
           '<span><span class="lab">Condition clé</span>' + r[4] + '</span>' +

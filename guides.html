@@ -65,16 +65,7 @@ h3{font:700 19px/1.3 var(--font-display);margin:0}
 .lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
 .section{padding:26px 0}
 .sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
-.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
-.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
-.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
-.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
-.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
-.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
-.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
-.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
-.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
-.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
+.flag{display:inline-block;width:28px;height:19px;object-fit:contain;background:#fff;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
 .f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
 .chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
@@ -376,15 +367,15 @@ table.mini th{font:700 12.5px var(--font-body);text-transform:uppercase;letter-s
   <div class="tw"><table class="mini">
     <thead><tr><th>Pays</th><th>Ressources à justifier</th><th>Principaux frais officiels</th></tr></thead>
     <tbody>
-      <tr><td><span class="flag f-fr" aria-hidden="true"></span> France</td><td>877,50 € par mois, soit 10 530 € par an</td><td>Campus France 85 000 FCFA ; visa 50 €</td></tr>
-      <tr><td><span class="flag f-ca" aria-hidden="true"></span> Canada</td><td>22 895 $ CA (24 617 $ CA au Québec) + 1re année de scolarité</td><td>Permis 150 $ CA ; biométrie 85 $ CA ; CAQ 135 $ CA</td></tr>
-      <tr><td><span class="flag f-be" aria-hidden="true"></span> Belgique</td><td>1 062 € par mois, soit 12 744 € par an</td><td>Équivalence 150 € ; admission 200 € ; visa 250 €</td></tr>
-      <tr><td><span class="flag f-it" aria-hidden="true"></span> Italie</td><td>10 179,85 €</td><td>Déclaration de valeur 32 800 FCFA ; visa 50 €</td></tr>
-      <tr><td><span class="flag f-ch" aria-hidden="true"></span> Suisse</td><td>Selon le canton : 21 900 CHF par an à Fribourg</td><td>Visa en principe gratuit pour les étudiants</td></tr>
-      <tr><td><span class="flag f-ma" aria-hidden="true"></span> Maroc</td><td>Bourse AMCI, ou frais de l'école privée</td><td>Carte de séjour étudiant à l'arrivée</td></tr>
-      <tr><td><span class="flag f-de" aria-hidden="true"></span> Allemagne</td><td>11 904 € sur un compte bloqué</td><td>Visa environ 75 € ; scolarité publique gratuite, sauf Bade-Wurtemberg</td></tr>
-      <tr><td><span class="flag f-tr" aria-hidden="true"></span> Turquie</td><td>Bourse complète, ou frais de l'université</td><td>Candidature à la bourse gratuite</td></tr>
-      <tr><td><span class="flag f-ro" aria-hidden="true"></span> Roumanie</td><td>Frais de scolarité en euros, payés après l'acceptation</td><td>Visa d'études à l'ambassade de Roumanie</td></tr>
+      <tr><td><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true"> France</td><td>877,50 € par mois, soit 10 530 € par an</td><td>Campus France 85 000 FCFA ; visa 50 €</td></tr>
+      <tr><td><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true"> Canada</td><td>22 895 $ CA (24 617 $ CA au Québec) + 1re année de scolarité</td><td>Permis 150 $ CA ; biométrie 85 $ CA ; CAQ 135 $ CA</td></tr>
+      <tr><td><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true"> Belgique</td><td>1 062 € par mois, soit 12 744 € par an</td><td>Équivalence 150 € ; admission 200 € ; visa 250 €</td></tr>
+      <tr><td><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true"> Italie</td><td>10 179,85 €</td><td>Déclaration de valeur 32 800 FCFA ; visa 50 €</td></tr>
+      <tr><td><img class="flag" src="img/flags/ch.svg" alt="" aria-hidden="true"> Suisse</td><td>Selon le canton : 21 900 CHF par an à Fribourg</td><td>Visa en principe gratuit pour les étudiants</td></tr>
+      <tr><td><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true"> Maroc</td><td>Bourse AMCI, ou frais de l'école privée</td><td>Carte de séjour étudiant à l'arrivée</td></tr>
+      <tr><td><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true"> Allemagne</td><td>11 904 € sur un compte bloqué</td><td>Visa environ 75 € ; scolarité publique gratuite, sauf Bade-Wurtemberg</td></tr>
+      <tr><td><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true"> Turquie</td><td>Bourse complète, ou frais de l'université</td><td>Candidature à la bourse gratuite</td></tr>
+      <tr><td><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true"> Roumanie</td><td>Frais de scolarité en euros, payés après l'acceptation</td><td>Visa d'études à l'ambassade de Roumanie</td></tr>
     </tbody>
   </table></div>
   <div class="gfoot"><a class="btn btn-primary btn-sm" href="tarifs.html">Voir tous les tarifs</a><a class="btn btn-wa btn-sm" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20calculer%20le%20budget%20de%20mon%20projet%20d'%C3%A9tudes." target="_blank" rel="noopener">Calculer mon budget avec un conseiller</a></div>

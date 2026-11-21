@@ -48,18 +48,9 @@ h2 { font: 800 clamp(24px, 3.4vw, 32px)/1.15 var(--font-display); margin: 0 0 6p
 h3 { font: 700 19px/1.3 var(--font-display); margin: 0 0 10px; }
 .lead { max-width: 62ch; color: var(--muted); font-size: 19px; margin: 0; }
 .section { padding: 28px 0; }
-.flag { display: inline-block; width: 30px; height: 20px; border-radius: 4px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); vertical-align: -4px; }
+.flag { display: inline-block; width: 30px; height: 20px; object-fit: contain; background: #fff; border-radius: 4px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); vertical-align: -4px; }
 .dest-photo-gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,250px)); gap: 12px; margin-bottom: 20px; }
 .dest-photo-gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; }
-.f-fr { background: linear-gradient(90deg,#0055a4 0 33.4%,#fff 33.4% 66.6%,#ef4135 66.6%); }
-.f-ca { background: linear-gradient(90deg,#d52b1e 0 25%,#fff 25% 75%,#d52b1e 75%); }
-.f-be { background: linear-gradient(90deg,#1a1a1a 0 33.4%,#fdda24 33.4% 66.6%,#ef3340 66.6%); }
-.f-it { background: linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#ce2b37 66.6%); }
-.f-ch { background: linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#da291c; width: 20px; }
-.f-ma { background: radial-gradient(circle,#c1272d 0 20%,#006233 21% 33%,#c1272d 34%); }
-.f-de { background: linear-gradient(180deg,#000 0 33.4%,#dd0000 33.4% 66.6%,#ffce00 66.6%); }
-.f-tr { background: radial-gradient(circle at 54% 50%,#e30a17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#e30a17; }
-.f-ro { background: linear-gradient(90deg,#002b7f 0 33.4%,#fcd116 33.4% 66.6%,#ce1126 66.6%); }
 .table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
 table.compare { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 15.5px; }
 table.compare th, table.compare td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -76,7 +67,6 @@ table.compare td.num { font-variant-numeric: tabular-nums; font-weight: 600; }
 .fiche-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
 .fiche-head p { margin: 0; color: var(--muted); max-width: 62ch; }
 .fiche-head .flag { width: 40px; height: 27px; margin-right: 6px; }
-.fiche-head .f-ch { width: 27px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; margin-bottom: 22px; }
 .tile { border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; background: var(--paper); }
 .tile span { display: block; font-size: 13.5px; color: var(--muted); font-weight: 600; }
@@ -146,15 +136,15 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
       <table class="compare">
         <thead><tr><th scope="col">Country</th><th scope="col">Required process</th><th scope="col">Proof of funds</th><th scope="col">Key date</th></tr></thead>
         <tbody>
-          <tr><th scope="row"><a href="#france"><span class="flag f-fr" aria-hidden="true"></span>France</a></th><td>Études en France (Campus France Senegal)</td><td class="num">€877.50 per month</td><td>Apply by 15 December 2026</td></tr>
-          <tr><th scope="row"><a href="#canada"><span class="flag f-ca" aria-hidden="true"></span>Canada</a></th><td>Acceptance letter + PAL, or CAQ in Quebec</td><td class="num">CAD 22,895 + first-year tuition (Quebec: CAD 24,617)</td><td>Annual quotas: apply early</td></tr>
-          <tr><th scope="row"><a href="#belgique"><span class="flag f-be" aria-hidden="true"></span>Belgium</a></th><td>Secondary diploma equivalency + D visa</td><td class="num">€1,062 per month (2026–27)</td><td>Apply for equivalency as soon as applications open</td></tr>
-          <tr><th scope="row"><a href="#italie"><span class="flag f-it" aria-hidden="true"></span>Italy</a></th><td>Pre-enrolment validated on Universitaly</td><td class="num">€10,179.85</td><td>2027–28 study visa deadline: 31 October 2027</td></tr>
-          <tr><th scope="row"><a href="#suisse"><span class="flag f-ch" aria-hidden="true"></span>Switzerland</a></th><td>Direct admission to a school + D visa</td><td class="num">CHF 21,900–24,000 per year, depending on canton</td><td>Apply for the visa at least 3 months before term starts</td></tr>
-          <tr><th scope="row"><a href="#maroc"><span class="flag f-ma" aria-hidden="true"></span>Morocco</a></th><td>AMCI scholarship or private school; residence card after arrival</td><td class="num">Scholarship or school fees</td><td>Watch for the AMCI call from May 2027</td></tr>
-          <tr><th scope="row"><a href="#allemagne"><span class="flag f-de" aria-hidden="true"></span>Germany</a></th><td>Studienkolleg with secondary diploma alone; national D visa</td><td class="num">€11,904 in a blocked account</td><td>Deadlines vary by university</td></tr>
-          <tr><th scope="row"><a href="#turquie"><span class="flag f-tr" aria-hidden="true"></span>Türkiye</a></th><td>Türkiye Scholarships or direct admission; visa then residence permit</td><td class="num">Full scholarship or university fees</td><td>Scholarship applications: January–February</td></tr>
-          <tr><th scope="row"><a href="#roumanie"><span class="flag f-ro" aria-hidden="true"></span>Romania</a></th><td>Acceptance letter from the ministry; study visa</td><td class="num">Tuition fees in euros</td><td>Term starts on 1 October (indicative)</td></tr>
+          <tr><th scope="row"><a href="#france"><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true">France</a></th><td>Études en France (Campus France Senegal)</td><td class="num">€877.50 per month</td><td>Apply by 15 December 2026</td></tr>
+          <tr><th scope="row"><a href="#canada"><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true">Canada</a></th><td>Acceptance letter + PAL, or CAQ in Quebec</td><td class="num">CAD 22,895 + first-year tuition (Quebec: CAD 24,617)</td><td>Annual quotas: apply early</td></tr>
+          <tr><th scope="row"><a href="#belgique"><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true">Belgium</a></th><td>Secondary diploma equivalency + D visa</td><td class="num">€1,062 per month (2026–27)</td><td>Apply for equivalency as soon as applications open</td></tr>
+          <tr><th scope="row"><a href="#italie"><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true">Italy</a></th><td>Pre-enrolment validated on Universitaly</td><td class="num">€10,179.85</td><td>2027–28 study visa deadline: 31 October 2027</td></tr>
+          <tr><th scope="row"><a href="#suisse"><img class="flag" src="img/flags/ch.svg" alt="" aria-hidden="true">Switzerland</a></th><td>Direct admission to a school + D visa</td><td class="num">CHF 21,900–24,000 per year, depending on canton</td><td>Apply for the visa at least 3 months before term starts</td></tr>
+          <tr><th scope="row"><a href="#maroc"><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true">Morocco</a></th><td>AMCI scholarship or private school; residence card after arrival</td><td class="num">Scholarship or school fees</td><td>Watch for the AMCI call from May 2027</td></tr>
+          <tr><th scope="row"><a href="#allemagne"><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true">Germany</a></th><td>Studienkolleg with secondary diploma alone; national D visa</td><td class="num">€11,904 in a blocked account</td><td>Deadlines vary by university</td></tr>
+          <tr><th scope="row"><a href="#turquie"><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true">Türkiye</a></th><td>Türkiye Scholarships or direct admission; visa then residence permit</td><td class="num">Full scholarship or university fees</td><td>Scholarship applications: January–February</td></tr>
+          <tr><th scope="row"><a href="#roumanie"><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true">Romania</a></th><td>Acceptance letter from the ministry; study visa</td><td class="num">Tuition fees in euros</td><td>Term starts on 1 October (indicative)</td></tr>
           <tr><th scope="row"><a href="#united-states"><img class="flag" src="img/flags/us.svg" alt="" aria-hidden="true">United States</a></th><td>Admission and student visa, depending on the programme</td><td>Confirm with the institution and current official rules</td><td>Dates vary by institution</td></tr>
           <tr><th scope="row"><a href="#united-kingdom"><img class="flag" src="img/flags/gb.svg" alt="" aria-hidden="true">United Kingdom</a></th><td>Admission and Student visa, depending on the programme</td><td>Confirm with the institution and current official rules</td><td>Dates vary by institution</td></tr>
           <tr><th scope="row"><a href="#saudi-arabia"><img class="flag" src="img/flags/sa.svg" alt="" aria-hidden="true">Saudi Arabia</a></th><td>Admission or scholarship, depending on the institution</td><td>Confirm with the institution and current official rules</td><td>Check current calls with each institution</td></tr>
@@ -165,25 +155,24 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
 
   <section class="section" aria-label="Country guides">
     <nav class="tabs" aria-label="Choose a country">
-      <a href="#france" data-tab="france" aria-selected="true"><span class="flag f-fr" aria-hidden="true"></span>France</a>
-      <a href="#canada" data-tab="canada" aria-selected="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</a>
-      <a href="#belgique" data-tab="belgique" aria-selected="false"><span class="flag f-be" aria-hidden="true"></span>Belgium</a>
-      <a href="#italie" data-tab="italie" aria-selected="false"><span class="flag f-it" aria-hidden="true"></span>Italy</a>
-      <a href="#suisse" data-tab="suisse" aria-selected="false"><span class="flag f-ch" aria-hidden="true"></span>Switzerland</a>
-      <a href="#maroc" data-tab="maroc" aria-selected="false"><span class="flag f-ma" aria-hidden="true"></span>Morocco</a>
-      <a href="#allemagne" data-tab="allemagne" aria-selected="false"><span class="flag f-de" aria-hidden="true"></span>Germany</a>
-      <a href="#turquie" data-tab="turquie" aria-selected="false"><span class="flag f-tr" aria-hidden="true"></span>Türkiye</a>
-      <a href="#roumanie" data-tab="roumanie" aria-selected="false"><span class="flag f-ro" aria-hidden="true"></span>Romania</a>
+      <a href="#france" data-tab="france" aria-selected="true"><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true">France</a>
+      <a href="#canada" data-tab="canada" aria-selected="false"><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true">Canada</a>
+      <a href="#belgique" data-tab="belgique" aria-selected="false"><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true">Belgium</a>
+      <a href="#italie" data-tab="italie" aria-selected="false"><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true">Italy</a>
+      <a href="#suisse" data-tab="suisse" aria-selected="false"><img class="flag" src="img/flags/ch.svg" alt="" aria-hidden="true">Switzerland</a>
+      <a href="#maroc" data-tab="maroc" aria-selected="false"><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true">Morocco</a>
+      <a href="#allemagne" data-tab="allemagne" aria-selected="false"><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true">Germany</a>
+      <a href="#turquie" data-tab="turquie" aria-selected="false"><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true">Türkiye</a>
+      <a href="#roumanie" data-tab="roumanie" aria-selected="false"><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true">Romania</a>
       <a href="#united-states" data-tab="united-states" aria-selected="false"><img class="flag" src="img/flags/us.svg" alt="" aria-hidden="true">United States</a>
       <a href="#united-kingdom" data-tab="united-kingdom" aria-selected="false"><img class="flag" src="img/flags/gb.svg" alt="" aria-hidden="true">United Kingdom</a>
       <a href="#saudi-arabia" data-tab="saudi-arabia" aria-selected="false"><img class="flag" src="img/flags/sa.svg" alt="" aria-hidden="true">Saudi Arabia</a>
     </nav>
 
     <article class="fiche" id="france">
-      <div class="fiche-head"><div><h2><span class="flag f-fr" aria-hidden="true"></span>Study in France</h2><p>From Senegal, the Campus France Études en France procedure is required for study visa applications lasting more than six months. The information below covers the 2027 intake.</p></div></div>
-      <div class="dest-photo-gallery" aria-label="Photos of Paris">
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true">Study in France</h2><p>From Senegal, the Campus France Études en France procedure is required for study visa applications lasting more than six months. The information below covers the 2027 intake.</p></div></div>
+      <div class="dest-photo-gallery" aria-label="Photo of Paris">
         <img src="img/destinations/paris-sunset.jpg" alt="The Eiffel Tower in Paris at sunset" width="618" height="1080" loading="lazy" decoding="async">
-        <img src="img/destinations/paris-eiffel.jpg" alt="The Eiffel Tower and Champ de Mars" width="720" height="1080" loading="lazy" decoding="async">
       </div>
       <div class="tiles">
         <div class="tile"><span>Campus France fee</span><b>85,000 FCFA</b><small>non-refundable</small></div>
@@ -224,7 +213,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="canada">
-      <div class="fiche-head"><div><h2><span class="flag f-ca" aria-hidden="true"></span>Study in Canada</h2><p>A study permit is required for programmes lasting more than six months. The number of permits is capped each year.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true">Study in Canada</h2><p>A study permit is required for programmes lasting more than six months. The number of permits is capped each year.</p></div></div>
       <div class="tiles">
         <div class="tile"><span>Proof of funds</span><b>CAD 22,895</b><small>plus first-year tuition</small></div><div class="tile"><span>Permit fee</span><b>CAD 150</b><small>plus CAD 85 biometrics fee</small></div>
         <div class="tile"><span>Provincial attestation</span><b>PAL or CAQ</b><small>CAQ for Quebec</small></div><div class="tile"><span>Master's or doctoral degree</span><b>No PAL</b><small>public institution, since January 2026</small></div>
@@ -241,7 +230,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="belgique">
-      <div class="fiche-head"><div><h2><span class="flag f-be" aria-hidden="true"></span>Study in Belgium</h2><p>A long-stay type D visa is required; a short-stay Schengen visa does not allow you to study.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true">Study in Belgium</h2><p>A long-stay type D visa is required; a short-stay Schengen visa does not allow you to study.</p></div></div>
       <div class="tiles"><div class="tile"><span>Living expenses</span><b>€1,062/month</b><small>2026–27 academic year</small></div><div class="tile"><span>For 12 months</span><b>€12,744</b><small>about 8.36 million FCFA</small></div><div class="tile"><span>Visa</span><b>Type D</b><small>long-stay study visa</small></div><div class="tile"><span>Bachelor's degree</span><b>Equivalency</b><small>Wallonia-Brussels Federation</small></div></div>
       <div class="cols">
         <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a university or university college and note its application deadline.</li><li>Bachelor's: request secondary-school diploma equivalency from the Wallonia-Brussels Federation. For a Master's, the institution decides on admission.</li><li>Obtain proof of enrolment.</li><li>Prepare proof of funds or a sponsor undertaking (Annex 32).</li><li>Apply for a type D visa through the Belgian diplomatic post.</li></ol></div>
@@ -255,7 +244,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="italie">
-      <div class="fiche-head"><div><h2><span class="flag f-it" aria-hidden="true"></span>Study in Italy</h2><p>Pre-enrolment is completed through the Universitaly portal. The published rules cover the 2026–27 and 2027–28 academic years.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true">Study in Italy</h2><p>Pre-enrolment is completed through the Universitaly portal. The published rules cover the 2026–27 and 2027–28 academic years.</p></div></div>
       <div class="tiles"><div class="tile"><span>Required funds</span><b>€10,179.85</b><small>about 6.68 million FCFA</small></div><div class="tile"><span>Calculation</span><b>€783.06 × 13</b><small>per month, for 13 months</small></div><div class="tile"><span>Pre-enrolment</span><b>Universitaly</b><small>validated by the university</small></div><div class="tile"><span>2027–28 visa deadline</span><b>31 October 2027</b><small>final date to apply</small></div></div>
       <div class="cols">
         <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a programme and check the university's dates.</li><li>Submit pre-enrolment through Universitaly and wait for validation.</li><li>Obtain a Declaration of Value or CIMEA certificate for your diplomas.</li><li>Gather proof of funds.</li><li>Apply by appointment for a type D “study, university enrolment” visa at the Italian Embassy.</li></ol></div>
@@ -268,7 +257,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="suisse">
-      <div class="fiche-head"><div><h2><span class="flag f-ch" aria-hidden="true"></span>Study in Switzerland</h2><p>Students contact the university or school directly; the embassy is not involved in pre-enrolment. The canton sets the required proof of funds.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/ch.svg" alt="" aria-hidden="true">Study in Switzerland</h2><p>Students contact the university or school directly; the embassy is not involved in pre-enrolment. The canton sets the required proof of funds.</p></div></div>
       <div class="tiles"><div class="tile"><span>Fribourg</span><b>CHF 21,900</b><small>per year</small></div><div class="tile"><span>Basel</span><b>CHF 2,000</b><small>per month</small></div><div class="tile"><span>Processing time</span><b>2–4 months</b><small>apply at least 3 months ahead</small></div><div class="tile"><span>Visa</span><b>Type D</b><small>apply in person</small></div></div>
       <div class="cols">
         <div class="block"><h3>Application steps</h3><ol class="steps"><li>Obtain admission and proof of enrolment from the school.</li><li>Pay the requested study fees.</li><li>Prepare proof of funds.</li><li>Apply in person for a type D visa at the Swiss Embassy.</li><li>Wait for the canton's decision and then for the visa to be issued.</li></ol></div>
@@ -281,7 +270,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="maroc">
-      <div class="fiche-head"><div><h2><span class="flag f-ma" aria-hidden="true"></span>Study in Morocco</h2><p>Morocco is a leading destination for Senegalese students. Options include AMCI scholarships, managed in Senegal by the Scholarships Directorate, or private schools.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true">Study in Morocco</h2><p>Morocco is a leading destination for Senegalese students. Options include AMCI scholarships, managed in Senegal by the Scholarships Directorate, or private schools.</p></div></div>
       <div class="tiles"><div class="tile"><span>AMCI scholarships 2026–27</span><b>260</b><small>offered to Senegal</small></div><div class="tile"><span>2027–28 campaign</span><b>from May 2027</b><small>watch for announcements</small></div><div class="tile"><span>Student residence card</span><b>1 year</b><small>renewable</small></div><div class="tile"><span>Paid employment</span><b>not permitted</b><small>under student status</small></div></div>
       <div class="cols">
         <div class="block"><h3>AMCI scholarship steps</h3><ol class="steps"><li>Watch for the call from the Ministry of Higher Education.</li><li>Check eligibility: Bachelor's for recent high-school graduates; Master's for Bachelor's degree holders.</li><li>Submit the application to the Scholarships Directorate in Dakar.</li><li>Check entry requirements with the Moroccan Embassy in Dakar.</li><li>Apply for a student residence card after arrival.</li></ol></div>
@@ -294,7 +283,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="allemagne">
-      <div class="fiche-head"><div><h2><span class="flag f-de" aria-hidden="true"></span>Study in Germany</h2><p>Many public universities charge no general tuition. Admission depends on how your previous diploma is recognised, and a blocked account is required for the visa.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true">Study in Germany</h2><p>Many public universities charge no general tuition. Admission depends on how your previous diploma is recognised, and a blocked account is required for the visa.</p></div></div>
       <div class="tiles"><div class="tile"><span>Blocked account, 2026</span><b>€11,904</b><small>€992 per month</small></div><div class="tile"><span>National D visa</span><b>about €75</b><small>6–12 weeks processing</small></div><div class="tile"><span>Tuition</span><b>often free</b><small>public universities, except Baden-Württemberg</small></div><div class="tile"><span>Work allowance</span><b>140 days</b><small>or 280 half-days per year</small></div></div>
       <div class="cols">
         <div class="block"><h3>Application steps</h3><ol class="steps"><li>Check in the anabin database how your diploma is recognised.</li><li>With a secondary diploma only, a two-semester Studienkolleg is generally required; a Bachelor's degree may qualify you for a Master's.</li><li>Apply through uni-assist or directly to the university.</li><li>Meet the language requirement in German (TestDaF, DSH) or English, depending on the programme.</li><li>Open a blocked account; this can take one to three weeks.</li><li>Apply for a national type D study visa at the German Embassy in Dakar.</li></ol></div>
@@ -306,7 +295,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="turquie">
-      <div class="fiche-head"><div><h2><span class="flag f-tr" aria-hidden="true"></span>Study in Türkiye</h2><p>Türkiye is an increasingly popular destination for Senegalese students. You can apply for Türkiye Scholarships or seek direct admission.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true">Study in Türkiye</h2><p>Türkiye is an increasingly popular destination for Senegalese students. You can apply for Türkiye Scholarships or seek direct admission.</p></div></div>
       <div class="tiles"><div class="tile"><span>Türkiye Scholarships 2026</span><b>10 Jan–20 Feb</b><small>free online application</small></div><div class="tile"><span>Scholarship covers</span><b>tuition and living</b><small>housing, stipend and Turkish classes</small></div><div class="tile"><span>French-language programme</span><b>Galatasaray</b><small>Istanbul</small></div><div class="tile"><span>After arrival</span><b>residence permit</b><small>apply in Türkiye</small></div></div>
       <div class="cols">
         <div class="block"><h3>Scholarship steps</h3><ol class="steps"><li>Prepare transcripts, diplomas, a motivation letter and recommendation letters.</li><li>Apply online at turkiyeburslari.gov.tr during the application window.</li><li>Attend an interview if shortlisted.</li><li>Apply for a study visa at the Turkish Embassy, then apply for a residence permit after arrival.</li></ol></div>
@@ -318,7 +307,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
     </article>
 
     <article class="fiche" id="roumanie">
-      <div class="fiche-head"><div><h2><span class="flag f-ro" aria-hidden="true"></span>Study in Romania</h2><p>Some universities offer programmes in English or French. The study acceptance letter issued by the Ministry of Education is a key document for the visa.</p></div></div>
+      <div class="fiche-head"><div><h2><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true">Study in Romania</h2><p>Some universities offer programmes in English or French. The study acceptance letter issued by the Ministry of Education is a key document for the visa.</p></div></div>
       <div class="tiles"><div class="tile"><span>Key document</span><b>Acceptance letter</b><small>issued by the ministry</small></div><div class="tile"><span>Tuition fees</span><b>in euros</b><small>payable after acceptance</small></div><div class="tile"><span>Romanian-language programme</span><b>+ 1 year</b><small>preparatory language year</small></div><div class="tile"><span>Government scholarships</span><b>31 March</b><small>2026 deadline</small></div></div>
       <div class="cols">
         <div class="block"><h3>Application steps</h3><ol class="steps"><li>Choose a university and check its language of instruction.</li><li>Send your application to the university with certified translations.</li><li>Receive the study acceptance letter from the Ministry of Education.</li><li>Pay tuition by the stated deadline (20 days at Politehnica Bucharest).</li><li>Apply for a study visa at the Romanian Embassy.</li></ol></div>
@@ -360,6 +349,7 @@ footer.site .legal { border-top: 1px solid color-mix(in srgb,var(--foot-ink) 18%
         <img src="img/destinations/london-rain.jpg" alt="Big Ben on a rainy London street" width="720" height="1080" loading="lazy" decoding="async">
         <img src="img/destinations/london-fog.jpg" alt="Big Ben in the fog" width="540" height="1080" loading="lazy" decoding="async">
         <img src="img/destinations/london-night.jpg" alt="Big Ben and Westminster in the evening" width="608" height="1080" loading="lazy" decoding="async">
+        <img src="img/destinations/london-day.jpg" alt="Big Ben and the Palace of Westminster in daylight" width="720" height="1080" loading="lazy" decoding="async">
       </div>
       <div class="cols">
         <div class="block"><h3>Prepare your application</h3><ol class="steps">

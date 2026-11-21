@@ -68,17 +68,7 @@ h1{font:800 clamp(32px,5.2vw,52px)/1.05 var(--font-display);margin:14px 0 12px;l
 .country{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;cursor:pointer;font:700 17px/1.2 var(--font-body);color:var(--ink);text-align:left}
 .country small{display:block;color:var(--muted);font-weight:400;font-size:13.5px;margin-top:2px}
 .country[aria-pressed="true"]{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
-.flag{width:32px;height:22px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)}
-.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
-.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
-.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
-.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
-.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:22px}
-.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
-.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
-.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
-.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
-.f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
+.flag{width:32px;height:22px;object-fit:contain;background:#fff;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)}
 .layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start;padding-bottom:56px}
 .intro{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin-bottom:14px}
 .intro p{margin:0;font-size:16px}
@@ -194,15 +184,15 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   </section>
 
   <div class="countries" id="countries" aria-label="Destination">
-    <button type="button" class="country" data-c="france" aria-pressed="true"><span class="flag f-fr" aria-hidden="true"></span><span>France<small>Campus France Sénégal</small></span></button>
-    <button type="button" class="country" data-c="canada" aria-pressed="false"><span class="flag f-ca" aria-hidden="true"></span><span>Canada<small>Permis d'études</small></span></button>
-    <button type="button" class="country" data-c="belgique" aria-pressed="false"><span class="flag f-be" aria-hidden="true"></span><span>Belgique<small>Visa D études</small></span></button>
-    <button type="button" class="country" data-c="italie" aria-pressed="false"><span class="flag f-it" aria-hidden="true"></span><span>Italie<small>Universitaly</small></span></button>
-    <button type="button" class="country" data-c="suisse" aria-pressed="false"><span class="flag f-ch" aria-hidden="true"></span><span>Suisse<small>Visa D études</small></span></button>
-    <button type="button" class="country" data-c="maroc" aria-pressed="false"><span class="flag f-ma" aria-hidden="true"></span><span>Maroc<small>Bourse AMCI ou privé</small></span></button>
-    <button type="button" class="country" data-c="allemagne" aria-pressed="false"><span class="flag f-de" aria-hidden="true"></span><span>Allemagne<small>Compte bloqué</small></span></button>
-    <button type="button" class="country" data-c="turquie" aria-pressed="false"><span class="flag f-tr" aria-hidden="true"></span><span>Turquie<small>Türkiye Bursları</small></span></button>
-    <button type="button" class="country" data-c="roumanie" aria-pressed="false"><span class="flag f-ro" aria-hidden="true"></span><span>Roumanie<small>Lettre d'acceptation</small></span></button>
+    <button type="button" class="country" data-c="france" aria-pressed="true"><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true"><span>France<small>Campus France Sénégal</small></span></button>
+    <button type="button" class="country" data-c="canada" aria-pressed="false"><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true"><span>Canada<small>Permis d'études</small></span></button>
+    <button type="button" class="country" data-c="belgique" aria-pressed="false"><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true"><span>Belgique<small>Visa D études</small></span></button>
+    <button type="button" class="country" data-c="italie" aria-pressed="false"><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true"><span>Italie<small>Universitaly</small></span></button>
+    <button type="button" class="country" data-c="suisse" aria-pressed="false"><img class="flag" src="img/flags/ch.svg" alt="" aria-hidden="true"><span>Suisse<small>Visa D études</small></span></button>
+    <button type="button" class="country" data-c="maroc" aria-pressed="false"><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true"><span>Maroc<small>Bourse AMCI ou privé</small></span></button>
+    <button type="button" class="country" data-c="allemagne" aria-pressed="false"><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true"><span>Allemagne<small>Compte bloqué</small></span></button>
+    <button type="button" class="country" data-c="turquie" aria-pressed="false"><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true"><span>Turquie<small>Türkiye Bursları</small></span></button>
+    <button type="button" class="country" data-c="roumanie" aria-pressed="false"><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true"><span>Roumanie<small>Lettre d'acceptation</small></span></button>
   </div>
 
   <div class="layout">

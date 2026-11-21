@@ -65,17 +65,7 @@ h3{font:700 19px/1.3 var(--font-display);margin:0}
 .lead{max-width:64ch;color:var(--muted);font-size:19px;margin:0}
 .section{padding:26px 0}
 .sub{color:var(--muted);margin:0 0 16px;max-width:66ch}
-.flag{display:inline-block;width:28px;height:19px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
-.f-fr{background:linear-gradient(90deg,#0055A4 0 33.4%,#fff 33.4% 66.6%,#EF4135 66.6%)}
-.f-ca{background:linear-gradient(90deg,#D52B1E 0 25%,#fff 25% 75%,#D52B1E 75%)}
-.f-be{background:linear-gradient(90deg,#1a1a1a 0 33.4%,#FDDA24 33.4% 66.6%,#EF3340 66.6%)}
-.f-it{background:linear-gradient(90deg,#009246 0 33.4%,#fff 33.4% 66.6%,#CE2B37 66.6%)}
-.f-ch{background:linear-gradient(#fff,#fff) center/58% 18% no-repeat,linear-gradient(#fff,#fff) center/18% 58% no-repeat,#DA291C;width:19px}
-.f-ma{background:radial-gradient(circle,#C1272D 0 20%,#006233 21% 33%,#C1272D 34%)}
-.f-de{background:linear-gradient(180deg,#000 0 33.4%,#DD0000 33.4% 66.6%,#FFCE00 66.6%)}
-.f-tr{background:radial-gradient(circle at 54% 50%,#E30A17 0 19%,transparent 20%),radial-gradient(circle at 44% 50%,#fff 0 25%,transparent 26%),#E30A17}
-.f-ro{background:linear-gradient(90deg,#002B7F 0 33.4%,#FCD116 33.4% 66.6%,#CE1126 66.6%)}
-.f-us{background:linear-gradient(#3C3B6E,#3C3B6E) 0 0/42% 54% no-repeat,repeating-linear-gradient(180deg,#B22234 0 15.4%,#fff 15.4% 30.8%)}
+.flag{display:inline-block;width:28px;height:19px;object-fit:contain;background:#fff;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);vertical-align:-3px}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--brand) 9%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--brand) 18%,var(--line))}
 .chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
 .seg{display:flex;flex-wrap:wrap;gap:8px}
@@ -162,15 +152,15 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 <section class="section">
   <div class="seg" id="cats" aria-label="Filtrer par pays" style="margin-bottom:16px">
     <button type="button" data-k="" aria-pressed="true">Toutes</button>
-    <button type="button" data-k="fr" aria-pressed="false"><span class="flag f-fr" aria-hidden="true"></span>France</button>
-    <button type="button" data-k="ca" aria-pressed="false"><span class="flag f-ca" aria-hidden="true"></span>Canada</button>
-    <button type="button" data-k="be" aria-pressed="false"><span class="flag f-be" aria-hidden="true"></span>Belgique</button>
-    <button type="button" data-k="it" aria-pressed="false"><span class="flag f-it" aria-hidden="true"></span>Italie</button>
-    <button type="button" data-k="ma" aria-pressed="false"><span class="flag f-ma" aria-hidden="true"></span>Maroc</button>
-    <button type="button" data-k="de" aria-pressed="false"><span class="flag f-de" aria-hidden="true"></span>Allemagne</button>
-    <button type="button" data-k="tr" aria-pressed="false"><span class="flag f-tr" aria-hidden="true"></span>Turquie</button>
-    <button type="button" data-k="ro" aria-pressed="false"><span class="flag f-ro" aria-hidden="true"></span>Roumanie</button>
-    <button type="button" data-k="us" aria-pressed="false"><span class="flag f-us" aria-hidden="true"></span>États-Unis</button>
+    <button type="button" data-k="fr" aria-pressed="false"><img class="flag" src="img/flags/fr.svg" alt="" aria-hidden="true">France</button>
+    <button type="button" data-k="ca" aria-pressed="false"><img class="flag" src="img/flags/ca.svg" alt="" aria-hidden="true">Canada</button>
+    <button type="button" data-k="be" aria-pressed="false"><img class="flag" src="img/flags/be.svg" alt="" aria-hidden="true">Belgique</button>
+    <button type="button" data-k="it" aria-pressed="false"><img class="flag" src="img/flags/it.svg" alt="" aria-hidden="true">Italie</button>
+    <button type="button" data-k="ma" aria-pressed="false"><img class="flag" src="img/flags/ma.svg" alt="" aria-hidden="true">Maroc</button>
+    <button type="button" data-k="de" aria-pressed="false"><img class="flag" src="img/flags/de.svg" alt="" aria-hidden="true">Allemagne</button>
+    <button type="button" data-k="tr" aria-pressed="false"><img class="flag" src="img/flags/tr.svg" alt="" aria-hidden="true">Turquie</button>
+    <button type="button" data-k="ro" aria-pressed="false"><img class="flag" src="img/flags/ro.svg" alt="" aria-hidden="true">Roumanie</button>
+    <button type="button" data-k="us" aria-pressed="false"><img class="flag" src="img/flags/us.svg" alt="" aria-hidden="true">États-Unis</button>
   </div>
   <div class="layout">
     <div class="news" id="news" aria-live="polite"></div>
@@ -288,7 +278,7 @@ var DL = [
   function render(k){
     var list = N.filter(function(n){ return !k || n.k === k; }).sort(function(x, y){ return y.date < x.date ? -1 : y.date > x.date ? 1 : 0; });
     $("news").innerHTML = list.map(function(n){
-      return '<article class="item"><div class="meta"><time datetime="' + n.date + '">' + (n.shown || fmt(n.date)) + '</time><span class="flag f-' + n.k + '" aria-hidden="true"></span><span class="chip">' + NAMES[n.k] + ' · ' + n.tag + '</span></div>' +
+      return '<article class="item"><div class="meta"><time datetime="' + n.date + '">' + (n.shown || fmt(n.date)) + '</time><img class="flag" src="img/flags/' + n.k + '.svg" alt="" aria-hidden="true"><span class="chip">' + NAMES[n.k] + ' · ' + n.tag + '</span></div>' +
         '<h3>' + n.t + '</h3><p>' + n.p + '</p><div class="impact"><b>Ce que ça change pour vous :</b> ' + n.i + '</div>' +
         '<p class="src">Sources : ' + n.s.map(function(s){ return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + '</a>'; }).join(" · ") + '</p></article>';
     }).join("") || '<p class="empty">Aucune actualité pour ce pays pour le moment.</p>';

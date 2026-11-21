@@ -780,6 +780,53 @@ a.btn[href$="contact-en.html"]:hover {
 .testimonials-section .section-head {
   margin-bottom: 2.5rem;
 }
+.video-testimonials {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border: 1px solid rgba(20, 86, 138, 0.1);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(20, 86, 138, 0.07);
+}
+.video-testimonials-head {
+  margin-bottom: 1.75rem;
+}
+.video-testimonials-head h2 {
+  margin: 0 0 0.7rem;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+}
+.video-testimonials-head p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.video-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.video-testimonial {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(20, 86, 138, 0.12);
+  border-radius: 16px;
+  background: #101923;
+  box-shadow: 0 8px 20px rgba(20, 86, 138, 0.1);
+}
+.video-testimonial video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #101923;
+}
+.video-testimonial figcaption {
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
 .testimonials-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
@@ -851,11 +898,24 @@ a.btn[href$="contact-en.html"]:hover {
   box-shadow: 0 18px 38px rgba(20, 86, 138, 0.12);
 }
 @media (max-width: 900px) {
+  .video-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .testimonials-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 560px) {
+  .video-testimonials {
+    padding: 1rem;
+  }
+  .video-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .video-testimonial {
+    max-width: 360px;
+    margin-inline: auto;
+  }
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
