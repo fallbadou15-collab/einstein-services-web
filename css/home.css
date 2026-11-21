@@ -831,6 +831,46 @@ body {
   display: flex;
   flex-direction: column;
 }
+.u-destination-thumb {
+  display: block;
+  width: 100%;
+  height: clamp(140px, 18vw, 180px);
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.1rem;
+}
+.u-service-flag {
+  display: block;
+  width: 34px;
+  height: 23px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.u-destination-title-flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+.dest-photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.dest-fiche-head .route-country-flag {
+  width: 32px;
+  height: 22px;
+  flex-basis: 32px;
+}
+.dest-photo-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+}
 .u-service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--u-shadow);
@@ -1374,6 +1414,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 981px) {
+  .u-hero-card ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (max-width: 720px) {
   .u-hero-card {
     width: 100%;
@@ -1471,7 +1516,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(20, 86, 138, 0.05);
 }
-.dest-compare {
+.dest-compare-table {
   border-collapse: collapse;
   width: 100%;
   min-width: 720px;
