@@ -15,7 +15,7 @@
         <div class="u-topbar-left">
           <nav class="u-topbar-socials" aria-label="${isEnglish ? "Social media" : "Réseaux sociaux"}">
             <a href="https://www.facebook.com/einsteinservicesvoyages1" aria-label="Facebook" target="_blank" rel="noopener"></a>
-            <a href="https://www.instagram.com/einsteinservices" aria-label="Instagram" target="_blank" rel="noopener"></a>
+            <a href="https://www.instagram.com/einsteinservices360/" aria-label="Instagram" target="_blank" rel="noopener"></a>
             <a href="https://www.linkedin.com/company/einsteinservices" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
             <a href="https://www.tiktok.com/@einsteinservices1" aria-label="TikTok" target="_blank" rel="noopener"></a>
           </nav>
