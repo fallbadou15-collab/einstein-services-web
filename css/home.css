@@ -1336,6 +1336,19 @@ body {
   margin-inline: auto;
 }
 
+.home-brand-banner {
+  width: min(920px, 92%);
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto;
+}
+
+.home-brand-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(20, 86, 138, 0.14);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 980px) {
   .u-hero-inner {
