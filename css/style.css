@@ -855,6 +855,11 @@ a.btn[href$="contact-en.html"]:hover {
   width: 100%;
   height: auto;
 }
+.privacy-blurred video,
+.privacy-blurred img {
+  filter: blur(22px);
+  transform: scale(1.04);
+}
 .testimonials-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
