@@ -57,12 +57,15 @@ if (siteFooter && !siteFooter.querySelector(".footer-about-link")) {
 
   const linksContainer =
     siteFooter.querySelector(".footer-links") ||
+    siteFooter.querySelector(".site-footer-bottom p") ||
     siteFooter.querySelector(".u-footer-bottom .u-container") ||
     siteFooter.querySelector(".footer-inner") ||
     siteFooter;
-  if (linksContainer.classList.contains("footer-links")) {
-    linksContainer.appendChild(document.createTextNode(" · "));
-  } else if (linksContainer.querySelector("a")) {
+  if (
+    linksContainer.classList.contains("footer-links") ||
+    linksContainer.matches(".site-footer-bottom p") ||
+    linksContainer.querySelector("a")
+  ) {
     linksContainer.appendChild(document.createTextNode(" · "));
   }
   linksContainer.appendChild(aboutLink);
@@ -160,7 +163,7 @@ const NAFI_REPLIES = [
   },
   {
     kw: ["adresse", "où", "ou etes", "localisation", "bureau", "yoff", "address", "location", "office"],
-    r: "📍 Nous sommes à Yoff (Dakar, Sénégal) : Route de l'Aéroport, près de la Senelec.\nTéléphones : +221 33 830 54 60 • +221 78 792 73 73 • +221 78 733 81 81",
+    r: "📍 Adresse : Route de l'Aéroport, Dakar 12000, Sénégal.\nTéléphones : +221 33 830 54 60 • +221 78 792 73 73 • +221 78 733 81 81",
   },
   {
     kw: ["qui es", "nafi", "robot", "humain", "personne", "who are you", "assistant"],
@@ -193,7 +196,7 @@ const NAFI_ENGLISH_REPLIES = [
   "📞 To speak with a human advisor:\n• Contact page: contact.html\n• Phone: +221 33 830 54 60\n• Email: " + NAFI_CONTACT_EMAIL,
   "🔒 Nafi does not provide prices. Contact Einstein Services for confirmed rates: contact.html",
   "You're welcome! 😊 Let me know if you have another question. Good luck with your study plans!",
-  "📍 Our office is in Yoff, Dakar, Senegal: Airport Road, near Senelec.\nPhone: +221 33 830 54 60 • +221 78 792 73 73 • +221 78 733 81 81",
+  "📍 Address: Airport Road, Dakar 12000, Senegal.\nPhone: +221 33 830 54 60 • +221 78 792 73 73 • +221 78 733 81 81",
   "I'm Nafi 🤖, Einstein Services' virtual assistant. I can answer common questions and direct you to a human advisor when needed.",
 ];
 

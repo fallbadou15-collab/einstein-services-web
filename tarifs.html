@@ -127,25 +127,35 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
 </head>
 <body>
 <div class="topline" aria-hidden="true"></div>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="img/logo.svg" alt="Einstein Services" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>Einstein Services</span></a>
-    <nav class="menu" id="destinationMenu" aria-label="Menu principal">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="etablissements.html">Établissements</a>
-      <a href="formations.html">Formations</a>
-      <a href="guides.html">Guides</a>
-      <a href="actualites.html">Actualités</a>
-      <a href="tarifs.html" aria-current="page">Tarifs</a>
-      <a href="test-eligibilite.html">Test d'éligibilité</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button type="button" class="site-menu-toggle" id="destinationMenuToggle" data-site-menu-toggle aria-controls="destinationMenu" aria-expanded="false" aria-label="Ouvrir le menu"><span></span></button>
-    <a class="btn btn-wa header-wa" href="https://wa.me/221787927373?text=Bonjour%20Einstein%20Services%2C%20je%20souhaite%20des%20informations%20sur%20vos%20tarifs" target="_blank" rel="noopener">WhatsApp</a>
-  </div>
-</header>
+<header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo" aria-label="Accueil Einstein Services">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+          <a href="agence.html">L'agence</a>
+          <a href="services.html">Services</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="formations.html">Formations</a>
+          <a href="temoignages.html">Témoignages</a>
+          <a href="avi.html">AVI</a>
+          <a href="tarifs.html" class="active" aria-current="page">Tarifs</a>
+          <a href="test-eligibilite.html">Test d'éligibilité</a>
+          <a href="contact.html" class="btn btn-orange nav-cta">Nous contacter</a>
+        </nav>
+        <div class="lang-switch" aria-label="Choix de la langue">
+          <a href="tarifs.html" class="lang-opt active" hreflang="fr" lang="fr" title="Français" aria-label="Français">
+            <img src="img/flags/fr.svg" alt="Français" width="22" height="16" />
+          </a>
+          <a href="tarifs-en.html" class="lang-opt" hreflang="en" lang="en" title="English" aria-label="English">
+            <img src="img/flags/gb.svg" alt="English" width="22" height="16" />
+          </a>
+        </div>
+        <button type="button" class="burger" id="burger" data-site-menu-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
 
 <main class="wrap">
   <section class="hero">
@@ -395,37 +405,56 @@ footer.site .legal{border-top:1px solid color-mix(in srgb,var(--foot-ink) 18%,tr
   <p class="stamp">Sources : Campus France Sénégal, France-Visas, IRCC, gouvernement du Québec, Fédération Wallonie-Bruxelles, Ambassade d'Italie à Dakar, Universitaly, DFAE, AMCI, Türkiye Bursları, Politehnica Bucarest. Montants vérifiés le 10 novembre 2026. Les tarifs d'Einstein Services peuvent évoluer : le devis remis en agence fait foi.</p>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="fcols">
-      <div>
-        <h4>Einstein Services</h4>
-        <p>Orientation et mobilité internationale des étudiants : France, Canada, Belgique, Suisse, Italie, Maroc, Allemagne, Turquie, Roumanie.</p>
+<footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="À propos d'Einstein Services">
+          <a class="site-footer-logo" href="index.html">
+            <img src="img/logo-light.svg" alt="Einstein Services" />
+          </a>
+          <p>Einstein Services accompagne les étudiants dans leurs projets d'études à l'étranger, de l'orientation aux démarches avant le départ.</p>
+          <div class="site-footer-socials" aria-label="Suivez-nous">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </section>
+        <section class="site-footer-column">
+          <h2>Liens rapides</h2>
+          <ul>
+            <li><a href="agence.html">L'agence</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+            <li><a href="avi.html">AVI</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="test-eligibilite.html">Test d'éligibilité</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></li>
+            <li><a href="tel:+221338305460">+221 33 830 54 60</a></li>
+            <li><a href="tel:+221787927373">+221 78 792 73 73</a></li>
+            <li><a href="tel:+221787338181">+221 78 733 81 81</a></li>
+            <li>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Informations légales</h2>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+          </ul>
+        </section>
       </div>
-      <div>
-        <h4>Nous trouver</h4>
-        <p>Route de l'Aéroport, près de la Senelec, Yoff, Dakar, Sénégal</p>
-        <p><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
+      <div class="site-footer-bottom">
+        <p>© 2026 Einstein Services. Tous droits réservés. · <a href="agence.html">À propos</a></p>
       </div>
-      <div>
-        <h4>Nous appeler</h4>
-        <p><a href="tel:+221338305460">+221 33 830 54 60</a></p>
-        <p><a href="tel:+221787927373">+221 78 792 73 73</a> (WhatsApp)</p>
-        <p><a href="tel:+221787338181">+221 78 733 81 81</a></p>
-      </div>
-      <div>
-        <h4>Nous suivre</h4>
-        <div class="social">
-          <a href="https://www.facebook.com/einsteinservices" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@einsteinservices" target="_blank" rel="noopener">TikTok</a>
-        </div>
-      </div>
-    </div>
-    <div class="legal">© 2026 Einstein Services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a></div>
-  </div>
-</footer>
+    </footer>
 <script src="js/site-ui.js"></script>
 <script src="js/site-header.js?v=20261121-0001"></script>
 </body>

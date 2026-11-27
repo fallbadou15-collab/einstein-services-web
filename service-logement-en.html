@@ -14,19 +14,90 @@
   <link rel="stylesheet" href="css/site-header.css?v=20261119-0009" />
 </head>
   <body>
-    <header class="navbar"><div class="container nav-inner">
-      <a href="index-en.html" class="logo"><img src="img/logo.svg" alt="Einstein Services" class="logo-img" /></a>
-      <nav class="nav-links" id="navLinks">
-        <a href="services-en.html">Services</a><a href="destinations-en.html">Destinations</a><a href="formations-en.html">Programmes</a><a href="contact-en.html" class="btn btn-orange">Contact</a>
-      </nav>
-      <button class="burger" id="burger" aria-label="Menu"><span>☰</span></button>
-    </div></header>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index-en.html" class="logo" aria-label="Einstein Services home">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Main menu">
+          <a href="agence-en.html">Agency</a>
+          <a href="services-en.html" class="active" aria-current="page">Services</a>
+          <a href="destinations-en.html">Destinations</a>
+          <a href="formations-en.html">Courses</a>
+          <a href="temoignages-en.html">Testimonials</a>
+          <a href="avi-en.html">AVI</a>
+          <a href="tarifs-en.html">Fees</a>
+          <a href="test-eligibilite-en.html">Eligibility test</a>
+          <a href="contact-en.html" class="btn btn-orange nav-cta">Contact us</a>
+        </nav>
+        <div class="lang-switch" aria-label="Language switch">
+          <a href="service-logement.html" class="lang-opt" hreflang="fr" lang="fr" title="Français" aria-label="Français">
+            <img src="img/flags/fr.svg" alt="Français" width="22" height="16" />
+          </a>
+          <a href="service-logement-en.html" class="lang-opt active" hreflang="en" lang="en" title="English" aria-label="English">
+            <img src="img/flags/gb.svg" alt="English" width="22" height="16" />
+          </a>
+        </div>
+        <button type="button" class="burger" id="burger" data-site-menu-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
     <main class="section"><div class="container">
       <div class="section-head"><p class="tag">Service</p><h1>Student housing</h1><p>Housing search and certificate of accommodation.</p></div>
       <div id="serviceDetail" data-service-id="logement"><p role="status">Loading service details…</p></div>
       <p><a class="btn btn-ghost" href="services-en.html">← All services</a></p>
     </div></main>
-    <footer class="footer"><div class="container footer-inner"><p><strong>Einstein Services</strong> — Yoff, Dakar · <a href="tel:+221338305460">+221 33 830 54 60</a> · <a href="tel:+221787927373">+221 78 792 73 73</a> · <a href="tel:+221787338181">+221 78 733 81 81</a></p><p class="footer-links"><a href="mentions-legales-en.html">Legal notice</a> · <a href="politique-confidentialite-en.html">Privacy policy</a></p></div></footer>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="About Einstein Services">
+          <a class="site-footer-logo" href="index-en.html">
+            <img src="img/logo-light.svg" alt="Einstein Services" />
+          </a>
+          <p>Einstein Services supports students with international study plans, from choosing a course to preparing for departure.</p>
+          <div class="site-footer-socials" aria-label="Follow us">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </section>
+        <section class="site-footer-column">
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="agence-en.html">Agency</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="destinations-en.html">Destinations</a></li>
+            <li><a href="formations-en.html">Courses</a></li>
+            <li><a href="temoignages-en.html">Testimonials</a></li>
+            <li><a href="avi-en.html">AVI</a></li>
+            <li><a href="tarifs-en.html">Fees</a></li>
+            <li><a href="test-eligibilite-en.html">Eligibility test</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></li>
+            <li><a href="tel:+221338305460">+221 33 830 54 60</a></li>
+            <li><a href="tel:+221787927373">+221 78 792 73 73</a></li>
+            <li><a href="tel:+221787338181">+221 78 733 81 81</a></li>
+            <li>Airport Road, near Senelec, Yoff, Dakar, Senegal</li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="mentions-legales-en.html">Legal notice</a></li>
+            <li><a href="politique-confidentialite-en.html">Privacy policy</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="site-footer-bottom">
+        <p>© 2026 Einstein Services. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="js/code.js"></script><script src="js/chatbot.js"></script><script src="js/service-detail-page.js"></script>
 <script src="js/site-header.js?v=20261121-0001"></script>
 </body>

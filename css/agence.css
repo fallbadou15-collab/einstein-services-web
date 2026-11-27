@@ -58,6 +58,35 @@
   background: var(--cream);
 }
 
+.agency-director-photos {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 100px;
+  gap: 0.5rem;
+  min-height: 300px;
+  padding: 0.5rem;
+  background: var(--cream);
+}
+
+.agency-director-photos > img,
+.agency-director-additional-photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  background: #fff;
+}
+
+.agency-director-photos > img {
+  object-position: 30% center;
+}
+
+.agency-director-additional-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
 .agency-team-card:first-child > img {
   object-position: 30% center;
 }
@@ -88,6 +117,27 @@
   text-transform: uppercase;
 }
 
+.agency-office-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.agency-office-gallery figure {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.agency-office-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 700px) {
   .agency-download {
     align-items: flex-start;
@@ -102,6 +152,10 @@
   .agency-team-grid {
     grid-template-columns: 1fr;
   }
+
+  .agency-office-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
@@ -112,6 +166,15 @@
   .agency-team-card > img {
     height: 320px;
     min-height: 0;
+  }
+
+  .agency-director-photos {
+    grid-template-rows: 320px 110px;
+    min-height: 0;
+  }
+
+  .agency-office-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

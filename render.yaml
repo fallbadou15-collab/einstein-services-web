@@ -3,6 +3,6 @@ services:
     name: einstein-services-web
     runtime: static
     branch: main
-    buildCommand: echo "Static site; no build required"
+    buildCommand: npm run build
     staticPublishPath: .
     autoDeploy: true

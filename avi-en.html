@@ -42,22 +42,29 @@
     <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-inner">
-        <a href="index-en.html" class="logo">
-          <img src="img/logo.svg" alt="Einstein Services logo" class="logo-img" />
+        <a href="index-en.html" class="logo" aria-label="Einstein Services home">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
         </a>
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links" id="navLinks" aria-label="Main menu">
+          <a href="agence-en.html">Agency</a>
           <a href="services-en.html">Services</a>
-          <a href="avi-en.html" class="active">AVI</a>
           <a href="destinations-en.html">Destinations</a>
+          <a href="formations-en.html">Courses</a>
+          <a href="temoignages-en.html">Testimonials</a>
+          <a href="avi-en.html" class="active" aria-current="page">AVI</a>
           <a href="tarifs-en.html">Fees</a>
           <a href="test-eligibilite-en.html">Eligibility test</a>
           <a href="contact-en.html" class="btn btn-orange nav-cta">Contact us</a>
         </nav>
         <div class="lang-switch" aria-label="Language switch">
-          <a href="avi.html" class="lang-opt" hreflang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="22" height="16" /></a>
-          <a href="avi-en.html" class="lang-opt active" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
+          <a href="avi.html" class="lang-opt" hreflang="fr" lang="fr" title="Français" aria-label="Français">
+            <img src="img/flags/fr.svg" alt="Français" width="22" height="16" />
+          </a>
+          <a href="avi-en.html" class="lang-opt active" hreflang="en" lang="en" title="English" aria-label="English">
+            <img src="img/flags/gb.svg" alt="English" width="22" height="16" />
+          </a>
         </div>
-        <button class="burger" id="burger" aria-label="Menu">
+        <button type="button" class="burger" id="burger" data-site-menu-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
           <span></span>
         </button>
       </div>
@@ -124,48 +131,54 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="u-footer">
-      <div class="u-container u-footer-grid">
-        <div class="u-footer-brand">
-          <img src="img/logo.svg" alt="Einstein Services logo" />
-          <p>
-            Einstein Services, a guidance and international mobility agency in
-            Yoff, Dakar.
-          </p>
-        </div>
-        <div>
-          <h4>Contact</h4>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="About Einstein Services">
+          <a class="site-footer-logo" href="index-en.html">
+            <img src="img/logo-light.svg" alt="Einstein Services" />
+          </a>
+          <p>Einstein Services supports students with international study plans, from choosing a course to preparing for departure.</p>
+          <div class="site-footer-socials" aria-label="Follow us">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </section>
+        <section class="site-footer-column">
+          <h2>Quick links</h2>
           <ul>
-            <li>contact@einstein-services.com</li>
-            <li>+221 33 830 54 60 / +221 78 792 73 73 / +221 78 733 81 81</li>
-            <li>Yoff, Dakar — Senegal</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Quick links</h4>
-          <ul>
+            <li><a href="agence-en.html">Agency</a></li>
             <li><a href="services-en.html">Services</a></li>
+            <li><a href="destinations-en.html">Destinations</a></li>
+            <li><a href="formations-en.html">Courses</a></li>
+            <li><a href="temoignages-en.html">Testimonials</a></li>
+            <li><a href="avi-en.html">AVI</a></li>
             <li><a href="tarifs-en.html">Fees</a></li>
+            <li><a href="test-eligibilite-en.html">Eligibility test</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
           </ul>
-        </div>
-        <div>
-          <h4>Legal</h4>
+        </section>
+        <section class="site-footer-column">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></li>
+            <li><a href="tel:+221338305460">+221 33 830 54 60</a></li>
+            <li><a href="tel:+221787927373">+221 78 792 73 73</a></li>
+            <li><a href="tel:+221787338181">+221 78 733 81 81</a></li>
+            <li>Airport Road, near Senelec, Yoff, Dakar, Senegal</li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Legal</h2>
           <ul>
             <li><a href="mentions-legales-en.html">Legal notice</a></li>
-            <li>
-              <a href="politique-confidentialite-en.html"
-                >Privacy policy</a
-              >
-            </li>
+            <li><a href="politique-confidentialite-en.html">Privacy policy</a></li>
           </ul>
-        </div>
+        </section>
       </div>
-      <div class="u-footer-bottom">
-        <div class="u-container">
-          © 2026 Einstein Services. All rights reserved.
-          · <a class="footer-about-link" href="agence-en.html">About us</a>
-
-        </div>
+      <div class="site-footer-bottom">
+        <p>© 2026 Einstein Services. All rights reserved.</p>
       </div>
     </footer>
 
@@ -178,14 +191,6 @@
       ><span aria-hidden="true">WA</span></a
     >
 
-    <script>
-      // Mobile menu
-      var burger = document.getElementById("burger");
-      var navLinks = document.getElementById("navLinks");
-      burger.addEventListener("click", function () {
-        navLinks.classList.toggle("open");
-      });
-    </script>
     <script src="js/site-ui.js"></script>
 <script src="js/site-header.js?v=20261121-0001"></script>
 </body>

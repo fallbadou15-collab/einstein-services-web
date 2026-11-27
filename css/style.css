@@ -840,7 +840,7 @@ a.btn[href$="contact-en.html"]:hover {
 }
 .testimonial-photos-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 .testimonial-photos-grid figure {
@@ -854,11 +854,6 @@ a.btn[href$="contact-en.html"]:hover {
   display: block;
   width: 100%;
   height: auto;
-}
-.privacy-blurred video,
-.privacy-blurred img {
-  filter: blur(22px);
-  transform: scale(1.04);
 }
 .testimonials-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -932,6 +927,9 @@ a.btn[href$="contact-en.html"]:hover {
 }
 @media (max-width: 900px) {
   .video-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .testimonial-photos-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .testimonials-grid {
@@ -2510,8 +2508,14 @@ img {
 @media (max-width: 560px) {
   .u-whatsapp,
   .site-whatsapp {
-    right: 16px;
-    bottom: 16px;
+    right: 12px;
+    bottom: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  #nafiWidget,
+  .nafi-widget {
+    display: none !important;
   }
   #nafiWidget {
     right: 16px;

@@ -745,6 +745,31 @@ body {
   font-size: 0.9rem;
   line-height: 1.4;
 }
+.u-event-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  max-width: 1000px;
+  margin: 0 auto 1.5rem;
+}
+.u-event-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 14px;
+  background: var(--u-white);
+  box-shadow: 0 6px 18px rgba(20, 86, 138, 0.08);
+}
+.u-event-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.u-event-gallery a:hover img,
+.u-event-gallery a:focus-visible img {
+  transform: scale(1.025);
+}
 .u-event-content {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
@@ -1453,6 +1478,43 @@ body {
   }
 }
 @media (max-width: 720px) {
+  .u-container {
+    width: 92%;
+  }
+  .u-hero {
+    padding: 2.25rem 0 2.75rem;
+  }
+  .u-hero-inner {
+    gap: 2rem;
+  }
+  .u-hero-badge {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.66rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .u-hero h1 {
+    font-size: clamp(1.75rem, 9vw, 2.2rem);
+    line-height: 1.12;
+  }
+  .u-hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .u-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding-right: 56px;
+  }
+  .u-hero-actions .u-btn {
+    width: calc(100% - 56px);
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 48px;
+  }
   .u-video-layout {
     grid-template-columns: 1fr;
   }
@@ -1525,6 +1587,9 @@ body {
   }
   .u-event-meta {
     grid-template-columns: 1fr;
+  }
+  .u-event-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .u-form-row {
     grid-template-columns: 1fr;

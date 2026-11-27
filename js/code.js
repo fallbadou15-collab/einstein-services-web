@@ -1,15 +1,5 @@
 /* ===== Einstein Services — code.js ===== */
 
-// Menu mobile
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("navLinks");
-burger.addEventListener("click", () => navLinks.classList.toggle("open"));
-navLinks
-  .querySelectorAll("a")
-  .forEach((a) =>
-    a.addEventListener("click", () => navLinks.classList.remove("open")),
-  );
-
 // FAQ accordéon
 document.querySelectorAll(".faq-q").forEach((q) => {
   q.addEventListener("click", () => {

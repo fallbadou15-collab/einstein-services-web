@@ -90,40 +90,31 @@
     <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-inner">
-        <a href="index-en.html" class="logo">
-          <img
-            src="img/logo.svg"
-            alt="Einstein Services logo"
-            class="logo-img"
-          />
+        <a href="index-en.html" class="logo" aria-label="Einstein Services home">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
         </a>
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links" id="navLinks" aria-label="Main menu">
+          <a href="agence-en.html">Agency</a>
           <a href="services-en.html">Services</a>
           <a href="destinations-en.html">Destinations</a>
-          <a href="formations-en.html">Programmes</a>
+          <a href="formations-en.html">Courses</a>
           <a href="temoignages-en.html">Testimonials</a>
-          <a href="test-eligibilite-en.html">Eligibility test</a>
-          <a href="contact-en.html" class="btn btn-orange nav-cta"
-            >Contact us</a
-          >
+          <a href="avi-en.html">AVI</a>
+          <a href="tarifs-en.html">Fees</a>
+          <a href="test-eligibilite-en.html" class="active" aria-current="page">Eligibility test</a>
+          <a href="contact-en.html" class="btn btn-orange nav-cta">Contact us</a>
         </nav>
         <div class="lang-switch" aria-label="Language switch">
-          <a
-            href="https://einstein-services.com/test-eligibilite.html"
-            class="lang-opt"
-            hreflang="fr"
-            title="Français"
-            ><img src="img/flags/fr.svg" alt="Français" width="22" height="16"
-          /></a>
-          <a
-            href="https://einstein-services.com/test-eligibilite-en.html"
-            class="lang-opt active"
-            hreflang="en"
-            title="English"
-            ><img src="img/flags/gb.svg" alt="English" width="22" height="16"
-          /></a>
+          <a href="test-eligibilite.html" class="lang-opt" hreflang="fr" lang="fr" title="Français" aria-label="Français">
+            <img src="img/flags/fr.svg" alt="Français" width="22" height="16" />
+          </a>
+          <a href="test-eligibilite-en.html" class="lang-opt active" hreflang="en" lang="en" title="English" aria-label="English">
+            <img src="img/flags/gb.svg" alt="English" width="22" height="16" />
+          </a>
         </div>
-        <button class="burger" id="burger" aria-label="Menu"></button>
+        <button type="button" class="burger" id="burger" data-site-menu-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -225,54 +216,54 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <img
-          src="img/logo-light.svg"
-          alt="Einstein Services"
-          class="footer-logo"
-        />
-        <p>
-          <strong>Einstein Services</strong> — From the first consultation to
-          your installation, we support you internationally.<br />
-          Route de l'Aéroport, near the Senelec, Yoff, Dakar — +221 33 830 54 60 / +221 78 792 73 73 / +221 78 733 81 81
-        </p>
-        <div class="footer-socials">
-          <a
-            href="https://www.tiktok.com/@einsteinservices1"
-            target="_blank"
-            rel="noopener"
-            aria-label="TikTok"
-            ><img src="img/tiktok.svg" alt="TikTok"
-          /></a>
-          <a
-            href="https://www.facebook.com/einsteinservicesvoyages1"
-            target="_blank"
-            rel="noopener"
-            aria-label="Facebook"
-            ><img src="img/facebook.svg" alt="Facebook"
-          /></a>
-          <a
-            href="https://www.instagram.com/einsteinservices360/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-            ><img src="img/instagram.svg" alt="Instagram"
-          /></a>
-          <a
-            href="https://www.linkedin.com/company/einsteinservices"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn"
-            ><img src="img/linkedin.svg" alt="LinkedIn"
-          /></a>
-        </div>
-        <p class="muted">© 2026 Einstein Services. All rights reserved.</p>
-        <p class="muted footer-links">
-          <a href="mentions-legales-en.html">Legal notice</a>
-          ·
-          <a href="politique-confidentialite-en.html">Privacy policy</a>
-        </p>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="About Einstein Services">
+          <a class="site-footer-logo" href="index-en.html">
+            <img src="img/logo-light.svg" alt="Einstein Services" />
+          </a>
+          <p>Einstein Services supports students with international study plans, from choosing a course to preparing for departure.</p>
+          <div class="site-footer-socials" aria-label="Follow us">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </section>
+        <section class="site-footer-column">
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="agence-en.html">Agency</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="destinations-en.html">Destinations</a></li>
+            <li><a href="formations-en.html">Courses</a></li>
+            <li><a href="temoignages-en.html">Testimonials</a></li>
+            <li><a href="avi-en.html">AVI</a></li>
+            <li><a href="tarifs-en.html">Fees</a></li>
+            <li><a href="test-eligibilite-en.html">Eligibility test</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></li>
+            <li><a href="tel:+221338305460">+221 33 830 54 60</a></li>
+            <li><a href="tel:+221787927373">+221 78 792 73 73</a></li>
+            <li><a href="tel:+221787338181">+221 78 733 81 81</a></li>
+            <li>Airport Road, near Senelec, Yoff, Dakar, Senegal</li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="mentions-legales-en.html">Legal notice</a></li>
+            <li><a href="politique-confidentialite-en.html">Privacy policy</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="site-footer-bottom">
+        <p>© 2026 Einstein Services. All rights reserved.</p>
       </div>
     </footer>
     <script src="js/code.js"></script>

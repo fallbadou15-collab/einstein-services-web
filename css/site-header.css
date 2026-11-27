@@ -279,26 +279,31 @@ header.site .site-menu-toggle {
 
 @media (max-width: 420px) {
   .u-topbar-inner {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     gap: 0.25rem;
     width: 96%;
-    min-height: 76px;
-    padding: 0.35rem 0;
+    min-height: 42px;
+    padding: 0.45rem 0;
   }
 
   .u-topbar-left {
     justify-content: center;
-    width: 100%;
+    width: auto;
+    min-width: 0;
   }
 
   .u-topbar-phone {
-    font-size: 0.68rem;
-    text-align: center;
+    max-width: 210px;
+    overflow: hidden;
+    font-size: 0.62rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .u-topbar-socials {
-    gap: 0.9rem;
+    display: none;
   }
 
   header.navbar > .nav-inner,
@@ -313,5 +318,104 @@ header.site .site-menu-toggle {
   header.site .brand img {
     height: 38px !important;
     max-width: min(42vw, 155px) !important;
+  }
+}
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 3rem 0 0;
+  background: #10243a;
+  color: #e8eef5;
+}
+
+.site-footer-inner {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(1200px, 94%);
+  margin-inline: auto;
+  padding-bottom: 2.5rem;
+}
+
+.site-footer-brand,
+.site-footer-column {
+  min-width: 0;
+}
+
+.site-footer-logo {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.site-footer-logo img {
+  display: block;
+  width: auto;
+  height: 48px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.site-footer p {
+  color: #c5d0dc;
+  line-height: 1.7;
+}
+
+.site-footer-column h2 {
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.site-footer-column ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: #e8eef5;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffb84d;
+  text-decoration: underline;
+}
+
+.site-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  margin-top: 1rem;
+}
+
+.site-footer-socials a {
+  font-size: 0.9rem;
+}
+
+.site-footer-bottom {
+  border-top: 1px solid rgba(232, 238, 245, 0.18);
+}
+
+.site-footer-bottom p {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .site-footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

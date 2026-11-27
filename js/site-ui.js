@@ -1,6 +1,27 @@
 (() => {
   const fileName = window.location.pathname.split("/").pop() || "index.html";
   const isEnglish = document.documentElement.lang === "en" || fileName.endsWith("-en.html");
+  const googleMapsUrl = "https://maps.app.goo.gl/gK5sjCCxLmxj2kCU7";
+
+  document.querySelectorAll("footer li").forEach((item) => {
+    const address = item.textContent.trim();
+    if (
+      item.querySelector("a") ||
+      !/(route de l['’]aéroport|airport road)/i.test(address) ||
+      !/(yoff|dakar)/i.test(address)
+    ) {
+      return;
+    }
+
+    const mapLink = document.createElement("a");
+    mapLink.href = googleMapsUrl;
+    mapLink.target = "_blank";
+    mapLink.rel = "noopener noreferrer";
+    mapLink.textContent = isEnglish
+      ? "Airport Road, Dakar 12000, Senegal"
+      : "Route de l'Aéroport, Dakar 12000, Sénégal";
+    item.replaceChildren(mapLink);
+  });
 
   if (!document.querySelector(".lang-switch")) {
     const frenchPage = isEnglish

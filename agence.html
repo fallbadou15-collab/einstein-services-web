@@ -45,7 +45,7 @@
       "logo": "https://einstein-services.com/img/logo.svg",
       "description": "Agence d'orientation et de mobilité internationale à Yoff, Dakar, accompagnant les étudiants dans leurs projets d'études à l'étranger.",
       "foundingDate": "2024",
-      "address": { "@type": "PostalAddress", "streetAddress": "Route de l'Aéroport, près de la Senelec", "addressLocality": "Yoff, Dakar", "addressCountry": "SN" },
+      "address": { "@type": "PostalAddress", "streetAddress": "Route de l'Aéroport", "addressLocality": "Dakar", "postalCode": "12000", "addressCountry": "SN" },
       "telephone": "+221787927373",
       "email": "contact@einstein-services.com",
       "sameAs": [
@@ -65,26 +65,31 @@
     <!-- ===== NAVBAR ===== -->
     <header class="navbar">
       <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img
-            src="img/logo.svg"
-            alt="Logo Einstein Services"
-            class="logo-img"
-          />
+        <a href="index.html" class="logo" aria-label="Accueil Einstein Services">
+          <img src="img/logo.svg" alt="Einstein Services" class="logo-img" />
         </a>
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+          <a href="agence.html" class="active" aria-current="page">L'agence</a>
           <a href="services.html">Services</a>
           <a href="destinations.html">Destinations</a>
           <a href="formations.html">Formations</a>
           <a href="temoignages.html">Témoignages</a>
+          <a href="avi.html">AVI</a>
+          <a href="tarifs.html">Tarifs</a>
           <a href="test-eligibilite.html">Test d'éligibilité</a>
           <a href="contact.html" class="btn btn-orange nav-cta">Nous contacter</a>
         </nav>
         <div class="lang-switch" aria-label="Choix de la langue">
-            <a href="https://einstein-services.com/agence.html" class="lang-opt active" hreflang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" width="22" height="16" /></a>
-            <a href="https://einstein-services.com/agence-en.html" class="lang-opt" hreflang="en" title="English"><img src="img/flags/gb.svg" alt="English" width="22" height="16" /></a>
-          </div>
-        <button class="burger" id="burger" aria-label="Menu"></button>
+          <a href="agence.html" class="lang-opt active" hreflang="fr" lang="fr" title="Français" aria-label="Français">
+            <img src="img/flags/fr.svg" alt="Français" width="22" height="16" />
+          </a>
+          <a href="agence-en.html" class="lang-opt" hreflang="en" lang="en" title="English" aria-label="English">
+            <img src="img/flags/gb.svg" alt="English" width="22" height="16" />
+          </a>
+        </div>
+        <button type="button" class="burger" id="burger" data-site-menu-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -163,12 +168,18 @@
             <p>Une équipe à vos côtés, de Dakar à Paris, pour vous accompagner dans votre projet.</p>
           </div>
           <div class="agency-team-grid">
-            <article class="agency-team-card">
-              <img
-                src="img/directeur-boubacar-diallo.jpg"
-                alt="M. Boubacar Diallo, directeur d’Einstein Services"
-                loading="lazy"
-              />
+            <article class="agency-team-card agency-director-card">
+              <div class="agency-director-photos">
+                <img
+                  src="img/directeur-boubacar-diallo.jpg"
+                  alt="M. Boubacar Diallo, directeur d’Einstein Services"
+                  loading="lazy"
+                />
+                <div class="agency-director-additional-photos">
+                  <img src="img/integration-2026/integration-24.jpeg" alt="M. Boubacar Diallo à l’agence Einstein Services" loading="lazy" />
+                  <img src="img/integration-2026/integration-26.jpeg" alt="M. Boubacar Diallo devant une carte du monde" loading="lazy" />
+                </div>
+              </div>
               <div class="agency-team-copy">
                 <p class="agency-team-role">Directeur d’Einstein Services</p>
                 <h3>M. Boubacar Diallo</h3>
@@ -207,6 +218,22 @@
                 <h3>Fatoumata Ba</h3>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section agency-office-section" aria-labelledby="agency-office-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="agency-office-title">Découvrez notre agence</h2>
+            <p>Retrouvez-nous à Yoff, Dakar, et découvrez nos espaces d’accueil et de travail.</p>
+          </div>
+          <div class="agency-office-gallery">
+            <figure><img src="img/agence/facade-agence.jpeg" alt="Façade du bâtiment d’Einstein Services à Yoff" loading="lazy" /></figure>
+            <figure><img src="img/agence/accueil-agence.jpeg" alt="Espace d’accueil d’Einstein Services" loading="lazy" /></figure>
+            <figure><img src="img/agence/espace-attente.jpeg" alt="Espace d’attente de l’agence" loading="lazy" /></figure>
+            <figure><img src="img/agence/bureau-agence.jpeg" alt="Bureau de l’agence Einstein Services" loading="lazy" /></figure>
+            <figure><img src="img/agence/enseigne-agence.jpeg" alt="Enseigne Einstein Services à l’intérieur de l’agence" loading="lazy" /></figure>
           </div>
         </div>
       </section>
@@ -341,7 +368,7 @@
             <a href="contact.html" class="btn btn-orange">Contacter Einstein Services</a>
           </div>
           <div class="contact-info card">
-            <p>📍 Route de l'Aéroport, près de la Senelec, Yoff, Dakar</p>
+            <p>📍 <a href="https://maps.app.goo.gl/gK5sjCCxLmxj2kCU7" target="_blank" rel="noopener noreferrer">Route de l'Aéroport, Dakar 12000, Sénégal</a></p>
             <p>📞 <a href="tel:+221338305460">+221 33 830 54 60</a> · <a href="tel:+221787927373">+221 78 792 73 73</a> · <a href="tel:+221787338181">+221 78 733 81 81</a></p>
             <p>💬 <a href="https://wa.me/221787927373">+221 78 792 73 73 (WhatsApp)</a></p>
             <p>✉️ <a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></p>
@@ -352,32 +379,54 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <img
-          src="img/logo-light.svg"
-          alt="Einstein Services"
-          class="footer-logo"
-        />
-        <p>
-          <strong>Einstein Services</strong> — Du premier conseil à votre
-          installation, nous vous accompagnons à l'international.<br />
-          Route de l'Aéroport, près de la Senelec, Yoff, Dakar — +221 33 830 54 60 / +221 78 792 73 73 / +221 78 733 81 81
-        </p>
-        <div class="footer-socials">
-          <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.svg" alt="TikTok" /></a>
-          <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.svg" alt="Facebook" /></a>
-          <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.svg" alt="Instagram" /></a>
-          <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
-        </div>
-        <p class="muted">© 2026 Einstein Services. Tous droits réservés.</p>
-        <p class="muted footer-links">
-          <a href="mentions-legales.html">Mentions légales</a>
-          ·
-          <a href="politique-confidentialite.html"
-            >Politique de confidentialité</a
-          >
-        </p>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="À propos d'Einstein Services">
+          <a class="site-footer-logo" href="index.html">
+            <img src="img/logo-light.svg" alt="Einstein Services" />
+          </a>
+          <p>Einstein Services accompagne les étudiants dans leurs projets d'études à l'étranger, de l'orientation aux démarches avant le départ.</p>
+          <div class="site-footer-socials" aria-label="Suivez-nous">
+            <a href="https://www.facebook.com/einsteinservicesvoyages1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/einsteinservices360/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/einsteinservices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.tiktok.com/@einsteinservices1" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </section>
+        <section class="site-footer-column">
+          <h2>Liens rapides</h2>
+          <ul>
+            <li><a href="agence.html">L'agence</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+            <li><a href="avi.html">AVI</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="test-eligibilite.html">Test d'éligibilité</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:contact@einstein-services.com">contact@einstein-services.com</a></li>
+            <li><a href="tel:+221338305460">+221 33 830 54 60</a></li>
+            <li><a href="tel:+221787927373">+221 78 792 73 73</a></li>
+            <li><a href="tel:+221787338181">+221 78 733 81 81</a></li>
+            <li>Route de l'Aéroport, Dakar 12000, Sénégal</li>
+          </ul>
+        </section>
+        <section class="site-footer-column">
+          <h2>Informations légales</h2>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="site-footer-bottom">
+        <p>© 2026 Einstein Services. Tous droits réservés.</p>
       </div>
     </footer>
     <script src="js/code.js"></script>
